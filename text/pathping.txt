@@ -1,0 +1,21 @@
+C:/>pathping 10.190.22.215
+
+Tracing route to 10.190.22.215 over a maximum of 30 hops
+
+  0  A03_626b.kn.vutbr.cz [147.229.220.6]
+  1  irf-kn.kn.vutbr.cz [147.229.220.1]
+  2  10.190.22.215
+
+Computing statistics for 50 seconds...
+            Source to Here   This Node/Link
+Hop  RTT    Lost/Sent = Pct  Lost/Sent = Pct  Address
+  0                                           A03_626b.kn.vutbr.cz 
+  [147.229.220.6]
+                                0/ 100 =  0%   |
+  1    5ms     0/ 100 =  0%     0/ 100 =  0%  irf-kn.kn.vutbr.cz 
+  [147.229.220.1]
+
+                                0/ 100 =  0%   |
+  2    2ms     0/ 100 =  0%     0/ 100 =  0%  10.190.22.215
+
+Trace complete.

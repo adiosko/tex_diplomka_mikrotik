@@ -1,0 +1,6 @@
+traceroute to 147.229.149.9 (147.229.149.9), 30 hops max, 60 byte packets
+ 1  irf-kn.kn.vutbr.cz (147.229.220.1)  1.415 ms  1.527 ms  1.667 ms
+ 2  gw-list.net.vutbr.cz (147.229.253.87)  8.722 ms  8.832 ms  8.984 ms
+ 3  hp-kou.net.vutbr.cz (147.229.252.33)  0.945 ms  1.197 ms  1.593 ms
+ 4  hp-pal.net.vutbr.cz (147.229.254.138)  1.735 ms  1.949 ms  2.112 ms
+ 5  Challange.feec.vutbr.cz (147.229.149.9)  0.648 ms  0.698 ms  0.668 ms
