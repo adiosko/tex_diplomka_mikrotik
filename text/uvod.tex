@@ -1,17 +1,97 @@
 \chapter{Úvod do diplomovej práce}
 Diplomová práca na tému "Multiplatformní aplikace pro správu síťových prvku Mikrotik" sa bude primárne zaoberať samostatným mikrotikom. Primárne pomocou aplication programable interface (API) vytvorenie jej konzolovej časti (backendu) a grafickej časti (frontendu). Tieto dve časti dajú celkovú applikáciu dokopy ako celok.\\
-V prvej časti práci bude definovanie Mikrotiku a jeho funkcií v skratke, popis operačného systému routerOS, porovnanie podobnosti s operačným systémom unix. Ďalej budú popísané aj pokročilé funkcie ako napríklad capsman, internet protocol security (ipsec), kompletný firewall, zoznamy adries v rámci firewallu. V úvodnej časti práci budú prejdené všetky časti mikrotiku a jeho nastavení.\\
-V druhej časti práce bude popis API a spôsoboch softvérového riešenia aplikácie pre správu Mikrotikov. Ďalej tu budú popísané všetky možné spôsoby softvérového riešenia a programovania mikrotikov. Táto časť bude tiež obsahovať niečo ohľadom technológie git, popise, čo je git, princíp tzv. commitu a pushu. Rozdiely medzi vetvami, prepínanie medzi vetvami a pridávania zmien.\\
-V tretej časti práce sa priblíži popis programovacieho jazyka python, rozdiely medzi verziami python, a jeho základné vlastnosti. Ďalej sa tu popíše knižnica paramiko, ktorá bude použitá na komunikáciu s operačným systémom routerOS. Buú tu popísané vastnosti knižnice, čo obsahuje, hlavné prvky knižnice, spôsob fungovania, použitie základného API a použitie secure socket layer (SSL), použité porty. Taktiež tu bude spomenutý aj úvod do certifikátov a to konkrétne Single Sign-on metódy. \\
-V ďalšej časti bude návrh riešenia softvérovej implementácie aplikácie. Bude obsahovať popis, princípy, diagramy, hlavne Unified modeling language (UML), popisy knižníc, jednotlivých tried a modulov. Každý modul bude popísaný sovojou funkcionalitou, parametrami a výstupom s praktickými ukážkami.\\
+V prvej časti práci bude definovanie Mikrotik API a jeho možností, porovnanie podobnosti s operačným systémom unix. Ďalej budú popísané možnosti zabezpečenia API pomocou secure socket layer (SSL). Budú tu tiež spomenuté použité porty,a ďalšie možnosti.\\
+V druhej časti práce bude popis API a spôsoboch softvérového riešenia aplikácie pre správu Mikrotikov. Táto časť bude tiež obsahovať niečo ohľadom technológie git, popise, čo je git, princíp tzv. commitu a pushu. Rozdiely medzi vetvami, prepínanie medzi vetvami a pridávania zmien. Taktiež tu bude spomenutý aj úvod do certifikátov a to konkrétne Single Sign-on metódy.\\
+V ďalšej časti bude návrh riešenia softvérovej implementácie aplikácie. Bude obsahovať popis, princípy, diagramy, hlavne Unified modeling language (UML), popisy knižníc, jednotlivých tried a modulov. Každý modul bude popísaný svojou funkcionalitou, parametrami a výstupom s praktickými ukážkami.\\
 V ďalšej časti bude použitá implementácia softvérového návrhu riešenia. Bude tu riešenie ako v konzolovej časti, jeho ukážky, test a výsledky. \\
 V poslednej časti práce bude ukážka grafického spracovania konzolovej časti aplikácie a ich prepojenia do jednej aplikácie, spoločne s ukážkami kódov, testu  a výsledkov.
 \chapter{Mikrotik a RouterOS (SwitchOS)}
 V dnešných malých  a stredne veľkých firmách sa na správu siete používajú prevažne routre a switche typu Mikrotik. Mikrotik je firma vyvíjajúca routre a switche,prístupové body a ďalšie sieťové prvky v Litve. \\
 Mikrotik zariadenia používajú operačný systém routerOS, prípadne switchOS. Rozdiel medzi nimi je na základe použitého zariadenia. Čo sa týka routrov, používa operačný systém routerOS, switch používa switchOS, v prípade prístupových bodov (AP) je to routerOS. 
-\section{Vlastnosti hardvérovej časti mikrotiku}
-Mikrotik používa niekoľko druhov mikrotikov, môžme ich rozdeliť do niekoľkých kategórií.Medzi tieto kategórie patrí:
+\section{Mikrotik API}
+Za pomoci Mikrotik API môžeme programovať užívateľské programy a prostredia na riadenie a konfiguráciu Mikrotik zariadení. V dnešnej dobe existuje softvér na konfiguráciu mikrotik zariadení a to pod názvom \textbf{Winbox}. Winbox v dnešnej dobe existuje len na operačný systém Windows a Macintosh (MAC). Bohužiaľ na operačný systém Linux winbox samostatne neexistuje a musí sa simulovať pomocou emulátoru Windows aplikácií za pomoci programu Wine. Toto spôsobuje komplikácie pri použití niektorých funkcií winboxu ale aj iných programov operačného systému Windows. Výstupom práce bude práve Graphical User Interface (GUI). 
+\subsection{Požiadavky na použitie API}
 \begin{itemize}
-\item RB 745
-\item RB 2011 x2
+\item Verzia routerOS verzie \textit{3.0.X} a vyššie \cite{API}
+\end{itemize}
+\subsection{Porty}
+Základné porty na použitie Mikrotik API \cite{API} sú:
+\begin{itemize}
+\item \textbf{API port}: 8728
+\item \textbf{Application programable interface Secure Socket Layer (API-SSL) port}: 8729
+\end{itemize}
+\subsection{Základný port 8728}
+Na základné pripojenie k API aplikácii na prvku Mikrotik musí byť povolený port 8728, ktorý tiež nájdeme v IP-> Services spoločne s API-SSL.\\
+Na základné pripojenie nie je potreba žiadneho transport layer security (TLS) certifikátu. Stačí jednoducho napísať kód a skompilovať ho. 
+\subsection{SSL port 8729}
+Pre použitie portu 8729 tiež známeho ako API-SSL portu je potreba zabezpečenej komunikácie pomocou SSL protokolu. \\
+Primárne muisú byť natavený port, základný port 8729 v IP -> Services. Môžeme ale definovať aj užívateľsky definovaný port. \\
+Možnosti nastavenia API-SSL:
+\begin{itemize}
+\item prístup bez certifikátu TLS
+\item prístup pomocou certifikátu TLS
 \end{itemize} 
+\subsubsection{Prístup pomocou certifikátu TLS}
+Pre použitie certifikátu TLS je potrebné vygenerovať certifikát TLS, a to na certifikačnej autorite alebo na ľubovoľnej linux stanici ideálne, ale tiež to dokážeme spraviť aj na WIndows stanici či MAC. 
+Spôsoby vygenerovania certifikátov:
+\begin{itemize}
+\item openssl
+\item easy-rsa 
+\item Windows Server Certificate Services
+\end{itemize}
+\subsubsection{Openssl}
+Openssl \cite{OpenSSL} je softvér na generovanie certifikátov pre komunikáciu v počítačovej sieti. Koreňovo sa používa na prístup na web skrz protokol Hyper Trasfer Transport Protocol Secure (HTTPS). Pre vygenerovanie certifikátov sa musí vygenerovať: \begin{itemize}
+\item certifikát \textit{*.crt}
+\item certifikačný požiadavok \textit{*.csr}
+\item kľúč k certifikátu \textit{*.key}
+\end{itemize}
+\subsubsection{Easy-rsa}
+Softvér easy-rsa \cite{EasyRSA} sa používa na vytvorenie open-source certifikačnej autority a užívateľých certifikátov napr. pre potreby HTTPS spojenia.\\
+Po nainštalovaní easy-rsa napr. na Ubuntu príkazom \textit{sudo apt install easy-rsa} sa musí spraviť nasledovné: \begin{itemize}
+\item Nakopírovanie konfiguračných súborov do zložky autority
+\item Vytvorenie šablóny na vygenerovanie certifikačnej autority
+\item Vytvorenie užívateľksých certifikátov
+\end{itemize}
+\subsubsection{Active Directory Certificate Services}
+Windows riešenie \cite{WindowsCA} pre generovanie  certifikačnej autority je inštalácia roly servera Active DIrectory Certificate Services. \\
+Pre použitie certifikačnej autority na Windows servery je potreba:
+\begin{itemize}
+\item Inštalácia role serveru
+\item Nadefinovanie certifkačnej autority
+\item Generovanie certifikátov
+\end{itemize}
+\section{API slová}
+\label{chap:APIwords}
+API slová \cite{API} sú základnou časťou API "vety". API "veta" predstavuje príkaz v pouužití príkazu napr. \textit{\//ip/address/print}, \textit{\//ip/address/add address="10.1.1.1/24" interface="ether1"}. \\
+Parametre na slová:
+\begin{itemize}
+\item každé slovo má svoju zakódovanú dĺžku t.j. 
+\begin{itemize}
+\item 0 - 127 bitov zaberá 1 Byte
+\item 128 - 1023 bitov zaberá 2 Byty 
+\item 1024 bitov - 2097 kib zaberá 3 Byty
+\item viac ako 2098 kib zaberá 4 Byty
+\end{itemize}
+\item jednotlivé slová súzaradené do viet
+\item maximum bztov na slovo sú 4 Byty
+\item kontrolné byty sa nepoužívajú
+\end{itemize}
+\section{Príkazové slová API}
+Slová Mikrotik API sa zaraďujú do API viet použitím API slov, na ktoré platia požiadavky, ktoré sú spomenuté v kapitole \ref{chap:APIwords}.Na použitie API viet je potreba začínať znakom \textit{\//}. Napr. miesto \textit{ip address print} sa použije \textit{\//ip/address/print}.\\
+Pre úplnosť API viet musí platiť \cite{API}
+\begin{itemize}
+\item zakódovaná dĺžka slova
+\item slovo musí začínať znakom \//
+\item musí byť použitá správna syntax
+\end{itemize}
+\section{Použitie atribútov v príkaze a filtrovanie}
+V prípade konfigurácie mikrotik zariadení sa pre nastavenie jednotlivých prvkov používajú tzv. atribúty \cite{API} napr. ip adresa, číslo pravidla, meno rozhrania, nastavenie virtuálnej lokálnej sieti (VLAN). \\
+Použitie atribútov má špeciálnu syntax pre konfiguráciu prípadne zmenu prvku na mikrotiku, prípadne pridanie a zmazanie prvku. Na použitie atribútov sa použije špeciálny znak \textit{=}. Napr. \textit{\//ip/address/add =address=10.1.1.1/24 =interface=erher1}.\\
+Pre filtrovanie prvkov v rámci mikrotik API syntaxe sa používa špeciálny atribút parameter so znakom \textit{?}. Napr. \//ip/address/print =?type=ether1 vyfiltruje len rozhranie ether1.
+\section{Špeciálne slová API}
+Miktotik API má možnosť tzv. špeciálnych slov \cite{API}. Špeciálne slová sú slová, ktoré sú rezervované  a nesmú sa použiť pre iné použitie ako napríklad meno premennej, metódy, triedy, a iné. Medzi špeciálne slová patria:\begin{itemize}
+\item prihlásenie sa na zariadenie \//login
+\item ukončenie spojenia na zariadenie \//cancel
+\item odhlásenie sa zo zariadenie \//logout
+\item získanie všetkých parametrov \//getall
+\end{itemize}    
