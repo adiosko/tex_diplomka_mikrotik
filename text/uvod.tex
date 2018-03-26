@@ -94,4 +94,70 @@ Miktotik API má možnosť tzv. špeciálnych slov \cite{API}. Špeciálne slov�
 \item ukončenie spojenia na zariadenie \//cancel
 \item odhlásenie sa zo zariadenie \//logout
 \item získanie všetkých parametrov \//getall
-\end{itemize}    
+\end{itemize}   
+\chapter{Pripojenie na Mikrotik}
+\section{Možnosti pripojenia}
+Pripojenie na mikrotik je realiyované pomocou niekoľkých typov softvéru:\begin{itemize}
+\item \textbf{Winbox} - základný softvér na konfiguráciu mikrotiku
+\item \textbf{Webfig} - konfigurácia mikrotiku pomocou webového rozhrania štandardne na portoch 80 a 443
+\item Riadenie mikrotiku pripojením na mac adresu - \textbf{mactelnet}
+\item Pripojenie pomocou protokolu \textbf{SSH} - zabezpečené a šifrované spojenie
+\item Pripojenie pomocou protokolu \textbf{telnet} - nebezpečné v dnešnej dobe
+\end{itemize}
+\section{Pripojenie pomocou winboxu}
+Winbox\cite{winbox} je nástroj na administráciu mikrotiku. Medzi jeho vlastnosti patrí:\begin{itemize}
+\item GUI nástroj (klikátko)
+\item rýchlosť
+\item spoľahlivosť 
+\end{itemize} 
+\\Winbox je prepis konzolovej aplikácie do grafickej. Obsahuje tiež nástroje ktoré sa v konzole nedajú odsimulovaťnapr. graphs, torch, netmon, scheduler,...\\
+Niektoré funkcie nevieme meniť pomocou winboxu napr. Media Access Control (MAC) adresu rozhrania. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.2]{../text/winbox.png}
+\caption{Winbox základné prihlasovacie rozhranie}
+\label{fig:winbox}
+\end{figure} 
+Režimy winboxu:\begin{itemize}
+\item jednoduchý režim - obsahuje na pripojenie len užívateľské meno, heslo a adresu mikrotiku
+\item pokročilý režim - možnosť pridania skupiny mikrotikov, popisky a názov spojenia
+\end{itemize}
+\section{Pripojenie pomocou webfigu}
+Webfig\cite{webfig} je webová aplikácia RouterOS a umožňuje konfiguráciu, minitoring a údržbu prvkov RouterOS. Medzi hlavné tasky webfigu patrí:\begin{itemize}
+\item konfigurácia mikrotiku
+\item mnotring mikrotiku
+\item riešenie problémov na mikrotiku za pomoci webového rozhrania
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{../text/webfig.png}
+\caption{Webfig základné prihlasovacie rozhranie}
+\label{fig:webfig}
+\end{figure} 
+\section{Mactelnet}
+Mactelnet\cite{mactelnet} predstavuje aplikačný protokol riadený na druhej vsrtve referenčného modelu. Tiež predtavuje kombináciu winboxu  a telnetu v jednom protokole. Riadi prístup na napr. nový mikrotik, ktorý ešte neobsahuje žiadnu konfiguráciu. Pracuje absolútne rovnakým spôsobom ako telnet. Je možné sa pripojiť len na fyzicky pripojený mikrotik pomocou mactelnet, vzdialený prístup pomocou mactelnet nie je možný. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{../text/mactelnet.png}
+\caption{Výstup príkazu mactelnet}
+\label{fig:webfig}
+\end{figure}
+Po pripojení na mikrotik pomocou mactelnet sa nastaví základná konektivita a pripájame sa potom na základe Internet Protocol (IP) adresy. 
+\section{Pripojenie pomocou telnet a SSH}
+Ďalšou možnosťou pripojenia na mikrotik je prihlásenie sa pomocou telnetu\cite{telnet} prípadne SSH\cite{ssh} na konzolu mikrotiku. Napríklad na nastavenie fronty,firewallu,... .
+\subsection{Pripojenie cet telnet}
+Telnet predstavuje protokol, ktorý umožňuje pripojenie na vzdialené servery. Jeho štandardným portom je port 23. \\
+Na povolenie pripojenia pomocou telnetu je potrebné povoliť službu telnet na mikrotiku v IP -> Services. Pre bezpečnostné účely by sa telnet nemal používať, je terčom útokov nakoľko je nešifrovaný. Pokiaľ chceme povoliť telnet na pripojenie na mikrotik, by sa mal minimálne zmeniť štandardný port z 23 na užívateľsky definovaný port.\\
+Príklad príkazu na pripojenie na zariadenie pomocou telnetu: \textit{telnet <IP adresa> <port>} 
+\subsection{Pripojenie pomocou ssh} 
+SSH predstavuje protokol, ktorý umožňuje vzdialené pripojenie pomocou tohoto protokolu. Používa štandardný port 22. Tak isto ako u telnetu, pre SSH platí to isté, je potrebné ho povoliť v IP -> Services. SSH na rozdiel od telnetu je ale šifrovaný  a zabezpečený protokol. SSH predstavuje bezpečnú verziu telnetu. Je možné si zabezpečiť SSH prístup na bezpečnejší, a to tak, že sa budú porovnávať verejný  a súkromný kľúč certifikátu TKIP. V7stupom pripojenia SSH na mikrotik je na obrázku \ref{fig:ssh}. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{../text/ssh.png}
+\caption{Prihlásenie na mikrotik pomocou príkazu SSH}
+\label{fig:ssh}
+\end{figure}
+
+
+
+
