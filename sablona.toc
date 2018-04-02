@@ -24,19 +24,14 @@
 \contentsline {subsection}{\numberline {3.5.2}Pripojenie pomocou ssh}{18}{subsection.32}
 \contentsline {chapter}{\numberline {4}Programovac\IeC {\'\i } jazyk Python}{20}{chapter.35}
 \contentsline {section}{\numberline {4.1}Python 2}{20}{section.36}
-\contentsline {section}{\numberline {4.2}Python3}{20}{section.37}
-\contentsline {section}{\numberline {4.3}Rozdiely medzi python2 a python3}{20}{section.38}
-\contentsline {section}{\numberline {4.4}ou\IeC {\v z}it\IeC {\'e} kni\IeC {\v z}nice}{20}{section.39}
-\contentsline {chapter}{\numberline {5}Grafick\IeC {\'y} n\IeC {\'a}vrh rie\IeC {\v s}enia pr\IeC {\'a}ce}{21}{chapter.40}
-\contentsline {section}{\numberline {5.1}Problematika}{21}{section.41}
-\contentsline {section}{\numberline {5.2}Diagramy rie\IeC {\v s}enia}{21}{section.42}
-\contentsline {section}{\numberline {5.3}Postup spracovania}{21}{section.43}
-\contentsline {chapter}{\numberline {6}Konzolov\IeC {\'a} \IeC {\v c}as\IeC {\v t} aplik\IeC {\'a}cie}{22}{chapter.44}
-\contentsline {section}{\numberline {6.1}Kni\IeC {\v z}nica Mikrotik}{22}{section.45}
-\contentsline {section}{\numberline {6.2}Pou\IeC {\v z}it\IeC {\'e} kni\IeC {\v z}nice pre kni\IeC {\v z}nicu Mikrotik}{22}{section.46}
-\contentsline {section}{\numberline {6.3}Moduly jednotliv\IeC {\'y}ch kni\IeC {\v z}n\IeC {\'\i }c}{22}{section.47}
-\contentsline {chapter}{\numberline {7}Grafick\IeC {\'a} \IeC {\v c}as\IeC {\v t} aplik\IeC {\'a}cie}{23}{chapter.48}
-\contentsline {section}{\numberline {7.1}Python Pyqt}{23}{section.49}
-\contentsline {chapter}{Literat\'{u}ra}{24}{section*.51}
-\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{25}{section*.53}
-\contentsline {chapter}{Zoznam pr\'{i}loh}{26}{section*.55}
+\contentsline {section}{\numberline {4.2}Python 3}{20}{section.37}
+\contentsline {section}{\numberline {4.3}Prostredia na programovanie v jazyku Python}{21}{section.38}
+\contentsline {section}{\numberline {4.4}Pycharm}{21}{section.39}
+\contentsline {chapter}{\numberline {5}Pou\IeC {\v z}it\IeC {\'e} kni\IeC {\v z}nice v diplomovej pr\IeC {\'a}ci}{23}{chapter.42}
+\contentsline {section}{\numberline {5.1}OS.SYSTEM}{23}{section.43}
+\contentsline {section}{\numberline {5.2}Telnetlib}{23}{section.44}
+\contentsline {section}{\numberline {5.3}Pxssh}{23}{section.45}
+\contentsline {section}{\numberline {5.4}TikApy}{23}{section.46}
+\contentsline {chapter}{Literat\'{u}ra}{24}{section*.48}
+\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{25}{section*.50}
+\contentsline {chapter}{Zoznam pr\'{i}loh}{26}{section*.52}
