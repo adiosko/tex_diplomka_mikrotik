@@ -68,6 +68,13 @@ slovak,             % originální jazyk je slovenčina
 \graphicspath{ {obrazky/} }
 \usepackage{alltt}
 \usepackage{amsmath}
+\usepackage{listings}
+\usepackage[most]{tcolorbox}
+\usepackage{inconsolata}
+\newtcblisting[auto counter]{sexylisting}[2][]{sharp corners, 
+    fonttitle=\bfseries, colframe=gray, listing only, 
+    listing options={basicstyle=\ttfamily,language=java}, 
+    title=Listing \thetcbcounter: #2, #1}
 \usepackage[%
 %% Z následujících voleb lze použít pouze jednu
 % left,               % Rovnice a popisky plovoucich objektů budou %zarovnány vlevo

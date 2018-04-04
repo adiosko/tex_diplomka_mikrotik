@@ -29,9 +29,10 @@
 \contentsline {section}{\numberline {4.4}Pycharm}{21}{section.39}
 \contentsline {chapter}{\numberline {5}Pou\IeC {\v z}it\IeC {\'e} kni\IeC {\v z}nice v diplomovej pr\IeC {\'a}ci}{23}{chapter.42}
 \contentsline {section}{\numberline {5.1}OS.SYSTEM}{23}{section.43}
-\contentsline {section}{\numberline {5.2}Telnetlib}{23}{section.44}
-\contentsline {section}{\numberline {5.3}Pxssh}{23}{section.45}
-\contentsline {section}{\numberline {5.4}TikApy}{23}{section.46}
-\contentsline {chapter}{Literat\'{u}ra}{24}{section*.48}
-\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{25}{section*.50}
-\contentsline {chapter}{Zoznam pr\'{i}loh}{26}{section*.52}
+\contentsline {section}{\numberline {5.2}Telnetlib}{24}{section.61}
+\contentsline {section}{\numberline {5.3}Pxssh a pxexpect}{25}{section.80}
+\contentsline {subsection}{\numberline {5.3.1}In\IeC {\v s}tal\IeC {\'a}cia pexpect}{26}{subsection.81}
+\contentsline {section}{\numberline {5.4}TikApy}{27}{section.103}
+\contentsline {chapter}{Literat\'{u}ra}{29}{section*.126}
+\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{31}{section*.128}
+\contentsline {chapter}{Zoznam pr\'{i}loh}{32}{section*.130}

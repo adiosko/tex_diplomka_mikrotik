@@ -1,0 +1,16 @@
+from tikapy import TikapyClient
+from tikapy import TikapySslClient
+class Addresses:
+    def __init__(self,address,username,password):
+        self.client = TikapySSLClient( address, 8729 )
+        self.client.login( username,password)
+    def addAddress(self,address,interface):
+     """
+     Method will add address
+     :param address:
+     :param interface:
+     :return:
+     """
+     ipv4 = self.client.talk(['/ip/address/add',
+     '=address='+address,'=interface='+interface])
+     return ipv4

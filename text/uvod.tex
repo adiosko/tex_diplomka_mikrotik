@@ -221,10 +221,143 @@ Po spustení programu Pycharm sa vytvorí projekt, kde po jeho inicializácii n�
 Jednou z najväčších výhod je generovanie UML diagramov z kódu.
 \chapter{Použité knižnice v diplomovej práci}
 \section{OS.SYSTEM}
+Modul operačný systém (OS) \cite{OS} je zahrnutý v rámci štandardných knižnícv jazyku python. Jeho hlavnou výhodou je použitie príkazov operačného systému na ktorom beží python.Najčastejšie sa volá príkazom os.system('príkaz').
+Použitie modulu aplikujem v rámci diplomovej práce. Používa sa hlavne pri vyhľadávaní a pripájaní sa na mikrotiky pomocou protokolu mactelnet. Jeho výstup môžeme aplikovať na:\begin{itemize}
+\item Štandardný výstup do konzoly
+\item Výstup do osobitného súboru, ktorý sa potom ďalej spracuje
+\end{itemize}
+\\
+V rámci práce som tento modul použil v rámci knižnice loginManager, kde v metódach pre mactelnet vyhľadáva mikrotiky za pomoci protokolu mactelnet a ukladá to do textového súboru mt.output. \\
+Nie je potreba inštalácie modulu  OS, pretože je zahrnutý v rámci štandardných knižníc jazyku python. V kóde vidíme ukážku metódy,ktorá vylistuje zoznam mikrotik zariadení za pomoci funkcie mactelnet a jej návratovou hodnotou je list zoznamu mikrotik zariadení
+\\
+\begin{sexylisting}{Použitie knižnice os.system}
+def listMikrotikDevices(self):
+ deviceList = []
+ loadMacAddress = False
+ os.system("mactelnet -l -t 20 2>&1 > mt.output")
+ with open( "mt.output", "r" ) as file:
+ for line in file:
+  if loadMacAddress:
+   macAddress = line.split( )[1]
+   deviceList.append( macAddress )
+  else:
+   header = line.split( )
+    if len( header ) > 1:
+     if "IP" in header[0] and "MAC-Address"in header[1]:
+      loadMacAddress = True
+ return deviceList
+\end{sexylisting}
 \section{Telnetlib}
-\section{Pxssh}
+Telnetlib \cite{telnetlib} obdobne ako OS knižnica je vstavaná knižnicaprogramovacieho jazyku python. Knižnice \textit{telnetlib} implementuje protokol telnet do pythonu, definovaného referenčným modelom RFC 854. V rámci definície modulu telnetlib sa používa hlavičkový súbor \textit{telnet.h} s odstráneným záhlavým obsahujúcim \textit{TELOPT\_}. \\Modul telnetlib predstavuje jednoduchého telnet klienta pripájajúceho sa na telnet server. Na vytvorenie spojenia je potreba nasledujúcich krokov:
+\begin{itemize}
+\item vytvorenie objektu telnetlib s parametrami \textit{host},čo predstavuje IP adresu telnet serveru, \textit{port}, štandardne 23, nepovinným parametrom je \textit{timeout}. 
+\item Je nutné otvoriť spojenie metódou \textit{open()}
+\item ďalej metódami readuntil() a write() vyžadujeme očakávaný výstup a odoslanie dát na server (príkazov)
+\item potom ukončíme spojenie metódou close()
+\end{itemize}
+Medzi najpoužívanejšie metódy v rámci diplomovej práce sú použité:
+\begin{itemize}
+\item  \textit{Telnet()}
+\item \textit{readuntil()} -očakávanie výstupu serveru
+\item \textit{write()} - zápis príkazov
+\item \textit{sleep()} - doba trvania odoslania príkazu v sekundách
+\item \textit{close()} - ukončenie spojenia
+\end{itemize}
+\\
+V rámci výstupu kódu je ukážka metódy na pripojenie na telnet server pomocou knižnice telnetlib.
+\\
+\begin{sexylisting}{Použitie knižnice telnetlib}
+def loginTelnet(self, password, login="admin"):
+ import telnetlib
+ central = centralControl(login, password)
+ server_list = central.listMikrotikDevices()
+ print(server_list)
+ for server in server_list:
+ try:
+  telnetcon = telnetlib.Telnet( host=server, port=23 )
+  telnetcon.read_until( b"Login: " )
+  telnetcon.write( login.encode( ) + "\n" )
+  telnetcon.read_until( b"Password: " )
+  telnetcon.write( password.encode( ) + b"\n" )
+  time.sleep( 10 )
+  telnetcon.close( )
+ except:
+  print( "Cannot connect to router via telnet" )
+\end{sexylisting} 
+\section{Pxssh a pxexpect}
+Moduly pexpect\cite{pexpect} a jeho submodul pxssh\cite{pxssh} sú knižnice, ktoré slúžia na vyžadovanie určitého výstupu zariadenia, na to slúži knižnica \textit{pexpect} a na pripojenie sa na server z pythonupomocou protokolu SSH slúži knižnica \textit{pxssh}\\
+Pexpect je čistá python modulna kontrolu a riadenie aplikácií. Pozostáva z dvoch krokov:\begin{itemize}
+\item Vyžadovanie výstupu
+\item Odoslanie požadovaného výstupu
+\end{itemize} 
+Pexpect môže byť použitý na interaktívne aplikácie, ktoré používajú protokoly SSH, File transfer protocol (FTP), telnet,atď. Pre implementáciu pexpect nie je potreba importovania knižníc z jazyka C na skompilovanie do jadra. Pracujú na všetkých platformách, a to v podobe štandardného vstupu a výstupu v príkazovom riadku operačného systému, či už serveru ale aj klienta. Pexpect je jednoduchýna implementáciu.\\
+Pxssh predtavuje submodul modulu pexpect. Na zavolanie submodulu pxssh je nutné prednostne zavolať metódu \textit{spawn()}. Po vytvorení spojenia metódou \textit{spawn()} je nutné použiť metódy \textit{login()}, \textit{spawn()}a \textit{logout()}.
+\subsection{Inštalácia pexpect}
+Pexpect je súčasťou sady nástrojov Pypi. Aktuálna verzia modulu pexpect je verzia 4.4. Požiadavky na softvér:\begin{itemize}
+\item Python vo verzii 2.7 alebo 3.3 a vyššie
+\item pre windows je potreba inštalácie modulu POSIX pre jeho funkčnosť
+\end{itemize}
+Na nainštalovanie pexpect \cite{pexpectinstall} na linuxe,sa v príkazovom riadku zadá:
+\begin{sexylisting}{Inštalácia Pexpect}
+pip install pexpect
+pip3 install pexpect
+\end{sexylisting} 
+Pre inštaláciu na operačnom systéme Windows je potreba maťnainštalovaný program python prípadne python3 externe, pretože nie je štandardne zahrnutý v balíčkoch operačného systému.\\
+Modul pexpect zahŕňa modul pxssh a nie je potreba ho potom extra inštalovať.\\
+Nižšie vidíme ukážku použiia kombinácie modulov pexpect a pxssh na pripojenie na mikrotik.
+\begin{sexylisting}{Inštalácia Pexpect}
+def loginSSH(self, server,login, password):
+ from pexpect import pxssh, spawn, expect
+ import getpass
+ try:
+  connect = pxssh.pxssh( )
+  server = '172.16.49.2'
+  login = 'admin'
+  password = 'admin'
+  port = 22
+  connect.login( server, login, password )
+  commands = pxssh.spawn( )
+  time.sleep( 10 )
+ except pxssh.ExceptionPxssh as e:
+  print( "Error" )
+  print( str( e ) )
+\end{sexylisting}
 \section{TikApy}
-
+Na správu mikrotik smerovačov je potreba implentovať do pythonu modul tikapy\cite{tikapy}. Modul tikapy funguje voverzii pythonu 3 a vyššie. Podobne ako bolo spomenuté v kapitole \ref{chap:APIwords}, API pracuje na základe tzv. "slov". Slová predstavujú jednotlivé príkazy na mikrotiku. Tieto príkazy budú popísané v ďalších kapitolách diplomovej práce.\\
+Modul tikapy ako celkovo mikrotik API komunikuje nezabezpečene na porte 8728 a pomocou API-SSL na porte 8729. Na pripojenie sa na mikrotik pomocou modulu tikapy, ktorýmá v sebe zahrnutých mnoho knižníc na komunikáciu s mikrotikom. Medzi najčastejšie patria:\begin{itemize}
+\item vytvorenie objektu TikapyClient prípadne TikapySSLClient
+\item \textit{login()} - prihlásenie sa na mikrotik pomocou API
+\item \textit{talk()} - odosielanie príkazov na mikrotik
+\item  \textit{close()} - ukončenie spojenia
+\end{itemize} 
+Na nainštalovanie tikapy do pythonu je potreba to nainštalovať nasledovne, v príkazovom riadku zadíme príkaz:
+\begin{sexylisting}{Inštalácia tikapy}
+pip install tikapy
+\end{sexylisting}
+V rámci vytvorenia objektu sú dve možnosti:\begin{itemize}
+\item vytvorenie klienta a to buď SSL klienta prípadne štandardného klienta TikapyCLient(adresa,port), pre SSL klienta to je port 8729, pre štandardného klienta port 8728
+\item vytvorenie metódy login(užívateľ,heslo)
+\item odoslanie príkazu metódou \textit{talk(['príkaz'])} 
+\end{itemize}
+Nižsie vidíme príklad metódy spoločne s konštruktorom triedy na pridanie IP adresy s príkladom použitia API slov.
+\begin{sexylisting}{Príklad použitia tikapy}
+from tikapy import TikapyClient
+from tikapy import TikapySslClient
+class Addresses:
+    def __init__(self,address,username,password):
+        self.client = TikapySSLClient( address, 8729 )
+        self.client.login( username,password)
+    def addAddress(self,address,interface):
+     """
+     Method will add address
+     :param address:
+     :param interface:
+     :return:
+     """
+     ipv4 = self.client.talk(['/ip/address/add',
+     '=address='+address,'=interface='+interface])
+     return ipv4
+\end{sexylisting}
 
 
 
