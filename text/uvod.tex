@@ -323,6 +323,7 @@ def loginSSH(self, server,login, password):
   print( str( e ) )
 \end{sexylisting}
 \section{TikApy}
+\label{sec:tikapy}
 Na správu mikrotik smerovačov je potreba implentovať do pythonu modul tikapy\cite{tikapy}. Modul tikapy funguje voverzii pythonu 3 a vyššie. Podobne ako bolo spomenuté v kapitole \ref{chap:APIwords}, API pracuje na základe tzv. "slov". Slová predstavujú jednotlivé príkazy na mikrotiku. Tieto príkazy budú popísané v ďalších kapitolách diplomovej práce.\\
 Modul tikapy ako celkovo mikrotik API komunikuje nezabezpečene na porte 8728 a pomocou API-SSL na porte 8729. Na pripojenie sa na mikrotik pomocou modulu tikapy, ktorýmá v sebe zahrnutých mnoho knižníc na komunikáciu s mikrotikom. Medzi najčastejšie patria:\begin{itemize}
 \item vytvorenie objektu TikapyClient prípadne TikapySSLClient
