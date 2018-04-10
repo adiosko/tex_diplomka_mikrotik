@@ -268,3 +268,81 @@ Ukážka súborovej štruktúry je zobrazená na obrázku \ref{fig:structure}:
 \chapter{Hlavná časť backendu}
 Cieľom kapitoly je detailný popis backend časti aplikácie na správu mikrotikov. V jendotlivých podkapitolách bude popísaná každá zložka projektu diplomkap3.
 \section{Zložka bridge}
+Cieľom tejto zložky je konfigurácia bridgu na mikrotiku. Pozostáva z:\begin{itemize}
+\item Managementu bridgu, portov, bezpečnosti, pripojených zariadení
+\item Pridanie, odtsránenie, zapnutie, vypnutie a komentár položiek
+\item Modifikácia existujúcich položiek
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.57]{../text/bridgeList.png}
+\caption{Zoznam súborov zložky bridge}
+\label{fig:bridge2}
+\end{figure} 
+Niektoré pasáže sa dajú modifikovať pomocou mena položky, niektoré pomocou poradia položky. Zoznam súborov  zložky nájdeme na obrázku \ref{fig:bridge2} a v kapitole\ref{sec:bridgechap}. 
+\subsection{Popis tried zložky}
+\label{sec:bridgechap}
+Zložka obsahuje triedy:
+\begin{itemize}
+\item \textbf{bridgeArp} - trieda nastavuje funkcionalitu ARP v rámci bridgu
+\item \textbf{bridgeFilter} - trieda nastavuje funkcionalitu fitrovania provozu (firewall)
+\item \textbf{bridgeFilterAction} - trieda nastavuje akcie filtrovania provozu
+\item \textbf{bridgeFilterAdvanced} - trieda nastavuje pokročilé filtrovanie
+\item \textbf{bridgeFilterGeneral} - trieda nastavuje genrálne nastavenie filtrovania provozu
+\item \textbf{bridgeHosts} - trieda ošetruje zoznam pripojených zariadení na bridge
+\item \textbf{bridgeMdb} - trieda ošetruje nastavenie portov pripojených zariadení
+\item \textbf{bridgeMSTI} - trieda nastavuje MST modul bridgu
+\item \textbf{bridgeNAT} - trieda oošetruje nastaveneie NAT na bridgi
+\item \textbf{bridgeNATAction} - trieda ošetruje nastavenie akcií NAT
+\item \textbf{bridgeNatAdvanced} - trieda ošetruje pokročilé nastavenie NAT
+\item \textbf{bridgeNatGeneral} - trieda ošetruje genrálne nastavenie NAT na bridgi
+\item \textbf{bridgeNatStp} - trieda ošetruje nastavenie STP
+\item \textbf{bridgePortMstOverride} - trieda ošetruje nastavenie nanútenia MST
+\item \textbf{BridgePorts} - trieda ošetruje nastavenie portov bridgu
+\item \textbf{BridgeSettings} - trieda ošetruje globálne nastavenie  bridgu 
+\item \textbf{BridgeVlan} - trieda ošetruje globálne nastavenie VLAN
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.48]{../text/bridge.png}
+\caption{UML diagram vybraného súboru bridgeArp}
+\label{fig:bridge}
+\end{figure} 
+\subsection{Vybraný analyzovaný súbor}
+Ako ukážku je vybratý súbor bridgeArp s popisom metód v tabuľke \ref{tab:bridge1}.
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy & Vstup & Výstup & Vysvetlenie metódy \\ \hline
+setArpOpcode & \begin{tabular}[c]{@{}c@{}}číslo bridgu,\\ operátor\end{tabular} & slovník & \begin{tabular}[c]{@{}c@{}}Metóda nastaví operačný mód ARP\\ - arp-nak, darp-error,...\end{tabular} \\ \hline
+setArpHadrwareType & \begin{tabular}[c]{@{}c@{}}číslo bridgu,\\ operátor\end{tabular} & slovník & Metóda nastaví typ hardvéru (číslený kód) \\ \hline
+setArpPacketType & \begin{tabular}[c]{@{}c@{}}číslo bridgu,\\ typ paketu(číselné označenie)\end{tabular} & slovník & Metóda nastaví typpaketov \\ \hline
+setArpSrcAddrr & \begin{tabular}[c]{@{}c@{}}číslo bridgu,\\ zdrojová adresa\end{tabular} & slovník & Metóda nastaví zdrojovú adresu bridgu \\ \hline
+setArpSrcmAcAdress & \begin{tabular}[c]{@{}c@{}}číslo bridgu,\\ zdrojová MAC adresa,\\ maska MAC adresy\end{tabular} & slovník & Metóda nastaví zdrojovú MAC adresu bridgu \\ \hline
+setArpDstmAcAdress & \begin{tabular}[c]{@{}c@{}}číslo bridgu,\\ cieľová MAC adresa\end{tabular} & slovník & Metóda nastaví cieľovú MAC adresu bridgu. \\ \hline
+setArpGratitinuous & \begin{tabular}[c]{@{}c@{}}číslo bridgu, \\ typ arp(štandardne none)\end{tabular} & slovník & Metóda nastaví typ ARP \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka zoznamu metód triedy bridgeArp}
+\label{tab:bridge1}
+\end{table}
+\section{Zložka capsman}
+Súčasťou zložky capsman sú súbory na centrálne nastevenie WiFi pomocou mikrotik funkcionality capsman. Capsman dovoľuje nastaviť a centrálne riadiť prístupové body na centrálnom smerovači.
+Zložka pozostáva z:\begin{itemize}
+\item Správu nakonfigurovaných položiek
+\item Pridávanie, odstránenie, zapnutie, vypnutie a koment položiek
+\item Modifikácia nakonfigurovaných položiek
+\item Správa pripojených zariadení
+\end{itemize}
+\\Zoznam súborov nájdeme na obrázku \ref{fig:capsman}. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/capsman.png}
+\caption{Zoznam súborov zložky capsman}
+\label{fig:capsman}
+\end{figure}
+\subsection{Popis tried zložky}
+\subsection{Vybraný analyzovaný súbor}
+
+

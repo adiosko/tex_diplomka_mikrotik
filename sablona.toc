@@ -42,6 +42,11 @@
 \contentsline {section}{\numberline {6.2}Rozbor hlavnej \IeC {\v c}asti backendu}{38}{section.324}
 \contentsline {chapter}{\numberline {7}Hlavn\IeC {\'a} \IeC {\v c}as\IeC {\v t} backendu}{41}{chapter.327}
 \contentsline {section}{\numberline {7.1}Zlo\IeC {\v z}ka bridge}{41}{section.328}
-\contentsline {chapter}{Literat\'{u}ra}{42}{section*.330}
-\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{44}{section*.332}
-\contentsline {chapter}{Zoznam pr\'{i}loh}{45}{section*.334}
+\contentsline {subsection}{\numberline {7.1.1}Popis tried zlo\IeC {\v z}ky}{41}{subsection.331}
+\contentsline {subsection}{\numberline {7.1.2}Vybran\IeC {\'y} analyzovan\IeC {\'y} s\IeC {\'u}bor}{43}{subsection.334}
+\contentsline {section}{\numberline {7.2}Zlo\IeC {\v z}ka capsman}{43}{section.337}
+\contentsline {subsection}{\numberline {7.2.1}Popis tried zlo\IeC {\v z}ky}{44}{subsection.340}
+\contentsline {subsection}{\numberline {7.2.2}Vybran\IeC {\'y} analyzovan\IeC {\'y} s\IeC {\'u}bor}{44}{subsection.341}
+\contentsline {chapter}{Literat\'{u}ra}{45}{section*.343}
+\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{47}{section*.345}
+\contentsline {chapter}{Zoznam pr\'{i}loh}{48}{section*.347}
