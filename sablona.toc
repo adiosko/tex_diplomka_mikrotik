@@ -43,10 +43,16 @@
 \contentsline {chapter}{\numberline {7}Hlavn\IeC {\'a} \IeC {\v c}as\IeC {\v t} backendu}{41}{chapter.327}
 \contentsline {section}{\numberline {7.1}Zlo\IeC {\v z}ka bridge}{41}{section.328}
 \contentsline {subsection}{\numberline {7.1.1}Popis tried zlo\IeC {\v z}ky}{41}{subsection.331}
-\contentsline {subsection}{\numberline {7.1.2}Vybran\IeC {\'y} analyzovan\IeC {\'y} s\IeC {\'u}bor}{43}{subsection.334}
+\contentsline {subsection}{\numberline {7.1.2}Vybran\IeC {\'y} analyzovan\IeC {\'y} s\IeC {\'u}bor}{42}{subsection.332}
 \contentsline {section}{\numberline {7.2}Zlo\IeC {\v z}ka capsman}{43}{section.337}
 \contentsline {subsection}{\numberline {7.2.1}Popis tried zlo\IeC {\v z}ky}{44}{subsection.340}
-\contentsline {subsection}{\numberline {7.2.2}Vybran\IeC {\'y} analyzovan\IeC {\'y} s\IeC {\'u}bor}{44}{subsection.341}
-\contentsline {chapter}{Literat\'{u}ra}{45}{section*.343}
-\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{47}{section*.345}
-\contentsline {chapter}{Zoznam pr\'{i}loh}{48}{section*.347}
+\contentsline {subsection}{\numberline {7.2.2}Vybran\IeC {\'y} analyzovan\IeC {\'y} s\IeC {\'u}bor}{46}{subsection.341}
+\contentsline {section}{\numberline {7.3}Zlo\IeC {\v z}ka Dude}{46}{section.346}
+\contentsline {subsection}{\numberline {7.3.1}Popis tried zlo\IeC {\v z}ky}{47}{subsection.347}
+\contentsline {subsection}{\numberline {7.3.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{47}{subsection.350}
+\contentsline {section}{\numberline {7.4}Zlo\IeC {\v z}ka Interfaces}{48}{section.355}
+\contentsline {subsection}{\numberline {7.4.1}Popis tried zlo\IeC {\v z}ky}{48}{subsection.356}
+\contentsline {subsection}{\numberline {7.4.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{50}{subsection.359}
+\contentsline {chapter}{Literat\'{u}ra}{52}{section*.365}
+\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{54}{section*.367}
+\contentsline {chapter}{Zoznam pr\'{i}loh}{55}{section*.369}

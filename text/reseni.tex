@@ -299,15 +299,8 @@ Zložka obsahuje triedy:
 \item \textbf{bridgeNatStp} - trieda ošetruje nastavenie STP
 \item \textbf{bridgePortMstOverride} - trieda ošetruje nastavenie nanútenia MST
 \item \textbf{BridgePorts} - trieda ošetruje nastavenie portov bridgu
-\item \textbf{BridgeSettings} - trieda ošetruje globálne nastavenie  bridgu 
+\item \textbf{BridgeSettings} - trieda ošetruje globálne nastavenie  bridgu  
 \item \textbf{BridgeVlan} - trieda ošetruje globálne nastavenie VLAN
-\end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.48]{../text/bridge.png}
-\caption{UML diagram vybraného súboru bridgeArp}
-\label{fig:bridge}
-\end{figure} 
 \subsection{Vybraný analyzovaný súbor}
 Ako ukážku je vybratý súbor bridgeArp s popisom metód v tabuľke \ref{tab:bridge1}.
 \begin{table}[H]
@@ -327,7 +320,15 @@ setArpGratitinuous & \begin{tabular}[c]{@{}c@{}}číslo bridgu, \\ typ arp(štan
 \caption{Tabuľka zoznamu metód triedy bridgeArp}
 \label{tab:bridge1}
 \end{table}
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.48]{../text/bridge.png}
+\caption{UML diagram vybraného súboru bridgeArp}
+\label{fig:bridge}
+\end{figure}
 \section{Zložka capsman}
+\label{sec:capsmanchap}
 Súčasťou zložky capsman sú súbory na centrálne nastevenie WiFi pomocou mikrotik funkcionality capsman. Capsman dovoľuje nastaviť a centrálne riadiť prístupové body na centrálnom smerovači.
 Zložka pozostáva z:\begin{itemize}
 \item Správu nakonfigurovaných položiek
@@ -343,6 +344,163 @@ Zložka pozostáva z:\begin{itemize}
 \label{fig:capsman}
 \end{figure}
 \subsection{Popis tried zložky}
+Zložka obsahuje:\begin{itemize}
+\item \textbf{accessList} - trieda ošetruje nastavenie prístupých listov (access listov)
+\item \textbf{accessListSet}- trieda ošetruje nastavenie už vytvorených access listov
+\item \textbf{capAaa} - trieda ošetruje nastavenie autorizačného protokolu  AAA
+\item \textbf{capManager} - trieda ošetruje nastavenie capsman managera
+\item \textbf{capManagerInterfaces}- trieda ošetruje nastavenie capsman rozhraní
+\item \textbf{capsmanRegTable} - trieda obsahuje zoznam zaregistrovaných zariadení  a ich publikácia (provisioning)
+\item \textbf{channel} - trieda ošetruje nastavenie kanálov v rámci WIFi pre centrálne riadenie capsmanom
+\item \textbf{channelSet} - trieda ošetruje nastavenie už existujúcich profilov kanálov 
+\item \textbf{configChannels} - trieda ošetruje nastavenie kanálov v rámci globálnej konfigurácie WiFi v rámci  capsman
+\item \textbf{configDatapath} - trieda očetruje nastavenie dátových ciest (datapath) v rámci globálneho konfiguračného súboru 
+\item \textbf{configRates} - trieda ošetruje nastavenie povolených prenosových rýchlostí 
+\item \textbf{configSecurity} - trieda ošetruje nastavenie bezpečnosti
+\item \textbf{configurations} - trieda ošetruje management, pridávanie, odstránenie, povolenie, zakázanie a komentovanie konfiguračných súborov
+\item \textbf{configWireless} - trieda ošetruje nastavenie Wireless rozhrania
+\item \textbf{dataPath} - trieda ošetruje management dataPath, pridávanie, odstránenie, povolenie ,zakázanie a komentovanie
+\item \textbf{dataPathSet} - trieda ošetruje nastavenie už existujúcich dátových ciest
+\item \textbf{interface} - trieda ošetruje management rozhraní riadených capsmanom
+\item \textbf{interfaceChannelSet} - trieda ošetruje nastavenie kanálov v rámci rozhrania
+\item  \textbf{interfaceDatpathSet} - trieda ošetruje nastavenie dátových ciest v rámci konfigurácie rozhrania capsman
+\item \textbf{interfaceRatesSet} - trieda ošetruje nastavenie povolených rýchlostí v rámci konfigurácie rozhrania capsmanom
+\item  \textbf{interfaceSecuritySet} - trieda ošetruje nastavenie bezpečnosti v rámci capsman rozhrania
+\item \textbf{interfaceSet} - trieda ošetruje základnú konfiguráciu rozhrania 
+\item \textbf{interfaceWirelessSet} - trieda ošetruje nastavenie WiFi profilu
+\item \textbf{provisioningSet} - trieda ošetruje možnosti publikácie konfigurácie - statické, dynamické
+\item \textbf{provisioning} - trieda ošetruje management publikácie konfigurácií
+\item \textbf{radio} -  trieda ošetruje nastavenie publikácie pripojných prístupových bodov
+\item \textbf{rates} - trieda ošetruje management povolených prenosových rýchlostí
+\item \textbf{ratesSet} - trieda ošetruje nastavenie prenosových rýchlostí
+\item \textbf{remoteCap} - trieda ošetruje správu pripojených prístupových bodov - upgrade, publikáciu
+\item \textbf{reselectChannnels} - trieda ošetruje výber druhého kanálu prístupového bodu
+\item \textbf{secuirity} - trieda ošetruje management bezpečnostných profilov - pridávanie, odstránenie, povolenie ,zakázanie a komentovanie
+\item \textbf{securitySet} - trieda ošetruje nastavenie bezpečnosti už existujúcich profilov
+\end{itemize}
 \subsection{Vybraný analyzovaný súbor}
-
-
+Pre analýzu jedného súboru zo zložky je vybratý súbor \textit{configRates.py}. Jeho UML diagram je zobrazený na obrázku \ref{fig:capsman1} a zoznam jeho metód je popísaný v tabuľke \ref{tab:rates}.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/configRates.png}
+\caption{UML diagram triedy configRates}
+\label{fig:capsman1}
+\end{figure}
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy & Vstup & Výstup & Vysvetlenie metódy \\ \hline
+setRates & \begin{tabular}[c]{@{}c@{}}názov profilu,\\ nové meno\end{tabular} & slovník & Metóda premenuje profil \\ \hline
+setBasicRate & \begin{tabular}[c]{@{}c@{}}názov profilu,\\ základné prenosové rýchlosti\end{tabular} & slovník & Metóda nastaví prenosovú rýchlosť. \\ \hline
+setSuppoertRate & \begin{tabular}[c]{@{}c@{}}názov profilu,\\ podporované prenosové rýchlosti\end{tabular} & slovník & Metóda nastaví posporované prenosové rýchlosti. \\ \hline
+setHtBasic & \begin{tabular}[c]{@{}c@{}}názov profilu,\\ základný prenosový kanál(y)\end{tabular} & slovník & Metóda nastaví prenosový kanál. \\ \hline
+setHtSupported & \begin{tabular}[c]{@{}c@{}}názov profilu,\\ podporované prenosové kanály\end{tabular} & slovník & Metóda nastaví podporované prenosové kanály. \\ \hline
+setVhtBasic & \begin{tabular}[c]{@{}c@{}}názov profilu,\\ základné virtuálne kanály\end{tabular} & slovník & Metóda nastaví prenosový virtuálny kanál. \\ \hline
+setVhtSupport & \begin{tabular}[c]{@{}c@{}}názov profilu,\\ podporované prenosové virtuálne kanály\end{tabular} & slovník & Metóda nastaví podporované prenosové kanály. \\ \hline
+\end{tabular}%
+}
+\caption{Popis triedy configRates}
+\label{tab:rates}
+\end{table}
+\section{Zložka Dude}
+Popisovaná zložka je obsah tried,ktoré nastavujú Dude monitorovací nástroj. Plnia rovnakú funkciu ako je to popísané v kapitolách \ref{sec:bridgechap} a \ref{sec:capsmanchap}. Na obrázku \ref{fig:dude} vidíme zoznam súborov. 
+\subsection{Popis tried zložky}
+Súčasťou zložky je nastavenie nástroja Dude na centrálny monitoring mikrotikov. Mnoho Obsahuje súbory:\begin{itemize}
+\item \textbf{Devices} - trieda ošetruje nastavenie monitorovaných zariadení
+\item \textbf{Notifications} - trieda ošetruje nastavenie upozornení
+\item \textbf{Probes} - trieda ošetruje nastavenie tetsovaní spojenia
+\item \textbf{RosInfo} - trieda ošetruje výpis informácií ohľadom hardvéru a operačného systému routerOS
+\item \textbf{Services} - trieda ošetruje nastavenie služieb
+\item \textbf{Settings} - trieda ošetruje zapnutie a vypnutie Dude nástroju
+\item \textbf{ostatné knižnice} - osotatné knižnice API nepodporuje
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/dude.png}
+\caption{Zoznam súborov adresáru Dude}
+\label{fig:dude}
+\end{figure}
+\subsection{Analýza vybraného súboru}
+Vybraný analyzovaný súbor \textit{Devices.py} a jeho analýza je popísaná v rámci jeho UML diagramu na obrázku \ref{fig:dudedev} a zoznam metód je popísaný v tabuľke \ref{tab:devices}.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/DudeDev.png}
+\caption{UML diagram knižnice Devices}
+\label{fig:dudedev}
+\end{figure}
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccc}
+\hline
+\multicolumn{1}{|c|}{Názov metódy} & \multicolumn{1}{c|}{Vstup} & \multicolumn{1}{c|}{Výstup} & \multicolumn{1}{c|}{Vysvetlenie metódy} \\ \hline
+\multicolumn{1}{|c|}{listDudeDevices} & \multicolumn{1}{c|}{žiadny} & \multicolumn{1}{c|}{slovník} & \multicolumn{1}{c|}{Metóda vypíše zoznam Dude zariadení.} \\ \hline
+\multicolumn{1}{|c|}{addDudeDevice} & \multicolumn{1}{c|}{názov zariadenia} & \multicolumn{1}{c|}{slovník} & \multicolumn{1}{c|}{Metóda pridá nové zariadenie} \\ \hline
+\multicolumn{1}{|c|}{setDudeDevice} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}číslo zariadenia,\\ meno zariadenia\end{tabular}} & \multicolumn{1}{c|}{slovník} & \multicolumn{1}{c|}{Metóda premenuje zariadenie.} \\ \hline
+\multicolumn{1}{|c|}{removeDevice} & \multicolumn{1}{c|}{číslo zariadenia} & \multicolumn{1}{c|}{slovník} & \multicolumn{1}{c|}{Metóda zmaže zariadenie.} \\ \hline
+\multicolumn{1}{|c|}{listDeviceTypes} & \multicolumn{1}{c|}{žiadny} & \multicolumn{1}{c|}{slovník} & \multicolumn{1}{c|}{Metóda zobrazí typy zariadení.} \\ \hline
+\multicolumn{1}{|c|}{addDeviceType} & \multicolumn{1}{c|}{názov zariadenia} & \multicolumn{1}{c|}{slovník} & \multicolumn{1}{c|}{Metóda pridá nové zariadenie.} \\ \hline
+\multicolumn{1}{|c|}{removeDeviceType} & \multicolumn{1}{c|}{názov profilu} & \multicolumn{1}{c|}{slovník} & \multicolumn{1}{c|}{Metóda zmaže typ zariadenia.} \\ \hline
+\multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\
+\multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\
+\multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{}
+\end{tabular}%
+}
+\caption{Tabuľka metód triedy Devices}
+\label{tab:devices}
+\end{table}
+\section{Zložka Interfaces}
+Popisovaná zložka je obsah tried,ktoré nastavujú rozhrania na mikrotiku. Medzi tieto rozhrania patria nastavenie VPN, ethernet, WiFi rozhraní a ďalších rozhraní. Plnia rovnakú funkciu ako je to popísané v kapitolách \ref{sec:bridgechap} a \ref{sec:capsmanchap} a ďalších kapitolách. Na obrázku \ref{fig:iface} vidíme zoznam súborov.
+\subsection{Popis tried zložky}
+Súčasťou zložky je nastavenie rohraní na mikrotiku. Patria sem triedy:
+\begin{itemize}
+\item \textbf{bonding} - trieda ošetruje nastavenie bonding rozhrania, rozhrania na nastevnie failover technológie súčasne s ďalšimi dvomi triedami na nastavenie bonding - \textbf{bondingGeneralSet} a \textbf{bondingSet} 
+\item \textbf{detectInternet} - trieda detekuje internet na vybranom rozhraní
+\item \textbf{eoipTunel} - trieda nastaví ethernet over IP rozhranie,spoločne s triedami \textbf{eoipSetGeneral} a \textbf{eoipSetLoopProtection}
+\item \textbf{ethernet} - trieda nastaví ethernet rozhrania spoločne s triedami \textbf{ethernetSet}, \textbf{ethernetSetGeneral} a \textbf{ethernetLoopProtectionSet}
+\item \textbf{greTunnel} - trieda nastaví rozhranie typu tunel GRE spoločne s triedou \textbf{greTunnelSet}
+\item \textbf{interfaceList} - trieda nastaví listrozhraní spoločne s triedou \textbf{interfaceListSet}
+\item \textbf{interfaces} - trieda zobrazí  a nastaví všetky rozhrania na mikrotiku
+\item \textbf{interfaces} - trieda nastaví Long Term Evolution (LTE) rozhranie
+\item \textbf{ipTunnel} - trieda nastaví IP tunel spoločne s triedou \textbf{ipTunnelSet}
+\item \textbf{lists} - trieda nastaví listy rozhraní spoločne s triedou \textbf{listsSet}
+\item \textbf{lteApn} - trieda nastaví prístupové LTE body spoločne s triedou \textbf{lteApnSet}
+\item \textbf{vlan} - trieda nastaví VLAN spoločne s triedami \textbf{vlanLoopProtection} a \textbf{vlanSetGeneral}
+\item \textbf{vrrp} - trieda nastaví zálohovací mechanizmus  Virtual Router Redoundency Protocol (VRRP) spoločne s triedami \textbf{vrrpGeneralSet, vrrpScriptSet a vrrpSetVrrp}
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/interfaces.png}
+\caption{Zoznam súborov adresáru Interfaces}
+\label{fig:iface}
+\end{figure}
+\subsection{Analýza vybraného súboru}
+Vybraný súbor \textit{greTunnelSet.py} a jeho nastavenie je zobrazené v UML diagrame triedy na obrázku \ref{fig:gre} a popis tried je zanalyzovaný v tabuľke \ref{tab:greTunel}.
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/gre.png}
+\caption{UML diagram greTunnelSet triedy}
+\label{fig:gre}
+\end{figure}
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy & Vstup & Výstup & Vysvetlenie metódy \\ \hline
+setName & \begin{tabular}[c]{@{}c@{}}meno tunelu,\\ nové meno tunelu\end{tabular} & slovník & Metóda prmenuj tunel rozhranie. \\ \hline
+setMtu & \begin{tabular}[c]{@{}c@{}}názov tunelu,\\ veľkoť MTU\end{tabular} & slovník & Metóda nastaví MTU rozhrania. \\ \hline
+setLocalAddress & \begin{tabular}[c]{@{}c@{}}názov tunelu,\\ lokálna IP adresa\end{tabular} & slovník & Metóda nastaví lokálnu adresu. \\ \hline
+setRemoteAddress & \begin{tabular}[c]{@{}c@{}}názov tunelu,\\ vzdialená  IP adresa\end{tabular} & slovník & Metóda nastaví vzdialenú IP adresu tunelu. \\ \hline
+setIpsecSecret & \begin{tabular}[c]{@{}c@{}}názov tunelu,\\ heslo\end{tabular} & slovník & Metóda nastaví heslo na tunely. \\ \hline
+setKeepAlive & \begin{tabular}[c]{@{}c@{}}názov tunelu,\\ keepalive interval\end{tabular} & slovník & Metóda nastaví keepalive interval. \\ \hline
+setDscp & \begin{tabular}[c]{@{}c@{}}názov tunelu,\\ hodnota DSCP\end{tabular} & slovník & Metóda nastaví hodnotu DSCP. \\ \hline
+setDontFragment & \begin{tabular}[c]{@{}c@{}}názov tunelu,\\ fragmentovanie\end{tabular} & slovník & Metóda nastaví možnosť fragmentovania (štandardne nie). \\ \hline
+enableClampMssTcp & názov tunelu & slovník & Metóda zapne MSS pole pri fragmentovaní. \\ \hline
+disableClampMss & názov tunelu & slovník & Metóda vypne MSS pole pri fragmentovaní. \\ \hline
+enableAllowFastPath & názov tunelu & slovník & Metóda zapne funkciu tunelu "fast path". \\ \hline
+disableAllowFastPath & názov tunelu & slovník & Metóda vypne funkciu tunelu "fast path". \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka metód triedy greTunnelSet}
+\label{tab:greTunel}
+\end{table}
