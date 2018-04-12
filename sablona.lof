@@ -15,3 +15,12 @@
 \contentsline {figure}{\numberline {7.6}{\ignorespaces UML diagram kni\IeC {\v z}nice Devices}}{48}{figure.352}
 \contentsline {figure}{\numberline {7.7}{\ignorespaces Zoznam s\IeC {\'u}borov adres\IeC {\'a}ru Interfaces}}{50}{figure.358}
 \contentsline {figure}{\numberline {7.8}{\ignorespaces UML diagram greTunnelSet triedy}}{51}{figure.361}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces \IeC {\v S}trukt\IeC {\'u}ra \IeC {\v c}asti zlo\IeC {\v z}ky IPv4}}{55}{figure.367}
+\contentsline {figure}{\numberline {7.10}{\ignorespaces UML diagram triedy FirewallAddressist}}{56}{figure.372}
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky IPv6}}{58}{figure.376}
+\contentsline {figure}{\numberline {7.12}{\ignorespaces UML diagram triedy FirewallMangle}}{59}{figure.381}
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky KVM}}{59}{figure.385}
+\contentsline {figure}{\numberline {7.14}{\ignorespaces UML diagram triedy KVM}}{60}{figure.389}
+\contentsline {figure}{\numberline {7.15}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky log}}{60}{figure.392}
+\contentsline {figure}{\numberline {7.16}{\ignorespaces UML diagram triedy log}}{60}{figure.396}
+\contentsline {figure}{\numberline {7.17}{\ignorespaces UML diagram triedy makeSupport}}{61}{figure.401}

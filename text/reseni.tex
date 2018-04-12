@@ -406,7 +406,7 @@ setVhtSupport & \begin{tabular}[c]{@{}c@{}}názov profilu,\\ podporované prenos
 \section{Zložka Dude}
 Popisovaná zložka je obsah tried,ktoré nastavujú Dude monitorovací nástroj. Plnia rovnakú funkciu ako je to popísané v kapitolách \ref{sec:bridgechap} a \ref{sec:capsmanchap}. Na obrázku \ref{fig:dude} vidíme zoznam súborov. 
 \subsection{Popis tried zložky}
-Súčasťou zložky je nastavenie nástroja Dude na centrálny monitoring mikrotikov. Mnoho Obsahuje súbory:\begin{itemize}
+Súčasťou zložky je nastavenie nástroja Dude na centrálny monitoring mikrotikov. Obsahuje súbory:\begin{itemize}
 \item \textbf{Devices} - trieda ošetruje nastavenie monitorovaných zariadení
 \item \textbf{Notifications} - trieda ošetruje nastavenie upozornení
 \item \textbf{Probes} - trieda ošetruje nastavenie tetsovaní spojenia
@@ -504,3 +504,248 @@ disableAllowFastPath & názov tunelu & slovník & Metóda vypne funkciu tunelu "
 \caption{Tabuľka metód triedy greTunnelSet}
 \label{tab:greTunel}
 \end{table}
+\section{Zložka IPv4}
+Popis  zložky IPv4 spočíva v nastavebí rôznych IPv4 protokolov, bezpečnosti, prekladu adries,statického smerovania a ďalších možností. Triedy spočívajú globálnym popisom totožným k popisov v kapitolách \ref{sec:bridgechap}, \ref{sec:capsmanchap} a ďalších kapitolách.  
+\subsection{Popis tried zložky}
+Zložka obsahuje konguračné súbory nastavenie protokolov, adries, bezpečnosti a ďalších vecí na základe protokolu  IPv4. Zložka obsahuje:
+\begin{itemize}
+\item \textbf{Accounting} - Trieda ošetruje nastavenie zabezpečenia
+\item \textbf{Addresses} - Trieda ošetruje nastavenie IP adries
+\item \textbf{Arp} - Trieda ošetruje nastavenie Address Resolution Protocol (ARP) 
+\item \textbf{DHCPClient} - trieda ošetruje nastavenie DHCP klienta
+\item \textbf{DHCPRelay} - trieda ošetruje nastavenie DHCP relay agenta
+\item \textbf{DHCPServer} - trieda ošetruje nastavenie DHCP serveru
+\item \textbf{DNS} - triedy \textbf{DNScache, DNSGlobal a DNSstatic} ošetrujú nastavenie DNS protokolu global rieši management DNS serverov, cache rieši ošetrenie pridaných záznamov do DNS a static pridáva statické DNS záznamy
+\item \textbf{Firewall} - triedy \textbf{Firewall-GeneralSetup, Action, Addresslist, AdvancedSetup,  Connections, ExtraSetup, Filter, L7Protocols,Mangle, NAT, ServicePorts}\\
+\textbf{GeneralSetup} - trieda nastavuje základné vlastnosti firewallu
+\textbf{Action} - trieda nastavuje akcie - povolenie, zakázanie, logovanie, ... \\
+\textbf{AddressList} - trieda nastavuje address listy, skupiny adries v jednej premennej\\
+\textbf{AdvancedSetup} - trieda ošetruje nastavenie pokročilých vlastností firewallu -napr. povolenie address listu, kde sa bude aplikovať, skupiny rozhraní, ...\\
+\textbf{Conenctions} - trieda ošetruje správu spojení na mikrotiku
+\textbf{ExstraSetup} - trieda ošetruje nastavenie napr. veľkosti hlavičky, sledovania počtu paketov za sekundu, ...\\
+\textbf{Filter} - trieda ošetruje nastavenie a správu filter pravidiel\\
+\textbf{L7Protocols} - trieda ošetruje nastavenie L7 protokolov - napr. torrent,...\\
+\textbf{Mangle} - trieda ošetruje nastavenie Quality of Service (QoS)\\
+\textbf{Network Address Translation (NAT)} - trieda ošetruje  nastavenie prekladu adries\\
+\textbf{ServicePorts} - trieda ošetreuje servisné porty nastavené na firewalle
+\item \textbf{Hotspot} - triedy H\textbf{otspotActive a HotspotCookies, Hotspothost, HotspotBridging, HotspotServer, HotspotServerProfile, HotspotServicePorts, HotspotUserProfile, HotspotUsers, HotspotWalledGarden, HotspotWalledGardenList} ošetrujú nastavenie WiFi hotspotu  a to konkrétne:\\
+\textbf{HotspotActive} - trieda ošetruje nastavenieaktuálne bežiaceho hotspotu\\
+\textbf{HotspotCookies} - trieda ošetruje nastavenie cookies\\
+\textbf{Hotspothost} - - trieda ošetruje nastavenie správy hostov\\
+\textbf{HotspotBridging} - trieda ošetruje nastavenie bridgu na hotspot\\
+\textbf{HotspotServer} - trieda ošetruje nastavenie hotspot serveru\\
+\textbf{HotspotServerProfile} - trieda ošetruje profil (konfiguračný) na nastavenie serveru hotspotu\\
+\textbf{HotspotServicePorts} - trieda ošetruje správu servisných portov hotspotu\\
+\textbf{HotspotUserProfile} - trieda ošetruje správu a nastavenie užívatšských profilov\\
+\textbf{HotspotUsers} - trieda ošetruje správu pripojených užívateľov\\
+\textbf{HotspotWalledGarden} - trieda ošetruje nastavenie bezpečnosti hotspotu\\
+\textbf{HotspotWalledGardenList} - trieda ošetruje nastavenie "bezpečnostných listov"
+\item \textbf{IPsec} - triedy \textbf{IPsecGroups, IPsecInstalledSA, IPsecKeys, IPsecModeCinfigs, IPsecPeers, IPsecPolicies, IPsecProposal, IPsecRemotePeers, IPsecUsers} nastavujú IPsec tunely a pozostávajú:\\
+\textbf{IPsecGroups} - trieda ošetruje nastavenie IPsec skupín adries\\
+\textbf{IPsecInstalledSA} - trieda spravuje nainštalované adresy\\
+\textbf{IPsecKeys} - trieda ošetruje nastavenie kľúčov zabezpečenia\\
+\textbf{IPsecModeCinfigs} - trieda ošetruje nastavenie módov\\
+\textbf{IPsecPeers} - trieda ošetruje nastavenie fázy 1 IPsec\\
+\textbf{IPsecPolicies} - trieda ošetruje nastavenie fázy 2 IPsec\\
+\textbf{IPsecProposal} - trieda ošetruje nastavenie proposal profilov zabezpečenia tunelu\\
+\textbf{IPsecRemotePeers} - trieda ošetruje správu vzdialených pripojených smerovačov do tunelu\\
+\textbf{IPsecUsers} - trieda ošetruje správu užívateľov
+\item \textbf{Neighbors} - triedy \textbf{NeighborDiscovery a Neighborlist} ošetrujú správu pripojených zariadení na mikrotik
+\item \textbf{Packing} - trieda Packing ošetruje nastavenie a správu nainštalovaných balíčkov
+\item \textbf{Pool} - triedy \textbf{Pool a PoolUsedAddresses} slúžia na konfiguráciu adresných rozsahov
+\item \textbf{Route} - správa nastavení smerovania v triedach - \textbf{RouteVrf, RouteGeneral, RouteNexthops a RouteRules}\\
+\textbf{RouteVrf} - správa nastavenia Vrf smerovania\\
+\textbf{RouteGeneral} - správa hlavných smerovacích profilov\\
+\textbf{RouteNexthops} - správa "next hop" adries\\
+\textbf{RouteRules} - správa lokálnych smerovacích pravidiel
+\item \textbf{Services} - trieda nastavuje povolené štandardné porty a služby na mikrotiku
+\item \textbf{Settings} - trieda nastavuje globálne IPv4 nastavenie mikrotiku
+\item \textbf{Samba} - triedy \textbf{Smb, SmbShare a smbUsers} ošetrujú nastavenie Samba protokolu\\
+\textbf{Smb} - trieda globálne rieši nastavenie Samba profilov\\
+\textbf{SmbShare} - trieda ošetruje nastavenie zdieľaných zložiek
+\textbf{SmbUsers} - trieda ošetruje nastavenie Samba užívateľov
+\item \textbf{Snmp} - trieda ošetruje nastavenie správu monitoringu zariadenia v triedach \textbf{Snmp, SnmpCommunity}\\
+\textbf{Snmp} - trieda ošetruje globálne nastavenie SNMP protokolu\\
+\textbf{SnmpCommunity} - trieda ošetruje globálne nastavenie komunnít(community stringov)
+\item \textbf{Socks} - trieda ošetruje nastavenie socketov v triedach \textbf{Socks, SocksAccess a SocksConnections}
+\item \textbf{Tftp} - trieda ošetruje nastavenie TFTP provozu
+\item \textbf{TrafficFlow} - trieda ošetruje nastavenie kontroly trafiky v triedach \textbf{TrafficFlow a TrafficFlowIpFix}
+\item \textbf{Upnp} - trieda ošetruje nastavuje UPNP v triedach \textbf{upnpinterface a upnpsettings} 
+\item \textbf{Webproxy} - ošetrenie nastavenia Webového proxy serveru v súboroch:\\
+\textbf{WebProxyAccess} - trieda ošetruje prístup k proxy serveru\\
+\textbf{WebProxyCache} - trieda ošetruje správu cache pamäti proxy serveru\\
+\textbf{WebProxyCacheContents} - trieda spravuje obsah pamäti\\
+\textbf{WebProxyConenctions} - trieda spravuje pripojené zariadenia na proxy server\\
+\textbf{WebProxyDirect} - trieda spravuje nastavenie priameho pripojenia na proxy server\\
+\textbf{WebProxyLookup} - trieda ošetruje nastavenie lokálnej proxy DNS\\
+\textbf{WebProxyRefreshes} - trieda ošetruje nastavenie obnovovacej frekvencie\\
+\textbf{WebProxySettings} - trieda ošetruje globálne nastavenia proxy serveru
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/IP4.png}
+\caption{Štruktúra časti zložky IPv4}
+\label{fig:ipv4}
+\end{figure}
+\newpage
+\subsection{Analýza vybraného súboru}
+Vybraný súbor \textit{FirewallAddressist.py}popísaný UML diagramom na obrázku \ref{fig:addList} a obsah jeho metód je popísaný v tabuľke \ref{tab:addlist}.
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy & Vstup & Výstup & Vysvetlenie metódy \\ \hline
+listAddressList & žiadny & slovník & Metóda vypíše zoznam address listov. \\ \hline
+addAddressList & meno & slovník & Metóda pridá nový adress list. \\ \hline
+removeList & meno & slovník & Metóda odstráni address list. \\ \hline
+enableList & meno & slovník & Metóda zapne address list. \\ \hline
+disableList & meno & slovník & Metóda vypne address list. \\ \hline
+commentList & \begin{tabular}[c]{@{}c@{}}meno,\\ komentár\end{tabular} & slovník & Metóda nastaví komentár k záznamu v adress liste. \\ \hline
+setName & \begin{tabular}[c]{@{}c@{}}číslo poradia záznamu,\\ meno\end{tabular} & slovník & Metóda zmení address list  v zázname. \\ \hline
+setAddress & \begin{tabular}[c]{@{}c@{}}číslo poradia záznamu,\\ adresa\end{tabular} & slovník & Metóda zmení IP adresu položky. \\ \hline
+setTimeout & \begin{tabular}[c]{@{}c@{}}číslo poradia záznamu,\\ timeout hodnota\end{tabular} & slovník & Metóda nastaví hodnotu timeoutu pre záznam v address liste. \\ \hline
+\end{tabular}%
+}
+\caption{Obsah triedy FirewallAdressist}
+\label{tab:addlist}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/addList.png}
+\caption{UML diagram triedy FirewallAddressist}
+\label{fig:addList}
+\end{figure}
+\section{Zložka IPv6}
+Podtstata zložky IPv6 je nastavenie IPv6 protokolu pozostavújecoho z DHCP pre IPv6, rozsahov adries, smerovania, firewallu a ďalších možností.
+\subsection{Popis tried zložky}
+Zložka obsahuje nastavenie funkcií prokolu IPv6 a zahrňuje:\begin{itemize}
+\item \textbf{DHCPv6} - nastavenie protokolu DHCPv6 v triedach:\\
+\textbf{DHCPRelay} - nastavenie DHCP Relay pre verziu IPv6\\
+\textbf{DHCPServer} - nastavenie DHCP serveru\\
+\textbf{DHCPv6Client} - nastavenie DHCPv6 klienta\\
+\textbf{FirewallActions} - nastavenie firewall akcií - povolenie ,zahodenie, logovanie, ...\\
+\textbf{FirewallAdvancedSetup} - nastavenie pokročilých vlastností firewallu napr. povolenie address listu, ...\\
+\textbf{FirewallConnections} - Správa pripojení v o verzii IPv6\\
+\textbf{FirewallExtraSetup} - Správa pokročilých nastavení napr. počet odoslaných paketov, ...\\
+\textbf{FirewallFilter} -nastavenie filter pravidiel \\
+\textbf{FirewallGeneralSetup} - nastavenie hlavných vlastností pravidlaa správa pravidiel\\
+\textbf{FirewallMangle} - nastavenie QoSpre IPv6\\
+\textbf{FirewallRaw} - nastavenie Raw (obdoba NAT)\\
+\textbf{IPv6 AddressList}  - nastavenie address listu
+\item \textbf{Addresses} - nastavenie a správa IPv6 adriesv triede \textbf{IPv6Addresses}
+\item \textbf{Neighbors} - nastavenie a správa vyhľadávania pripojených zariadení v triede \textbf{IPv6NeighborDiscovery}
+\item \textbf{Route} - správa smerovania v triede \textbf{IPv6Route}
+\item \textbf{Settings} - správa nastavenia IPv6 na globálnej úrovni v triede \textbf{IPv6Settings}
+\item \textbf{Neighbors} - správa pripojených zariadení v triede \textbf{Neighbors}
+\item \textbf{Pool} - správa rozsahov adries v triede \textbf{Pool}
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/IPV6.png}
+\caption{Zoznam súborov zložky IPv6}
+\label{fig:ipv6}
+\end{figure}
+\subsection{Anylýza vybraného súboru}
+Vybraný súbor \textit{FirewallManngle.py} je zobrazené UML diagramom triedy na obrázku \ref{fig:mangle} a obsah metód je zobrazený v tabuľke \ref{tab:ipv6mangle}.
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy & Vstup & Výstup & Vysvetlenie metódy \\ \hline
+listRules & žiadny & slovník & Metóda vypíše zoznam pravidiel. \\ \hline
+addRule & chain & slovník & Metóda pridá nové pravidlo. \\ \hline
+removeRule & poradové číslo pravidla & slovník & Metóda odstráni pravidlo. \\ \hline
+enableRule & poradové číslo pravidla & slovník & Metóda zapne pravidlo. \\ \hline
+disableRule & poradové číslo pravidla & slovník & Metóda vypne pravidlo. \\ \hline
+commentList & \begin{tabular}[c]{@{}c@{}}poradové číslo pravidla,\\ komentár\end{tabular} & slovník & Metóda nastaví komentár k pravidlu. \\ \hline
+resetCounter & poradové číslo pravidla & slovník & Metóda zmaže počítadlo paketov a bytov pre konkrétne pravidlo. \\ \hline
+resetAllCounters & žiadny & slovník & Metóda zmaže počítadlo všetkých pravidiel paketov a bytov. \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka triedy FirewallMangle}
+\label{tab:ipv6mangle}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/fwmangle.png}
+\caption{UML diagram triedy FirewallMangle}
+\label{fig:mangle}
+\end{figure}
+\section{Zložky KVM, log a makeSupportFile}
+Obsahom zložiek je nastavenie virtuálneho mikrotiku, nastavenie logovania a vytvorenie súboru, ktorý je možné odslať na mikrotik podporu na analýzu. Celkový obsah je popísaný nižšie.
+\subsection{Popis triedy zložky KVM}
+Nastavenie virtuálnych mikrotikov alebo "mikrotiku v mikrotiku" je možné pomocou tzv. KVM. Zložka obsahuje triedy:\begin{itemize}
+\item \textbf{KVM} - trieda na nastavenie virtualizácie na mikrotiku pomocou triedy \textbf{KVM}
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/kvm.png}
+\caption{Zoznam súborov zložky KVM}
+\label{fig:mangle}
+\end{figure}
+Popis súboru \textit{KVM.py} je popísaný na obrázku \ref{fig:kvm}  a jeho obsah metód je popísaný v tabuľke \ref{tab:kvm}.
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy & Vstup & Výstup & Vysvetlenie metódy \\ \hline
+listKVM & žiadny & slovník & Metóda zobrazí všetky virtuálne mikrotiky. \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka metód triedy KVM}
+\label{tab:kvm}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/kvmfig.png}
+\caption{UML diagram triedy KVM}
+\label{fig:kvm}
+\end{figure}
+\subsection{Popis triedy zložky log}
+Zložka log popisuje výpis systémového logu. Obsahuje triedy:\begin{itemize}
+\item \textbf{log} - trieda log na výpis systémového logu
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/log.png}
+\caption{Zoznam súborov zložky log}
+\label{fig:log}
+\end{figure}
+Zoznam použitých metód je popísaný UML diagramom triedy na obrázku \ref{fig:logUML} a popísaný v tabuľke \ref{tab:log}.
+\begin{table}[H]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy & Vstup & Výstup & Vysvetlenie metódy \\ \hline
+listLog & žiadny & slovník & Metóda zobrazí systémový log. \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka metód triedy log}
+\label{tab:log}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/logUML.png}
+\caption{UML diagram triedy log}
+\label{fig:logUML}
+\end{figure}
+\subsection{Popis triedymakeSupportFile}
+Zložka log obsahuje súbor makeSupportFile spološne striedou makeSupportFile, vytvorí a odošle súbor na podporu. Trieda makeSupport má na starosti vytvorenie súboru pre podporu na analýzu. Obsah súboru je popísanýv tabuľke \ref{tab:support} a UML diagramom triedy na obrázku \ref{fig:support}.
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy & Vstup & Výstup & Vysvetlenie metódy \\ \hline
+makeSupportFile & názov súboru & slovník & Metóda vytvorí súbor na podporu. \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka metód triedy makeSupport}
+\label{tab:support}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/support.png}
+\caption{UML diagram triedy makeSupport}
+\label{fig:support}
+\end{figure}

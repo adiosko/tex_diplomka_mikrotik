@@ -53,6 +53,16 @@
 \contentsline {section}{\numberline {7.4}Zlo\IeC {\v z}ka Interfaces}{48}{section.355}
 \contentsline {subsection}{\numberline {7.4.1}Popis tried zlo\IeC {\v z}ky}{48}{subsection.356}
 \contentsline {subsection}{\numberline {7.4.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{50}{subsection.359}
-\contentsline {chapter}{Literat\'{u}ra}{52}{section*.365}
-\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{54}{section*.367}
-\contentsline {chapter}{Zoznam pr\'{i}loh}{55}{section*.369}
+\contentsline {section}{\numberline {7.5}Zlo\IeC {\v z}ka IPv4}{51}{section.364}
+\contentsline {subsection}{\numberline {7.5.1}Popis tried zlo\IeC {\v z}ky}{52}{subsection.365}
+\contentsline {subsection}{\numberline {7.5.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{56}{subsection.368}
+\contentsline {section}{\numberline {7.6}Zlo\IeC {\v z}ka IPv6}{56}{section.373}
+\contentsline {subsection}{\numberline {7.6.1}Popis tried zlo\IeC {\v z}ky}{56}{subsection.374}
+\contentsline {subsection}{\numberline {7.6.2}Anyl\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{58}{subsection.377}
+\contentsline {section}{\numberline {7.7}Zlo\IeC {\v z}ky KVM, log a makeSupportFile}{59}{section.382}
+\contentsline {subsection}{\numberline {7.7.1}Popis triedy zlo\IeC {\v z}ky KVM}{59}{subsection.383}
+\contentsline {subsection}{\numberline {7.7.2}Popis triedy zlo\IeC {\v z}ky log}{60}{subsection.390}
+\contentsline {subsection}{\numberline {7.7.3}Popis triedymakeSupportFile}{60}{subsection.397}
+\contentsline {chapter}{Literat\'{u}ra}{62}{section*.403}
+\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{64}{section*.405}
+\contentsline {chapter}{Zoznam pr\'{i}loh}{65}{section*.407}
