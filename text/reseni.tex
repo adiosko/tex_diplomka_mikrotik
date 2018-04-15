@@ -730,7 +730,7 @@ listLog & žiadny & slovník & Metóda zobrazí systémový log. \\ \hline
 \caption{UML diagram triedy log}
 \label{fig:logUML}
 \end{figure}
-\subsection{Popis triedymakeSupportFile}
+\subsection{Popis triedy makeSupportFile}
 Zložka log obsahuje súbor makeSupportFile spološne striedou makeSupportFile, vytvorí a odošle súbor na podporu. Trieda makeSupport má na starosti vytvorenie súboru pre podporu na analýzu. Obsah súboru je popísanýv tabuľke \ref{tab:support} a UML diagramom triedy na obrázku \ref{fig:support}.
 \begin{table}[]
 \resizebox{\textwidth}{!}{%
@@ -748,4 +748,453 @@ makeSupportFile & názov súboru & slovník & Metóda vytvorí súbor na podporu
 \includegraphics[scale=0.6]{../text/support.png}
 \caption{UML diagram triedy makeSupport}
 \label{fig:support}
+\end{figure}
+\section{Zložka Mesh}
+Účelom zložky mesh je nastavenie tzv. mesh siete, mesh portov, správa pripojených zariadneí, atď. Zložka pozostáva obdobne ako je to v kapitolách \ref{tab:bridge1} a ďalších kapitolách.
+\subsection{Popis tried zložky}
+Zložka pozostáva z tried:
+\begin{itemize}
+\item \textbf{MeshFdb} - trieda ošetruje nastavenie a správu FDB prvkov
+\item \textbf{MeshInterfaces} - trieda ošetruje nastavenie a správu mesh rozhraní
+\item \textbf{MeshPorts} - trieda ošetruje nastaveniea správu mesh portov
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/mesh.png}
+\caption{Zoznam súborov zložky mesh}
+\label{fig:mesh}
+\end{figure}
+\subsection{Analýza vybraného súboru}
+Pre vybraný analyzovaný súbor \textit{MeshInterfaces.py}. Anaylýza tried je zobrazená na UML diagrame na obrázku \ref{fig:meshuml} a popis metód je popísaný v tabuľke \ref{tab:meshtab}.
+\begin{table}[]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|l|l|l|}
+\hline
+\multicolumn{1}{|c|}{Názov metódy} & \multicolumn{1}{c|}{Vstup} & \multicolumn{1}{c|}{Výstup} & \multicolumn{1}{c|}{Vysvetlenie metódy} \\ \hline
+\multicolumn{1}{|c|}{listInterfaces} & \multicolumn{1}{c|}{žiadny} & \multicolumn{1}{c|}{slovník} & \multicolumn{1}{c|}{Metóda zobrazí všetky rozhrania.} \\ \hline
+addInterface & meno rozhrania & slovník & Metóda pridá rozhranie. \\ \hline
+removeInterface & meno rozhrania & slovník & Metóda zmaže rozhranie. \\ \hline
+enableInterface & meno rozhrania & slovník & Metóda zapne rozhranie. \\ \hline
+disableInterface & meno rozhrania & slovník & Metóda vypne rozhranie. \\ \hline
+commentInterface & \begin{tabular}[c]{@{}l@{}}meno rozhrania,\\ komentár\end{tabular} & slovník & Metóda okomentuje rozhranie. \\ \hline
+setName & \begin{tabular}[c]{@{}l@{}}meno rozhrania,\\ nové meno rozhrania\end{tabular} & slovník & Metóda premenuje rozhranie. \\ \hline
+setMtu & \begin{tabular}[c]{@{}l@{}}meno rozhrania,\\ MTU\end{tabular} & slovník & Metóda nastaví beľkosť MTU. \\ \hline
+setArp & \begin{tabular}[c]{@{}l@{}}meno rozhrania,\\ Arp mód (enabled štandardne)\end{tabular} & sloívník & Metóda nastaví mód ARP protokolu. \\ \hline
+setArpTimeout & \begin{tabular}[c]{@{}l@{}}men orozhrania,\\ nastavenie hodnoty timeoutu\end{tabular} & slovník & Metóda nastaví timoeout ARP. \\ \hline
+setAdminMac & \begin{tabular}[c]{@{}l@{}}meno rohrania,\\ admin MAC adresa\end{tabular} & slovník & Metóda nastaví admin adresu typu MAC. \\ \hline
+setMeshPortal & meno rozhrania & slovník & Metóda nastaví mash portal. \\ \hline
+setDefaultHopLimit & \begin{tabular}[c]{@{}l@{}}meno rozhrania,\\ limit (štandardne 2)\end{tabular} & slovník & Metóda nastaví maximálny počet "prekokov". \\ \hline
+setPreqWaitingTime & \begin{tabular}[c]{@{}l@{}}meno rozhrania,\\ časová hodnota\end{tabular} & slovník & Metóda nastaví čas čakania záznamu v portále. \\ \hline
+setPreqRetries & \begin{tabular}[c]{@{}l@{}}meno rozhrania,\\ počet opakovaní spojenia\end{tabular} & slovník & Metóda nastaví počet možných opakovaní spojenia. \\ \hline
+setPreqDestinationOnly & meno rozhrania & slovník & Metóda nastaví spôsob spracovania dát v cieli. \\ \hline
+setPreqReplyAndForward & meno rozhrania & slovník & Metóda nastaví spôsob spracovania odozvy prijatej správy. \\ \hline
+setPrepLifetime & \begin{tabular}[c]{@{}l@{}}meno rozhrania,\\ doba života\end{tabular} & slovník & Metóda nastaví hodnotu doby života zariadenia na portály. \\ \hline
+setRannInterval & \begin{tabular}[c]{@{}l@{}}meno rozhrania,\\ interval\end{tabular} & slovník & Metóda nastaví interval doby trvania metódy rann. \\ \hline
+setRannPropagationDelay & \begin{tabular}[c]{@{}l@{}}meno rozhrania,\\ spozdenie\end{tabular} & slovník & Metóda nastaví delay systému rann. \\ \hline
+setRannLifetime & \begin{tabular}[c]{@{}l@{}}meno rozhrania,\\ doba života\end{tabular} & slovník & Metóda nastaví dobu života rann. \\ \hline
+reoptimizePaths & meno rozhrania & slovník & Metóda optimalizuje cestu k cieľu na rozhraní. \\ \hline
+MeshTraceroute & \begin{tabular}[c]{@{}l@{}}rozhranie,\\ adresa,\\ limit (štandardne 255),\\ trvanie (štandardne 10 s)\end{tabular} & slovník & Metóda obsahuje traceroute na mash adresu. \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka metód v triede MeshInterfaces}
+\label{tab:meshtab}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/meshuml.png}
+\caption{UML diagram triedy MeshInterfaces}
+\label{fig:meshuml}
+\end{figure}
+\section{Zložka MPLS}
+Multi Protocol Label Switing (MPLS) a jeho zložka globálne popísaná rovnakým spôsob ako zložka v kapitole \ref{tab:bridge1} a ďalších kapitolách. Triedy obsiahnuté v zložke slúžia na nastavenie MPLS prpeínania v počítačových sietiach.
+\subsection{Popis tried zložky}
+Zložka pozostáva z tried:
+\begin{itemize}
+\item \textbf{MplsAcceptFilter} - trieda ošetruje nastavenie  filktrovanie trafiky
+\item \textbf{MplsAdvertiseFilter\textbf{•}} - trieda ošetruje publikovanie filtrov
+\item \textbf{MplsBgpVpls} - trieda ošetruje nastavenie VPLS v rámci  BGP protokolu
+\item \textbf{MplsCiscoBgpVpls} - trieda ošetruje nastavenie VPLS v rámci technológií firmy CISCO
+\item \textbf{MplsForwardingTable} - trieda ošetruje správu forwarding tabuľky
+\item \textbf{MplsLdpInterface} - trieda ošetruje správu a nastavenie rozhraní MPLS
+\item \textbf{MplsLdpNeighbor} - trieda ošetruje správu a nastavenie susedov
+\item \textbf{MplsLocalBinding} - trieda ošetruje nastavenie  a správu lokálnych pripojení
+\item \textbf{MplsRemoteBimndings} - trieda ošetruje nastavenie a správu vzdialených pripojení
+\item \textbf{MplsSettings} - trieda ošetruje globálne nastavenie MPLS
+\item \textbf{MplsVpls} - trieda ošeteruje správu a nastavenie VPLS
+\item \textbf{TrafficEngInterface} - trieda ošetruje správu a nastavenie rozhrania prijímania trafiky
+\item \textbf{TrafficEngPathState} - trieda ošetruje nastavenie a správu ciest tzv. "path state"
+\item \textbf{TrafficResvState} - trieda ošeetruje nastavenie a správu tarfiky na strane príjímacej strany
+\item \textbf{TrafficEngTraffInterface} - trieda ošetruje nastavenie a správu rozhraní riadenia trafiky
+\item \textbf{TrafficEngTunnelPath} - trieda ošetruje nastavenie  a správu tunelov v rámci kontroly trafiky
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/mplslist.png}
+\caption{Zoznam súborov zložky MPLS}
+\label{fig:mplslist}
+\end{figure}
+\subsection{Anylýza vybraného súboru}
+Vybraný analyzovaný súbor \textit{MplsLocalBinding.py} je popísaný jeho UML diagramom na obrázku \ref{fig:mplslocal} a v tabuľke \ref{tab:locbind}.
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy & Vstup & Výstup & Vysvetlenie metódy \\ \hline
+listBindings & žiadny & slovník & Metóda zobrazí všetky preklady. \\ \hline
+addBinding & žiadny & slovník & Metóda pridá preklad. \\ \hline
+removeBinding & poradové číslo prekladu & slovník & Metóda zmaže záznam prekladu. \\ \hline
+enableBinding & poradové číslo prekladu & slovník & Metóda zapne záznam prekladu. \\ \hline
+disableBinding & ;poradové číslo prekladu & slovník & Metóda vypne záznam prekladu. \\ \hline
+commentBinding & \begin{tabular}[c]{@{}c@{}}poradové číslo prekladu,\\ komentár\end{tabular} & slovník & Metóda okomentuje záznam prekladu. \\ \hline
+setDstAddress & \begin{tabular}[c]{@{}c@{}}poradové číslo prekladu\\ cieľová IP adresa\end{tabular} & slovník & Metóda nastaví cieľovú adresu tunelu. \\ \hline
+setLabel & \begin{tabular}[c]{@{}c@{}}poradové číslo prekladu,\\ označenie tunelu\end{tabular} & slovník & Metóda nastaví označenie tunelu. \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka zoznamu metód triedy MplsLocalBindings}
+\label{tab:locbind}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/mplsuml.png}
+\caption{UML diagram triedy MplsLocalBindings}
+\label{fig:mplslocal}
+\end{figure}
+\section{Zložka PPP}
+Úlohou zložky Point to point Protocol (PPP) je riadenie  a konfigurácia VPN spojenia rôznych typov napr. Open VPN (OVPN), SSTP, L2TP, ... Štruktúra zložky je rovnakaá ako v predchádzajúcich zložkách zahrňujúc kapitolu \ref{sec:bridgechap} a ďalšie kapitoly.
+\subsection{Popis tried zložky}
+Zložka obsahuje triedy:
+\begin{itemize}
+\item \textbf{activeConenctions} - trieda ošetruje  správu pripojených zariadení
+\item \textbf{interfaceL2TP} - triedy\\
+\textbf{interfaceL2TPClient} - nastavenie L2TP klienta\\
+\textbf{interfaceL2TPSetGeneral} - nastavenie  globálnych nastavení klienta\\
+\textbf{interfaceL2TPServer} - nastavenie L2TP servera\\
+\textbf{interfaceL2TPServerBinding} - nastavenie spravovateľného L2TP server rozhrania\\
+\textbf{interfaceL2TPSet} - globálne nastavenie rozhrania L2TP
+\item \textbf{interfaceOvpn} - obsahuje triedy:\\
+\textbf{interfaceOvpnClient} - nastavenie OVPN klienta\\
+\textbf{interfaceOvpnClientSetDialOut} - nastavenie vytáčania OVPN klienta\\
+\textbf{interfaceOvpnClientSetGenral} - globálne nastavenie OVPN klienta\\
+\textbf{interfaceOvpnServer} - nastavenie a správa OVPN serverov\\
+\textbf{interfaceOvpnServerBiding} - nastavenie spravovatľného rozhrania OVPN servera\\
+\textbf{interfaceOvpnServerSet} - nastavenie OVPN servera
+\item interfacePpp - obsahuje triedy:\\
+\textbf{interfacePppClient} - nastavenie PPP klienta\\
+\textbf{interfacePppClientSetGenral} - globálne nastavenie PPP klienta\\
+\textbf{interfacePppClientSetPpp} - nastavenie PPP konfigurácie klienta\\
+\textbf{interfacePppServerDialIn} - nastavenie vytáčania servera\\
+\textbf{interfacePppServerSetGeneral} - nastavenie globálnej konfigurácie ppp server profilu\\
+\textbf{pppAuthenticationAndAccounting} - nastavenie zabezpečenia PPP
+\item interfacePppoe - obsahuje triedy:\\
+\textbf{interfacePppoe} - správa rozhraní PPPoE\\
+\textbf{interfacePppoeClient} - spráca PPPoE klientov\\
+\textbf{interfacePppoeClientSetDialOut} - správa nastavenia vytášania klienta\\
+\textbf{interfacePppoeSet} - nastavenie PPPoE rozhrania\\
+\textbf{interfacePppoeSetGeneral} - nastavenie PPPoE globálneho nastavenia\\
+\textbf{pppoe} - správa pppoe rozhraní\\
+\textbf{pppoeSettings} - globálne nastavenie PPPoE
+\item \textbf{interfacePptp} - obsahuje triedy:\\
+\textbf{interfacePptpServer} - nastavenie Pptp servera\\
+\textbf{interfacePptpServerBinding} - nastavenie spojení PPTP servera\\
+\textbf{interfacePptpServerSetGenral} - hlavné nastavenie PPTP server profilu\\
+\textbf{interfacePptpClientDialOut} - natsavenie vytáčania PPTP klienta\\
+\textbf{interfacePptpClientSetGeneral} - základné  nastaveni PPTP klienta
+\item \textbf{interfaceSstp} - obsahuje triedy:\\
+\textbf{interfaceSstpClient} - nastavenie SSTP klienta\\
+\textbf{interfaceSstpClientGeneralSet} - základné nastavenie SSTP klienta\\
+\textbf{interfaceSstpClietSetDialOut} - nastavenie vytáčania SSTP klienta\\
+\textbf{interfaceSstpServer} - nastavenie SSTP serveru\\
+\textbf{interfaceSstpServerBinding} - nastavenie správy spojení servera SSTP\\
+\textbf{interfaceSstpServerSet} - nastavenie SSTP servera
+\item \textbf{l2tpSecrets} - nastavenie hesiel L2TP profilov
+\item \textbf{profile} - obsahuje triedy:\\
+\textbf{profileGeneral} - hlavné nastavenie užívateľov\\
+\textbf{profileLimits} - natsavenie obmedzenia užívateľa\\
+\textbf{profileProtocols} - nastavenie protokolov užívateľa\\
+\textbf{profileQueue} - nastavenie fronty užívateľa\\
+\textbf{profile} - správa užívateľov\\
+\textbf{profileScripts} - nastavenie skriptov pri prihlásení a odhlásení užívateľa
+\item \textbf{secrets} - trieda obsahuje:\\
+\textbf{secrets} - správa hesiel\\
+\textbf{secrtesSettings} - nastavenie hesiel
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/ppplist.png}
+\caption{Zoznam tried v zložke PPP}
+\label{fig:pppset}
+\end{figure}
+\subsection{Analyzovaný súbor}
+Analyzovaný súbor \textit{interfacePppoeSetGeneral.py} je popísaný na UML diagrame \ref{fig:pppset} a v v tabuľke metód \ref{tab:ppptab}.
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy & Vstup & Výstup & Vysvetlenie metódy \\ \hline
+setName & \begin{tabular}[c]{@{}c@{}}meno rozhrania,\\ nové meno rozhrania\end{tabular} & slovník & Metóda premenuje rozhranie. \\ \hline
+setMaxMtu & \begin{tabular}[c]{@{}c@{}}men rozhrania,\\ nastavenie MTU\end{tabular} & slovník & Metóda nastaví veľkosť MTU. \\ \hline
+setMaxMru & \begin{tabular}[c]{@{}c@{}}meno rozhrania,\\ veľkosťMRU\end{tabular} & slovník & Metóda nastaví veľkosť MRU. \\ \hline
+setMrru & \begin{tabular}[c]{@{}c@{}}meno rozhrania,\\ veľkosťMRRU\end{tabular} & slovník & Metóda nastaví veľkosť MRRU. \\ \hline
+setInterface & \begin{tabular}[c]{@{}c@{}}meno rozhrania,\\ rozhranie\end{tabular} & slovník & Metóda nastaví rozhranie na profil. \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka popisu metód triedy interfacePppoeGeneralSet}
+\label{tab:ppptab}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/ppptab.png}
+\caption{UML diagram triedy interfacePppoeGeneralSet}
+\label{fig:pppset}
+\end{figure}
+\section{Zložka Queues}
+Zložka popisuje nastavenie sirťovej fronty rôznych typov. Popis celkovej zložky je rovnaký ako v kapitole \ref{tab:bridge1} a ďalších kapitolách.
+\subsection{Zoznam tried zložky}
+Zložka obsahuje triedy:
+\begin{itemize}
+\item \textbf{QueueInterfaces} - nastavenie rozhraní
+\item \textbf{QueueTree} - nastavenie stromu fronty
+\item \textbf{QueueTypes} - nastavenie existujúcich a nových typov fronty
+\item \textbf{SimpleQueues} - nastavenie jednoduchých front
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/queueList.png}
+\caption{Zoznam súborov zložky Queues}
+\label{fig:queuelist}
+\end{figure}
+\subsection{Analáza vybraného súboru}
+Vybraný analyzovaný súbor \textit{QueueTree.py} je popísaný v tabuľke \ref{tab:tree} a na UML diagrame \ref{fig:queueTree}.
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy & Vstup & Výstup & Vysvetlenie metódy \\ \hline
+listQueueTrees & žiadny & slovník & Metóda vypíše zoznam stromov. \\ \hline
+addQueueTree & rodič & slovník & Metóda pridá nový strom. \\ \hline
+removeQueueTree & menostromu & slovník & Metóda odtsráni strom. \\ \hline
+disableQueueTree & meno stromu & slovník & Metóda vypne strom. \\ \hline
+enableQueueTree & meno stromu & slovník & Metóda zapne strom. \\ \hline
+commentQueueTree & \begin{tabular}[c]{@{}c@{}}meno stromu,\\ komentár\end{tabular} & slovník & Metóda okomentuje strom. \\ \hline
+resetCounters & meno stromu & slovník & Metóda zmaže štatistiky stromu. \\ \hline
+resetAllCounters & žiadny & slovník & Metóda zmaže všetky štatistiky. \\ \hline
+setQueueName & \begin{tabular}[c]{@{}c@{}}meno,\\ nové meno\end{tabular} & slovník & Metóda premenuje strom. \\ \hline
+setQueueParent & \begin{tabular}[c]{@{}c@{}}meno stromu,\\ rodič\end{tabular} & slovník & Metóda nastaví rodiča stromu. \\ \hline
+setQueuePacketMark & \begin{tabular}[c]{@{}c@{}}meno stromu,\\ označenie paketu\end{tabular} & slovník & Metóda nastaví označenie paketov prichádzajúcich a odchádzajúcich zo stromu. \\ \hline
+setQueueType & \begin{tabular}[c]{@{}c@{}}meno stromu,\\ typ fronty\end{tabular} & slovník & Metóda nastaví typ fronty. \\ \hline
+setQueuePriority & \begin{tabular}[c]{@{}c@{}}meno stromu,\\ priorita\end{tabular} & slovník & Metóda nastaví prioritu fronty. \\ \hline
+setQueueBuckezSize & \begin{tabular}[c]{@{}c@{}}meno stromu,\\ veľkosť úložiska fronty\end{tabular} & slovník & Metóda nastaví veľkosť úložiska na fronty. \\ \hline
+setLimitAt & \begin{tabular}[c]{@{}c@{}}meno stromu,\\ limit\end{tabular} & slovník & Metóda nastaví monimálny limit na frontu. \\ \hline
+setMaxLimit & \begin{tabular}[c]{@{}c@{}}meno stromu,\\ maximálny limit\end{tabular} & slovník & Metóda nastaví maximálny limit fronty. \\ \hline
+setBurstTime & \begin{tabular}[c]{@{}c@{}}meno sstromu,\\ hodnota zhluku\end{tabular} & slovník & Metóda nastaví čas zhluku fronty. \\ \hline
+setBurstThreshold & \begin{tabular}[c]{@{}c@{}}meno stromu,\\ prahová hranice\end{tabular} & slovník & Metóda nastaví prahovú hranicu zhluku front. \\ \hline
+setBurstLimit & \begin{tabular}[c]{@{}c@{}}meno stromu,\\ limit zhluku\end{tabular} & slovník & Metóda nastaví limit zhluku. \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka zoznamu metód triedy QueuTree}
+\label{tab:tree}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/QueueTree.png}
+\caption{UML diagram triedy QueueTree}
+\label{fig:queueTree}
+\end{figure}
+\section{Zložka Radius}
+Zložka Radius pozostáva z nastavenia Radiusu na mikrotiku. Radius pozostáva so súborov tried:\begin{itemize}
+\item \textbf{Radius} - nastavenie a správa radiusu
+\end{itemize}
+V tabuľke \ref{tab:radius} a ma UML diagrame \ref{fig:radius} vidíme popis triedy Radius.
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy & Vstup & Výstup & Vysvetlenie metódy \\ \hline
+listRadius & žiadny & slovník & Metóda vypíše zoznam RADIUS serverov. \\ \hline
+addRadius & adresa & slovník & Metóda pridá nový RADIUS server. \\ \hline
+removeRadius & poradové číslo serveru & slovník & Metóda odtsráni RADIUS server. \\ \hline
+disableRadius & poradové číslo serveru & slovník & Metóda vypne RADIUS server. \\ \hline
+enableRadius & poradové číslo serveru & slovník & Metóda zapne RADIUS server. \\ \hline
+commentRadius & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ komentár\end{tabular} & slovník & Metóda okomentuje RADIUS server. \\ \hline
+printIncommingSettings & žiadny & slovník & Metóda vypíše štatistiky RADIUS serveru. \\ \hline
+enableIncomming & žiadny & slovník & Metóda povolí prichádzajúcu trafiku. \\ \hline
+setIncommingPort & port & slovník & Metóda nastaví port na prichádzajúcu trafiku. \\ \hline
+disableIncommingTraffic & žaidny & slovník & Metóda vypne prichádzajúcu trafiku. \\ \hline
+setQueuePacketMark & \begin{tabular}[c]{@{}c@{}}meno stromu,\\ označenie paketu\end{tabular} & slovník & Metóda nastaví označenie paketov prichádzajúcich a odchádzajúcich zo stromu. \\ \hline
+resetIncommingCounters & žiadny & slovník & Metóda resetuje štatisktiky spojenia. \\ \hline
+resetAllRadiusCounters & žiadny & slovník & Metóda resetuje všetky štatistiky spojenia. \\ \hline
+monitorRadius & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ interval\end{tabular} & slovník & Metóda nastaví monitoring RADIUS serveru. \\ \hline
+setRadiusService & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ meno služby\end{tabular} & slovník & Metóda nastaví službu RADIUS. \\ \hline
+setCalledId & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ užívateľ\end{tabular} & slovník & Metóda nastaví vytáčaného užívateľa. \\ \hline
+setDomain & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ doména\end{tabular} & slovník & Metóda nastaví doménu. \\ \hline
+setAddress & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ adresa serveru\end{tabular} & slovník & Metóda nastaví adresu serveru. \\ \hline
+setSecret & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ heslo\end{tabular} & slovník & Metóda nastaví heslo na server. \\ \hline
+setAuthenticationPort & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ port\end{tabular} & slovník & Metóda nastaví autentikačný port. \\ \hline
+setAccountingPort & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ port\end{tabular} & slovník & Metóda nastaví port protokolu AAA. \\ \hline
+setTimeout & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ timeout\end{tabular} & slovník & Metóda nastaví timeout serveru. \\ \hline
+enableAccountingBackup & poradové číslo serveru & slovník & Metóda zapne zálohovanie. \\ \hline
+disableAccountingBackup & poradové číslo serveru & slovník & Metóda vypne zálohovanie. \\ \hline
+setRealm & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ doména\end{tabular} & slovník & Metóda nastaví sadu domén. \\ \hline
+setSourceAddress & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ zdrojová adresa\end{tabular} & slovník & Metóda nastaví zdrojovú adresu serveru. \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka metód triedy Radius}
+\label{tab:radius}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/radiusPng.png}
+\caption{UML diagram triedy Radius}
+\label{fig:radius}
+\end{figure}
+\section{Zložka routing}
+Zložka popisuje možnosti dynamického smerovania na mikrotiku. ROvnako ako kapitoly predtým, jej štruktúra je postavená na základe rovnakom ako je popísaný v kapitolách \ref{sec:bridgechap} a ostatných kapitolách.
+\subsection{Zoznam tried zložiek}
+Zložka pozostáva z tried:
+\begin{itemize}
+\item \textbf{BFD} - trieda ošetruje nastavenie BFD
+\item \textbf{BGP} - triedy ošetrujú nastavenie BGP protokolu
+\item \textbf{Filter} - triedy ošetrujú nastavenie BGP bezpečnosti
+\item \textbf{IgmProxy} - triedy ošetrujú nastavenie IGMP proxy
+\item \textbf{MME} - trieda ošetruje nastavenie MME
+\item \textbf{OSPF} - triedy ošetrujú nastavenie OSPF
+\item \textbf{PIM} - trieda ošetruje nastavenie PIM
+\item \textbf{RIP} - trieda ošetruje nastavenie protokolu RIP
+\item \textbf{RoutingFilter} - triedy ošetrujú nastavenie fiultrácie komunikácie protokolu BGP
+\item \textbf{RP} - trieda ošetruje nastavenie Randevou point 
+\item \textbf{VPNRoutes} - trieda ošetruje správu ciest VPN tunelu
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.5]{../text/routing.png}
+\caption{Zoznam súborov zložky Routing}
+\label{fig:routing}
+\end{figure}
+\subsection{Analýza vybraného súboru}
+Analýzou vybraného súboru \textit{RipNetworks.py} v UMl diagrame \ref{fig:rip}  a v tabuľke \ref{tab:rip}.
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy   & Vstup                                                                & Výstup  & Vysvetlenie metódy              \\ \hline
+listNetwork    & žiadny                                                               & slovník & Metóda vypíše zoznam sietí.     \\ \hline
+addNetwork     & sieť                                                                 & slovník & Metóda pridá novú sieť.         \\ \hline
+removeNetwork  & poradové číslo siete                                                 & slovník & Metóda odtsráni sieť.           \\ \hline
+disableNetwork & poradové číslosiete                                                  & slovník & Metóda vypne sieť.              \\ \hline
+enableNetwork  & poradové číslo siete                                                 & slovník & Metóda zapne sieť.              \\ \hline
+setNetwork     & \begin{tabular}[c]{@{}c@{}}poradové číslo siete,\\ sieť\end{tabular} & slovník & Metóda nastaví existujúcu sieť. \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka popisu metód triedy RipNetworks}
+\label{tab:rip}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/RipNetworks.png}
+\caption{UML diagram súboru RipNetworks}
+\label{fig:rip}
+\end{figure}
+\section{Zložka switch}
+Cieľom zložkyswitch je nastavenie virtuálneho switchu na mikrotiku. Jeho infraštruktúra je identická s kapitolami \ref{sec:bridgechap} a ostatnými kapitolami. 
+\subsection{Zoznam tried zložky}
+Obsahom zložky sú triedy:
+\begin{itemize}
+\item \textbf{SwitchGeneral} -hlavné nastavenie prepínača
+\item \textbf{SwitchHost} - nastavenie hostov
+\item \textbf{SwitchPorts} -nastavenie portov prepínača
+\item \textbf{SwitchRule} - nastavenie pravidiel filtrovania trafiky na prepínač
+\item \textbf{SwitchVlan} - nastavenie virtuálnych LAN sietí
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{../text/switch.png}
+\caption{Zoznamsúborov zložky switch}
+\label{fig:switch}
+\end{figure}
+\subsection{Analýza vybraného súboru}
+Analýza vybraného súboru \textit{switchPorts.py} jeodzrkadlená v UML diagrame \ref{fig:switchPort} a v tabuľke metód \ref{tab:switchPort}.
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy  & Vstup                                                                 & Výstup  & Vysvetlenie metódy                   \\ \hline
+listPorts     & žiadny                                                                & slovník & Metóda vypíše zoznam portov switchu. \\ \hline
+setVlanMode   & \begin{tabular}[c]{@{}c@{}}meno switchu,\\ vlan mód\end{tabular}      & slovník & Metóda nastaví VLAN mód portu.       \\ \hline
+setVlanHeader & \begin{tabular}[c]{@{}c@{}}meno switchu,\\ hlavička VLAN\end{tabular} & slovník & Metóda nastaví hlavičku VLAN.        \\ \hline
+setVlanId     & \begin{tabular}[c]{@{}c@{}}meno switchu,\\ VLAN ID\end{tabular}       & slovník & Metóda nastaví číslo VLAN.           \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka zoznamu metód triedy switchPort}
+\label{tab:switchPort}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{../text/SwitchPorts.png}
+\caption{UML digram triedy switchPorts}
+\label{fig:switchPort}
+\end{figure}
+\section{Zložka System}
+Účelom zložky system je nastavenie systémových nástrojov prvku mikrotik. Jej infraštruktúra je totžná k infraštruktúre kapitoly \ref{sec:bridgechap} a ďalších kapitol.
+\subsection{Zoznam súborov zložky}
+Zložka pozostáva zo súborov:
+\begin{itemize}
+\item \textbf{AutoUpdate} - správa automatických aktualizácií
+\item \textbf{Certificates} - správa systémových certifikátov
+\item \textbf{Console} - nastavenie konzolového portu
+\item \textbf{Files} - správa súborvej infraštruktúry
+\item \textbf{Health} - správa kontroly stavu hardvéru mikrotiku
+\item \textbf{History} - správa histórie zmien na mikrotiku
+\item \textbf{Identity} - správa nastavenia hostname
+\item \textbf{Interfaces} -správa nastavenia konzolových rozhraní
+\item \textbf{LCD} -správa nastavenia kontroly LCD displeja
+\item \textbf{Licence} - správa licencie na mikrotiku
+\item \textbf{Logging} -správa logovania 
+\item \textbf{NTPClient} - správa klienta protokolu NTP
+\item \textbf{NTPServer} - správa serveru protokolu NTP
+\item \textbf{PackageManager} - správa aktualizácií mikrotiku a systémových balíkov
+\item \textbf{ResetConfig} - správa resetovania konfigurácie mikrotiku
+\item \textbf{RouterBoard} - správa získavania informácií o Routerboarde
+\item \textbf{RouterOS} - správa informácií o operačnom systéme
+\item \textbf{Scheduller} - správa plánovaných úloh
+\item \textbf{Scripts} - správa systémových skriptov
+\item \textbf{Services} - správa systémových služieb
+\item \textbf{SpecialLogin} -správa šopeciálneho admin prihlasovacieho účtu
+\item \textbf{SystemClock} - správa systémového času
+\item \textbf{SystemMaintenance} - správa reštartu a vypnutia mikrotiku
+\item \textbf{UPS} -správa konektoru na mikrotiku (AC adaptéru)
+\item \textbf{user} -triedy nastavujú užívateľov, skupiny,...
+\item \textbf{WatchDog} - sprva kontroly prvkov na mikrotiku
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/system.png}
+\caption{Zoznam súborov triedy system}
+\label{fig:system}
+\end{figure}
+\subsection{Analýza vybraného súboru}
+Vybraný analyzovaný súbor \textit{SystemMaintenance.py} je popísaný v UML diagrame \ref{fig:systemMaintenance} a v tabuľke \ref{tab:maintenance}.
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy   & Vstup  & Výstup  & Vysvetlenie metódy        \\ \hline
+shutdownRouter & žiadny & slovník & Metóda vypne router       \\ \hline
+rebootRouter   & žiadny & slovník & Metóda reštartuje router. \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka metód triedy SystemMaintenance}
+\label{tab:maintenance}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/SystemMaintenance.png}
+\caption{UML diagram triedy SystemMaintenance}
+\label{fig:systemMaintenance}
 \end{figure}

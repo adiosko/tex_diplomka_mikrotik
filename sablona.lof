@@ -1,26 +1,41 @@
 \select@language {slovak}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Winbox z\IeC {\'a}kladn\IeC {\'e} prihlasovacie rozhranie}}{16}{figure.23}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Webfig z\IeC {\'a}kladn\IeC {\'e} prihlasovacie rozhranie}}{17}{figure.26}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces V\IeC {\'y}stup pr\IeC {\'\i }kazu mactelnet}}{17}{figure.29}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Prihl\IeC {\'a}senie na mikrotik pomocou pr\IeC {\'\i }kazu SSH}}{19}{figure.34}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Rozhranie IDE Pycharm Professional Edition}}{22}{figure.41}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Zoznam z\IeC {\'a}kladn\IeC {\'y}ch konfigura\IeC {\v c}n\IeC {\'y}ch s\IeC {\'u}borov}}{29}{figure.128}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka kon\IeC {\v s}truktorov projektu}}{33}{figure.190}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces \IeC {\v S}trukt\IeC {\'u}ra projektu konzolovej \IeC {\v c}asti projektu}}{40}{figure.326}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky bridge}}{41}{figure.330}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces UML diagram vybran\IeC {\'e}ho s\IeC {\'u}boru bridgeArp}}{43}{figure.336}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky capsman}}{44}{figure.339}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces UML diagram triedy configRates}}{46}{figure.343}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Zoznam s\IeC {\'u}borov adres\IeC {\'a}ru Dude}}{47}{figure.349}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces UML diagram kni\IeC {\v z}nice Devices}}{48}{figure.352}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Zoznam s\IeC {\'u}borov adres\IeC {\'a}ru Interfaces}}{50}{figure.358}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces UML diagram greTunnelSet triedy}}{51}{figure.361}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces \IeC {\v S}trukt\IeC {\'u}ra \IeC {\v c}asti zlo\IeC {\v z}ky IPv4}}{55}{figure.367}
-\contentsline {figure}{\numberline {7.10}{\ignorespaces UML diagram triedy FirewallAddressist}}{56}{figure.372}
-\contentsline {figure}{\numberline {7.11}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky IPv6}}{58}{figure.376}
-\contentsline {figure}{\numberline {7.12}{\ignorespaces UML diagram triedy FirewallMangle}}{59}{figure.381}
-\contentsline {figure}{\numberline {7.13}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky KVM}}{59}{figure.385}
-\contentsline {figure}{\numberline {7.14}{\ignorespaces UML diagram triedy KVM}}{60}{figure.389}
-\contentsline {figure}{\numberline {7.15}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky log}}{60}{figure.392}
-\contentsline {figure}{\numberline {7.16}{\ignorespaces UML diagram triedy log}}{60}{figure.396}
-\contentsline {figure}{\numberline {7.17}{\ignorespaces UML diagram triedy makeSupport}}{61}{figure.401}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Winbox z\IeC {\'a}kladn\IeC {\'e} prihlasovacie rozhranie}}{18}{figure.23}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Webfig z\IeC {\'a}kladn\IeC {\'e} prihlasovacie rozhranie}}{19}{figure.26}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces V\IeC {\'y}stup pr\IeC {\'\i }kazu mactelnet}}{19}{figure.29}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Prihl\IeC {\'a}senie na mikrotik pomocou pr\IeC {\'\i }kazu SSH}}{21}{figure.34}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Rozhranie IDE Pycharm Professional Edition}}{24}{figure.41}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Zoznam z\IeC {\'a}kladn\IeC {\'y}ch konfigura\IeC {\v c}n\IeC {\'y}ch s\IeC {\'u}borov}}{31}{figure.128}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Uk\IeC {\'a}\IeC {\v z}ka kon\IeC {\v s}truktorov projektu}}{35}{figure.190}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces \IeC {\v S}trukt\IeC {\'u}ra projektu konzolovej \IeC {\v c}asti projektu}}{42}{figure.326}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky bridge}}{43}{figure.330}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces UML diagram vybran\IeC {\'e}ho s\IeC {\'u}boru bridgeArp}}{45}{figure.336}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky capsman}}{46}{figure.339}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces UML diagram triedy configRates}}{48}{figure.343}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Zoznam s\IeC {\'u}borov adres\IeC {\'a}ru Dude}}{49}{figure.349}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces UML diagram kni\IeC {\v z}nice Devices}}{50}{figure.352}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Zoznam s\IeC {\'u}borov adres\IeC {\'a}ru Interfaces}}{52}{figure.358}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces UML diagram greTunnelSet triedy}}{53}{figure.361}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces \IeC {\v S}trukt\IeC {\'u}ra \IeC {\v c}asti zlo\IeC {\v z}ky IPv4}}{57}{figure.367}
+\contentsline {figure}{\numberline {7.10}{\ignorespaces UML diagram triedy FirewallAddressist}}{58}{figure.372}
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky IPv6}}{60}{figure.376}
+\contentsline {figure}{\numberline {7.12}{\ignorespaces UML diagram triedy FirewallMangle}}{61}{figure.381}
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky KVM}}{61}{figure.385}
+\contentsline {figure}{\numberline {7.14}{\ignorespaces UML diagram triedy KVM}}{62}{figure.389}
+\contentsline {figure}{\numberline {7.15}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky log}}{62}{figure.392}
+\contentsline {figure}{\numberline {7.16}{\ignorespaces UML diagram triedy log}}{62}{figure.396}
+\contentsline {figure}{\numberline {7.17}{\ignorespaces UML diagram triedy makeSupport}}{63}{figure.401}
+\contentsline {figure}{\numberline {7.18}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky mesh}}{63}{figure.405}
+\contentsline {figure}{\numberline {7.19}{\ignorespaces UML diagram triedy MeshInterfaces}}{65}{figure.410}
+\contentsline {figure}{\numberline {7.20}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky MPLS}}{66}{figure.414}
+\contentsline {figure}{\numberline {7.21}{\ignorespaces UML diagram triedy MplsLocalBindings}}{67}{figure.419}
+\contentsline {figure}{\numberline {7.22}{\ignorespaces Zoznam tried v zlo\IeC {\v z}ke PPP}}{70}{figure.423}
+\contentsline {figure}{\numberline {7.23}{\ignorespaces UML diagram triedy interfacePppoeGeneralSet}}{71}{figure.428}
+\contentsline {figure}{\numberline {7.24}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky Queues}}{72}{figure.432}
+\contentsline {figure}{\numberline {7.25}{\ignorespaces UML diagram triedy QueueTree}}{73}{figure.437}
+\contentsline {figure}{\numberline {7.26}{\ignorespaces UML diagram triedy Radius}}{75}{figure.442}
+\contentsline {figure}{\numberline {7.27}{\ignorespaces Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky Routing}}{76}{figure.446}
+\contentsline {figure}{\numberline {7.28}{\ignorespaces UML diagram s\IeC {\'u}boru RipNetworks}}{77}{figure.451}
+\contentsline {figure}{\numberline {7.29}{\ignorespaces Zoznams\IeC {\'u}borov zlo\IeC {\v z}ky switch}}{78}{figure.455}
+\contentsline {figure}{\numberline {7.30}{\ignorespaces UML digram triedy switchPorts}}{78}{figure.460}
+\contentsline {figure}{\numberline {7.31}{\ignorespaces Zoznam s\IeC {\'u}borov triedy system}}{80}{figure.464}
+\contentsline {figure}{\numberline {7.32}{\ignorespaces UML diagram triedy SystemMaintenance}}{81}{figure.469}
