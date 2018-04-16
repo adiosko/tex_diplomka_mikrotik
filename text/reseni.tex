@@ -1198,3 +1198,123 @@ rebootRouter   & žiadny & slovník & Metóda reštartuje router. \\ \hline
 \caption{UML diagram triedy SystemMaintenance}
 \label{fig:systemMaintenance}
 \end{figure}
+\section{Zložka tools}
+Cieľom zložky tools je konfigurácia nástrojov prvku mikrotik. Jej infraštruktúra je identická infraštruktúre v zložke \ref{sec:capsmanchap} a ďalších kapitolách.
+\subsection{Zoznam súborov zložky}
+Zložka obsahuje:
+\begin{itemize}
+\item \textbf{BwServer} - trieda ošetruje nastavenieserveru správy šírky pásma
+\item \textbf{BwTest} - trieda ošetruje testovanie šírky pásma
+\item \textbf{Email} - trieda ošetruje odosielanie emailov z mikrotiku
+\item \textbf{FloodPing} - trieda ošetruje tzv. "floodping" alebo "ping of death"
+\item \textbf{Graphing} - trieda ošetruje nastavenie a export grafov
+\item \textbf{IPscan} - trieda ošetruje skener IP adries
+\item \textbf{MacServer} - trieda ošetruje nastavenie MAC serveru napr. na pripojenie pomoocu MAC adresy na winbox
+\item \textbf{Netwatch} - trieda ošetruje nastavenie monitoringu trafiky na sieti
+\item \textbf{PacketSniffer} - trieda ošetruje analyzátor paketov
+\item \textbf{Ping} - trieda ošetruje štandardný nástroj overenia dostupnosti adresy ping
+\item \textbf{PingSpeed} - trieda ošetruje meranie rýchlosti dostupnosti spojenia
+\item \textbf{Profile} - trieda ošetruje nastavenie mikrotik profilu
+\item \textbf{Romon} - trieda ošetruje nastavenie prístupu do romon módu (keď router nebootuje)
+\item \textbf{SMS} - trieda ošetruje nastavenie odosielania správ na mobil z mikrotiku
+\item \textbf{Telnet} - trieda ošetruje nastavenie pripojenia z mikrotiku pomocou protokolu telnet
+\item \textbf{Torch} - trieda ošetruje zachytávanie trafiky
+\item \textbf{Traceroute} - trieda ošetruje štandardný nástoj trasovania cesty traceroute
+\item \textbf{TrafficGenerator} - trieda ošetruje nastavenie generátoru trafiky
+\item \textbf{TrafficMonitorList} - trieda ošetruje správu trafiky
+\end{itemize}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{../text/tools.png}
+\caption{Zoznam súborov triedy tools}
+\label{fig:tools}
+\end{figure}
+\subsection{Analýza vybraného súboru}
+Analyzovaný vybraný súbor \textit{Netwatch.py} popísaný v tabuľke \ref{tab:tools} a na UML diagrame \ref{fig:netwatchuml}.
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy         & Vstup                                                                       & Výstup  & Vysvetlenie metódy                              \\ \hline
+listNetwatchSessions & žiadny                                                                      & slovník & Metóda zobrazí spojenia netwatch.               \\ \hline
+addNetwatch          & \begin{tabular}[c]{@{}c@{}}IP adresa,\\ interval,\\ timeout\end{tabular}    & slovník & Metóda pridá nový monitoring.                   \\ \hline
+setNetwachHost       & \begin{tabular}[c]{@{}c@{}}číslo poradia spojenia,\\ IP adresa\end{tabular} & slovník & Metóda nastaví IP adresu existujúceho spojenia. \\ \hline
+setNetwatchInterval  & \begin{tabular}[c]{@{}c@{}}číslo poradia spojenia,\\ interval\end{tabular}  & slovník & Metóda nastaví interval merania.                \\ \hline
+setNetwatchTimeout   & \begin{tabular}[c]{@{}c@{}}číslo poradia spojenia,\\ interval\end{tabular}  & slovník & Metóda nastaví timeout spojenia.                \\ \hline
+removeNetwatch       & poradové číslo spojenia                                                     & slovník & Metóda zmaže spojenie.                          \\ \hline
+enableNetwatch       & poradové číslo spojenia                                                     & slovník & Metóda zapne spojenie.                          \\ \hline
+disableNetwatch      & poradové číslo spojenia                                                     & slovník & Metóda vypne spojenie.                          \\ \hline
+commentRule          & \begin{tabular}[c]{@{}c@{}}poradové číslo spojenia,\\ komentár\end{tabular} & slovník & Metóda okomentuje spojenie.                     \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka metód súboru Netwatch}
+\label{tab:tools}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/Netwatch.png}
+\caption{UML diagram triedy Netwatch}
+\label{fig:netwatchuml}
+\end{figure}
+\section{Zložka Wireless}
+Zložka WIreless obsahuje nástroje na nastavenie WiFi spojenia. Jeho štruktúra je identická zložkám v kapitole \ref{sec:capsmanchap} a ďalších kapitolách.
+\subsection{Zoznam tried zložky}
+Zložka obsahuje triedy:
+\begin{itemize}
+\item \textbf{accessList} - triedy obsahujú nastavenie prístupových listov
+\item \textbf{channels} - triedy obsahujú nastavenie prístupových kanálov WiFi
+\item \textbf{connectionList} - trieda obsahuje správu pripojených zariadení
+\item \textbf{interfaceCap} - triedy obsahujú nastavenie rozhraní Capsman
+\item \textbf{interfaceNstremeDual} - triedy obsahujú nastavenie rozhraní NstremeDual
+\item \textbf{interfaceRepeater} - trieda obsahuje nastavenie rozhrania Repeater
+\item \textbf{interfaces} - trieda rieši správu všetkých rozhraní 
+\item \textbf{interfaceSniffer} - trieda rieši pridanie tzv. "sniffera" na rozhranie
+\item \textbf{interfaceVirtual} - triedy ošetrujú nastavenie virtuálnych rozhraní
+\item \textbf{interfaceVirtualApBridge} - triedy ošetrujú nastavenie rozhrania AP Bridge
+\item \textbf{interfaceVirtualBridge} - trieda ošetruje  nastavenie virtuálneho bridgu
+\item \textbf{interfaceVirtualStationPseudoBridge} - trieda ošetruje nastavenie pseudobridgu
+\item \textbf{interfaceVirtualStation} - trieda ošetruje nastavenie virtuálnej pracovnej stanice
+\item \textbf{interfaceVirtualWds} - triedy ošetrujú nastavenie rohrania ako WDS
+\item \textbf{interfaceWirelessAlignement} - trieda ošetruje zarovnanie pásma
+\item \textbf{interfaceWpsClient} - trieda ošetruje nastavenie WPS klienta
+\item \textbf{nstreme}- triedy ošetrujú nastavenie technológie nstreme dual
+\item \textbf{registration} - trieda ošetruje správu zaregistrovaných zariadení
+\item \textbf{security} - triedy ošetrujú nastavenie bezpečnosti WiFi siete napr. autentizácia cezt RADIUS, šifrovanie,...
+\item \textbf{wirelessSnooper} -nastavenie WiFi skenera 
+\end{itemize} 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/wifi.png}
+\caption{Zoznam súborov zložka wireless}
+\label{fig:wifi}
+\end{figure}
+\subsection{Analýza vybraného súboru}
+Analyzovaný súbor \textit{securityProfileRadius.py} je popísaný UML diagramom \ref{fig:wififig} a popis metód je v tabuľke \ref{tab:wifiradius}.
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|c|c|c|c|}
+\hline
+Názov metódy             & Vstup                                                                                   & Výstup  & Vysvetlenie metódy                                           \\ \hline
+enableMacAuthentication  & meno profilu                                                                            & slovník & Metóda zapne autentizáciu na úrovni MAC adresy.              \\ \hline
+disableMacAuthentication & meno profilu                                                                            & slovník & Metóda vypne autentizáciu na úrovni MAC adresy.              \\ \hline
+enableMacAccounting      & meno profilu                                                                            & slovník & Metóda zapne započítavanie pripojenia na základe MAC adresy. \\ \hline
+disableMacAccounting     & meno profilu                                                                            & slovník & Metóda vzpne započítavanie pripojenia na základe MAC adresy. \\ \hline
+enableEapAccounting      & meno profilu                                                                            & slovník & Metóda zapne EAP (overenie doménovým menom).                 \\ \hline
+disableEapAccounting     & meno profilu                                                                            & slovník & Metóda vypne EAP (overenie doménovým menom).                 \\ \hline
+setInterimUpdate         & \begin{tabular}[c]{@{}c@{}}meno profilu,\\ update interval\end{tabular}                 & slovník & Metóda nastaví dobu aktualizácie.                            \\ \hline
+setMacFormat             & \begin{tabular}[c]{@{}c@{}}meno profilu,\\ formát MAC adresy\end{tabular}               & slovník & Metóda nastaví formát MAC adresy.                            \\ \hline
+setMacMode               & \begin{tabular}[c]{@{}c@{}}meno profilu,\\ mód autentizácie na základe MAC\end{tabular} & slovník & Metóda naství mód MAC adries.                                \\ \hline
+setMacCahingTime         & meno profilu                                                                            & slovník & Metóda nastaví dobu cashovania záznamov.                     \\ \hline
+\end{tabular}%
+}
+\caption{Tabuľka metód triedy securityProfileRadius}
+\label{tab:wifiradius}
+\end{table}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.6]{../text/securityProfileRadius.png}
+\caption{UML diagram triedy securityProfileRadius}
+\label{fig:wififig}
+\end{figure}

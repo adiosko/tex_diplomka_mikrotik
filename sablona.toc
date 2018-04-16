@@ -85,6 +85,12 @@
 \contentsline {section}{\numberline {7.15}Zlo\IeC {\v z}ka System}{79}{section.461}
 \contentsline {subsection}{\numberline {7.15.1}Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky}{79}{subsection.462}
 \contentsline {subsection}{\numberline {7.15.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{80}{subsection.465}
-\contentsline {chapter}{Literat\'{u}ra}{82}{section*.471}
-\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{84}{section*.473}
-\contentsline {chapter}{Zoznam pr\'{i}loh}{85}{section*.475}
+\contentsline {section}{\numberline {7.16}Zlo\IeC {\v z}ka tools}{81}{section.470}
+\contentsline {subsection}{\numberline {7.16.1}Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky}{81}{subsection.471}
+\contentsline {subsection}{\numberline {7.16.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{82}{subsection.474}
+\contentsline {section}{\numberline {7.17}Zlo\IeC {\v z}ka Wireless}{83}{section.479}
+\contentsline {subsection}{\numberline {7.17.1}Zoznam tried zlo\IeC {\v z}ky}{83}{subsection.480}
+\contentsline {subsection}{\numberline {7.17.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{85}{subsection.483}
+\contentsline {chapter}{Literat\'{u}ra}{87}{section*.489}
+\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{89}{section*.491}
+\contentsline {chapter}{Zoznam pr\'{i}loh}{90}{section*.493}
