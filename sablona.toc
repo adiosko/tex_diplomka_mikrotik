@@ -93,8 +93,12 @@
 \contentsline {subsection}{\numberline {7.17.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{85}{subsection.483}
 \contentsline {chapter}{\numberline {8}Grafick\IeC {\'a} \IeC {\v c}as\IeC {\v t} aplik\IeC {\'a}cie (frontend)}{87}{chapter.488}
 \contentsline {section}{\numberline {8.1}QT4 disigner}{87}{section.489}
-\contentsline {section}{\numberline {8.2}PyQT 4}{87}{section.490}
-\contentsline {section}{\numberline {8.3}Aplikovanie v aplik\IeC {\'a}cii}{87}{section.491}
-\contentsline {chapter}{Literat\'{u}ra}{88}{section*.493}
-\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{90}{section*.495}
-\contentsline {chapter}{Zoznam pr\'{i}loh}{91}{section*.497}
+\contentsline {section}{\numberline {8.2}PyQT 4}{88}{section.492}
+\contentsline {chapter}{\numberline {9}Grafick\IeC {\'a} aplik\IeC {\'a}cia}{89}{chapter.493}
+\contentsline {section}{\numberline {9.1}Hlavn\IeC {\'e} prihlasovavie okno}{89}{section.494}
+\contentsline {subsection}{\numberline {9.1.1}Hlavn\IeC {\'e} okno konfigura\IeC {\v c}nej aplik\IeC {\'a}cie}{90}{subsection.501}
+\contentsline {section}{\numberline {9.2}Polo\IeC {\v z}ky hlavn\IeC {\'e}ho menu}{91}{section.504}
+\contentsline {subsection}{\numberline {9.2.1}Menu Interface}{91}{subsection.505}
+\contentsline {chapter}{Literat\'{u}ra}{94}{section*.517}
+\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{96}{section*.519}
+\contentsline {chapter}{Zoznam pr\'{i}loh}{97}{section*.521}
