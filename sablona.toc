@@ -91,6 +91,10 @@
 \contentsline {section}{\numberline {7.17}Zlo\IeC {\v z}ka Wireless}{83}{section.479}
 \contentsline {subsection}{\numberline {7.17.1}Zoznam tried zlo\IeC {\v z}ky}{83}{subsection.480}
 \contentsline {subsection}{\numberline {7.17.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{85}{subsection.483}
-\contentsline {chapter}{Literat\'{u}ra}{87}{section*.489}
-\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{89}{section*.491}
-\contentsline {chapter}{Zoznam pr\'{i}loh}{90}{section*.493}
+\contentsline {chapter}{\numberline {8}Grafick\IeC {\'a} \IeC {\v c}as\IeC {\v t} aplik\IeC {\'a}cie (frontend)}{87}{chapter.488}
+\contentsline {section}{\numberline {8.1}QT4 disigner}{87}{section.489}
+\contentsline {section}{\numberline {8.2}PyQT 4}{87}{section.490}
+\contentsline {section}{\numberline {8.3}Aplikovanie v aplik\IeC {\'a}cii}{87}{section.491}
+\contentsline {chapter}{Literat\'{u}ra}{88}{section*.493}
+\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{90}{section*.495}
+\contentsline {chapter}{Zoznam pr\'{i}loh}{91}{section*.497}
