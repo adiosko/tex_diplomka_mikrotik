@@ -258,13 +258,6 @@ V rámci hlavnej konfiguračnej časti diplomovej práce, pre konfiguráciu back
 \item \textbf{Wireless} - sekcia bude obsahovať konfiguráciu bezdrátového rozhrania, moduly, módy, konfiguráciu, nastavenie, a ďalšie funkcie
 \item \textbf{konfiguračné súbory mimo zložiek} - sekcia popísaná v kapitole  \ref{sec:popis1}, popisuje súbory na základnú konfiuráciu mikrotiku, nastavenie základnej konfigurácie.
 \end{itemize}
-Ukážka súborovej štruktúry je zobrazená na obrázku \ref{fig:structure}:
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.4]{../text/struktura.png}
-\caption{Štruktúra projektu konzolovej časti projektu}
-\label{fig:structure}
-\end{figure} 
 \chapter{Hlavná časť backendu}
 Cieľom kapitoly je detailný popis backend časti aplikácie na správu mikrotikov. V jendotlivých podkapitolách bude popísaná každá zložka projektu diplomkap3.
 \section{Zložka bridge}
@@ -272,13 +265,7 @@ Cieľom tejto zložky je konfigurácia bridgu na mikrotiku. Pozostáva z:\begin{
 \item Managementu bridgu, portov, bezpečnosti, pripojených zariadení
 \item Pridanie, odtsránenie, zapnutie, vypnutie a komentár položiek
 \item Modifikácia existujúcich položiek
-\end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.57]{../text/bridgeList.png}
-\caption{Zoznam súborov zložky bridge}
-\label{fig:bridge2}
-\end{figure} 
+\end{itemize} 
 Niektoré pasáže sa dajú modifikovať pomocou mena položky, niektoré pomocou poradia položky. Zoznam súborov  zložky nájdeme na obrázku \ref{fig:bridge2} a v kapitole\ref{sec:bridgechap}. 
 \subsection{Popis tried zložky}
 \label{sec:bridgechap}
@@ -336,13 +323,6 @@ Zložka pozostáva z:\begin{itemize}
 \item Modifikácia nakonfigurovaných položiek
 \item Správa pripojených zariadení
 \end{itemize}
-\\Zoznam súborov nájdeme na obrázku \ref{fig:capsman}. 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.6]{../text/capsman.png}
-\caption{Zoznam súborov zložky capsman}
-\label{fig:capsman}
-\end{figure}
 \subsection{Popis tried zložky}
 Zložka obsahuje:\begin{itemize}
 \item \textbf{accessList} - trieda ošetruje nastavenie prístupých listov (access listov)
@@ -404,7 +384,7 @@ setVhtSupport & \begin{tabular}[c]{@{}c@{}}názov profilu,\\ podporované prenos
 \label{tab:rates}
 \end{table}
 \section{Zložka Dude}
-Popisovaná zložka je obsah tried,ktoré nastavujú Dude monitorovací nástroj. Plnia rovnakú funkciu ako je to popísané v kapitolách \ref{sec:bridgechap} a \ref{sec:capsmanchap}. Na obrázku \ref{fig:dude} vidíme zoznam súborov. 
+Popisovaná zložka je obsah tried,ktoré nastavujú Dude monitorovací nástroj. Plnia rovnakú funkciu ako je to popísané v kapitolách \ref{sec:bridgechap} a \ref{sec:capsmanchap}. 
 \subsection{Popis tried zložky}
 Súčasťou zložky je nastavenie nástroja Dude na centrálny monitoring mikrotikov. Obsahuje súbory:\begin{itemize}
 \item \textbf{Devices} - trieda ošetruje nastavenie monitorovaných zariadení
@@ -415,12 +395,6 @@ Súčasťou zložky je nastavenie nástroja Dude na centrálny monitoring mikrot
 \item \textbf{Settings} - trieda ošetruje zapnutie a vypnutie Dude nástroju
 \item \textbf{ostatné knižnice} - osotatné knižnice API nepodporuje
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.6]{../text/dude.png}
-\caption{Zoznam súborov adresáru Dude}
-\label{fig:dude}
-\end{figure}
 \subsection{Analýza vybraného súboru}
 Vybraný analyzovaný súbor \textit{Devices.py} a jeho analýza je popísaná v rámci jeho UML diagramu na obrázku \ref{fig:dudedev} a zoznam metód je popísaný v tabuľke \ref{tab:devices}.
 \begin{figure}[H]
@@ -450,7 +424,7 @@ Vybraný analyzovaný súbor \textit{Devices.py} a jeho analýza je popísaná v
 \label{tab:devices}
 \end{table}
 \section{Zložka Interfaces}
-Popisovaná zložka je obsah tried,ktoré nastavujú rozhrania na mikrotiku. Medzi tieto rozhrania patria nastavenie VPN, ethernet, WiFi rozhraní a ďalších rozhraní. Plnia rovnakú funkciu ako je to popísané v kapitolách \ref{sec:bridgechap} a \ref{sec:capsmanchap} a ďalších kapitolách. Na obrázku \ref{fig:iface} vidíme zoznam súborov.
+Popisovaná zložka je obsah tried,ktoré nastavujú rozhrania na mikrotiku. Medzi tieto rozhrania patria nastavenie VPN, ethernet, WiFi rozhraní a ďalších rozhraní. Plnia rovnakú funkciu ako je to popísané v kapitolách \ref{sec:bridgechap} a \ref{sec:capsmanchap} a ďalších kapitolách.
 \subsection{Popis tried zložky}
 Súčasťou zložky je nastavenie rohraní na mikrotiku. Patria sem triedy:
 \begin{itemize}
@@ -468,12 +442,6 @@ Súčasťou zložky je nastavenie rohraní na mikrotiku. Patria sem triedy:
 \item \textbf{vlan} - trieda nastaví VLAN spoločne s triedami \textbf{vlanLoopProtection} a \textbf{vlanSetGeneral}
 \item \textbf{vrrp} - trieda nastaví zálohovací mechanizmus  Virtual Router Redoundency Protocol (VRRP) spoločne s triedami \textbf{vrrpGeneralSet, vrrpScriptSet a vrrpSetVrrp}
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.6]{../text/interfaces.png}
-\caption{Zoznam súborov adresáru Interfaces}
-\label{fig:iface}
-\end{figure}
 \subsection{Analýza vybraného súboru}
 Vybraný súbor \textit{greTunnelSet.py} a jeho nastavenie je zobrazené v UML diagrame triedy na obrázku \ref{fig:gre} a popis tried je zanalyzovaný v tabuľke \ref{tab:greTunel}.
 \begin{figure}[H]
@@ -504,6 +472,7 @@ disableAllowFastPath & názov tunelu & slovník & Metóda vypne funkciu tunelu "
 \caption{Tabuľka metód triedy greTunnelSet}
 \label{tab:greTunel}
 \end{table}
+\newpage
 \section{Zložka IPv4}
 Popis  zložky IPv4 spočíva v nastavebí rôznych IPv4 protokolov, bezpečnosti, prekladu adries,statického smerovania a ďalších možností. Triedy spočívajú globálnym popisom totožným k popisov v kapitolách \ref{sec:bridgechap}, \ref{sec:capsmanchap} a ďalších kapitolách.  
 \subsection{Popis tried zložky}
@@ -581,13 +550,6 @@ Zložka obsahuje konguračné súbory nastavenie protokolov, adries, bezpečnost
 \textbf{WebProxyRefreshes} - trieda ošetruje nastavenie obnovovacej frekvencie\\
 \textbf{WebProxySettings} - trieda ošetruje globálne nastavenia proxy serveru
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.6]{../text/IP4.png}
-\caption{Štruktúra časti zložky IPv4}
-\label{fig:ipv4}
-\end{figure}
-\newpage
 \subsection{Analýza vybraného súboru}
 Vybraný súbor \textit{FirewallAddressist.py}popísaný UML diagramom na obrázku \ref{fig:addList} a obsah jeho metód je popísaný v tabuľke \ref{tab:addlist}.
 \begin{table}[H]
@@ -640,12 +602,6 @@ Zložka obsahuje nastavenie funkcií prokolu IPv6 a zahrňuje:\begin{itemize}
 \item \textbf{Neighbors} - správa pripojených zariadení v triede \textbf{Neighbors}
 \item \textbf{Pool} - správa rozsahov adries v triede \textbf{Pool}
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.6]{../text/IPV6.png}
-\caption{Zoznam súborov zložky IPv6}
-\label{fig:ipv6}
-\end{figure}
 \subsection{Anylýza vybraného súboru}
 Vybraný súbor \textit{FirewallManngle.py} je zobrazené UML diagramom triedy na obrázku \ref{fig:mangle} a obsah metód je zobrazený v tabuľke \ref{tab:ipv6mangle}.
 \begin{table}[H]
@@ -678,12 +634,6 @@ Obsahom zložiek je nastavenie virtuálneho mikrotiku, nastavenie logovania a vy
 Nastavenie virtuálnych mikrotikov alebo "mikrotiku v mikrotiku" je možné pomocou tzv. KVM. Zložka obsahuje triedy:\begin{itemize}
 \item \textbf{KVM} - trieda na nastavenie virtualizácie na mikrotiku pomocou triedy \textbf{KVM}
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.6]{../text/kvm.png}
-\caption{Zoznam súborov zložky KVM}
-\label{fig:mangle}
-\end{figure}
 Popis súboru \textit{KVM.py} je popísaný na obrázku \ref{fig:kvm}  a jeho obsah metód je popísaný v tabuľke \ref{tab:kvm}.
 \begin{table}[H]
 \resizebox{\textwidth}{!}{%
@@ -758,12 +708,6 @@ Zložka pozostáva z tried:
 \item \textbf{MeshInterfaces} - trieda ošetruje nastavenie a správu mesh rozhraní
 \item \textbf{MeshPorts} - trieda ošetruje nastaveniea správu mesh portov
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.6]{../text/mesh.png}
-\caption{Zoznam súborov zložky mesh}
-\label{fig:mesh}
-\end{figure}
 \subsection{Analýza vybraného súboru}
 Pre vybraný analyzovaný súbor \textit{MeshInterfaces.py}. Anaylýza tried je zobrazená na UML diagrame na obrázku \ref{fig:meshuml} a popis metód je popísaný v tabuľke \ref{tab:meshtab}.
 \begin{table}[]
@@ -827,12 +771,6 @@ Zložka pozostáva z tried:
 \item \textbf{TrafficEngTraffInterface} - trieda ošetruje nastavenie a správu rozhraní riadenia trafiky
 \item \textbf{TrafficEngTunnelPath} - trieda ošetruje nastavenie  a správu tunelov v rámci kontroly trafiky
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.6]{../text/mplslist.png}
-\caption{Zoznam súborov zložky MPLS}
-\label{fig:mplslist}
-\end{figure}
 \subsection{Anylýza vybraného súboru}
 Vybraný analyzovaný súbor \textit{MplsLocalBinding.py} je popísaný jeho UML diagramom na obrázku \ref{fig:mplslocal} a v tabuľke \ref{tab:locbind}.
 \begin{table}[H]
@@ -919,12 +857,6 @@ Zložka obsahuje triedy:
 \textbf{secrets} - správa hesiel\\
 \textbf{secrtesSettings} - nastavenie hesiel
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.6]{../text/ppplist.png}
-\caption{Zoznam tried v zložke PPP}
-\label{fig:pppset}
-\end{figure}
 \subsection{Analyzovaný súbor}
 Analyzovaný súbor \textit{interfacePppoeSetGeneral.py} je popísaný na UML diagrame \ref{fig:pppset} a v v tabuľke metód \ref{tab:ppptab}.
 \begin{table}[H]
@@ -959,12 +891,6 @@ Zložka obsahuje triedy:
 \item \textbf{QueueTypes} - nastavenie existujúcich a nových typov fronty
 \item \textbf{SimpleQueues} - nastavenie jednoduchých front
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.6]{../text/queueList.png}
-\caption{Zoznam súborov zložky Queues}
-\label{fig:queuelist}
-\end{figure}
 \subsection{Analáza vybraného súboru}
 Vybraný analyzovaný súbor \textit{QueueTree.py} je popísaný v tabuľke \ref{tab:tree} a na UML diagrame \ref{fig:queueTree}.
 \begin{table}[H]
@@ -1068,12 +994,6 @@ Zložka pozostáva z tried:
 \item \textbf{RP} - trieda ošetruje nastavenie Randevou point 
 \item \textbf{VPNRoutes} - trieda ošetruje správu ciest VPN tunelu
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.5]{../text/routing.png}
-\caption{Zoznam súborov zložky Routing}
-\label{fig:routing}
-\end{figure}
 \subsection{Analýza vybraného súboru}
 Analýzou vybraného súboru \textit{RipNetworks.py} v UMl diagrame \ref{fig:rip}  a v tabuľke \ref{tab:rip}.
 \begin{table}[H]
@@ -1110,12 +1030,6 @@ Obsahom zložky sú triedy:
 \item \textbf{SwitchRule} - nastavenie pravidiel filtrovania trafiky na prepínač
 \item \textbf{SwitchVlan} - nastavenie virtuálnych LAN sietí
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.8]{../text/switch.png}
-\caption{Zoznamsúborov zložky switch}
-\label{fig:switch}
-\end{figure}
 \subsection{Analýza vybraného súboru}
 Analýza vybraného súboru \textit{switchPorts.py} jeodzrkadlená v UML diagrame \ref{fig:switchPort} a v tabuľke metód \ref{tab:switchPort}.
 \begin{table}[H]
@@ -1171,12 +1085,6 @@ Zložka pozostáva zo súborov:
 \item \textbf{user} -triedy nastavujú užívateľov, skupiny,...
 \item \textbf{WatchDog} - sprva kontroly prvkov na mikrotiku
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.6]{../text/system.png}
-\caption{Zoznam súborov triedy system}
-\label{fig:system}
-\end{figure}
 \subsection{Analýza vybraného súboru}
 Vybraný analyzovaný súbor \textit{SystemMaintenance.py} je popísaný v UML diagrame \ref{fig:systemMaintenance} a v tabuľke \ref{tab:maintenance}.
 \begin{table}[H]
@@ -1223,12 +1131,6 @@ Zložka obsahuje:
 \item \textbf{TrafficGenerator} - trieda ošetruje nastavenie generátoru trafiky
 \item \textbf{TrafficMonitorList} - trieda ošetruje správu trafiky
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.75]{../text/tools.png}
-\caption{Zoznam súborov triedy tools}
-\label{fig:tools}
-\end{figure}
 \subsection{Analýza vybraného súboru}
 Analyzovaný vybraný súbor \textit{Netwatch.py} popísaný v tabuľke \ref{tab:tools} a na UML diagrame \ref{fig:netwatchuml}.
 \begin{table}[H]
@@ -1283,12 +1185,6 @@ Zložka obsahuje triedy:
 \item \textbf{security} - triedy ošetrujú nastavenie bezpečnosti WiFi siete napr. autentizácia cezt RADIUS, šifrovanie,...
 \item \textbf{wirelessSnooper} -nastavenie WiFi skenera 
 \end{itemize} 
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.6]{../text/wifi.png}
-\caption{Zoznam súborov zložka wireless}
-\label{fig:wifi}
-\end{figure}
 \subsection{Analýza vybraného súboru}
 Analyzovaný súbor \textit{securityProfileRadius.py} je popísaný UML diagramom \ref{fig:wififig} a popis metód je v tabuľke \ref{tab:wifiradius}.
 \begin{table}[H]

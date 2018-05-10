@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.10)  9 MAY 2018 23:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.10)  10 MAY 2018 12:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1437,45 +1437,35 @@ LaTeX Warning: Label `fig:webfig' multiply defined.
 
 LaTeX Warning: Label `fig:webfig' multiply defined.
 
-) (./text/reseni.aux
-
-LaTeX Warning: Label `fig:mangle' multiply defined.
-
-
-LaTeX Warning: Label `fig:pppset' multiply defined.
-
-) (./text/vysledky.aux
-
-LaTeX Warning: Label `fig:netwatchuml' multiply defined.
-
-) (./text/zaver.aux) (./text/literatura.aux) (./text/zkratky.aux)
-(./text/prilohy.aux))
+) (./text/reseni.aux) (./text/vysledky.aux) (./text/zaver.aux)
+(./text/literatura.aux) (./text/zkratky.aux) (./text/prilohy.aux))
 \openout1 = `sablona.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 156.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 156.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 157.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 157.
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 156.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 157.
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1509,7 +1499,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box76
-Package hyperref Info: Link coloring OFF on input line 156.
+Package hyperref Info: Link coloring OFF on input line 157.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1519,9 +1509,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count269
 )
-LaTeX Info: Redefining \ref on input line 156.
-LaTeX Info: Redefining \pageref on input line 156.
-LaTeX Info: Redefining \nameref on input line 156.
+LaTeX Info: Redefining \ref on input line 157.
+LaTeX Info: Redefining \pageref on input line 157.
+LaTeX Info: Redefining \nameref on input line 157.
 
 (./sablona.out) (./sablona.out)
 \@outlinefile=\write7
@@ -1543,158 +1533,158 @@ ABD: EveryShipout initializing macros
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-<pdf/student-desky.pdf, id=405, 597.51233pt x 845.0471pt>
+<pdf/student-desky.pdf, id=426, 597.51233pt x 845.0471pt>
 File: pdf/student-desky.pdf Graphic file (type pdf)
 
 <use pdf/student-desky.pdf>
-Package pdftex.def Info: pdf/student-desky.pdf used on input line 161.
+Package pdftex.def Info: pdf/student-desky.pdf used on input line 162.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 File: pdf/student-desky.pdf Graphic file (type pdf)
  <use pdf/student-desky.pdf>
-Package pdftex.def Info: pdf/student-desky.pdf used on input line 161.
+Package pdftex.def Info: pdf/student-desky.pdf used on input line 162.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 
-<pdf/student-desky.pdf, id=408, page=1, 597.51233pt x 845.0471pt>
+<pdf/student-desky.pdf, id=429, page=1, 597.51233pt x 845.0471pt>
 File: pdf/student-desky.pdf Graphic file (type pdf)
 
 <use pdf/student-desky.pdf, page 1>
-Package pdftex.def Info: pdf/student-desky.pdf, page1 used on input line 161.
+Package pdftex.def Info: pdf/student-desky.pdf, page1 used on input line 162.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 File: pdf/student-desky.pdf Graphic file (type pdf)
  <use pdf/student-desky.pdf, page 1>
-Package pdftex.def Info: pdf/student-desky.pdf, page1 used on input line 161.
+Package pdftex.def Info: pdf/student-desky.pdf, page1 used on input line 162.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: pdf/student-desky.pdf Graphic file (type pdf)
 
 <use pdf/student-desky.pdf, page 1>
-Package pdftex.def Info: pdf/student-desky.pdf, page1 used on input line 161.
+Package pdftex.def Info: pdf/student-desky.pdf, page1 used on input line 162.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: pdf/student-desky.pdf Graphic file (type pdf)
  <use pdf/student-desky.pdf, page 1>
-Package pdftex.def Info: pdf/student-desky.pdf, page1 used on input line 161.
+Package pdftex.def Info: pdf/student-desky.pdf, page1 used on input line 162.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: pdf/student-desky.pdf Graphic file (type pdf)
 
 <use pdf/student-desky.pdf, page 1>
-Package pdftex.def Info: pdf/student-desky.pdf, page1 used on input line 161.
+Package pdftex.def Info: pdf/student-desky.pdf, page1 used on input line 162.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
  [1
 
  <./pdf/student-desky.pdf>]
-<pdf/student-titulka.pdf, id=425, 597.51233pt x 845.0471pt>
+<pdf/student-titulka.pdf, id=445, 597.51233pt x 845.0471pt>
 File: pdf/student-titulka.pdf Graphic file (type pdf)
 
 <use pdf/student-titulka.pdf>
-Package pdftex.def Info: pdf/student-titulka.pdf used on input line 168.
+Package pdftex.def Info: pdf/student-titulka.pdf used on input line 169.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 File: pdf/student-titulka.pdf Graphic file (type pdf)
  <use pdf/student-titulka.pdf>
-Package pdftex.def Info: pdf/student-titulka.pdf used on input line 168.
+Package pdftex.def Info: pdf/student-titulka.pdf used on input line 169.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 
-<pdf/student-titulka.pdf, id=428, page=1, 597.51233pt x 845.0471pt>
+<pdf/student-titulka.pdf, id=448, page=1, 597.51233pt x 845.0471pt>
 File: pdf/student-titulka.pdf Graphic file (type pdf)
 
 <use pdf/student-titulka.pdf, page 1>
-Package pdftex.def Info: pdf/student-titulka.pdf, page1 used on input line 168.
+Package pdftex.def Info: pdf/student-titulka.pdf, page1 used on input line 169.
 
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 File: pdf/student-titulka.pdf Graphic file (type pdf)
  <use pdf/student-titulka.pdf, page 1>
-Package pdftex.def Info: pdf/student-titulka.pdf, page1 used on input line 168.
+Package pdftex.def Info: pdf/student-titulka.pdf, page1 used on input line 169.
 
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: pdf/student-titulka.pdf Graphic file (type pdf)
 
 <use pdf/student-titulka.pdf, page 1>
-Package pdftex.def Info: pdf/student-titulka.pdf, page1 used on input line 168.
+Package pdftex.def Info: pdf/student-titulka.pdf, page1 used on input line 169.
 
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: pdf/student-titulka.pdf Graphic file (type pdf)
  <use pdf/student-titulka.pdf, page 1>
-Package pdftex.def Info: pdf/student-titulka.pdf, page1 used on input line 168.
+Package pdftex.def Info: pdf/student-titulka.pdf, page1 used on input line 169.
 
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: pdf/student-titulka.pdf Graphic file (type pdf)
 
 <use pdf/student-titulka.pdf, page 1>
-Package pdftex.def Info: pdf/student-titulka.pdf, page1 used on input line 168.
+Package pdftex.def Info: pdf/student-titulka.pdf, page1 used on input line 169.
 
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
  [1 <./pdf/student-titulka.pdf>]
-<pdf/student-zadani.pdf, id=447, 597.51233pt x 845.0471pt>
+<pdf/student-zadani.pdf, id=467, 597.51233pt x 845.0471pt>
 File: pdf/student-zadani.pdf Graphic file (type pdf)
 
 <use pdf/student-zadani.pdf>
-Package pdftex.def Info: pdf/student-zadani.pdf used on input line 174.
+Package pdftex.def Info: pdf/student-zadani.pdf used on input line 175.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 File: pdf/student-zadani.pdf Graphic file (type pdf)
  <use pdf/student-zadani.pdf>
-Package pdftex.def Info: pdf/student-zadani.pdf used on input line 174.
+Package pdftex.def Info: pdf/student-zadani.pdf used on input line 175.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 
-<pdf/student-zadani.pdf, id=450, page=1, 597.51233pt x 845.0471pt>
+<pdf/student-zadani.pdf, id=470, page=1, 597.51233pt x 845.0471pt>
 File: pdf/student-zadani.pdf Graphic file (type pdf)
 
 <use pdf/student-zadani.pdf, page 1>
-Package pdftex.def Info: pdf/student-zadani.pdf, page1 used on input line 174.
+Package pdftex.def Info: pdf/student-zadani.pdf, page1 used on input line 175.
 (pdftex.def)             Requested size: 597.51086pt x 845.04504pt.
 File: pdf/student-zadani.pdf Graphic file (type pdf)
  <use pdf/student-zadani.pdf, page 1>
-Package pdftex.def Info: pdf/student-zadani.pdf, page1 used on input line 174.
+Package pdftex.def Info: pdf/student-zadani.pdf, page1 used on input line 175.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: pdf/student-zadani.pdf Graphic file (type pdf)
 
 <use pdf/student-zadani.pdf, page 1>
-Package pdftex.def Info: pdf/student-zadani.pdf, page1 used on input line 174.
+Package pdftex.def Info: pdf/student-zadani.pdf, page1 used on input line 175.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: pdf/student-zadani.pdf Graphic file (type pdf)
  <use pdf/student-zadani.pdf, page 1>
-Package pdftex.def Info: pdf/student-zadani.pdf, page1 used on input line 174.
+Package pdftex.def Info: pdf/student-zadani.pdf, page1 used on input line 175.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
 File: pdf/student-zadani.pdf Graphic file (type pdf)
 
 <use pdf/student-zadani.pdf, page 1>
-Package pdftex.def Info: pdf/student-zadani.pdf, page1 used on input line 174.
+Package pdftex.def Info: pdf/student-zadani.pdf, page1 used on input line 175.
 (pdftex.def)             Requested size: 597.53821pt x 845.08372pt.
  [2 <./pdf/student-zadani.pdf>]
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 181.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 182.
 
 
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 181.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 182.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<ot1.cmap>>
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 181.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 182.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<oml.cmap>>
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 181
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 182
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )<<oms.cmap>>
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 181
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 182
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 181.
+(Font)              <12> on input line 182.
 <<omx.cmap>>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 181.
+(Font)              <8> on input line 182.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 181.
+(Font)              <6> on input line 182.
  [3
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [4
@@ -1702,18 +1692,18 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 ] [5
 
 ]
-<loga/SIX_logo_zahlavi.png, id=511, 280.4076pt x 108.405pt>
+<loga/SIX_logo_zahlavi.png, id=531, 280.4076pt x 108.405pt>
 File: loga/SIX_logo_zahlavi.png Graphic file (type png)
 
 <use loga/SIX_logo_zahlavi.png>
-Package pdftex.def Info: loga/SIX_logo_zahlavi.png used on input line 191.
+Package pdftex.def Info: loga/SIX_logo_zahlavi.png used on input line 192.
 (pdftex.def)             Requested size: 217.66734pt x 84.14864pt.
 
-<loga/logolink-op_vavpi.png, id=512, 4100.31876pt x 975.645pt>
+<loga/logolink-op_vavpi.png, id=532, 4100.31876pt x 975.645pt>
 File: loga/logolink-op_vavpi.png Graphic file (type png)
 
 <use loga/logolink-op_vavpi.png>
-Package pdftex.def Info: loga/logolink-op_vavpi.png used on input line 191.
+Package pdftex.def Info: loga/logolink-op_vavpi.png used on input line 192.
 (pdftex.def)             Requested size: 426.79134pt x 101.54507pt.
  [6
 
@@ -1725,25 +1715,25 @@ Package pdftex.def Info: loga/logolink-op_vavpi.png used on input line 191.
 \tf@toc=\write8
 \openout8 = `sablona.toc'.
 
- [9] (./sablona.lof [10
-
-
-])
+ [9] (./sablona.lof)
 \tf@lof=\write9
 \openout9 = `sablona.lof'.
 
- [11]
+ [10
+
+
+]
 (./sablona.lot)
 \tf@lot=\write10
 \openout10 = `sablona.lot'.
 
- [12
+ [11
 
 
 ]
 \openout2 = `text/uvod.aux'.
 
- (./text/uvod.tex [13
+ (./text/uvod.tex [12
 
 
 ]
@@ -1751,48 +1741,48 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 15.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [14
+) [13
 
-] [15]
+] [14]
 Overfull \hbox (53.30112pt too wide) in paragraph at lines 65--68
 \T1/lmr/m/n/12 u∫itÌ prÌ-kazu napr. \T1/lmr/m/it/12 /i-p/add-res-s/p-rint\T1/lm
 r/m/n/12 , \T1/lmr/m/it/12 /i-p/add-res-s/add add-ress="10.1.1.1/24Ônterface=Ît
 her1"\T1/lmr/m/n/12 . 
  []
 
-[16] [17] <obrazky/../text/winbox.png, id=836, 1917.1625pt x 906.38625pt>
+[15] [16] <obrazky/../text/winbox.png, id=821, 1917.1625pt x 906.38625pt>
 File: obrazky/../text/winbox.png Graphic file (type png)
 
 <use obrazky/../text/winbox.png>
 Package pdftex.def Info: obrazky/../text/winbox.png used on input line 117.
 (pdftex.def)             Requested size: 383.4257pt x 181.27403pt.
- [18
+ [17
 
  <./obrazky/../text/winbox.png>]
-<obrazky/../text/webfig.png, id=845, 925.4575pt x 237.88875pt>
+<obrazky/../text/webfig.png, id=829, 925.4575pt x 237.88875pt>
 File: obrazky/../text/webfig.png Graphic file (type png)
 
 <use obrazky/../text/webfig.png>
 Package pdftex.def Info: obrazky/../text/webfig.png used on input line 133.
 (pdftex.def)             Requested size: 370.17644pt x 95.15381pt.
 
-<obrazky/../text/mactelnet.png, id=847, 945.5325pt x 76.285pt>
+<obrazky/../text/mactelnet.png, id=831, 945.5325pt x 76.285pt>
 File: obrazky/../text/mactelnet.png Graphic file (type png)
 
 <use obrazky/../text/mactelnet.png>
 Package pdftex.def Info: obrazky/../text/mactelnet.png used on input line 141.
 (pdftex.def)             Requested size: 378.2063pt x 30.51344pt.
- [19 <./obrazky/../text/webfig.png> <./obrazky/../text/mactelnet.png>]
-<obrazky/../text/ssh.png, id=860, 694.595pt x 520.94624pt>
+ [18 <./obrazky/../text/webfig.png> <./obrazky/../text/mactelnet.png>]
+<obrazky/../text/ssh.png, id=845, 694.595pt x 520.94624pt>
 File: obrazky/../text/ssh.png Graphic file (type png)
 
 <use obrazky/../text/ssh.png>
 Package pdftex.def Info: obrazky/../text/ssh.png used on input line 156.
 (pdftex.def)             Requested size: 277.83307pt x 208.3748pt.
- [20] [21 <./obrazky/../text/ssh.png>] [22
+ [19] [20 <./obrazky/../text/ssh.png>] [21
 
 ]
-<obrazky/../text/pycharm.png, id=880, 1926.19624pt x 1013.7875pt>
+<obrazky/../text/pycharm.png, id=865, 1926.19624pt x 1013.7875pt>
 File: obrazky/../text/pycharm.png Graphic file (type png)
 
 <use obrazky/../text/pycharm.png>
@@ -1803,31 +1793,17 @@ Overfull \hbox (54.75655pt too wide) in paragraph at lines 217--218
  [][] 
  []
 
-[23] [24 <./obrazky/../text/pycharm.png>]
+[22] [23 <./obrazky/../text/pycharm.png>]
 Overfull \hbox (16.19699pt too wide) in paragraph at lines 222--222
 []\T1/lmr/bx/n/17.28 POUöIT… KNIö-NICE V DIP-LO-MO-VEJ PR¡CI 
  []
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.230 V
-        r√°mci pr√°ce som tento modul pou≈æil v r√°mci kni≈ænice loginManage...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
 \openout5 = `sablona.listing'.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 249.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 248.
 
 (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2014/06/22 T1/zi4 (Inconsolata)
@@ -1841,48 +1817,29 @@ Overfull \hbox (7.71071pt too wide) in paragraph at lines 13--14
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 230--249
+Underfull \hbox (badness 10000) in paragraph at lines 229--248
 
  []
 
-[25
+[24
 
 ]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.267 V
-        r√°mci v√Ωstupu k√≥du je uk√°≈æka met√≥dy na pripojenie na telnet se...
-
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 \openout5 = `sablona.listing'.
 
-(./sablona.listing)
-Underfull \hbox (badness 10000) in paragraph at lines 267--286
-
- []
-
-[26] [27]
+ (./sablona.listing) [25] [26]
 \openout5 = `sablona.listing'.
 
  (./sablona.listing)
 \openout5 = `sablona.listing'.
 
- (./sablona.listing) [28]
+ (./sablona.listing)
+[27]
 \openout5 = `sablona.listing'.
 
  (./sablona.listing)
 \openout5 = `sablona.listing'.
 
-
-(./sablona.listing) [29]) [30]
+ (./sablona.listing) [28]) [29]
 \openout2 = `text/reseni.aux'.
 
  (./text/reseni.tex
@@ -1890,13 +1847,13 @@ Overfull \hbox (17.99268pt too wide) in paragraph at lines 1--1
 []\T1/lmr/bx/n/17.28 KONZOLOV¡ ÉASî AP-LI-K¡-CIE NA SPR¡VU
  []
 
-<obrazky/../text/loginFiles.png, id=1011, 280.04625pt x 231.86626pt>
+<obrazky/../text/loginFiles.png, id=995, 280.04625pt x 231.86626pt>
 File: obrazky/../text/loginFiles.png Graphic file (type png)
 
 <use obrazky/../text/loginFiles.png>
 Package pdftex.def Info: obrazky/../text/loginFiles.png used on input line 12.
 (pdftex.def)             Requested size: 168.02904pt x 139.12082pt.
- [31
+ [30
 
 
 
@@ -1910,19 +1867,19 @@ Package pdftex.def Info: obrazky/../text/loginFiles.png used on input line 12.
  (./sablona.listing)
 \openout5 = `sablona.listing'.
 
- (./sablona.listing) [32]
+ (./sablona.listing) [31]
 \openout5 = `sablona.listing'.
 
 
-(./sablona.listing) [33]
-<obrazky/../text/constructors.png, id=1066, 847.165pt x 400.49625pt>
+(./sablona.listing) [32]
+<obrazky/../text/constructors.png, id=1051, 847.165pt x 400.49625pt>
 File: obrazky/../text/constructors.png Graphic file (type png)
 
 <use obrazky/../text/constructors.png>
 Package pdftex.def Info: obrazky/../text/constructors.png used on input line 88
 .
 (pdftex.def)             Requested size: 423.58145pt x 200.24763pt.
- [34]
+ [33]
 \openout5 = `sablona.listing'.
 
  (./sablona.listing)
@@ -1937,10 +1894,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--121
 
  []
 
-[35 <./obrazky/../text/constructors.png>]
+[34 <./obrazky/../text/constructors.png>]
 \openout5 = `sablona.listing'.
 
- (./sablona.listing) [36]
+ (./sablona.listing) [35]
 \openout5 = `sablona.listing'.
 
 
@@ -2041,7 +1998,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--174
 
  []
 
-[37]
+[36]
 ! Undefined control sequence.
 <argument> \the \dimexpr \tcb@width 
                                     +\kvtcb@bbright \relax 
@@ -2712,7 +2669,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--216
 
  []
 
-[38]
+[37]
 \openout5 = `sablona.listing'.
 
  (./sablona.listing
@@ -2725,446 +2682,307 @@ Overfull \hbox (7.71071pt too wide) in paragraph at lines 13--14
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [39] [40]
-<obrazky/../text/struktura.png, id=1231, 336.25626pt x 832.10875pt>
-File: obrazky/../text/struktura.png Graphic file (type png)
+) [38] [39] [40]
 
-<use obrazky/../text/struktura.png>
-Package pdftex.def Info: obrazky/../text/struktura.png used on input line 264.
-(pdftex.def)             Requested size: 134.5001pt x 332.8376pt.
- [41] [42 <./obrazky/../text/struktura.png>] <obrazky/../text/bridgeList.png, i
-d=1242, 262.9825pt x 468.75125pt>
-File: obrazky/../text/bridgeList.png Graphic file (type png)
+LaTeX Warning: Reference `fig:bridge2' on page 41 undefined on input line 269.
 
-<use obrazky/../text/bridgeList.png>
-Package pdftex.def Info: obrazky/../text/bridgeList.png used on input line 278.
+[41
 
-(pdftex.def)             Requested size: 149.90157pt x 267.19098pt.
- [43
-
- <./obrazky/../text/bridgeList.png>]
-<obrazky/../text/bridge.png, id=1251, 393.47pt x 647.41875pt>
+] <obrazky/../text/bridge.png, id=1225, 393.47pt x 647.41875pt>
 File: obrazky/../text/bridge.png Graphic file (type png)
 
 <use obrazky/../text/bridge.png>
-Package pdftex.def Info: obrazky/../text/bridge.png used on input line 326.
+Package pdftex.def Info: obrazky/../text/bridge.png used on input line 313.
 (pdftex.def)             Requested size: 188.86345pt x 310.75746pt.
- [44]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.339 \\Z
-         oznam s√∫borov n√°jdeme na obr√°zku \ref{fig:capsman}.
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-<obrazky/../text/capsman.png, id=1258, 236.885pt x 688.5725pt>
-File: obrazky/../text/capsman.png Graphic file (type png)
-
-<use obrazky/../text/capsman.png>
-Package pdftex.def Info: obrazky/../text/capsman.png used on input line 342.
-(pdftex.def)             Requested size: 142.13208pt x 413.14668pt.
- [45 <./obrazky/../text/bridge.png (PNG copy)>] [46 <./obrazky/../text/capsman.
-png>]
-Overfull \hbox (0.69955pt too wide) in paragraph at lines 377--378
+ [42 <./obrazky/../text/bridge.png (PNG copy)>] [43]
+Overfull \hbox (0.69955pt too wide) in paragraph at lines 357--358
 []\T1/lmr/bx/n/12 reselectChannnels \T1/lmr/m/n/12 - trieda o≤et-ruje v˝-ber dr
 u-hÈho ka-n·lu prÌ-stu-po-vÈho bodu 
  []
 
-<obrazky/../text/configRates.png, id=1272, 336.25626pt x 254.9525pt>
+<obrazky/../text/configRates.png, id=1239, 336.25626pt x 254.9525pt>
 File: obrazky/../text/configRates.png Graphic file (type png)
 
 <use obrazky/../text/configRates.png>
-Package pdftex.def Info: obrazky/../text/configRates.png used on input line 385
+Package pdftex.def Info: obrazky/../text/configRates.png used on input line 365
 .
 (pdftex.def)             Requested size: 201.75531pt x 152.97266pt.
- [47] [48 <./obrazky/../text/configRates.png (PNG copy)>] <obrazky/../text/dude
-.png, id=1287, 206.7725pt x 386.44376pt>
-File: obrazky/../text/dude.png Graphic file (type png)
-
-<use obrazky/../text/dude.png>
-Package pdftex.def Info: obrazky/../text/dude.png used on input line 420.
-(pdftex.def)             Requested size: 124.06445pt x 231.86804pt.
-
-<obrazky/../text/DudeDev.png, id=1290, 379.4175pt x 324.21124pt>
+ [44 <./obrazky/../text/configRates.png (PNG copy)>] <obrazky/../text/DudeDev.p
+ng, id=1249, 379.4175pt x 324.21124pt>
 File: obrazky/../text/DudeDev.png Graphic file (type png)
 
 <use obrazky/../text/DudeDev.png>
-Package pdftex.def Info: obrazky/../text/DudeDev.png used on input line 428.
+Package pdftex.def Info: obrazky/../text/DudeDev.png used on input line 402.
 (pdftex.def)             Requested size: 227.65225pt x 194.52824pt.
- [49 <./obrazky/../text/dude.png>] [50 <./obrazky/../text/DudeDev.png (PNG copy
-)>]
-<obrazky/../text/interfaces.png, id=1305, 249.93375pt x 736.7525pt>
-File: obrazky/../text/interfaces.png Graphic file (type png)
-
-<use obrazky/../text/interfaces.png>
-Package pdftex.def Info: obrazky/../text/interfaces.png used on input line 473.
-
-(pdftex.def)             Requested size: 149.9614pt x 442.05492pt.
- [51]
-<obrazky/../text/gre.png, id=1312, 410.53375pt x 370.38374pt>
+ [45] [46 <./obrazky/../text/DudeDev.png (PNG copy)>] <obrazky/../text/gre.png,
+ id=1266, 410.53375pt x 370.38374pt>
 File: obrazky/../text/gre.png Graphic file (type png)
 
 <use obrazky/../text/gre.png>
-Package pdftex.def Info: obrazky/../text/gre.png used on input line 481.
+Package pdftex.def Info: obrazky/../text/gre.png used on input line 449.
 (pdftex.def)             Requested size: 246.32214pt x 222.23195pt.
- [52 <./obrazky/../text/interfaces.png>] [53 <./obrazky/../text/gre.png (PNG co
-py)>]
-Overfull \hbox (12.86667pt too wide) in paragraph at lines 519--531
+ [47] [48 <./obrazky/../text/gre.png (PNG copy)>]
+Overfull \hbox (12.86667pt too wide) in paragraph at lines 488--500
 \T1/lmr/bx/n/12 ced-Se-tup, Con-nec-ti-ons, Ex-tra-Se-tup, Fil-ter, L7Protocols
 ,Mangle, NAT,
  []
 
 
-Overfull \hbox (0.94464pt too wide) in paragraph at lines 531--543
+Overfull \hbox (0.94464pt too wide) in paragraph at lines 500--512
 []\T1/lmr/bx/n/12 Hotspot \T1/lmr/m/n/12 - triedy H\T1/lmr/bx/n/12 otspotActive
  a Hots-pot-Co-okies, Hots-pot-host, Hots-
  []
 
 
-Overfull \hbox (20.27802pt too wide) in paragraph at lines 531--543
+Overfull \hbox (20.27802pt too wide) in paragraph at lines 500--512
 \T1/lmr/bx/n/12 Ports, Hots-po-tU-ser-Pro-file, Hots-po-tU-sers, Hots-pot-Wal-l
 ed-Gar-den, Hots-
  []
 
-[54] [55]
-Overfull \hbox (1.58473pt too wide) in paragraph at lines 567--570
+[49] [50]
+Overfull \hbox (1.58473pt too wide) in paragraph at lines 536--539
 \T1/lmr/bx/n/12 SnmpCommunity \T1/lmr/m/n/12 - trieda o≤et-ruje glo-b·lne na-st
 a-ve-nie ko-mun-nÌt(community
  []
 
-<obrazky/../text/IP4.png, id=1335, 279.0425pt x 883.3pt>
-File: obrazky/../text/IP4.png Graphic file (type png)
-
-<use obrazky/../text/IP4.png>
-Package pdftex.def Info: obrazky/../text/IP4.png used on input line 586.
-(pdftex.def)             Requested size: 167.42679pt x 529.9841pt.
- [56] [57 <./obrazky/../text/IP4.png>]
-<obrazky/../text/addList.png, id=1347, 347.2975pt x 301.125pt>
+<obrazky/../text/addList.png, id=1290, 347.2975pt x 301.125pt>
 File: obrazky/../text/addList.png Graphic file (type png)
 
 <use obrazky/../text/addList.png>
-Package pdftex.def Info: obrazky/../text/addList.png used on input line 615.
+Package pdftex.def Info: obrazky/../text/addList.png used on input line 577.
 (pdftex.def)             Requested size: 208.3801pt x 180.67638pt.
- [58 <./obrazky/../text/addList.png (PNG copy)>] <obrazky/../text/IPV6.png, id=
-1354, 243.91125pt x 420.57124pt>
-File: obrazky/../text/IPV6.png Graphic file (type png)
-
-<use obrazky/../text/IPV6.png>
-Package pdftex.def Info: obrazky/../text/IPV6.png used on input line 645.
-(pdftex.def)             Requested size: 146.34787pt x 252.3447pt.
- [59]
-<obrazky/../text/fwmangle.png, id=1361, 327.2225pt x 278.03876pt>
+ [51] [52 <./obrazky/../text/addList.png (PNG copy)>] <obrazky/../text/fwmangle
+.png, id=1303, 327.2225pt x 278.03876pt>
 File: obrazky/../text/fwmangle.png Graphic file (type png)
 
 <use obrazky/../text/fwmangle.png>
-Package pdftex.def Info: obrazky/../text/fwmangle.png used on input line 671.
+Package pdftex.def Info: obrazky/../text/fwmangle.png used on input line 627.
 (pdftex.def)             Requested size: 196.335pt x 166.82454pt.
- [60 <./obrazky/../text/IPV6.png>]
-<obrazky/../text/kvm.png, id=1370, 148.555pt x 72.27pt>
-File: obrazky/../text/kvm.png Graphic file (type png)
-
-<use obrazky/../text/kvm.png>
-Package pdftex.def Info: obrazky/../text/kvm.png used on input line 683.
-(pdftex.def)             Requested size: 89.13368pt x 43.36232pt.
-
-<obrazky/../text/kvmfig.png, id=1373, 327.2225pt x 116.435pt>
+ [53]
+<obrazky/../text/kvmfig.png, id=1311, 327.2225pt x 116.435pt>
 File: obrazky/../text/kvmfig.png Graphic file (type png)
 
 <use obrazky/../text/kvmfig.png>
-Package pdftex.def Info: obrazky/../text/kvmfig.png used on input line 701.
+Package pdftex.def Info: obrazky/../text/kvmfig.png used on input line 651.
 (pdftex.def)             Requested size: 196.335pt x 69.86153pt.
- [61 <./obrazky/../text/fwmangle.png (PNG copy)> <./obrazky/../text/kvm.png>]
-<obrazky/../text/log.png, id=1381, 143.53625pt x 66.2475pt>
+ [54 <./obrazky/../text/fwmangle.png (PNG copy)> <./obrazky/../text/kvmfig.png 
+(PNG copy)>]
+<obrazky/../text/log.png, id=1320, 143.53625pt x 66.2475pt>
 File: obrazky/../text/log.png Graphic file (type png)
 
 <use obrazky/../text/log.png>
-Package pdftex.def Info: obrazky/../text/log.png used on input line 711.
+Package pdftex.def Info: obrazky/../text/log.png used on input line 661.
 (pdftex.def)             Requested size: 86.1224pt x 39.7488pt.
 
-<obrazky/../text/logUML.png, id=1384, 327.2225pt x 116.435pt>
+<obrazky/../text/logUML.png, id=1323, 327.2225pt x 116.435pt>
 File: obrazky/../text/logUML.png Graphic file (type png)
 
 <use obrazky/../text/logUML.png>
-Package pdftex.def Info: obrazky/../text/logUML.png used on input line 729.
+Package pdftex.def Info: obrazky/../text/logUML.png used on input line 679.
 (pdftex.def)             Requested size: 196.335pt x 69.86153pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 735.
+               Default added (so using `tbp') on input line 685.
 
-<obrazky/../text/support.png, id=1387, 327.2225pt x 116.435pt>
+<obrazky/../text/support.png, id=1326, 327.2225pt x 116.435pt>
 File: obrazky/../text/support.png Graphic file (type png)
 
 <use obrazky/../text/support.png>
-Package pdftex.def Info: obrazky/../text/support.png used on input line 748.
+Package pdftex.def Info: obrazky/../text/support.png used on input line 698.
 (pdftex.def)             Requested size: 196.335pt x 69.86153pt.
- [62 <./obrazky/../text/kvmfig.png (PNG copy)> <./obrazky/../text/log.png> <./o
-brazky/../text/logUML.png (PNG copy)>]
-<obrazky/../text/mesh.png, id=1397, 213.79875pt x 113.42375pt>
-File: obrazky/../text/mesh.png Graphic file (type png)
-
-<use obrazky/../text/mesh.png>
-Package pdftex.def Info: obrazky/../text/mesh.png used on input line 763.
-(pdftex.def)             Requested size: 128.28023pt x 68.05476pt.
-
+ [55 <./obrazky/../text/log.png> <./obrazky/../text/logUML.png (PNG copy)>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 769.
+               Default added (so using `tbp') on input line 713.
 
-<obrazky/../text/meshuml.png, id=1400, 469.755pt x 624.3325pt>
+<obrazky/../text/meshuml.png, id=1338, 469.755pt x 624.3325pt>
 File: obrazky/../text/meshuml.png Graphic file (type png)
 
 <use obrazky/../text/meshuml.png>
-Package pdftex.def Info: obrazky/../text/meshuml.png used on input line 804.
+Package pdftex.def Info: obrazky/../text/meshuml.png used on input line 748.
 (pdftex.def)             Requested size: 281.85518pt x 374.60239pt.
- [63 <./obrazky/../text/support.png (PNG copy)> <./obrazky/../text/mesh.png>] [
-64] [65 <./obrazky/../text/meshuml.png (PNG copy)>] <obrazky/../text/mplslist.p
-ng, id=1420, 242.9075pt x 428.60126pt>
-File: obrazky/../text/mplslist.png Graphic file (type png)
-
-<use obrazky/../text/mplslist.png>
-Package pdftex.def Info: obrazky/../text/mplslist.png used on input line 832.
-(pdftex.def)             Requested size: 145.7456pt x 257.16273pt.
- [66 <./obrazky/../text/mplslist.png>]
-<obrazky/../text/mplsuml.png, id=1429, 367.3725pt x 278.03876pt>
+ [56 <./obrazky/../text/support.png (PNG copy)>] [57] [58 <./obrazky/../text/me
+shuml.png (PNG copy)>]
+<obrazky/../text/mplsuml.png, id=1359, 367.3725pt x 278.03876pt>
 File: obrazky/../text/mplsuml.png Graphic file (type png)
 
 <use obrazky/../text/mplsuml.png>
-Package pdftex.def Info: obrazky/../text/mplsuml.png used on input line 859.
+Package pdftex.def Info: obrazky/../text/mplsuml.png used on input line 797.
 (pdftex.def)             Requested size: 220.42519pt x 166.82454pt.
- [67 <./obrazky/../text/mplsuml.png (PNG copy)>] [68] <obrazky/../text/ppplist.
-png, id=1441, 285.065pt x 882.29625pt>
-File: obrazky/../text/ppplist.png Graphic file (type png)
-
-<use obrazky/../text/ppplist.png>
-Package pdftex.def Info: obrazky/../text/ppplist.png used on input line 924.
-(pdftex.def)             Requested size: 171.04031pt x 529.38184pt.
- [69]
-<obrazky/../text/ppptab.png, id=1448, 428.60126pt x 208.78pt>
+ [59] [60 <./obrazky/../text/mplsuml.png (PNG copy)>] [61] <obrazky/../text/ppp
+tab.png, id=1378, 428.60126pt x 208.78pt>
 File: obrazky/../text/ppptab.png Graphic file (type png)
 
 <use obrazky/../text/ppptab.png>
-Package pdftex.def Info: obrazky/../text/ppptab.png used on input line 948.
+Package pdftex.def Info: obrazky/../text/ppptab.png used on input line 880.
 (pdftex.def)             Requested size: 257.16273pt x 125.26895pt.
- [70 <./obrazky/../text/ppplist.png>]
-<obrazky/../text/queueList.png, id=1455, 188.705pt x 129.48375pt>
-File: obrazky/../text/queueList.png Graphic file (type png)
-
-<use obrazky/../text/queueList.png>
-Package pdftex.def Info: obrazky/../text/queueList.png used on input line 964.
-(pdftex.def)             Requested size: 113.22386pt x 77.69083pt.
- [71 <./obrazky/../text/ppptab.png (PNG copy)>] <obrazky/../text/QueueTree.png,
- id=1465, 358.33875pt x 531.9875pt>
+ [62 <./obrazky/../text/ppptab.png (PNG copy)>] <obrazky/../text/QueueTree.png,
+ id=1388, 358.33875pt x 531.9875pt>
 File: obrazky/../text/QueueTree.png Graphic file (type png)
 
 <use obrazky/../text/QueueTree.png>
-Package pdftex.def Info: obrazky/../text/QueueTree.png used on input line 1002.
-
+Package pdftex.def Info: obrazky/../text/QueueTree.png used on input line 928.
 (pdftex.def)             Requested size: 215.0049pt x 319.19496pt.
- [72 <./obrazky/../text/queueList.png>]
-<obrazky/../text/radiusPng.png, id=1475, 364.36125pt x 670.505pt>
+ [63]
+<obrazky/../text/radiusPng.png, id=1396, 364.36125pt x 670.505pt>
 File: obrazky/../text/radiusPng.png Graphic file (type png)
 
 <use obrazky/../text/radiusPng.png>
-Package pdftex.def Info: obrazky/../text/radiusPng.png used on input line 1050.
-
+Package pdftex.def Info: obrazky/../text/radiusPng.png used on input line 976.
 (pdftex.def)             Requested size: 218.61842pt x 402.3061pt.
- [73 <./obrazky/../text/QueueTree.png (PNG copy)>] [74] [75 <./obrazky/../text/
+ [64 <./obrazky/../text/QueueTree.png (PNG copy)>] [65] [66 <./obrazky/../text/
 radiusPng.png (PNG copy)>]
-<obrazky/../text/routing.png, id=1492, 239.89626pt x 821.0675pt>
-File: obrazky/../text/routing.png Graphic file (type png)
-
-<use obrazky/../text/routing.png>
-Package pdftex.def Info: obrazky/../text/routing.png used on input line 1073.
-(pdftex.def)             Requested size: 119.94783pt x 410.53275pt.
-
-<obrazky/../text/RipNetworks.png, id=1495, 327.2225pt x 231.86626pt>
+<obrazky/../text/RipNetworks.png, id=1416, 327.2225pt x 231.86626pt>
 File: obrazky/../text/RipNetworks.png Graphic file (type png)
 
 <use obrazky/../text/RipNetworks.png>
-Package pdftex.def Info: obrazky/../text/RipNetworks.png used on input line 109
+Package pdftex.def Info: obrazky/../text/RipNetworks.png used on input line 101
 8.
 (pdftex.def)             Requested size: 196.335pt x 139.12082pt.
- [76 <./obrazky/../text/routing.png>]
-<obrazky/../text/switch.png, id=1502, 164.615pt x 158.5925pt>
-File: obrazky/../text/switch.png Graphic file (type png)
-
-<use obrazky/../text/switch.png>
-Package pdftex.def Info: obrazky/../text/switch.png used on input line 1115.
-(pdftex.def)             Requested size: 131.69217pt x 126.87415pt.
- [77 <./obrazky/../text/RipNetworks.png (PNG copy)>] <obrazky/../text/SwitchPor
-ts.png, id=1511, 363.3575pt x 185.69376pt>
+ [67 <./obrazky/../text/RipNetworks.png (PNG copy)>]
+<obrazky/../text/SwitchPorts.png, id=1426, 363.3575pt x 185.69376pt>
 File: obrazky/../text/SwitchPorts.png Graphic file (type png)
 
 <use obrazky/../text/SwitchPorts.png>
-Package pdftex.def Info: obrazky/../text/SwitchPorts.png used on input line 113
-8.
+Package pdftex.def Info: obrazky/../text/SwitchPorts.png used on input line 105
+2.
 (pdftex.def)             Requested size: 290.68639pt x 148.55519pt.
- [78 <./obrazky/../text/switch.png> <./obrazky/../text/SwitchPorts.png (PNG cop
-y)>]
-<obrazky/../text/system.png, id=1521, 204.765pt x 824.07875pt>
-File: obrazky/../text/system.png Graphic file (type png)
-
-<use obrazky/../text/system.png>
-Package pdftex.def Info: obrazky/../text/system.png used on input line 1176.
-(pdftex.def)             Requested size: 122.85992pt x 494.45107pt.
- [79]
-<obrazky/../text/SystemMaintenance.png, id=1528, 348.30125pt x 139.52126pt>
+ [68] [69 <./obrazky/../text/SwitchPorts.png (PNG copy)>]
+<obrazky/../text/SystemMaintenance.png, id=1441, 348.30125pt x 139.52126pt>
 File: obrazky/../text/SystemMaintenance.png Graphic file (type png)
 
 <use obrazky/../text/SystemMaintenance.png>
 Package pdftex.def Info: obrazky/../text/SystemMaintenance.png used on input li
-ne 1197.
+ne 1105.
 (pdftex.def)             Requested size: 208.98236pt x 83.7134pt.
- [80 <./obrazky/../text/system.png>] [81 <./obrazky/../text/SystemMaintenance.p
-ng (PNG copy)>]
-<obrazky/../text/tools.png, id=1541, 193.72375pt x 451.6875pt>
-File: obrazky/../text/tools.png Graphic file (type png)
-
-<use obrazky/../text/tools.png>
-Package pdftex.def Info: obrazky/../text/tools.png used on input line 1228.
-(pdftex.def)             Requested size: 145.29245pt x 338.76479pt.
-
-<obrazky/../text/Netwatch.png, id=1544, 334.24875pt x 301.125pt>
+ [70 <./obrazky/../text/SystemMaintenance.png (PNG copy)>]
+<obrazky/../text/Netwatch.png, id=1451, 334.24875pt x 301.125pt>
 File: obrazky/../text/Netwatch.png Graphic file (type png)
 
 <use obrazky/../text/Netwatch.png>
-Package pdftex.def Info: obrazky/../text/Netwatch.png used on input line 1256.
+Package pdftex.def Info: obrazky/../text/Netwatch.png used on input line 1158.
 (pdftex.def)             Requested size: 200.55078pt x 180.67638pt.
- [82 <./obrazky/../text/tools.png>] [83 <./obrazky/../text/Netwatch.png (PNG co
-py)>]
-Overfull \hbox (5.15279pt too wide) in paragraph at lines 1276--1277
+ [71]
+Overfull \hbox (5.15279pt too wide) in paragraph at lines 1178--1179
 []\T1/lmr/bx/n/12 interfaceVirtualStationPseudoBridge \T1/lmr/m/n/12 - trieda o
 ≤et-ruje na-sta-ve-nie pse-udob-
  []
 
-<obrazky/../text/wifi.png, id=1558, 336.25626pt x 920.43875pt>
-File: obrazky/../text/wifi.png Graphic file (type png)
-
-<use obrazky/../text/wifi.png>
-Package pdftex.def Info: obrazky/../text/wifi.png used on input line 1288.
-(pdftex.def)             Requested size: 201.75531pt x 552.26752pt.
- [84]
-<obrazky/../text/securityProfileRadius.png, id=1566, 398.48875pt x 324.21124pt>
+[72 <./obrazky/../text/Netwatch.png (PNG copy)>]
+<obrazky/../text/securityProfileRadius.png, id=1466, 398.48875pt x 324.21124pt>
 File: obrazky/../text/securityProfileRadius.png Graphic file (type png)
 <use obrazky/../text/securityProfileRadius.png>
 Package pdftex.def Info: obrazky/../text/securityProfileRadius.png used on inpu
-t line 1317.
+t line 1213.
 (pdftex.def)             Requested size: 239.0951pt x 194.52824pt.
- [85 <./obrazky/../text/wifi.png>]) [86 <./obrazky/../text/securityProfileRadiu
-s.png (PNG copy)>]
+) [73 <./obrazky/../text/securityProfileRadius.png (PNG copy)>]
 \openout2 = `text/vysledky.aux'.
 
-
-(./text/vysledky.tex
+ (./text/vysledky.tex
 Overfull \hbox (13.97722pt too wide) in paragraph at lines 1--1
 []\T1/lmr/bx/n/17.28 GRAFICK¡ ÉASî AP-LI-K¡-CIE (FRON-TEND) 
  []
 
-<obrazky/../text/designer.png, id=1579, 1933.2225pt x 836.12375pt>
-File: obrazky/../text/designer.png Graphic file (type png)
-
-<use obrazky/../text/designer.png>
-Package pdftex.def Info: obrazky/../text/designer.png used on input line 25.
-(pdftex.def)             Requested size: 405.98871pt x 175.59117pt.
- [87
+[74
 
 
 
-] [88 <./obrazky/../text/designer.png>]
-<obrazky/../text/linuxwinbox.png, id=1591, 837.1275pt x 551.05875pt>
+] <obrazky/../text/linuxwinbox.png, id=1478, 837.1275pt x 551.05875pt>
 File: obrazky/../text/linuxwinbox.png Graphic file (type png)
 
 <use obrazky/../text/linuxwinbox.png>
-Package pdftex.def Info: obrazky/../text/linuxwinbox.png used on input line 38.
+Package pdftex.def Info: obrazky/../text/linuxwinbox.png used on input line 25.
 
 (pdftex.def)             Requested size: 376.70389pt x 247.97414pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--41
+Underfull \hbox (badness 10000) in paragraph at lines 21--28
 
  []
 
-<obrazky/../text/socket.png, id=1593, 209.78375pt x 157.58875pt>
+<obrazky/../text/socket.png, id=1480, 209.78375pt x 157.58875pt>
 File: obrazky/../text/socket.png Graphic file (type png)
 
 <use obrazky/../text/socket.png>
-Package pdftex.def Info: obrazky/../text/socket.png used on input line 45.
+Package pdftex.def Info: obrazky/../text/socket.png used on input line 32.
 (pdftex.def)             Requested size: 115.38141pt x 86.67407pt.
- [89
+ [75
 
  <./obrazky/../text/linuxwinbox.png>]
-<obrazky/../text/loginerror.png, id=1600, 204.765pt x 144.54pt>
+<obrazky/../text/loginerror.png, id=1487, 204.765pt x 144.54pt>
 File: obrazky/../text/loginerror.png Graphic file (type png)
 
 <use obrazky/../text/loginerror.png>
-Package pdftex.def Info: obrazky/../text/loginerror.png used on input line 52.
+Package pdftex.def Info: obrazky/../text/loginerror.png used on input line 39.
 (pdftex.def)             Requested size: 112.62108pt x 79.49722pt.
 
-<obrazky/../text/loginokno.png, id=1602, 1249.66875pt x 288.07625pt>
+<obrazky/../text/loginokno.png, id=1489, 1249.66875pt x 288.07625pt>
 File: obrazky/../text/loginokno.png Graphic file (type png)
 
 <use obrazky/../text/loginokno.png>
-Package pdftex.def Info: obrazky/../text/loginokno.png used on input line 61.
+Package pdftex.def Info: obrazky/../text/loginokno.png used on input line 48.
 (pdftex.def)             Requested size: 437.39063pt x 100.82819pt.
 
-Overfull \hbox (10.59929pt too wide) in paragraph at lines 61--62
+Overfull \hbox (10.59929pt too wide) in paragraph at lines 48--49
  [][] 
  []
 
-[90 <./obrazky/../text/socket.png> <./obrazky/../text/loginerror.png> <./obrazk
-y/../text/loginokno.png>] [91]
-<obrazky/../text/interfacesgui.png, id=1620, 1109.14375pt x 680.5425pt>
+[76 <./obrazky/../text/socket.png> <./obrazky/../text/loginerror.png> <./obrazk
+y/../text/loginokno.png>] [77]
+<obrazky/../text/interfacesgui.png, id=1506, 1109.14375pt x 680.5425pt>
 File: obrazky/../text/interfacesgui.png Graphic file (type png)
 
 <use obrazky/../text/interfacesgui.png>
-Package pdftex.def Info: obrazky/../text/interfacesgui.png used on input line 9
-6.
+Package pdftex.def Info: obrazky/../text/interfacesgui.png used on input line 8
+3.
 (pdftex.def)             Requested size: 388.20613pt x 238.19344pt.
 
-<obrazky/../text/ethernet.png, id=1621, 1243.64626pt x 369.38pt>
+<obrazky/../text/ethernet.png, id=1507, 1243.64626pt x 369.38pt>
 File: obrazky/../text/ethernet.png Graphic file (type png)
 
 <use obrazky/../text/ethernet.png>
-Package pdftex.def Info: obrazky/../text/ethernet.png used on input line 102.
+Package pdftex.def Info: obrazky/../text/ethernet.png used on input line 89.
 (pdftex.def)             Requested size: 435.28271pt x 129.28493pt.
 
-Overfull \hbox (8.49138pt too wide) in paragraph at lines 102--103
+Overfull \hbox (8.49138pt too wide) in paragraph at lines 89--90
  [][] 
  []
 
-<obrazky/../text/vlangui.png, id=1622, 1008.76875pt x 240.9pt>
+<obrazky/../text/vlangui.png, id=1508, 1008.76875pt x 240.9pt>
 File: obrazky/../text/vlangui.png Graphic file (type png)
 
 <use obrazky/../text/vlangui.png>
-Package pdftex.def Info: obrazky/../text/vlangui.png used on input line 108.
+Package pdftex.def Info: obrazky/../text/vlangui.png used on input line 95.
 (pdftex.def)             Requested size: 353.07436pt x 84.31625pt.
 
-<obrazky/../text/ifacelistmember.png, id=1623, 724.7075pt x 380.42125pt>
+<obrazky/../text/ifacelistmember.png, id=1509, 724.7075pt x 380.42125pt>
 File: obrazky/../text/ifacelistmember.png Graphic file (type png)
 
 <use obrazky/../text/ifacelistmember.png>
 Package pdftex.def Info: obrazky/../text/ifacelistmember.png used on input line
- 114.
+ 101.
 (pdftex.def)             Requested size: 253.65143pt x 133.14941pt.
- [92 <./obrazky/../text/interfacesgui.png> <./obrazky/../text/ethernet.png>]
-<obrazky/../text/ifacelist.png, id=1630, 642.4pt x 364.36125pt>
+ [78 <./obrazky/../text/interfacesgui.png> <./obrazky/../text/ethernet.png>]
+<obrazky/../text/ifacelist.png, id=1517, 642.4pt x 364.36125pt>
 File: obrazky/../text/ifacelist.png Graphic file (type png)
 
 <use obrazky/../text/ifacelist.png>
-Package pdftex.def Info: obrazky/../text/ifacelist.png used on input line 120.
+Package pdftex.def Info: obrazky/../text/ifacelist.png used on input line 107.
 (pdftex.def)             Requested size: 289.07733pt x 163.96104pt.
-) [93 <./obrazky/../text/vlangui.png> <./obrazky/../text/ifacelistmember.png> <
-./obrazky/../text/ifacelist.png>]
+ [79 <./obrazky/../text/vlangui.png> <./obrazky/../text/ifacelistmember.png> <.
+/obrazky/../text/ifacelist.png>] [80
+
+])
+[81
+
+]
 \openout2 = `text/zaver.aux'.
 
+ (./text/zaver.tex) [82
 
-(./text/zaver.tex)
+
+
+]
 \openout2 = `text/literatura.aux'.
 
  (./text/literatura.tex
@@ -3240,9 +3058,7 @@ Underfull \hbox (badness 1365) in paragraph at lines 64--68
 2.04.2018]. Do-stupnÈ z URL:
  []
 
-[94
-
-
+[83
 
 
 
@@ -3265,10 +3081,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 112--116
 server-[]certs /
  []
 
-) [95]
+) [84]
 \openout2 = `text/zkratky.aux'.
 
- (./text/zkratky.tex [96
+ (./text/zkratky.tex [85
 
 
 
@@ -3277,13 +3093,35 @@ server-[]certs /
 \tf@toa=\write11
 \openout11 = `sablona.toa'.
 
- [97
+ [86
 
 
 ]
 \openout2 = `text/prilohy.aux'.
 
- (./text/prilohy.tex)
+ (./text/prilohy.tex
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3 ...iplomka_mikrotik/tree/adrian}{diplomka_tex}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3 ...iplomka_mikrotik/tree/adrian}{diplomka_tex}
+                                                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+) [87
+
+]
 
 ! LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{document}.
 
@@ -3292,29 +3130,32 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.230 \end{document}
+l.231 \end{document}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 230.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 230.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
 (./sablona.aux (./text/uvod.aux) (./text/reseni.aux) (./text/vysledky.aux)
 (./text/zaver.aux) (./text/literatura.aux) (./text/zkratky.aux)
 (./text/prilohy.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 230.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 230.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
 Package rerunfilecheck Info: File `sablona.out' has not changed.
-(rerunfilecheck)             Checksum: F3CE9458F4F82B51E49C2600EB5C50FA;16348.
+(rerunfilecheck)             Checksum: 89025C4D602867D018068912BFA8B775;17356.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 230.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
  )
 (\end occurred inside a group at level 2)
 
@@ -3322,10 +3163,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 230.
 ### semi simple group (level 1) entered at line 1 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 37216 strings out of 493029
- 694083 string characters out of 6136233
- 788601 words of memory out of 5000000
- 39416 multiletter control sequences out of 15000+600000
+ 37061 strings out of 493029
+ 690996 string characters out of 6136233
+ 787736 words of memory out of 5000000
+ 39319 multiletter control sequences out of 15000+600000
  58390 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,18n,101p,10490b,1479s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3342,10 +3183,10 @@ texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 so12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on sablona.pdf (98 pages, 2069608 bytes).
+Output written on sablona.pdf (88 pages, 1668984 bytes).
 PDF statistics:
- 1870 PDF objects out of 2073 (max. 8388607)
- 1646 compressed objects within 17 object streams
- 611 named destinations out of 1000 (max. 500000)
- 1165 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1770 PDF objects out of 2073 (max. 8388607)
+ 1575 compressed objects within 16 object streams
+ 570 named destinations out of 1000 (max. 500000)
+ 1115 words of extra memory for PDF output out of 10000 (max. 10000000)
 

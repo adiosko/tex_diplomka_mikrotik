@@ -226,7 +226,6 @@ Použitie modulu aplikujem v rámci diplomovej práce. Používa sa hlavne pri v
 \item Štandardný výstup do konzoly
 \item Výstup do osobitného súboru, ktorý sa potom ďalej spracuje
 \end{itemize}
-\\
 V rámci práce som tento modul použil v rámci knižnice loginManager, kde v metódach pre mactelnet vyhľadáva mikrotiky za pomoci protokolu mactelnet a ukladá to do textového súboru mt.output. \\
 Nie je potreba inštalácie modulu  OS, pretože je zahrnutý v rámci štandardných knižníc jazyku python. V kóde vidíme ukážku metódy,ktorá vylistuje zoznam mikrotik zariadení za pomoci funkcie mactelnet a jej návratovou hodnotou je list zoznamu mikrotik zariadení
 \\
@@ -263,9 +262,7 @@ Medzi najpoužívanejšie metódy v rámci diplomovej práce sú použité:
 \item \textit{sleep()} - doba trvania odoslania príkazu v sekundách
 \item \textit{close()} - ukončenie spojenia
 \end{itemize}
-\\
 V rámci výstupu kódu je ukážka metódy na pripojenie na telnet server pomocou knižnice telnetlib.
-\\
 \begin{sexylisting}{Použitie knižnice telnetlib}
 def loginTelnet(self, password, login="admin"):
  import telnetlib

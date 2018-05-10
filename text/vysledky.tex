@@ -2,13 +2,6 @@
 V rámci frontend časti aplikácie boli použité aplikácie:\begin{itemize}
 \item \textbf{QT4 designer} - softvér na nábrh dizajnu "okien" aplikácie
 \item \textbf{PyQT 4} - doplnok do pythonu, na návrh a programovenie grafických aplikácií
-\end{itemize}
-Všetky implementácie v kóde boli použité vo verzovacom systéme github \cite{git} za použitia technológie git. Technológia git predstavuje verzovací systém na rôzne vetvy, hlavnú vetvu predstavuje master vetva, potom sú tu užívateľsky definované vetvy. \\
-Git pracuje na základe \textit{repozitárového systému}. Postup pridania súborov na git repozitár:\begin{itemize}
-\item inicializácia git repozitáru - príkaz \textit{git init}
-\item pridanie súborov aktuálnej zložky - príkaz \textit{git add .}
-\item commit na repozitár - príkaz \textit{git commit -m "Text"}
-\item pridanie súborov na git - príkaz \textit{git push origin vetva}
 \end{itemize} 
 \section{QT4 disigner}
 QT4 designer je aplikácia na návrh šablón v rámci použitia knižnice PyQT4. Medzi základné objekty použité v aplikácii sem patria:
@@ -20,12 +13,6 @@ QT4 designer je aplikácia na návrh šablón v rámci použitia knižnice PyQT4
 \item \textbf{lineedit} - textové pole na editáciu riadku
 \end{itemize} 
 Po vytvorení šablóny sa súbor uloží vo formáte \textit{.ui} a musí sa nahrať do kódu aby sa s ním dalo pracovať pomocou príkazu \textit{qtCreatorFile = "súbor.ui"}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.21]{../text/designer.png}
-\caption{Rozhranie QT4 designer}
-\label{fig:netwatchuml}
-\end{figure}
 \section{PyQT 4}
 V aplikácii je použitá verzia PyQT vo verzii 4. Dnes existuje v dvoch verziách a to vo verzii 4 a vo verzii 5. Nakoľko QT4 designer je navrhnutý na PyQT vo verzii 4, tak aj PyQT je v kóde použité vo verzii 4. \\
 V rámci okna po prihlásení na zariadenie je okno založené na objekte \textit{menubar()} a na metódach \textit{addMenu()} na pridávanie hlavných položiek v menu a ďalšie položky sú QAcion, ktoré vytvárajú podzložku v menu cez metódu \textit{addAction()}. Ďalšou dôležitou knižnicou je QtGui na vytvorenie GUI plikácie. Objekt \textit{QApplication()} vytvorí samostatnú aplikáciu spoločne s metódou pre otvorenie okna \textit{show()}, tiež je tu použitá knižnica \textit{sys} a jej metóda \textit{exit()} na zatvorenie celej aplikácie,  a ďalšou metódou je \textit{close()}, táto metóda okno zavre.
@@ -82,7 +69,7 @@ V menu sa nachádzajú jednotlivé položky a ich podzložky:
 \item \textbf{Log} - predstavuje výpis systémového logu
 \item \textbf{About} - predstavuje dve tlačítka Quit a About, About vypíše informácie o softvéri, stalčením tlačítka  Quit sa vypnú všetky okná a celé spojenie zahrňujúc prihlasovacie okno 
 \end{itemize}
-\subsection{Menu Interface}
+\subsection{Ukážka fungovania aplikácie cez menu Interface}
 Tlačítko interface obsahuje:
 \begin{itemize}
 \item \textbf{Interfaces} - obsahuje zoznam rozhraní, zapnutie a vypnutie rozhraní spoločne s výnimkami zobrazené na obrázku \ref{fig:interfacesgui} 
@@ -121,5 +108,7 @@ Tlačítko interface obsahuje:
 \caption{Okno interface list}
 \label{fig:interfacelistgui}
 \end{figure}
+\chapter{Návod na inštaláciu a spustenie}
+\chapter{Testovanie aplikácie}
 
 
