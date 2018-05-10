@@ -22,15 +22,15 @@ V súbore centrolControl sa popisuje spôsob hromadnej obsluhy mikrotikov na zá
 \item \textit{addCredentials()} - metóda pridíva heslo k užívateľskému účtu do slovníku, štandardnéužívateľské meno sa používa admin, ale tiež sa môže použiť aj iné užívateľské meno pri volaní metódy
 \item \textit{loginSSH()}- metóda je použitá na hromadné prihlásenie pomoocu protokolu SSH na mikrotiky, používa sa tu pritom knižnica pexpect a jej subkižnica pxssh, jej vstupné parametre sp IP adresa serveru, užívateľské meno a heslo 
 \end{itemize}
-\begin{sexylisting}{Konštruktor súboru}
+\linebreak
+\begin{lstlisting}[language=python, frame=single, caption=Deklarácia vstupných parametrov,captionpos=b]
  def __init__(self, login):
         self.username = login
         self.credentials = {
             "192.168.1.1": "admin",
             "192.168.2.1": ""
-        }
-\end{sexylisting}
-\begin{sexylisting}{Meóda zobrazenia mikrotikov}
+\end{lstlisting}
+\begin{lstlisting}[language=python, frame=single, caption=Meóda zobrazenia mikrotikov,captionpos=b, showstringspaces=false]
  def listMikrotikDevices(self):
    deviceList = []
    loadAddress = False
@@ -45,11 +45,10 @@ V súbore centrolControl sa popisuje spôsob hromadnej obsluhy mikrotikov na zá
          if len( header ) > 1:
             if "IP" in header[0]:
               loadAddress = True
-         for i in deviceList:
-           print(i)
   return deviceList
-\end{sexylisting}
-\begin{sexylisting}{Metóda pridania užívateľských mien a hesiel}
+\end{lstlisting}
+\newpage
+\begin{lstlisting}[language=python, frame=single, caption=Metóda pridania užívateľských mien a hesiel,captionpos=b, showstringspaces=false]
  def addCredentials(self, login="admin"):
    server_list = self.listMikrotikDevices()
    print( server_list )
@@ -61,9 +60,9 @@ V súbore centrolControl sa popisuje spôsob hromadnej obsluhy mikrotikov na zá
     password for " + server + ":" )
     self.credentials[server] = password
     return server_list
-\end{sexylisting}
-\begin{sexylisting}{Metóda hromadného prihlásenia pomocou protokolu SSH}
-def loginSSH(self, server,login, password):
+\end{lstlisting}
+\begin{lstlisting}[language=python, frame=single, caption=Metóda hromadného prihlásenia pomocou protokolu SSH,captionpos=b, showstringspaces=false]
+ def loginSSH(self, server,login, password):
  from pexpect import pxssh, spawn, expect
  import getpass
  for server in self.credentials:
@@ -79,7 +78,7 @@ def loginSSH(self, server,login, password):
  except pxssh.ExceptionPxssh as e:
   print( "Error" )
   print( str( e ) )
-\end{sexylisting}
+\end{lstlisting}
 \subsection{Súbor Constructors}
 Súbor predstavuje zoznam konštruktorov pre konkrétne naprogramované API moduly pomocou knižnice tikapy. V úvode konštruktoru sú popísané importy jednotlivých modulov a submodulov pre konfiguráciu mikrotiku za pomoci API. \\
 Následne je vytvorená trieda Mikrotik, ktorá zahŕňa všetky konštruktory spoločne s ich vstupnými parametrami, ktoré sú adresa,užívateľské meno a heslo. 
@@ -91,16 +90,17 @@ Následne je vytvorená trieda Mikrotik, ktorá zahŕňa všetky konštruktory s
 \end{figure} 
 \subsection{Súbor dhcpClient}
 V tomto súbore sa nachádza základná konfigurácia mikrotiku po pripojení naň. Obsahuje triedu basicConfig, ktorá pozostáva z dvoch metód.\\
-V konštruktore sa nastaví rozhranie, na ktorom sa má adresa nastaviť, IP adresa/subnet a MAC adresa na pripojenie na mikrotik pomocu protokolu mactelnet.\\
-\begin{sexylisting}{Trieda basicConfig}
-class basicCOnfig:
+V konštruktore sa nastaví rozhranie, na ktorom sa má adresa nastaviť, IP adresa/subnet a MAC adresa na pripojenie na mikrotik pomocu protokolu mactelnet.
+\begin{lstlisting}[language=python, frame=single, caption=Trieda basicConfig,captionpos=b, showstringspaces=false]
+ class basicCOnfig:
     def __init__(self,interface,mac,ip):
         self.interface = interface
         self.mac = mac
         self.ip = ip
-\end{sexylisting}
-Prvá metóda \textit{dhcp()}, ktorej vstupné parametre sú užívateľské meno a heslo. Pozostáva z prihlásenia na mikrotik, a nastavenia Dynamic Host Client Protocol (DHCP) klienta na rozhraní, ktoré sa definuje pri volaní objektu v rámci konštruktoru.\\
-\begin{sexylisting}{Metóda dhcp}
+\end{lstlisting}
+Prvá metóda \textit{dhcp()}, ktorej vstupné parametre sú užívateľské meno a heslo. Pozostáva z prihlásenia na mikrotik, a nastavenia Dynamic Host Client Protocol (DHCP) klienta na rozhraní, ktoré sa definuje pri volaní objektu v rámci konštruktoru.
+\newpage
+\begin{lstlisting}[language=python, frame=single, caption=Metóda dhcp,captionpos=b, showstringspaces=false]
  def dhcp(self,username,password):
         child =pexpect.spawn('mactelnet '+self.mac)
         child.expect('Username:')
@@ -115,13 +115,11 @@ Prvá metóda \textit{dhcp()}, ktorej vstupné parametre sú užívateľské men
             child.expect('> ')
             child.close()
         except:
-            print("error")
             child.close()
-        time.sleep(1)
-\end{sexylisting}
+\end{lstlisting}
 Druhá metóda \textit{setAddress()}, ktorá bere ako vstupné parametre užívateľské meno a heslo nastaví statickú IP adresu na rozhraní definovanom v rámci konštruktoru.
-\begin{sexylisting}{Metóda setAddress}
-    def setAddress(self,username,password):
+\begin{lstlisting}[language=python, frame=single, caption=Metóda setAddress,captionpos=b, showstringspaces=false]
+ def setAddress(self,username,password):
         child = pexpect.spawn( 'mactelnet '+ 
         self.mac )
         child.expect( 'Username:' )
@@ -131,27 +129,24 @@ Druhá metóda \textit{setAddress()}, ktorá bere ako vstupné parametre užíva
         child.sendline( '\r' )
         try:
             child.expect( '> ' )
-            child.sendline( 'ip address add address='
-            +self.ip + " interface="
-            +self.interface+"\r" )
+            child.sendline( 'ip address add address='+self.ip 
+            +"interface="+self.interface+"\r" )
             child.expect( '> ' )
             child.close()
         except:
-            print( "error" )
             child.close()
-        time.sleep( 1 )
-\end{sexylisting}
+\end{lstlisting}
 \subsection{Súbor LoginManager}
-Súbor LoginManager pozostáva z niekoľkých metód, tieto metódy majú podobnú štruktúru ako súbor centralConrol popisujúci v kapitole\ref{sec:central}.\\
-Ako prvá popísaná časť je konštruktor, ktorý prijíma vstupné parametre užívateľské meno a heslo.\\
-\begin{sexylisting}{Konštruktor súboru}
-    def __init__(self, login,password):
+Súbor LoginManager pozostáva z niekoľkých metód, tieto metódy majú podobnú štruktúru ako súbor centralConrol popisujúci v kapitole \ref{sec:central}.\\
+Ako prvá popísaná časť je konštruktor, ktorý prijíma vstupné parametre užívateľské meno a heslo.
+\begin{lstlisting}[language=python, frame=single, caption=Konštruktor súboru,captionpos=b, showstringspaces=false] 
+def __init__(self, login,password):
         self.username = login
         self.pwd = password
-\end{sexylisting}
-Druhá metóda je metóda \textit{loginTelnet()},v rámci tejto metódy sa rieši prihlásenie na mikrotik pomocou protokolu telnet za použitia knižnice telnetlib. Vo vstupe metódy sa definuje premenná \textit{server_list}. Táto premenná je naplnená IP adresami mikrotikov v rámci súboru centralControl.\\
-\begin{sexylisting}{Metóda loginTelnet}
-    def loginTelnet(self, password, login="admin"):
+\end{lstlisting}
+Druhá metóda je metóda \textit{loginTelnet()},v rámci tejto metódy sa rieši prihlásenie na mikrotik pomocou protokolu telnet za použitia knižnice telnetlib. Vo vstupe metódy sa definuje premenná \textit{server\_ list}. Táto premenná je naplnená IP adresami mikrotikov v rámci súboru centralControl.
+\begin{lstlisting}[language=python, frame=single, caption=Metóda loginTelnet,captionpos=b, showstringspaces=false] 
+def loginTelnet(self, password, login="admin"):
         import telnetlib
         central = centralControl(login, password)
         server_list = central.listMikrotikDevices()
@@ -171,10 +166,11 @@ Druhá metóda je metóda \textit{loginTelnet()},v rámci tejto metódy sa rieš
             except:
                 print( "Cannot connect to 
                 router via telnet" )
-\end{sexylisting}
-Ďalej sa tu nachádza metóda loginSSH(), táto metóda pracujúca podobne ako metoda loginTelnet() pracuje na základe protokolu SSH, na vstupe má server IP adresu, užívateľské meno  a heslo. \\
-\begin{sexylisting}{Metóda loginSSH}
-    def loginSSH(self, server,login, password):
+\end{lstlisting}
+\newpage
+Ďalej sa tu nachádza metóda loginSSH(), táto metóda pracujúca podobne ako metoda loginTelnet() pracuje na základe protokolu SSH, na vstupe má server IP adresu, užívateľské meno  a heslo.
+\begin{lstlisting}[language=python, frame=single, caption=Metóda loginSSH,captionpos=b, showstringspaces=false] 
+def loginSSH(self, server,login, password):
         from pexpect import pxssh, spawn, expect
         import getpass
         try:
@@ -190,11 +186,11 @@ Druhá metóda je metóda \textit{loginTelnet()},v rámci tejto metódy sa rieš
         except pxssh.ExceptionPxssh as e:
             print( "Error" )
             print( str( e ) )
-\end{sexylisting}
+\end{lstlisting}
 Ďalšou metódou je metóda na vylistovanie všetkýchmikrotikov, táto metóda je bez vstupného parametru. Ako výstup je súbor mikrtik.output naplnený MAC adresami mikrotikov. 
-\\
-\begin{sexylisting}{Metóda listMikrotikDevices}
-    def listMikrotikDevices(self):
+\newpage
+\begin{lstlisting}[language=python, frame=single, caption=Metóda listMikrotikDevices,captionpos=b, showstringspaces=false] 
+def listMikrotikDevices(self):
         deviceList = []
         loadMacAddress = False
         os.system("mactelnet -l -t 20 
@@ -213,10 +209,11 @@ Druhá metóda je metóda \textit{loginTelnet()},v rámci tejto metódy sa rieš
                         in header[1]:
                             loadMacAddress = True
         return deviceList
-\end{sexylisting}
-Poslednou metódou je metóda \textit{mactelnetLoginToSingleDevice()}, vďaka ktorej sa pripája pomocou protokolu mactelnet na jedno mikrotik zariadenie pomocou macadresy získanej z výstupu metódy \textit{listMikrotikDevices()} \textit{mikrotik.output}.
-\begin{sexylisting}{Metóda mactelnetLoginToSingleDevice}
-    def mactelnetLoginToSingleDevice(self, username, 
+\end{lstlisting}
+Poslednou metódou je metóda \textit{mactelnetLoginToSingleDevice()}, vďaka ktorej sa pripája pomocou protokolu mactelnet na jedno mikrotik zariadenie pomocou macadresy získanej z výstupu metódy \textit{listMikrotikDevices()} mikrotik.output.
+\newpage
+\begin{lstlisting}[language=python, frame=single, caption=Metóda mactelnetLoginToSingleDevice,captionpos=b, showstringspaces=false] 
+def mactelnetLoginToSingleDevice(self, username, 
     password, address=None):
         deviceList = self.listMikrotikDevices()
         print( deviceList )
@@ -232,7 +229,7 @@ Poslednou metódou je metóda \textit{mactelnetLoginToSingleDevice()}, vďaka kt
             ( deviceList[0], username, password ) )
         else:
             print("No device was found")
-\end{sexylisting}
+\end{lstlisting}
 \section{Rozbor hlavnej časti backendu}
 V rámci hlavnej konfiguračnej časti diplomovej práce, pre konfiguráciu backendu mikrotiku za pomoci porgramovacieho jazyka python som projekt rozdelil do niekoľkých častí:\begin{itemize}
 \item \textbf{bridge} - táto časť obsahuje prvky konfiguácie, pridania, odstránenia, zapnutia, vypnutia možnosti bridgu na mikrotiku, konfigurácia existujúceho bridgu, zobrazenie zoznamu bridgov

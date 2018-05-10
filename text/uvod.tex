@@ -1,15 +1,16 @@
 \chapter{Úvod do diplomovej práce}
-Diplomová práca na tému "Multiplatformní aplikace pro správu síťových prvku Mikrotik" sa bude primárne zaoberať samostatným mikrotikom. Primárne pomocou aplication programable interface (API) vytvorenie jej konzolovej časti (backendu) a grafickej časti (frontendu). Tieto dve časti dajú celkovú applikáciu dokopy ako celok.\\
+Diplomová práca na tému "Multiplatformní aplikace pro správu síťových prvku Mikrotik" sa bude primárne zaoberať samostatným mikrotikom. Pomocou aplication programable interface (API)je cieľom  vytvorenie jej konzolovej časti (backendu) a grafickej časti (frontendu). Tieto dve časti dajú celkovú applikáciu dokopy ako celok.\\
 V prvej časti práci bude definovanie Mikrotik API a jeho možností, porovnanie podobnosti s operačným systémom unix. Ďalej budú popísané možnosti zabezpečenia API pomocou secure socket layer (SSL). Budú tu tiež spomenuté použité porty,a ďalšie možnosti.\\
-V druhej časti práce bude popis API a spôsoboch softvérového riešenia aplikácie pre správu Mikrotikov. Táto časť bude tiež obsahovať niečo ohľadom technológie git, popise, čo je git, princíp tzv. commitu a pushu. Rozdiely medzi vetvami, prepínanie medzi vetvami a pridávania zmien. Taktiež tu bude spomenutý aj úvod do certifikátov a to konkrétne Single Sign-on metódy.\\
+V druhej časti práce bude popis API a spôsoboch softvérového riešenia aplikácie pre správu Mikrotikov. Bude spomenutý aj úvod do certifikátov a to konkrétne Single Sign-on metódy.\\
 V ďalšej časti bude návrh riešenia softvérovej implementácie aplikácie. Bude obsahovať popis, princípy, diagramy, hlavne Unified modeling language (UML), popisy knižníc, jednotlivých tried a modulov. Každý modul bude popísaný svojou funkcionalitou, parametrami a výstupom s praktickými ukážkami.\\
 V ďalšej časti bude použitá implementácia softvérového návrhu riešenia. Bude tu riešenie ako v konzolovej časti, jeho ukážky, test a výsledky. \\
-V poslednej časti práce bude ukážka grafického spracovania konzolovej časti aplikácie a ich prepojenia do jednej aplikácie, spoločne s ukážkami kódov, testu  a výsledkov.
+V predposlednej časti práce bude ukážka grafického spracovania konzolovej časti aplikácie a ich prepojenia do jednej aplikácie, spoločne s ukážkami kódov, testu  a výsledkov.\\
+V poslednej časti sa bude nachádzať návod na inštaláciu softvéru a testovanie softvéru.
 \chapter{Mikrotik a RouterOS (SwitchOS)}
-V dnešných malých  a stredne veľkých firmách sa na správu siete používajú prevažne routre a switche typu Mikrotik. Mikrotik je firma vyvíjajúca routre a switche,prístupové body a ďalšie sieťové prvky v Litve. \\
+V dnešných malých  a stredne veľkých firmách sa na správu siete používajú prevažne routre a switche typu Mikrotik. Mikrotik je firma vyvíjajúca routre a switche,prístupové body a ďalšie sieťové prvky vyrábané v Litve. \\
 Mikrotik zariadenia používajú operačný systém routerOS, prípadne switchOS. Rozdiel medzi nimi je na základe použitého zariadenia. Čo sa týka routrov, používa operačný systém routerOS, switch používa switchOS, v prípade prístupových bodov (AP) je to routerOS. 
 \section{Mikrotik API}
-Za pomoci Mikrotik API môžeme programovať užívateľské programy a prostredia na riadenie a konfiguráciu Mikrotik zariadení. V dnešnej dobe existuje softvér na konfiguráciu mikrotik zariadení a to pod názvom \textbf{Winbox}. Winbox v dnešnej dobe existuje len na operačný systém Windows a Macintosh (MAC). Bohužiaľ na operačný systém Linux winbox samostatne neexistuje a musí sa simulovať pomocou emulátoru Windows aplikácií za pomoci programu Wine. Toto spôsobuje komplikácie pri použití niektorých funkcií winboxu ale aj iných programov operačného systému Windows. Výstupom práce bude práve Graphical User Interface (GUI). 
+Za pomoci Mikrotik API môžeme programovať užívateľské programy a prostredia na riadenie a konfiguráciu Mikrotik zariadení. V dnešnej dobe existuje softvér na konfiguráciu mikrotik zariadení a to pod názvom \textbf{Winbox}. Winbox v dnešnej dobe existuje len na operačný systém Windows a Macintosh (MAC), a to len cez emuláciu windows aplikácií cez wine, podobne ako na linuxe. Bohužiaľ na operačný systém Linux winbox samostatne neexistuje a musí sa simulovať pomocou emulátoru Windows aplikácií za pomoci programu Wine. Toto spôsobuje komplikácie pri použití niektorých funkcií winboxu ale aj iných programov operačného systému Windows. Výstupom práce bude práve Graphical User Interface (GUI), v podstate upravený a zjednodušený winbox. 
 \subsection{Požiadavky na použitie API}
 \begin{itemize}
 \item Verzia routerOS verzie \textit{3.0.X} a vyššie \cite{API}
@@ -32,7 +33,7 @@ Možnosti nastavenia API-SSL:
 \item prístup pomocou certifikátu TLS
 \end{itemize} 
 \subsubsection{Prístup pomocou certifikátu TLS}
-Pre použitie certifikátu TLS je potrebné vygenerovať certifikát TLS, a to na certifikačnej autorite alebo na ľubovoľnej linux stanici ideálne, ale tiež to dokážeme spraviť aj na WIndows stanici či MAC. 
+Pre použitie certifikátu TLS je potrebné vygenerovať certifikát TLS, a to na certifikačnej autorite alebo na ľubovoľnej linux stanici ideálne, ale tiež to dokážeme spraviť aj na Windows stanici či MAC. 
 Spôsoby vygenerovania certifikátov:
 \begin{itemize}
 \item openssl
@@ -53,7 +54,7 @@ Po nainštalovaní easy-rsa napr. na Ubuntu príkazom \textit{sudo apt install e
 \item Vytvorenie užívateľksých certifikátov
 \end{itemize}
 \subsubsection{Active Directory Certificate Services}
-Windows riešenie \cite{WindowsCA} pre generovanie  certifikačnej autority je inštalácia roly servera Active DIrectory Certificate Services. \\
+Windows riešenie \cite{WindowsCA} pre generovanie  certifikačnej autority je inštalácia roly servera Active Directory Certificate Services. \\
 Pre použitie certifikačnej autority na Windows servery je potreba:
 \begin{itemize}
 \item Inštalácia role serveru
@@ -228,8 +229,7 @@ Použitie modulu aplikujem v rámci diplomovej práce. Používa sa hlavne pri v
 \end{itemize}
 V rámci práce som tento modul použil v rámci knižnice loginManager, kde v metódach pre mactelnet vyhľadáva mikrotiky za pomoci protokolu mactelnet a ukladá to do textového súboru mt.output. \\
 Nie je potreba inštalácie modulu  OS, pretože je zahrnutý v rámci štandardných knižníc jazyku python. V kóde vidíme ukážku metódy,ktorá vylistuje zoznam mikrotik zariadení za pomoci funkcie mactelnet a jej návratovou hodnotou je list zoznamu mikrotik zariadení
-\\
-\begin{sexylisting}{Použitie knižnice os.system}
+\begin{lstlisting}[language=python, frame=single, caption=Metóda na vyhľadanie MAC adries mikrotikov, captionpos=b]
 def listMikrotikDevices(self):
  deviceList = []
  loadMacAddress = False
@@ -245,7 +245,7 @@ def listMikrotikDevices(self):
      if "IP" in header[0] and "MAC-Address"in header[1]:
       loadMacAddress = True
  return deviceList
-\end{sexylisting}
+\end{lstlisting}
 \section{Telnetlib}
 Telnetlib \cite{telnetlib} obdobne ako OS knižnica je vstavaná knižnicaprogramovacieho jazyku python. Knižnice \textit{telnetlib} implementuje protokol telnet do pythonu, definovaného referenčným modelom RFC 854. V rámci definície modulu telnetlib sa používa hlavičkový súbor \textit{telnet.h} s odstráneným záhlavým obsahujúcim \textit{TELOPT\_}. \\Modul telnetlib predstavuje jednoduchého telnet klienta pripájajúceho sa na telnet server. Na vytvorenie spojenia je potreba nasledujúcich krokov:
 \begin{itemize}
@@ -262,8 +262,7 @@ Medzi najpoužívanejšie metódy v rámci diplomovej práce sú použité:
 \item \textit{sleep()} - doba trvania odoslania príkazu v sekundách
 \item \textit{close()} - ukončenie spojenia
 \end{itemize}
-V rámci výstupu kódu je ukážka metódy na pripojenie na telnet server pomocou knižnice telnetlib.
-\begin{sexylisting}{Použitie knižnice telnetlib}
+\begin{lstlisting}[language=python, frame=single, caption=Použitie knižnice telnetlib, captionpos=b, showstringspaces=false]
 def loginTelnet(self, password, login="admin"):
  import telnetlib
  central = centralControl(login, password)
@@ -280,7 +279,7 @@ def loginTelnet(self, password, login="admin"):
   telnetcon.close( )
  except:
   print( "Cannot connect to router via telnet" )
-\end{sexylisting} 
+\end{lstlisting} 
 \section{Pxssh a pxexpect}
 Moduly pexpect\cite{pexpect} a jeho submodul pxssh\cite{pxssh} sú knižnice, ktoré slúžia na vyžadovanie určitého výstupu zariadenia, na to slúži knižnica \textit{pexpect} a na pripojenie sa na server z pythonupomocou protokolu SSH slúži knižnica \textit{pxssh}\\
 Pexpect je čistá python modulna kontrolu a riadenie aplikácií. Pozostáva z dvoch krokov:\begin{itemize}
@@ -295,14 +294,15 @@ Pexpect je súčasťou sady nástrojov Pypi. Aktuálna verzia modulu pexpect je 
 \item pre windows je potreba inštalácie modulu POSIX pre jeho funkčnosť
 \end{itemize}
 Na nainštalovanie pexpect \cite{pexpectinstall} na linuxe,sa v príkazovom riadku zadá:
-\begin{sexylisting}{Inštalácia Pexpect}
+\begin{lstlisting}[language=python, frame=single, caption=Inštalácia Pexpect, captionpos=b]
 pip install pexpect
 pip3 install pexpect
-\end{sexylisting} 
+\end{lstlisting}  
 Pre inštaláciu na operačnom systéme Windows je potreba maťnainštalovaný program python prípadne python3 externe, pretože nie je štandardne zahrnutý v balíčkoch operačného systému.\\
 Modul pexpect zahŕňa modul pxssh a nie je potreba ho potom extra inštalovať.\\
 Nižšie vidíme ukážku použiia kombinácie modulov pexpect a pxssh na pripojenie na mikrotik.
-\begin{sexylisting}{Inštalácia Pexpect}
+\newpage
+\begin{lstlisting}[language=python, frame=single, caption=Použitie pxssh na pripojenie na router cez protokol SSH, captionpos=b]
 def loginSSH(self, server,login, password):
  from pexpect import pxssh, spawn, expect
  import getpass
@@ -318,7 +318,7 @@ def loginSSH(self, server,login, password):
  except pxssh.ExceptionPxssh as e:
   print( "Error" )
   print( str( e ) )
-\end{sexylisting}
+\end{lstlisting}  
 \section{TikApy}
 \label{sec:tikapy}
 Na správu mikrotik smerovačov je potreba implentovať do pythonu modul tikapy\cite{tikapy}. Modul tikapy funguje voverzii pythonu 3 a vyššie. Podobne ako bolo spomenuté v kapitole \ref{chap:APIwords}, API pracuje na základe tzv. "slov". Slová predstavujú jednotlivé príkazy na mikrotiku. Tieto príkazy budú popísané v ďalších kapitolách diplomovej práce.\\
@@ -329,16 +329,18 @@ Modul tikapy ako celkovo mikrotik API komunikuje nezabezpečene na porte 8728 a 
 \item  \textit{close()} - ukončenie spojenia
 \end{itemize} 
 Na nainštalovanie tikapy do pythonu je potreba to nainštalovať nasledovne, v príkazovom riadku zadíme príkaz:
-\begin{sexylisting}{Inštalácia tikapy}
+\begin{lstlisting}[language=python, frame=single, caption=Inštalácia tikapy,  captionpos=b]
 pip install tikapy
-\end{sexylisting}
+pip3 install tikapy
+\end{lstlisting}
 V rámci vytvorenia objektu sú dve možnosti:\begin{itemize}
 \item vytvorenie klienta a to buď SSL klienta prípadne štandardného klienta TikapyCLient(adresa,port), pre SSL klienta to je port 8729, pre štandardného klienta port 8728
 \item vytvorenie metódy login(užívateľ,heslo)
 \item odoslanie príkazu metódou \textit{talk(['príkaz'])} 
 \end{itemize}
 Nižsie vidíme príklad metódy spoločne s konštruktorom triedy na pridanie IP adresy s príkladom použitia API slov.
-\begin{sexylisting}{Príklad použitia tikapy}
+
+\begin{lstlisting}[language=python, frame=single, caption=Príklad použitia tikapy,  captionpos=b]
 from tikapy import TikapyClient
 from tikapy import TikapySslClient
 class Addresses:
@@ -355,7 +357,8 @@ class Addresses:
      ipv4 = self.client.talk(['/ip/address/add',
      '=address='+address,'=interface='+interface])
      return ipv4
-\end{sexylisting}
+\end{lstlisting} 
+
 
 
 

@@ -1,20 +1,20 @@
 \select@language {slovak}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Tabu\IeC {\v l}ka zoznamu met\IeC {\'o}d triedy bridgeArp}}{42}{table.330}
-\contentsline {table}{\numberline {7.2}{\ignorespaces Popis triedy configRates}}{45}{table.339}
-\contentsline {table}{\numberline {7.3}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy Devices}}{46}{table.346}
-\contentsline {table}{\numberline {7.4}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy greTunnelSet}}{48}{table.353}
-\contentsline {table}{\numberline {7.5}{\ignorespaces Obsah triedy FirewallAdressist}}{52}{table.358}
-\contentsline {table}{\numberline {7.6}{\ignorespaces Tabu\IeC {\v l}ka triedy FirewallMangle}}{53}{table.365}
-\contentsline {table}{\numberline {7.7}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy KVM}}{54}{table.371}
-\contentsline {table}{\numberline {7.9}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy makeSupport}}{55}{table.383}
-\contentsline {table}{\numberline {7.8}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy log}}{55}{table.378}
-\contentsline {table}{\numberline {7.10}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d v triede MeshInterfaces}}{57}{table.390}
-\contentsline {table}{\numberline {7.11}{\ignorespaces Tabu\IeC {\v l}ka zoznamu met\IeC {\'o}d triedy MplsLocalBindings}}{59}{table.397}
-\contentsline {table}{\numberline {7.12}{\ignorespaces Tabu\IeC {\v l}ka popisu met\IeC {\'o}d triedy interfacePppoeGeneralSet}}{62}{table.404}
-\contentsline {table}{\numberline {7.13}{\ignorespaces Tabu\IeC {\v l}ka zoznamu met\IeC {\'o}d triedy QueuTree}}{63}{table.411}
-\contentsline {table}{\numberline {7.14}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy Radius}}{65}{table.416}
-\contentsline {table}{\numberline {7.15}{\ignorespaces Tabu\IeC {\v l}ka popisu met\IeC {\'o}d triedy RipNetworks}}{67}{table.423}
-\contentsline {table}{\numberline {7.16}{\ignorespaces Tabu\IeC {\v l}ka zoznamu met\IeC {\'o}d triedy switchPort}}{68}{table.430}
-\contentsline {table}{\numberline {7.17}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy SystemMaintenance}}{70}{table.437}
-\contentsline {table}{\numberline {7.18}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d s\IeC {\'u}boru Netwatch}}{71}{table.444}
-\contentsline {table}{\numberline {7.19}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy securityProfileRadius}}{73}{table.451}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Tabu\IeC {\v l}ka zoznamu met\IeC {\'o}d triedy bridgeArp}}{40}{table.305}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Popis triedy configRates}}{43}{table.314}
+\contentsline {table}{\numberline {7.3}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy Devices}}{44}{table.321}
+\contentsline {table}{\numberline {7.4}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy greTunnelSet}}{46}{table.328}
+\contentsline {table}{\numberline {7.5}{\ignorespaces Obsah triedy FirewallAdressist}}{50}{table.333}
+\contentsline {table}{\numberline {7.6}{\ignorespaces Tabu\IeC {\v l}ka triedy FirewallMangle}}{51}{table.340}
+\contentsline {table}{\numberline {7.7}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy KVM}}{52}{table.346}
+\contentsline {table}{\numberline {7.9}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy makeSupport}}{53}{table.358}
+\contentsline {table}{\numberline {7.8}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy log}}{53}{table.353}
+\contentsline {table}{\numberline {7.10}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d v triede MeshInterfaces}}{55}{table.365}
+\contentsline {table}{\numberline {7.11}{\ignorespaces Tabu\IeC {\v l}ka zoznamu met\IeC {\'o}d triedy MplsLocalBindings}}{57}{table.372}
+\contentsline {table}{\numberline {7.12}{\ignorespaces Tabu\IeC {\v l}ka popisu met\IeC {\'o}d triedy interfacePppoeGeneralSet}}{60}{table.379}
+\contentsline {table}{\numberline {7.13}{\ignorespaces Tabu\IeC {\v l}ka zoznamu met\IeC {\'o}d triedy QueuTree}}{61}{table.386}
+\contentsline {table}{\numberline {7.14}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy Radius}}{63}{table.391}
+\contentsline {table}{\numberline {7.15}{\ignorespaces Tabu\IeC {\v l}ka popisu met\IeC {\'o}d triedy RipNetworks}}{65}{table.398}
+\contentsline {table}{\numberline {7.16}{\ignorespaces Tabu\IeC {\v l}ka zoznamu met\IeC {\'o}d triedy switchPort}}{66}{table.405}
+\contentsline {table}{\numberline {7.17}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy SystemMaintenance}}{68}{table.412}
+\contentsline {table}{\numberline {7.18}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d s\IeC {\'u}boru Netwatch}}{69}{table.419}
+\contentsline {table}{\numberline {7.19}{\ignorespaces Tabu\IeC {\v l}ka met\IeC {\'o}d triedy securityProfileRadius}}{71}{table.426}
