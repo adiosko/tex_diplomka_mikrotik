@@ -1,7 +1,7 @@
 \chapter{Grafická časť aplikácie (frontend)}
 V rámci frontend časti aplikácie boli použité aplikácie:\begin{itemize}
-\item \textbf{QT4 designer} - softvér na nábrh dizajnu "okien" aplikácie
-\item \textbf{PyQT 4} - doplnok do pythonu, na návrh a programovenie grafických aplikácií
+\item \textbf{QT4 designer} - softvér na návrh dizajnu "okien" aplikácie
+\item \textbf{PyQT 4} - doplnok do pythonu, na návrh a programovanie grafických aplikácií
 \end{itemize} 
 \section{QT4 disigner}
 QT4 designer je aplikácia na návrh šablón v rámci použitia knižnice PyQT4. Medzi základné objekty použité v aplikácii sem patria:
@@ -15,18 +15,18 @@ QT4 designer je aplikácia na návrh šablón v rámci použitia knižnice PyQT4
 Po vytvorení šablóny sa súbor uloží vo formáte \textit{.ui} a musí sa nahrať do kódu aby sa s ním dalo pracovať pomocou príkazu \textit{qtCreatorFile = "súbor.ui"}
 \section{PyQT 4}
 V aplikácii je použitá verzia PyQT vo verzii 4. Dnes existuje v dvoch verziách a to vo verzii 4 a vo verzii 5. Nakoľko QT4 designer je navrhnutý na PyQT vo verzii 4, tak aj PyQT je v kóde použité vo verzii 4. \\
-V rámci okna po prihlásení na zariadenie je okno založené na objekte \textit{menubar()} a na metódach \textit{addMenu()} na pridávanie hlavných položiek v menu a ďalšie položky sú QAcion, ktoré vytvárajú podzložku v menu cez metódu \textit{addAction()}. Ďalšou dôležitou knižnicou je QtGui na vytvorenie GUI plikácie. Objekt \textit{QApplication()} vytvorí samostatnú aplikáciu spoločne s metódou pre otvorenie okna \textit{show()}, tiež je tu použitá knižnica \textit{sys} a jej metóda \textit{exit()} na zatvorenie celej aplikácie,  a ďalšou metódou je \textit{close()}, táto metóda okno zavre.
+V rámci okna po prihlásení na zariadenie je okno založené na objekte \textit{menubar()} a na metódach \textit{addMenu()} na pridávanie hlavných položiek v menu a ďalšie položky sú \textit{QAcion}, ktoré vytvárajú podzložku v menu cez metódu \textit{addAction()}. Ďalšou dôležitou knižnicou je \textit{QtGui} na vytvorenie GUI plikácie. Objekt \textit{QApplication()} vytvorí samostatnú aplikáciu spoločne s metódou pre otvorenie okna \textit{show()}, tiež je tu použitá knižnica \textit{sys} a jej metóda \textit{exit()} na zatvorenie celej aplikácie,  a ďalšou metódou je \textit{close()}, táto metóda okno zavre.
 \chapter{Grafická aplikácia}
 \section{Hlavné prihlasovavie okno}
 Hlavné okno aplikácie predstavuje prihlasovaciu obrazovku a možnosť zobrazenia blízkych zariadení a to ich IP adries pomocou tlačítka \textit{find devices IP}(vyhľadávacia doba je 30 sekúnd), pomocou tohoto tlačítka sa vylistujú blízke mikrotik zariadenia a ich IP adresy, toto vychádza z aplikácie mactelnet a výstup zachytáva \textit{listIpValues}.\\
-Podobne ako zobrazenie IP adries sa pomocou tlačítka find devices MAC (doba hľadania zariadení je 30s sekúnd) vylistuje zoznam MAC adries blízkych zariadení. Pre funkčnosť týchto tlačítok je potreba na linuxe správne nastaviť forward pravidlona firewalle. Podobne ako find devices IP aj toto tlačítko pracuje s programom mactelnet a výstup zachytáva objekt \textit{listMacValues}. Toto vidíme na obrázku \ref{fig:winboxlinux}\\
+Podobne ako zobrazenie IP adries sa pomocou tlačítka find devices MAC (doba hľadania zariadení je 30s sekúnd) vylistuje zoznam MAC adries blízkych zariadení. Pre funkčnosť týchto tlačítok je potreba na linuxe správne nastaviť forward pravidla na firewalle. Podobne ako \textit{find devices IP tlačítko} aj toto tlačítko pracuje s programom mactelnet a výstup zachytáva slovník \textit{listMacValues}. Toto vidíme na obrázku \ref{fig:winboxlinux}\\
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.45]{../text/linuxwinbox.png}
 \caption{Prihlasovacie okno aplikácie}
 \label{fig:winboxlinux}
 \end{figure}
-Ďalej sa tu nachádzajú textové polia address, username a password. Do týchto polí sa zapisuje IP adresa (je možné ju skopírovať z Ip address textového poľa) zariadenia na ktoré sa chceme pripojiť, užívateľské meno  a heslo a po stlačení tlačítka \textit{login} sa užívateľ pri úspešnom pokuse prihlási na mikrotik pomocou \textit{API-SSL}. V opačnom prípade sa vyhodí okno s výnimkou. Pri nepodpore zariadenia API-SSL prípadne španej komunikácie v rámci overovania certifikátu sa vyhodí nasledujúca výnimka na obrázku \ref{fig:socket}.
+Ďalej sa tu nachádzajú textové polia address, username a password. Do týchto polí sa zapisuje IP adresa (je možné ju skopírovať z IP address textového poľa) zariadenia, na ktoré sa chceme pripojiť, užívateľské meno  a heslo a po stlačení tlačítka \textit{login} sa užívateľ pri úspešnom pokuse prihlási na mikrotik pomocou \textit{API-SSL}. V opačnom prípade sa vyhodí okno s výnimkou. Pri nepodpore zariadenia API-SSL prípadne španej komunikácie v rámci overovania certifikátu sa vyhodí nasledujúca výnimka podľa obrázku \ref{fig:socket}.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.55]{../text/socket.png}
@@ -54,20 +54,20 @@ Po úspšnom prihlásení na zariadení sa otvorí okno popisujúce na obrázku 
 V menu sa nachádzajú jednotlivé položky a ich podzložky:
 \begin{itemize}
 \item \textbf{Interface} - správa a manažment rozhraní, pridávanie, odoberanie rozhraní, zapnutie a vypnutie rozhraní, obshauje tiež správu ethernet rozhraní, VLAN rozhraní a tzv. interface listov a ich členov
-\item \textbf{IP} - predstavuje správu Ip adries, ARP a služieb na zariadení
+\item \textbf{IP} - predstavuje správu IP adries, ARP a služieb na zariadení
 \item \textbf{Address pools} - predstavuje správu adries na priraďovanie tzv, adresných rozsahov (poolov)
-\item \textbf{Bridge} - predstavuje sprívu bridge rozhrania, VLAN rozhraní, portov bridgu, a pripojených zariadení
+\item \textbf{Bridge} - predstavuje správu bridge rozhrania, VLAN rozhraní, portov bridgu, a pripojených zariadení
 \item \textbf{Routing management} - predstavuje správu statického smerovania, susedov, a next-hop zariadení
 \item \textbf{DHCP} - predstavuje správu DHCP serveru, klienta a relay, pripojených zariadení na konkrétny server
 \item \textbf{DNS} - predstavuje správu nastavenia DNS serverov, správa cache pamäti a statických záznamov
 \item \textbf{Hostname} - predstavuje nastavenie systémového mena (hostname)
-\item \textbf{Firewall} - predstavuje správu NAT a Filtrovacích pravidiel na vstup a výstup zariadenia, pridávanie povolenia, zakázania  a odmietnutia paketu, správu servisných portov a pripojení, tiež správu tzv. \textit{address listov}
+\item \textbf{Firewall} - predstavuje správu NAT a filtrovacích pravidiel na vstup a výstup zariadenia, pridávanie povolenia, zakázania  a odmietnutia paketu, správu servisných portov, Quality of Service (QoS) a pravidiel výstupu a pripojení, tiež správu tzv. \textit{address listov}
 \item \textbf{Wireless} - predstavuje nastavenie bezdrôtovej siete, nastavenie WPA2-PSK profilu na bezdrótové spojenie  a správu pripojených zariadení
 \item  \textbf{System information} - predstavuje zobrazenie informácií o procesore,  ovládačoch, diskoch, atď.
 \item \textbf{User management} - predstavuje správu užívateľov a zobrazenie pripojených užívateľov
 \item \textbf{Maintenance} - predstavuje upgrade, reset zariadenia, obnova konfigurácie, reštart a vypnutie zariadenia
 \item \textbf{Log} - predstavuje výpis systémového logu
-\item \textbf{About} - predstavuje dve tlačítka Quit a About, About vypíše informácie o softvéri, stalčením tlačítka  Quit sa vypnú všetky okná a celé spojenie zahrňujúc prihlasovacie okno 
+\item \textbf{About} - predstavuje dve tlačítka Quit a About, About vypíše informácie o softvéri, stlačením tlačítka  Quit sa vypnú všetky okná a celé spojenie zahrňujúc prihlasovacie okno 
 \end{itemize}
 \subsection{Ukážka fungovania aplikácie cez menu Interface}
 Tlačítko interface obsahuje:

@@ -35,7 +35,7 @@
 \contentsline {section}{\numberline {5.4}TikApy}{27}{section.99}
 \contentsline {chapter}{\numberline {6}Konzolov\IeC {\'a} \IeC {\v c}as\IeC {\v t} aplik\IeC {\'a}cie na spr\IeC {\'a}vu mikrotikov}{29}{chapter.120}
 \contentsline {section}{\numberline {6.1}Popis naprogramovanej \IeC {\v c}asti prihlasovania na mikrotik}{29}{section.121}
-\contentsline {subsection}{\numberline {6.1.1}S\IeC {\'u}bor centralControl}{30}{subsection.124}
+\contentsline {subsection}{\numberline {6.1.1}S\IeC {\'u}bor centralControl}{29}{subsection.124}
 \contentsline {subsection}{\numberline {6.1.2}S\IeC {\'u}bor Constructors}{31}{subsection.176}
 \contentsline {subsection}{\numberline {6.1.3}S\IeC {\'u}bor dhcpClient}{32}{subsection.179}
 \contentsline {subsection}{\numberline {6.1.4}S\IeC {\'u}bor LoginManager}{34}{subsection.219}
@@ -43,7 +43,7 @@
 \contentsline {chapter}{\numberline {7}Hlavn\IeC {\'a} \IeC {\v c}as\IeC {\v t} backendu}{39}{chapter.300}
 \contentsline {section}{\numberline {7.1}Zlo\IeC {\v z}ka bridge}{39}{section.301}
 \contentsline {subsection}{\numberline {7.1.1}Popis tried zlo\IeC {\v z}ky}{39}{subsection.302}
-\contentsline {subsection}{\numberline {7.1.2}Vybran\IeC {\'y} analyzovan\IeC {\'y} s\IeC {\'u}bor}{39}{subsection.303}
+\contentsline {subsection}{\numberline {7.1.2}Vybran\IeC {\'y} analyzovan\IeC {\'y} s\IeC {\'u}bor}{40}{subsection.303}
 \contentsline {section}{\numberline {7.2}Zlo\IeC {\v z}ka capsman}{41}{section.308}
 \contentsline {subsection}{\numberline {7.2.1}Popis tried zlo\IeC {\v z}ky}{41}{subsection.309}
 \contentsline {subsection}{\numberline {7.2.2}Vybran\IeC {\'y} analyzovan\IeC {\'y} s\IeC {\'u}bor}{42}{subsection.310}

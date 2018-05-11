@@ -1,12 +1,12 @@
 \chapter{Konzolová časť aplikácie na správu mikrotikov}
-V tejto kapitole si popíšeme fungovanie naprogramovanej aplikácie. Celkovo je konzolová časť aplikácie napísaná za pomoci knižnice tikapy popísanej v kapitole \ref{sec:tikapy}. Kapitola bude rozdelená do niekoľkých častí:\begin{itemize}
-\item časť 1: popis naprogramovanej časti pre vyhľadávanie mikrotikov, pripojenie sa na mikrotik cez python pomocou protokolov telnet, SSH, mactelnet a napojenie na metódy
-\item časť 2: Popis infraštruktúry backendu - zložky, ich vysvetlenie, zoznam súborov na konfiguráciu mikrotku, vysvetenie rozdelenia, vysvetlenie tried, metód daných tried a volanie funkcií
-\item časť 3 - prtidanie tabuliek jednotlivých tried a ich metód v každej zložke, krátka sumarizácia, ich niektoré vybrané UML diagramy, ostatné budú zahrnuté v prílohe
+V tejto kapitole sa popisuje fungovanie naprogramovanej aplikácie. Celkovo je konzolová časť aplikácie napísaná za pomoci knižnice tikapy popísanej v kapitole \ref{sec:tikapy}. Kapitola bude rozdelená do niekoľkých častí:\begin{itemize}
+\item Časť 1: popis naprogramovanej časti pre vyhľadávanie mikrotikov, pripojenie sa na mikrotik cez python pomocou protokolov telnet, SSH, mactelnet a napojenie na metódy
+\item Časť 2: Popis infraštruktúry backendu - zložky, ich vysvetlenie, zoznam súborov na konfiguráciu mikrotku, vysvetenie rozdelenia, vysvetlenie tried, metód daných tried a volanie funkcií
+\item časť 3 - pridanie tabuliek jednotlivých tried a ich metód v každej zložke, krátka sumarizácia, ich niektoré vybrané UML diagramy
 \end{itemize}
 \section{Popis naprogramovanej časti prihlasovania na mikrotik}
 \label{sec:popis1}
-V tejto časti si zobrazíme rozbor časti prihlasovania na mikrotik a základné funnkcie. Toto je riadené v rámci projektu nazvaného \textit{diplomkap3} v ktorom je súbor \textit{loginManager.py}. V rámci login managera tu nachádzame ďalšie súbory, ktoré sú zobrazené na obrázku \ref{fig:filesLogin}. 
+V tejto časti sa zobrazí rozbor časti prihlasovania na mikrotik a jeho základné funnkcie. Toto je riadené v rámci projektu nazvaného \textit{diplomkap3} v ktorom je súbor \textit{loginManager.py}. V rámci login managera tu nachádzame ďalšie súbory, ktoré sú zobrazené na obrázku \ref{fig:filesLogin}. 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{../text/loginFiles.png}
@@ -17,10 +17,10 @@ V tejto časti si zobrazíme rozbor časti prihlasovania na mikrotik a základn�
 \label{sec:central}
 V súbore centrolControl sa popisuje spôsob hromadnej obsluhy mikrotikov na základe protokolu mactelnet. Pozostáva z metód:
 \begin{itemize}
-\item \textit{konštruktor} - pozostáva zužívateľských mien a hesiel, heslá v premennej credentials sú uložené ako slovník v podobe IP adresa: heslo
+\item \textit{konštruktor} - Pozostáva z užívateľských mien a hesiel, heslá v premennej credentials sú uložené ako slovník v podobe IP adresa: heslo
 \item \textit{listMikrotikDevices()} - metóda vráti zoznam MAC a IP adries nájdených mikrotikov, uloží ich do súboru, a finálny výstup predstavuje list MAC adries
-\item \textit{addCredentials()} - metóda pridíva heslo k užívateľskému účtu do slovníku, štandardnéužívateľské meno sa používa admin, ale tiež sa môže použiť aj iné užívateľské meno pri volaní metódy
-\item \textit{loginSSH()}- metóda je použitá na hromadné prihlásenie pomoocu protokolu SSH na mikrotiky, používa sa tu pritom knižnica pexpect a jej subkižnica pxssh, jej vstupné parametre sp IP adresa serveru, užívateľské meno a heslo 
+\item \textit{addCredentials()} - metóda pridáva heslo k užívateľskému účtu do slovníku, štandardné užívateľské meno sa používa admin, ale tiež sa môže použiť aj iné užívateľské meno pri volaní metódy
+\item \textit{loginSSH()}- metóda je použitá na hromadné prihlásenie pomocou protokolu SSH na mikrotiky, používa sa tu pritom knižnica pexpect a jej subkižnica pxssh, jej vstupné parametre sú IP adresa serveru, užívateľské meno a heslo 
 \end{itemize}
 \linebreak
 \begin{lstlisting}[language=python, frame=single, caption=Deklarácia vstupných parametrov,captionpos=b]
@@ -168,7 +168,7 @@ def loginTelnet(self, password, login="admin"):
                 router via telnet" )
 \end{lstlisting}
 \newpage
-Ďalej sa tu nachádza metóda loginSSH(), táto metóda pracujúca podobne ako metoda loginTelnet() pracuje na základe protokolu SSH, na vstupe má server IP adresu, užívateľské meno  a heslo.
+Ďalej sa tu nachádza metóda \textit{loginSSH()}, táto metóda pracujúca podobne ako metoda loginTelnet() pracuje na základe protokolu SSH, na vstupe má server IP adresu, užívateľské meno  a heslo.
 \begin{lstlisting}[language=python, frame=single, caption=Metóda loginSSH,captionpos=b, showstringspaces=false] 
 def loginSSH(self, server,login, password):
         from pexpect import pxssh, spawn, expect
@@ -187,7 +187,7 @@ def loginSSH(self, server,login, password):
             print( "Error" )
             print( str( e ) )
 \end{lstlisting}
-Ďalšou metódou je metóda na vylistovanie všetkýchmikrotikov, táto metóda je bez vstupného parametru. Ako výstup je súbor mikrtik.output naplnený MAC adresami mikrotikov. 
+Ďalšou metódou je metóda na vylistovanie všetkých mikrotikov, táto metóda je bez vstupného parametru. Ako výstup je súbor \textit{mikrotik.output} naplnený MAC adresami mikrotikov. 
 \newpage
 \begin{lstlisting}[language=python, frame=single, caption=Metóda listMikrotikDevices,captionpos=b, showstringspaces=false] 
 def listMikrotikDevices(self):
@@ -210,7 +210,7 @@ def listMikrotikDevices(self):
                             loadMacAddress = True
         return deviceList
 \end{lstlisting}
-Poslednou metódou je metóda \textit{mactelnetLoginToSingleDevice()}, vďaka ktorej sa pripája pomocou protokolu mactelnet na jedno mikrotik zariadenie pomocou macadresy získanej z výstupu metódy \textit{listMikrotikDevices()} mikrotik.output.
+Poslednou metódou je metóda \textit{mactelnetLoginToSingleDevice()}, vďaka ktorej sa pripája pomocou protokolu mactelnet na jedno mikrotik zariadenie pomocou MAC adresy získanej z výstupu metódy \textit{listMikrotikDevices()} mikrotik.output.
 \newpage
 \begin{lstlisting}[language=python, frame=single, caption=Metóda mactelnetLoginToSingleDevice,captionpos=b, showstringspaces=false] 
 def mactelnetLoginToSingleDevice(self, username, 
@@ -231,60 +231,60 @@ def mactelnetLoginToSingleDevice(self, username,
             print("No device was found")
 \end{lstlisting}
 \section{Rozbor hlavnej časti backendu}
-V rámci hlavnej konfiguračnej časti diplomovej práce, pre konfiguráciu backendu mikrotiku za pomoci porgramovacieho jazyka python som projekt rozdelil do niekoľkých častí:\begin{itemize}
+V rámci hlavnej konfiguračnej časti diplomovej práce, pre konfiguráciu backendu mikrotiku za pomoci programovacieho jazyka python som projekt rozdelil do niekoľkých častí:\begin{itemize}
 \item \textbf{bridge} - táto časť obsahuje prvky konfiguácie, pridania, odstránenia, zapnutia, vypnutia možnosti bridgu na mikrotiku, konfigurácia existujúceho bridgu, zobrazenie zoznamu bridgov
-\item  \textbf{capsman} - táto časť obsahuje konfiguráciu hromadnej obsluhy mikrotik úrístupových bodov a WiFi, profily, bezpečnosť, konfiguácie, povolené rýchlosti, zobrazenie zoznamu pripojených prvkov a ďalšie funkcie
-\item \textbf{certs} - obsahuje certifikáty na pripojenie sa na mikrotik pomocou protokolu api-ssl
-\item \textbf{Dude} - obsahuje popis konfigurácie ako nastaviť nástroj Dude klienta, ako nakonfigurovať Dude na vzdialený monitoring na Dude serveri, taktiež Dude server, a ďalšie možnosti
-\item \textbf{exportToHtml} - časť predstavuje generovanie súboru na analýzu v podobe webovej stránky
-\item \textbf{interfaces} - časť predstavuje konfiguráciu rozhraní na mikrotiku, tieto časti sú tiež popísané aj v iných zložkách ako napr. bridge. 4asť popisuje pridanie, odstránenie, zapnutie, vypnutie, konfiguráciu existujúcich rozhraní.
-\item \textbf{IPv4} - rozsiahla časť, obsahuje konfiguráciu IP adries, firewallu, monitoringu, smerovania a ďalších nástrojov spadajúcich pod IP zložku na mikrotiku.
-\item \textbf{IPv6} - pre zložku IPv6 platí to isté čo pre zložku IPv4, ale platí pre konfiguráciu na základe IPv6 adresného rozsahu
-\item \textbf{KVM} - sekcia bude popisovať možnosti virtualizácie mikrotiku.
-\item \textbf{log} - sekcia bude popisovať analýzu a konfiguráciu logu zariadenia
-\item \textbf{makeSupportFile} - seckia bude popisovať vytvorenie súboru potrebného pre analýzu na mikrotik podpore
-\item \textbf{mesh} - sekcia popisuje konfiguráciu tzv. mesh technológie, technológii podobne ako  v rámci časti bridge
-\item \textbf{MPLS} - sekcia bude popisovať možnosti konfiurácie Multi Protocol Label Switching (MPLS), jej pridanie, odstránenie ,zapnutie, vypnutie, modifikácie a ďalšie funkcie.
+\item  \textbf{capsman} - Táto časť obsahuje konfiguráciu hromadnej obsluhy mikrotik prístupových bodov a WiFi, profily, bezpečnosť, konfiguácie, povolené rýchlosti, zobrazenie zoznamu pripojených prvkov a ďalšie funkcie
+\item \textbf{certs} - Obsahuje certifikáty na pripojenie sa na mikrotik pomocou protokolu API-SSL
+\item \textbf{Dude} - Obsahuje popis konfigurácie ako nastaviť nástroj Dude klienta, ako nakonfigurovať Dude na vzdialený monitoring na Dude serveri, taktiež Dude server, a ďalšie možnosti
+\item \textbf{exportToHtml} - Časť predstavuje generovanie súboru na analýzu v podobe webovej stránky
+\item \textbf{interfaces} - Časť predstavuje konfiguráciu rozhraní na mikrotiku, tieto časti sú tiež popísané aj v iných zložkách ako napr. bridge. časť popisuje pridanie, odstránenie, zapnutie, vypnutie, konfiguráciu existujúcich rozhraní.
+\item \textbf{IPv4} - Rozsiahla časť, obsahuje konfiguráciu IP adries, firewallu, monitoringu, smerovania a ďalších nástrojov spadajúcich pod IP zložku na mikrotiku.
+\item \textbf{IPv6} - Pre zložku IPv6 platí to isté čo pre zložku IPv4, ale platí pre konfiguráciu na základe IPv6 adresného rozsahu
+\item \textbf{KVM} - Sekcia bude popisovať možnosti virtualizácie mikrotiku.
+\item \textbf{log} - Sekcia bude popisovať analýzu a konfiguráciu logu zariadenia
+\item \textbf{makeSupportFile} - Seckia bude popisovať vytvorenie súboru potrebného pre analýzu na mikrotik podpore
+\item \textbf{mesh} - Sekcia popisuje konfiguráciu tzv. mesh technológie, technológii podobne ako  v rámci časti bridge
+\item \textbf{MPLS} - Sekcia bude popisovať možnosti konfiurácie Multi Protocol Label Switching (MPLS), jej pridanie, odstránenie ,zapnutie, vypnutie, modifikácie a ďalšie funkcie.
 \item \textbf{PPP} - sekcia bude popisovať konfiguráciu Point to Point Protocol (PPP) a ďalších možností Virtual Private Network (VPN) konfigurácie.
-\item \textbf{Queues} - sekcia budep popisovať konfiguráciu sieťových front, možnosti front, typy front a ďalšie funkcie
-\item \textbf{Radius} - sekcia bude popisovať nastavenie funkcie Radius - autentizačnej služby užívateľov , jeho modifikáciu, konfiguráciu a ďalšie funkcie.
-\item \textbf{Routing} - sekcia bude popisovať možnosti dynamického smerovania, statické smerovanie bude popísané v rámci časti IPv4, dynamické smerovacie protokoly, ich konfigurácie, a ďalšie možnosti. 
-\item \textbf{Switch} - sekcia bude popisovať konfiguráciu prepínača, niektoré mikrotiky sú typu SwitchOS a sú štandardne prepínač. Kofiguuráciu portov, trunkov, a ďalších funkcií. 
-\item \textbf{System} - sekcia bude popisovať časť konfigurácie systémových nástrojov, ich funkcií a konfigurácie, a ďalších funkcií.
-\item \textbf{Tools} - sekcia bude popisovať konfiguráciu mikrotik nástroj, a však nie všetky bolo možné odsimulovať v rámci konzolvej časti aplikácie, ich konfiguráciu, spustenie, riadenie a ďalšie funkcie. 
-\item \textbf{Wireless} - sekcia bude obsahovať konfiguráciu bezdrátového rozhrania, moduly, módy, konfiguráciu, nastavenie, a ďalšie funkcie
-\item \textbf{konfiguračné súbory mimo zložiek} - sekcia popísaná v kapitole  \ref{sec:popis1}, popisuje súbory na základnú konfiuráciu mikrotiku, nastavenie základnej konfigurácie.
+\item \textbf{Queues} - Sekcia budep popisovať konfiguráciu sieťových front, možnosti front, typy front a ďalšie funkcie
+\item \textbf{Radius} - Sekcia bude popisovať nastavenie funkcie Radius - autentizačnej služby užívateľov , jeho modifikáciu, konfiguráciu a ďalšie funkcie.
+\item \textbf{Routing} - Sekcia bude popisovať možnosti dynamického smerovania, statické smerovanie bude popísané v rámci časti IPv4, dynamické smerovacie protokoly, ich konfigurácie, a ďalšie možnosti. 
+\item \textbf{Switch} - Sekcia bude popisovať konfiguráciu prepínača, niektoré mikrotiky sú typu SwitchOS a sú štandardne prepínač. Kofiguuráciu portov, trunkov, a ďalších funkcií. 
+\item \textbf{System} - Sekcia bude popisovať časť konfigurácie systémových nástrojov, ich funkcií a konfigurácie, a ďalších funkcií.
+\item \textbf{Tools} - Sekcia bude popisovať konfiguráciu mikrotik nástroj, a však nie všetky bolo možné odsimulovať v rámci konzolvej časti aplikácie, ich konfiguráciu, spustenie, riadenie a ďalšie funkcie. 
+\item \textbf{Wireless} - Sekcia bude obsahovať konfiguráciu bezdrátového rozhrania, moduly, módy, konfiguráciu, nastavenie, a ďalšie funkcie
+\item \textbf{konfiguračné súbory mimo zložiek} - Sekcia popísaná v kapitole  \ref{sec:popis1}, popisuje súbory na základnú konfiuráciu mikrotiku, nastavenie základnej konfigurácie.
 \end{itemize}
 \chapter{Hlavná časť backendu}
-Cieľom kapitoly je detailný popis backend časti aplikácie na správu mikrotikov. V jendotlivých podkapitolách bude popísaná každá zložka projektu diplomkap3.
+Cieľom kapitoly je detailný popis backend časti aplikácie na správu mikrotikov. V jednotlivých podkapitolách bude popísaná každá zložka projektu diplomkap3.
 \section{Zložka bridge}
 Cieľom tejto zložky je konfigurácia bridgu na mikrotiku. Pozostáva z:\begin{itemize}
 \item Managementu bridgu, portov, bezpečnosti, pripojených zariadení
 \item Pridanie, odtsránenie, zapnutie, vypnutie a komentár položiek
 \item Modifikácia existujúcich položiek
 \end{itemize} 
-Niektoré pasáže sa dajú modifikovať pomocou mena položky, niektoré pomocou poradia položky. Zoznam súborov  zložky nájdeme na obrázku \ref{fig:bridge2} a v kapitole\ref{sec:bridgechap}. 
+Niektoré pasáže sa dajú modifikovať pomocou mena položky, niektoré pomocou poradia položky (tiež podľa parametru \textit{.id} v rámci výstupu tikapy). Zoznam súborov  zložky nájdeme na obrázku \ref{fig:bridge2} a v kapitole\ref{sec:bridgechap}. 
 \subsection{Popis tried zložky}
 \label{sec:bridgechap}
 Zložka obsahuje triedy:
 \begin{itemize}
-\item \textbf{bridgeArp} - trieda nastavuje funkcionalitu ARP v rámci bridgu
-\item \textbf{bridgeFilter} - trieda nastavuje funkcionalitu fitrovania provozu (firewall)
-\item \textbf{bridgeFilterAction} - trieda nastavuje akcie filtrovania provozu
-\item \textbf{bridgeFilterAdvanced} - trieda nastavuje pokročilé filtrovanie
-\item \textbf{bridgeFilterGeneral} - trieda nastavuje genrálne nastavenie filtrovania provozu
-\item \textbf{bridgeHosts} - trieda ošetruje zoznam pripojených zariadení na bridge
-\item \textbf{bridgeMdb} - trieda ošetruje nastavenie portov pripojených zariadení
-\item \textbf{bridgeMSTI} - trieda nastavuje MST modul bridgu
-\item \textbf{bridgeNAT} - trieda oošetruje nastaveneie NAT na bridgi
-\item \textbf{bridgeNATAction} - trieda ošetruje nastavenie akcií NAT
-\item \textbf{bridgeNatAdvanced} - trieda ošetruje pokročilé nastavenie NAT
-\item \textbf{bridgeNatGeneral} - trieda ošetruje genrálne nastavenie NAT na bridgi
-\item \textbf{bridgeNatStp} - trieda ošetruje nastavenie STP
-\item \textbf{bridgePortMstOverride} - trieda ošetruje nastavenie nanútenia MST
-\item \textbf{BridgePorts} - trieda ošetruje nastavenie portov bridgu
-\item \textbf{BridgeSettings} - trieda ošetruje globálne nastavenie  bridgu  
-\item \textbf{BridgeVlan} - trieda ošetruje globálne nastavenie VLAN
+\item \textbf{bridgeArp} - Trieda nastavuje funkcionalitu ARP v rámci bridgu
+\item \textbf{bridgeFilter} - Trieda nastavuje funkcionalitu fitrovania provozu (firewall)
+\item \textbf{bridgeFilterAction} - Trieda nastavuje akcie filtrovania provozu
+\item \textbf{bridgeFilterAdvanced} - Trieda nastavuje pokročilé filtrovanie
+\item \textbf{bridgeFilterGeneral} - Trieda nastavuje genrálne nastavenie filtrovania provozu
+\item \textbf{bridgeHosts} - Trieda ošetruje zoznam pripojených zariadení na bridge
+\item \textbf{bridgeMdb} - Trieda ošetruje nastavenie portov pripojených zariadení
+\item \textbf{bridgeMSTI} - Trieda nastavuje MST modul bridgu
+\item \textbf{bridgeNAT} - Trieda oošetruje nastaveneie NAT na bridgi
+\item \textbf{bridgeNATAction} - Trieda ošetruje nastavenie akcií NAT
+\item \textbf{bridgeNatAdvanced} - Trieda ošetruje pokročilé nastavenie NAT
+\item \textbf{bridgeNatGeneral} - Trieda ošetruje genrálne nastavenie NAT na bridgi
+\item \textbf{bridgeNatStp} - Trieda ošetruje nastavenie STP
+\item \textbf{bridgePortMstOverride} - Trieda ošetruje nastavenie nanútenia MST
+\item \textbf{BridgePorts} - Trieda ošetruje nastavenie portov bridgu
+\item \textbf{BridgeSettings} - Trieda ošetruje globálne nastavenie  bridgu  
+\item \textbf{BridgeVlan} - Trieda ošetruje globálne nastavenie VLAN
 \subsection{Vybraný analyzovaný súbor}
 Ako ukážku je vybratý súbor bridgeArp s popisom metód v tabuľke \ref{tab:bridge1}.
 \begin{table}[H]
@@ -386,11 +386,11 @@ Popisovaná zložka je obsah tried,ktoré nastavujú Dude monitorovací nástroj
 Súčasťou zložky je nastavenie nástroja Dude na centrálny monitoring mikrotikov. Obsahuje súbory:\begin{itemize}
 \item \textbf{Devices} - trieda ošetruje nastavenie monitorovaných zariadení
 \item \textbf{Notifications} - trieda ošetruje nastavenie upozornení
-\item \textbf{Probes} - trieda ošetruje nastavenie tetsovaní spojenia
+\item \textbf{Probes} - trieda ošetruje nastavenie testovaní spojenia
 \item \textbf{RosInfo} - trieda ošetruje výpis informácií ohľadom hardvéru a operačného systému routerOS
 \item \textbf{Services} - trieda ošetruje nastavenie služieb
 \item \textbf{Settings} - trieda ošetruje zapnutie a vypnutie Dude nástroju
-\item \textbf{ostatné knižnice} - osotatné knižnice API nepodporuje
+\item \textbf{ostatné knižnice} - ostatné knižnice API nepodporuje
 \end{itemize}
 \subsection{Analýza vybraného súboru}
 Vybraný analyzovaný súbor \textit{Devices.py} a jeho analýza je popísaná v rámci jeho UML diagramu na obrázku \ref{fig:dudedev} a zoznam metód je popísaný v tabuľke \ref{tab:devices}.
@@ -440,7 +440,7 @@ Súčasťou zložky je nastavenie rohraní na mikrotiku. Patria sem triedy:
 \item \textbf{vrrp} - trieda nastaví zálohovací mechanizmus  Virtual Router Redoundency Protocol (VRRP) spoločne s triedami \textbf{vrrpGeneralSet, vrrpScriptSet a vrrpSetVrrp}
 \end{itemize}
 \subsection{Analýza vybraného súboru}
-Vybraný súbor \textit{greTunnelSet.py} a jeho nastavenie je zobrazené v UML diagrame triedy na obrázku \ref{fig:gre} a popis tried je zanalyzovaný v tabuľke \ref{tab:greTunel}.
+Vybraný súbor \textit{greTunnelSet.py} a jeho nastavenie je zobrazené v UML diagrame triedy na obrázku \ref{fig:gre} a popis tried je analyzovaný v tabuľke \ref{tab:greTunel}.
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{../text/gre.png}
@@ -471,7 +471,7 @@ disableAllowFastPath & názov tunelu & slovník & Metóda vypne funkciu tunelu "
 \end{table}
 \newpage
 \section{Zložka IPv4}
-Popis  zložky IPv4 spočíva v nastavebí rôznych IPv4 protokolov, bezpečnosti, prekladu adries,statického smerovania a ďalších možností. Triedy spočívajú globálnym popisom totožným k popisov v kapitolách \ref{sec:bridgechap}, \ref{sec:capsmanchap} a ďalších kapitolách.  
+Popis  zložky IPv4 spočíva v nastavení rôznych IPv4 protokolov, bezpečnosti, prekladu adries,statického smerovania a ďalších možností. Triedy spočívajú globálnym popisom totožným k popisov v kapitolách \ref{sec:bridgechap}, \ref{sec:capsmanchap} a ďalších kapitolách.  
 \subsection{Popis tried zložky}
 Zložka obsahuje konguračné súbory nastavenie protokolov, adries, bezpečnosti a ďalších vecí na základe protokolu  IPv4. Zložka obsahuje:
 \begin{itemize}
@@ -495,7 +495,7 @@ Zložka obsahuje konguračné súbory nastavenie protokolov, adries, bezpečnost
 \textbf{Network Address Translation (NAT)} - trieda ošetruje  nastavenie prekladu adries\\
 \textbf{ServicePorts} - trieda ošetreuje servisné porty nastavené na firewalle
 \item \textbf{Hotspot} - triedy H\textbf{otspotActive a HotspotCookies, Hotspothost, HotspotBridging, HotspotServer, HotspotServerProfile, HotspotServicePorts, HotspotUserProfile, HotspotUsers, HotspotWalledGarden, HotspotWalledGardenList} ošetrujú nastavenie WiFi hotspotu  a to konkrétne:\\
-\textbf{HotspotActive} - trieda ošetruje nastavenieaktuálne bežiaceho hotspotu\\
+\textbf{HotspotActive} - trieda ošetruje nastavenie aktuálne bežiaceho hotspotu\\
 \textbf{HotspotCookies} - trieda ošetruje nastavenie cookies\\
 \textbf{Hotspothost} - - trieda ošetruje nastavenie správy hostov\\
 \textbf{HotspotBridging} - trieda ošetruje nastavenie bridgu na hotspot\\
@@ -589,7 +589,7 @@ Zložka obsahuje nastavenie funkcií prokolu IPv6 a zahrňuje:\begin{itemize}
 \textbf{FirewallExtraSetup} - Správa pokročilých nastavení napr. počet odoslaných paketov, ...\\
 \textbf{FirewallFilter} -nastavenie filter pravidiel \\
 \textbf{FirewallGeneralSetup} - nastavenie hlavných vlastností pravidlaa správa pravidiel\\
-\textbf{FirewallMangle} - nastavenie QoSpre IPv6\\
+\textbf{FirewallMangle} - nastavenie QoS pre IPv6\\
 \textbf{FirewallRaw} - nastavenie Raw (obdoba NAT)\\
 \textbf{IPv6 AddressList}  - nastavenie address listu
 \item \textbf{Addresses} - nastavenie a správa IPv6 adriesv triede \textbf{IPv6Addresses}
@@ -678,7 +678,7 @@ listLog & žiadny & slovník & Metóda zobrazí systémový log. \\ \hline
 \label{fig:logUML}
 \end{figure}
 \subsection{Popis triedy makeSupportFile}
-Zložka log obsahuje súbor makeSupportFile spološne striedou makeSupportFile, vytvorí a odošle súbor na podporu. Trieda makeSupport má na starosti vytvorenie súboru pre podporu na analýzu. Obsah súboru je popísanýv tabuľke \ref{tab:support} a UML diagramom triedy na obrázku \ref{fig:support}.
+Zložka log obsahuje súbor makeSupportFile spoločne s triedou makeSupportFile, vytvorí a odošle súbor na podporu. Trieda makeSupport má na starosti vytvorenie súboru pre podporu na analýzu. Obsah súboru je popísaný v tabuľke \ref{tab:support} a UML diagramom triedy na obrázku \ref{fig:support}.
 \begin{table}[]
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|}
@@ -752,7 +752,7 @@ Multi Protocol Label Switing (MPLS) a jeho zložka globálne popísaná rovnaký
 Zložka pozostáva z tried:
 \begin{itemize}
 \item \textbf{MplsAcceptFilter} - trieda ošetruje nastavenie  filktrovanie trafiky
-\item \textbf{MplsAdvertiseFilter\textbf{•}} - trieda ošetruje publikovanie filtrov
+\item \textbf{MplsAdvertiseFilter} - trieda ošetruje publikovanie filtrov
 \item \textbf{MplsBgpVpls} - trieda ošetruje nastavenie VPLS v rámci  BGP protokolu
 \item \textbf{MplsCiscoBgpVpls} - trieda ošetruje nastavenie VPLS v rámci technológií firmy CISCO
 \item \textbf{MplsForwardingTable} - trieda ošetruje správu forwarding tabuľky
@@ -879,7 +879,7 @@ setInterface & \begin{tabular}[c]{@{}c@{}}meno rozhrania,\\ rozhranie\end{tabula
 \label{fig:pppset}
 \end{figure}
 \section{Zložka Queues}
-Zložka popisuje nastavenie sirťovej fronty rôznych typov. Popis celkovej zložky je rovnaký ako v kapitole \ref{tab:bridge1} a ďalších kapitolách.
+Zložka popisuje nastavenie sieťovej fronty rôznych typov. Popis celkovej zložky je rovnaký ako v kapitole \ref{tab:bridge1} a ďalších kapitolách.
 \subsection{Zoznam tried zložky}
 Zložka obsahuje triedy:
 \begin{itemize}
@@ -948,7 +948,7 @@ enableIncomming & žiadny & slovník & Metóda povolí prichádzajúcu trafiku. 
 setIncommingPort & port & slovník & Metóda nastaví port na prichádzajúcu trafiku. \\ \hline
 disableIncommingTraffic & žaidny & slovník & Metóda vypne prichádzajúcu trafiku. \\ \hline
 setQueuePacketMark & \begin{tabular}[c]{@{}c@{}}meno stromu,\\ označenie paketu\end{tabular} & slovník & Metóda nastaví označenie paketov prichádzajúcich a odchádzajúcich zo stromu. \\ \hline
-resetIncommingCounters & žiadny & slovník & Metóda resetuje štatisktiky spojenia. \\ \hline
+resetIncommingCounters & žiadny & slovník & Metóda resetuje štatistiky spojenia. \\ \hline
 resetAllRadiusCounters & žiadny & slovník & Metóda resetuje všetky štatistiky spojenia. \\ \hline
 monitorRadius & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ interval\end{tabular} & slovník & Metóda nastaví monitoring RADIUS serveru. \\ \hline
 setRadiusService & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ meno služby\end{tabular} & slovník & Metóda nastaví službu RADIUS. \\ \hline
@@ -975,7 +975,7 @@ setSourceAddress & \begin{tabular}[c]{@{}c@{}}poradové číslo serveru,\\ zdroj
 \label{fig:radius}
 \end{figure}
 \section{Zložka routing}
-Zložka popisuje možnosti dynamického smerovania na mikrotiku. ROvnako ako kapitoly predtým, jej štruktúra je postavená na základe rovnakom ako je popísaný v kapitolách \ref{sec:bridgechap} a ostatných kapitolách.
+Zložka popisuje možnosti dynamického smerovania na mikrotiku. Rovnako ako kapitoly predtým, jej štruktúra je postavená na základe rovnakom ako je popísaný v kapitolách \ref{sec:bridgechap} a ostatných kapitolách.
 \subsection{Zoznam tried zložiek}
 Zložka pozostáva z tried:
 \begin{itemize}
@@ -1051,7 +1051,7 @@ setVlanId     & \begin{tabular}[c]{@{}c@{}}meno switchu,\\ VLAN ID\end{tabular} 
 \label{fig:switchPort}
 \end{figure}
 \section{Zložka System}
-Účelom zložky system je nastavenie systémových nástrojov prvku mikrotik. Jej infraštruktúra je totžná k infraštruktúre kapitoly \ref{sec:bridgechap} a ďalších kapitol.
+Účelom zložky system je nastavenie systémových nástrojov prvku mikrotik. Jej infraštruktúra je totožná k infraštruktúre kapitoly \ref{sec:bridgechap} a ďalších kapitol.
 \subsection{Zoznam súborov zložky}
 Zložka pozostáva zo súborov:
 \begin{itemize}
@@ -1179,7 +1179,7 @@ Zložka obsahuje triedy:
 \item \textbf{interfaceWpsClient} - trieda ošetruje nastavenie WPS klienta
 \item \textbf{nstreme}- triedy ošetrujú nastavenie technológie nstreme dual
 \item \textbf{registration} - trieda ošetruje správu zaregistrovaných zariadení
-\item \textbf{security} - triedy ošetrujú nastavenie bezpečnosti WiFi siete napr. autentizácia cezt RADIUS, šifrovanie,...
+\item \textbf{security} - triedy ošetrujú nastavenie bezpečnosti WiFi siete napr. autentizácia cez RADIUS, šifrovanie,...
 \item \textbf{wirelessSnooper} -nastavenie WiFi skenera 
 \end{itemize} 
 \subsection{Analýza vybraného súboru}

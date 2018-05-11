@@ -98,7 +98,7 @@ Miktotik API má možnosť tzv. špeciálnych slov \cite{API}. Špeciálne slov�
 \end{itemize}   
 \chapter{Pripojenie na Mikrotik}
 \section{Možnosti pripojenia}
-Pripojenie na mikrotik je realiyované pomocou niekoľkých typov softvéru:\begin{itemize}
+Pripojenie na mikrotik je realizované pomocou niekoľkých typov softvéru:\begin{itemize}
 \item \textbf{Winbox} - základný softvér na konfiguráciu mikrotiku
 \item \textbf{Webfig} - konfigurácia mikrotiku pomocou webového rozhrania štandardne na portoch 80 a 443
 \item Riadenie mikrotiku pripojením na mac adresu - \textbf{mactelnet}
@@ -111,8 +111,8 @@ Winbox\cite{winbox} je nástroj na administráciu mikrotiku. Medzi jeho vlastnos
 \item rýchlosť
 \item spoľahlivosť 
 \end{itemize} 
-Winbox je prepis konzolovej aplikácie do grafickej. Obsahuje tiež nástroje ktoré sa v konzole nedajú odsimulovaťnapr. graphs, torch, netmon, scheduler,...\\
-Niektoré funkcie nevieme meniť pomocou winboxu napr. Media Access Control (MAC) adresu rozhrania. 
+Winbox je prepis konzolovej aplikácie do grafickej. Obsahuje tiež nástroje ktoré sa v konzole nedajú odsimulovať napr. \textit{graphs, torch, netmon, scheduler,...}\\
+Niektoré funkcie nevieme meniť pomocou winboxu napr. Media Access Control adresu (MAC) adresu rozhrania. 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.2]{../text/winbox.png}
@@ -148,10 +148,10 @@ Po pripojení na mikrotik pomocou mactelnet sa nastaví základná konektivita a
 Ďalšou možnosťou pripojenia na mikrotik je prihlásenie sa pomocou telnetu\cite{telnet} prípadne SSH\cite{ssh} na konzolu mikrotiku. Napríklad na nastavenie fronty,firewallu,... .
 \subsection{Pripojenie cet telnet}
 Telnet predstavuje protokol, ktorý umožňuje pripojenie na vzdialené servery. Jeho štandardným portom je port 23. \\
-Na povolenie pripojenia pomocou telnetu je potrebné povoliť službu telnet na mikrotiku v IP -> Services. Pre bezpečnostné účely by sa telnet nemal používať, je terčom útokov nakoľko je nešifrovaný. Pokiaľ chceme povoliť telnet na pripojenie na mikrotik, by sa mal minimálne zmeniť štandardný port z 23 na užívateľsky definovaný port.\\
+Na povolenie pripojenia pomocou telnetu je potrebné povoliť službu telnet na mikrotiku v \textit{IP -> Services}. Pre bezpečnostné účely by sa telnet nemal používať, je terčom útokov, kde pomocou metasploitu je možné veľmi jednoducho prelomiť telnet, nakoľko je nešifrovaný. Pokiaľ chceme povoliť telnet na pripojenie na mikrotik, by sa mal minimálne zmeniť štandardný port z 23 na užívateľsky definovaný port.\\
 Príklad príkazu na pripojenie na zariadenie pomocou telnetu: \textit{telnet <IP adresa> <port>} 
 \subsection{Pripojenie pomocou ssh} 
-SSH predstavuje protokol, ktorý umožňuje vzdialené pripojenie pomocou tohoto protokolu. Používa štandardný port 22. Tak isto ako u telnetu, pre SSH platí to isté, je potrebné ho povoliť v IP -> Services. SSH na rozdiel od telnetu je ale šifrovaný  a zabezpečený protokol. SSH predstavuje bezpečnú verziu telnetu. Je možné si zabezpečiť SSH prístup na bezpečnejší, a to tak, že sa budú porovnávať verejný  a súkromný kľúč certifikátu TKIP. V7stupom pripojenia SSH na mikrotik je na obrázku \ref{fig:ssh}. 
+SSH predstavuje protokol, ktorý umožňuje vzdialené pripojenie pomocou tohoto protokolu. Používa štandardný port 22. Tak isto ako u telnetu, pre SSH platí to isté, je potrebné ho povoliť v I\textit{P -> Services}. SSH na rozdiel od telnetu je ale šifrovaný  a zabezpečený protokol. SSH predstavuje bezpečnú verziu telnetu. Je možné si zabezpečiť SSH prístup na bezpečnejší, a to tak, že sa budú porovnávať verejný  a súkromný kľúč certifikátu TKIP. Vstupom pripojenia SSH na mikrotik je na obrázku \ref{fig:ssh}. 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{../text/ssh.png}
@@ -179,10 +179,10 @@ Verzie jazyku Python:\begin{itemize}
 \section{Python 2}
 Vlastnosti jazyku Python 2\cite{Python2}
 \begin{itemize}
-\item automatická spáva pamäti (garbage collector)
-\item podporuje viac vstupných paradigiem
+\item Automatická spáva pamäti (garbage collector)
+\item Podporuje viac vstupných paradigiem
 \item Volanie niektorých príkazov je odlišné od Python 3
-\item referenčný interpret sa nazýva CPython a spravuje ho organizácia Python Software Foundation
+\item Referenčný interpret sa nazýva CPython a spravuje ho organizácia Python Software Foundation
 \item Súčasne sa používa Python vo verzii 2.7.2
 \end{itemize}
 \section{Python 3}
@@ -190,20 +190,20 @@ Vlastnosti jazyku Python 3\cite{Python3}\begin{itemize}
 \item V niekorých častiach syntaxe v porovnaní s jazykom Python 2je trošku odlišná (napr. príkaz print,...)
 \item Od verzie 3.6 má premenná typu slovník interné zachovávané poradie vkladaných prvkov
 \item Pridanie anotácií cez metatriedy
-\item deklarácia nelokálnej premennej vonku z funkcie
+\item Deklarácia nelokálnej premennej vonku z funkcie
 \item Slová typu True, False a None sú rezervované slová
 \item Mnoho vlastností ma rovnakých ako Python 2
-\item Miesto <> sa voverzii 3 používa relačný operátor !=
-\item od Júla 2018 by mala výjsť verzia Python 3.7 s ďalšími novinkami 
+\item Miesto \textit{<>} sa vo verzii 3 používa relačný operátor \textit{!=}
+\item Od Júla 2018 by mala výjsť verzia Python 3.7 s ďalšími novinkami 
 \end{itemize}
 \section{Prostredia na programovanie v jazyku Python}
-Na realizovanie python programu je nutnosť mať nainštalovaný softvér na komppiláciu softvéru napísaného v jazyku Python. Na tieto účely slúži tzv. intergrated developement envinroment (IDE). Ecistuje niekoľko ciet aj mimo IDE ako spustiť kód napísaný v jazyku python.\begin{itemize}
-\item Napísanie kódu napr. v textovom editore typu nano, vim, gedit ale aj windows riešenie ako napr. notepad
-\item nainštalovaný python kompilátor
-\item spustenie programu príkazom python <názov.py>
+Na realizovanie python programu je nutnosť mať nainštalovaný softvér na komppiláciu softvéru napísaného v jazyku Python. Na tieto účely slúži tzv. intergrated developement envinroment (IDE). Existuje niekoľko ciet aj mimo IDE ako spustiť kód napísaný v jazyku python.\begin{itemize}
+\item Napísanie kódu napr. v textovom editore typu nano, vim, gedit ale aj windows riešenie ako napr. notepad, notepad++, pspad.
+\item Nainštalovaný python kompilátor
+\item Spustenie programu príkazom python \textit{<názov.py>} prípadne python3 \textit{<názov.py>}
 \end{itemize}
 \section{Pycharm}
-Pycharm predsatvuje IDE na pokročilé aplikácie napísané v jazyku Python. Exustuje v dcoch verziách:\begin{itemize}
+Pycharm predsatvuje IDE na pokročilé aplikácie napísané v jazyku Python. Existuje v dvoch verziách:\begin{itemize}
 \item Pycharm Community Edition - voľne dostupné, nelicencované, neobsahuje niektoré doplnky professional verzie
 \item Pycharm Professional Edition - licencované, voľne dostupné na 30 dní, licencované, plný prístup ku všetkým doplnkom
 \end{itemize}
@@ -211,6 +211,7 @@ Na nainštalovanie pycharm ľubovoľnej verzie je potreba:\begin{itemize}
 \item Stiahnutie bin respektíve exe súboru inštalátoru
 \item Napojenie na pracovný adresár projektu
 \item Napojenie na tzv. envinroment, to je použitie cesty k volaniu príkazu python respektíve python3
+\item Druhá varianta je stiahnutie jetbrains toolboxu a centrálne nainštalovanie aplikácie cez toolbox
 \end{itemize}
 Po spustení programu Pycharm sa vytvorí projekt, kde po jeho inicializácii nájdeme podobný výstup.
 \begin{figure}[H]
@@ -222,13 +223,13 @@ Po spustení programu Pycharm sa vytvorí projekt, kde po jeho inicializácii n�
 Jednou z najväčších výhod je generovanie UML diagramov z kódu.
 \chapter{Použité knižnice v diplomovej práci}
 \section{OS.SYSTEM}
-Modul operačný systém (OS) \cite{OS} je zahrnutý v rámci štandardných knižnícv jazyku python. Jeho hlavnou výhodou je použitie príkazov operačného systému na ktorom beží python.Najčastejšie sa volá príkazom os.system('príkaz').
-Použitie modulu aplikujem v rámci diplomovej práce. Používa sa hlavne pri vyhľadávaní a pripájaní sa na mikrotiky pomocou protokolu mactelnet. Jeho výstup môžeme aplikovať na:\begin{itemize}
+Modul operačný systém (OS) \cite{OS} je zahrnutý v rámci štandardných knižníc v jazyku python. Jeho hlavnou výhodou je použitie príkazov operačného systému na ktorom beží python. Najčastejšie sa volá príkazom \textit{os.system('príkaz')}.
+Použitie modulu sa aplikuje v rámci diplomovej práce. Používa sa hlavne pri vyhľadávaní a pripájaní sa na mikrotiky pomocou protokolu \textit{mactelnet}. Jeho výstup sa môže aplikovať na:\begin{itemize}
 \item Štandardný výstup do konzoly
 \item Výstup do osobitného súboru, ktorý sa potom ďalej spracuje
 \end{itemize}
-V rámci práce som tento modul použil v rámci knižnice loginManager, kde v metódach pre mactelnet vyhľadáva mikrotiky za pomoci protokolu mactelnet a ukladá to do textového súboru mt.output. \\
-Nie je potreba inštalácie modulu  OS, pretože je zahrnutý v rámci štandardných knižníc jazyku python. V kóde vidíme ukážku metódy,ktorá vylistuje zoznam mikrotik zariadení za pomoci funkcie mactelnet a jej návratovou hodnotou je list zoznamu mikrotik zariadení
+V rámci práce sa tento modul použil v rámci knižnice loginManager, kde v metódach pre mactelnet vyhľadáva mikrotiky za pomoci protokolu mactelnet a ukladá to do textového súboru \textit{mt.output}. \\
+Nie je potreba inštalácie modulu  OS, pretože je zahrnutý v rámci štandardných knižníc jazyku python. V kóde vidíme ukážku metódy,ktorá vylistuje zoznam mikrotik zariadení za pomoci funkcie mactelnet a jej návratovou hodnotou je list zozname mikrotik zariadení.
 \begin{lstlisting}[language=python, frame=single, caption=Metóda na vyhľadanie MAC adries mikrotikov, captionpos=b]
 def listMikrotikDevices(self):
  deviceList = []
@@ -247,20 +248,20 @@ def listMikrotikDevices(self):
  return deviceList
 \end{lstlisting}
 \section{Telnetlib}
-Telnetlib \cite{telnetlib} obdobne ako OS knižnica je vstavaná knižnicaprogramovacieho jazyku python. Knižnice \textit{telnetlib} implementuje protokol telnet do pythonu, definovaného referenčným modelom RFC 854. V rámci definície modulu telnetlib sa používa hlavičkový súbor \textit{telnet.h} s odstráneným záhlavým obsahujúcim \textit{TELOPT\_}. \\Modul telnetlib predstavuje jednoduchého telnet klienta pripájajúceho sa na telnet server. Na vytvorenie spojenia je potreba nasledujúcich krokov:
+Telnetlib \cite{telnetlib} obdobne ako OS knižnica je vstavaná knižnica programovacieho jazyku python. Knižnice \textit{telnetlib} implementuje protokol telnet do pythonu, definovaného referenčným modelom RFC 854. V rámci definície modulu telnetlib sa používa hlavičkový súbor \textit{telnet.h} s odstráneným záhlavým obsahujúcim \textit{TELOPT\_}. \\Modul telnetlib predstavuje jednoduchého telnet klienta pripájajúceho sa na telnet server. Na vytvorenie spojenia je potreba nasledujúcich krokov:
 \begin{itemize}
-\item vytvorenie objektu telnetlib s parametrami \textit{host},čo predstavuje IP adresu telnet serveru, \textit{port}, štandardne 23, nepovinným parametrom je \textit{timeout}. 
+\item Vytvorenie objektu telnetlib s parametrami \textit{host},čo predstavuje IP adresu telnet serveru, \textit{port}, štandardne 23, nepovinným parametrom je \textit{timeout}. 
 \item Je nutné otvoriť spojenie metódou \textit{open()}
-\item ďalej metódami readuntil() a write() vyžadujeme očakávaný výstup a odoslanie dát na server (príkazov)
-\item potom ukončíme spojenie metódou close()
+\item Ďalej metódami \textit{readuntil()} a \textit{write()} sa vyžaduje očakávaný výstup a odoslanie dát na server (príkazov)
+\item Potom sa ukončí spojenie metódou \textit{close()}
 \end{itemize}
 Medzi najpoužívanejšie metódy v rámci diplomovej práce sú použité:
 \begin{itemize}
 \item  \textit{Telnet()}
-\item \textit{readuntil()} -očakávanie výstupu serveru
-\item \textit{write()} - zápis príkazov
-\item \textit{sleep()} - doba trvania odoslania príkazu v sekundách
-\item \textit{close()} - ukončenie spojenia
+\item \textit{readuntil()} -Očakávanie výstupu serveru
+\item \textit{write()} - Zápis príkazov
+\item \textit{sleep()} - Doba trvania odoslania príkazu v sekundách
+\item \textit{close()} - Ukončenie spojenia
 \end{itemize}
 \begin{lstlisting}[language=python, frame=single, caption=Použitie knižnice telnetlib, captionpos=b, showstringspaces=false]
 def loginTelnet(self, password, login="admin"):
@@ -282,11 +283,11 @@ def loginTelnet(self, password, login="admin"):
 \end{lstlisting} 
 \section{Pxssh a pxexpect}
 Moduly pexpect\cite{pexpect} a jeho submodul pxssh\cite{pxssh} sú knižnice, ktoré slúžia na vyžadovanie určitého výstupu zariadenia, na to slúži knižnica \textit{pexpect} a na pripojenie sa na server z pythonupomocou protokolu SSH slúži knižnica \textit{pxssh}\\
-Pexpect je čistá python modulna kontrolu a riadenie aplikácií. Pozostáva z dvoch krokov:\begin{itemize}
+Pexpect je čistý python modul na kontrolu a riadenie aplikácií. Pozostáva z dvoch krokov:\begin{itemize}
 \item Vyžadovanie výstupu
 \item Odoslanie požadovaného výstupu
 \end{itemize} 
-Pexpect môže byť použitý na interaktívne aplikácie, ktoré používajú protokoly SSH, File transfer protocol (FTP), telnet,atď. Pre implementáciu pexpect nie je potreba importovania knižníc z jazyka C na skompilovanie do jadra. Pracujú na všetkých platformách, a to v podobe štandardného vstupu a výstupu v príkazovom riadku operačného systému, či už serveru ale aj klienta. Pexpect je jednoduchýna implementáciu.\\
+Pexpect môže byť použitý na interaktívne aplikácie, ktoré používajú protokoly SSH, File transfer protocol (FTP), telnet,atď. Pre implementáciu pexpect nie je potreba importovania knižníc z jazyka C na skompilovanie do jadra. Pracujú na všetkých platformách, a to v podobe štandardného vstupu a výstupu v príkazovom riadku operačného systému, či už serveru ale aj klienta. Pexpect je jednoduchý na implementáciu.\\
 Pxssh predtavuje submodul modulu pexpect. Na zavolanie submodulu pxssh je nutné prednostne zavolať metódu \textit{spawn()}. Po vytvorení spojenia metódou \textit{spawn()} je nutné použiť metódy \textit{login()}, \textit{spawn()}a \textit{logout()}.
 \subsection{Inštalácia pexpect}
 Pexpect je súčasťou sady nástrojov Pypi. Aktuálna verzia modulu pexpect je verzia 4.4. Požiadavky na softvér:\begin{itemize}
@@ -298,7 +299,7 @@ Na nainštalovanie pexpect \cite{pexpectinstall} na linuxe,sa v príkazovom riad
 pip install pexpect
 pip3 install pexpect
 \end{lstlisting}  
-Pre inštaláciu na operačnom systéme Windows je potreba maťnainštalovaný program python prípadne python3 externe, pretože nie je štandardne zahrnutý v balíčkoch operačného systému.\\
+Pre inštaláciu na operačnom systéme Windows je potreba mať nainštalovaný program python prípadne python3 externe, spoločne s nastavením cesty k systémovej premennej, pretože nie je štandardne zahrnutý v balíčkoch operačného systému.\\
 Modul pexpect zahŕňa modul pxssh a nie je potreba ho potom extra inštalovať.\\
 Nižšie vidíme ukážku použiia kombinácie modulov pexpect a pxssh na pripojenie na mikrotik.
 \newpage
@@ -321,25 +322,24 @@ def loginSSH(self, server,login, password):
 \end{lstlisting}  
 \section{TikApy}
 \label{sec:tikapy}
-Na správu mikrotik smerovačov je potreba implentovať do pythonu modul tikapy\cite{tikapy}. Modul tikapy funguje voverzii pythonu 3 a vyššie. Podobne ako bolo spomenuté v kapitole \ref{chap:APIwords}, API pracuje na základe tzv. "slov". Slová predstavujú jednotlivé príkazy na mikrotiku. Tieto príkazy budú popísané v ďalších kapitolách diplomovej práce.\\
-Modul tikapy ako celkovo mikrotik API komunikuje nezabezpečene na porte 8728 a pomocou API-SSL na porte 8729. Na pripojenie sa na mikrotik pomocou modulu tikapy, ktorýmá v sebe zahrnutých mnoho knižníc na komunikáciu s mikrotikom. Medzi najčastejšie patria:\begin{itemize}
+Na správu mikrotik smerovačov je potreba implentovať do pythonu modul tikapy\cite{tikapy}. Modul tikapy funguje vo verzii pythonu 3 a vyššie. Podobne ako bolo spomenuté v kapitole \ref{chap:APIwords}, API pracuje na základe tzv. "slov". Slová predstavujú jednotlivé príkazy na mikrotiku. Tieto príkazy budú popísané v ďalších kapitolách diplomovej práce.\\
+Modul tikapy ako celkovo mikrotik API komunikuje nezabezpečene na porte 8728 a pomocou API-SSL na porte 8729. Na pripojenie sa na mikrotik pomocou modulu tikapy, ktorý má v sebe zahrnutých mnoho knižníc na komunikáciu s mikrotikom. Medzi najčastejšie patria:\begin{itemize}
 \item vytvorenie objektu TikapyClient prípadne TikapySSLClient
-\item \textit{login()} - prihlásenie sa na mikrotik pomocou API
-\item \textit{talk()} - odosielanie príkazov na mikrotik
-\item  \textit{close()} - ukončenie spojenia
+\item \textit{login()} - Prihlásenie sa na mikrotik pomocou API
+\item \textit{talk()} - Odosielanie príkazov na mikrotik
+\item  \textit{close()} - Ukončenie spojenia
 \end{itemize} 
-Na nainštalovanie tikapy do pythonu je potreba to nainštalovať nasledovne, v príkazovom riadku zadíme príkaz:
+Na nainštalovanie tikapy do pythonu je potreba to nainštalovať nasledovne, v príkazovom riadku zadaním príkazu:
 \begin{lstlisting}[language=python, frame=single, caption=Inštalácia tikapy,  captionpos=b]
 pip install tikapy
 pip3 install tikapy
 \end{lstlisting}
 V rámci vytvorenia objektu sú dve možnosti:\begin{itemize}
-\item vytvorenie klienta a to buď SSL klienta prípadne štandardného klienta TikapyCLient(adresa,port), pre SSL klienta to je port 8729, pre štandardného klienta port 8728
-\item vytvorenie metódy login(užívateľ,heslo)
-\item odoslanie príkazu metódou \textit{talk(['príkaz'])} 
+\item Vytvorenie klienta a to buď SSL klienta prípadne štandardného klienta TikapyCLient(adresa,port), pre SSL klienta to je port 8729, pre štandardného klienta port 8728
+\item Vytvorenie metódy login(užívateľ,heslo)
+\item Odoslanie príkazu metódou \textit{talk(['príkaz'])} 
 \end{itemize}
 Nižsie vidíme príklad metódy spoločne s konštruktorom triedy na pridanie IP adresy s príkladom použitia API slov.
-
 \begin{lstlisting}[language=python, frame=single, caption=Príklad použitia tikapy,  captionpos=b]
 from tikapy import TikapyClient
 from tikapy import TikapySslClient
