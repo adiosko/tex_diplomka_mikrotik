@@ -99,19 +99,19 @@
 \contentsline {subsection}{\numberline {9.1.1}Hlavn\IeC {\'e} okno konfigura\IeC {\v c}nej aplik\IeC {\'a}cie}{75}{subsection.440}
 \contentsline {section}{\numberline {9.2}Polo\IeC {\v z}ky hlavn\IeC {\'e}ho menu}{75}{section.443}
 \contentsline {subsection}{\numberline {9.2.1}Uk\IeC {\'a}\IeC {\v z}ka fungovania aplik\IeC {\'a}cie cez menu Interface}{76}{subsection.444}
-\contentsline {chapter}{\numberline {10}N\IeC {\'a}vod na in\IeC {\v s}tal\IeC {\'a}ciu a spustenie}{79}{chapter.455}
-\contentsline {section}{\numberline {10.1}In\IeC {\v s}tal\IeC {\'a}cia na opera\IeC {\v c}om syst\IeC {\'e}me linux}{79}{section.456}
-\contentsline {subsection}{\numberline {10.1.1}In\IeC {\v s}tal\IeC {\'a}cia pip a pip3}{79}{subsection.457}
-\contentsline {subsection}{\numberline {10.1.2}Nain\IeC {\v s}talovanie kni\IeC {\v z}nice tikapy}{79}{subsection.463}
-\contentsline {subsection}{\numberline {10.1.3}Nain\IeC {\v s}talovanie pexpect}{79}{subsection.468}
-\contentsline {subsection}{\numberline {10.1.4}In\IeC {\v s}tal\IeC {\'a}cia mactelnet}{80}{subsection.472}
-\contentsline {subsection}{\numberline {10.1.5}Nain\IeC {\v s}talovanie setuptools}{80}{subsection.475}
-\contentsline {subsection}{\numberline {10.1.6}In\IeC {\v s}tal\IeC {\'a}cia PyQT4}{80}{subsection.479}
-\contentsline {subsection}{\numberline {10.1.7}In\IeC {\v s}tal\IeC {\'a}cia QT4 designer}{80}{subsection.484}
-\contentsline {subsection}{\numberline {10.1.8}In\IeC {\v s}tal\IeC {\'a}cia paramiko}{80}{subsection.487}
-\contentsline {subsection}{\numberline {10.1.9}Spustenie aplik\IeC {\'a}cie}{81}{subsection.491}
-\contentsline {chapter}{\numberline {11}Testovanie aplik\IeC {\'a}cie}{82}{chapter.496}
-\contentsline {chapter}{\numberline {12}Z\IeC {\'a}ver}{83}{chapter.497}
+\contentsline {section}{\numberline {9.3}Testovanie aplik\IeC {\'a}cie}{78}{section.455}
+\contentsline {chapter}{\numberline {10}N\IeC {\'a}vod na in\IeC {\v s}tal\IeC {\'a}ciu a spustenie}{80}{chapter.456}
+\contentsline {section}{\numberline {10.1}In\IeC {\v s}tal\IeC {\'a}cia na opera\IeC {\v c}om syst\IeC {\'e}me linux}{80}{section.457}
+\contentsline {subsection}{\numberline {10.1.1}In\IeC {\v s}tal\IeC {\'a}cia pip a pip3}{80}{subsection.458}
+\contentsline {subsection}{\numberline {10.1.2}Nain\IeC {\v s}talovanie kni\IeC {\v z}nice tikapy}{80}{subsection.464}
+\contentsline {subsection}{\numberline {10.1.3}Nain\IeC {\v s}talovanie pexpect}{80}{subsection.469}
+\contentsline {subsection}{\numberline {10.1.4}In\IeC {\v s}tal\IeC {\'a}cia mactelnet}{81}{subsection.473}
+\contentsline {subsection}{\numberline {10.1.5}Nain\IeC {\v s}talovanie setuptools}{81}{subsection.476}
+\contentsline {subsection}{\numberline {10.1.6}In\IeC {\v s}tal\IeC {\'a}cia PyQT4}{81}{subsection.480}
+\contentsline {subsection}{\numberline {10.1.7}In\IeC {\v s}tal\IeC {\'a}cia QT4 designer}{81}{subsection.485}
+\contentsline {subsection}{\numberline {10.1.8}In\IeC {\v s}tal\IeC {\'a}cia paramiko}{81}{subsection.488}
+\contentsline {subsection}{\numberline {10.1.9}Spustenie aplik\IeC {\'a}cie}{82}{subsection.492}
+\contentsline {chapter}{\numberline {11}Z\IeC {\'a}ver}{83}{chapter.497}
 \contentsline {chapter}{Literat\'{u}ra}{84}{section*.499}
 \contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{86}{section*.501}
 \contentsline {chapter}{Zoznam pr\'{i}loh}{87}{section*.503}

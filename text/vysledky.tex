@@ -107,6 +107,24 @@ Tlačítko interface obsahuje:
 \caption{Okno interface list}
 \label{fig:interfacelistgui}
 \end{figure}
+\section{Testovanie aplikácie}
+V rámci aplikácie bolo prevedené manuálne testovanie. Aplikácia bola tetsovaná na lokálnom mikrotiku, na ktorom bol nahratý a importovaný certifikát \textit{diplomlka.crt}. Tento certifikát bol následne použitý aj v službe API-SSL. V rámci testovania sú certifikáty nahraté aj v koreňovej zložke projektu aplikácie.\\
+Ako prvé bolo otestované vyhľadávanie zariadení kliknutím na tlačítko "\textit{find devices}". Pre funkčnosť tohoto vyhľadávania je potreba vypnúť firewall, nakoľko linux so zapnutým firewallom zariadenia nevyhľadá.\\
+Po vyhľadaní zariadení sa kliknutím na záznam IP adresy vloží do políčka "\textit{Address}". Štandardne tam je nastavené užívateľské meno \textit{admin}. Zadaním hesla a stalčením tlačítka \textit{OK} nastávajú situácie:
+\begin{itemize}
+\item úspešné prihlásenie otvorí okno s aplikáciou
+\item neúspešné prihlásenie (užívateľské meno alebo heslo) vypíše výnimku do okna s textom "\textit{Could not login}"
+\item posledná varianta je nepodpora API-SSL na zariadení, chyba certifikátu (overovanie) vyhodí výnimku do okna s textom "\textit{Could not open socket}"
+\end{itemize}  
+V rámci ďalšieho testovania nastávajú nasledujúce situácie:
+\begin{itemize}
+\item otestovanie otvorenia okien, okná sa otvárajú v hlavnom okne aplikácie, minimalizovaním hlavného okna aplikácie sa minimalizuje všetko, okná sú zoradené do kaskády
+\item otestovanie tlačítok \textit{enable, disable} - tlačítkami sa otestuje vypnutie a zapnutie položky v aplikácii, niektoré položky nemožno vypnúť (napr. dynamické záznamy v ARP) a vyskočí oknos výnimkou "\textit{Could not talk to api}", čo v týchto prípadoch znamená, že prvok nie je možné vypnúť, obdobne to platí aj pre tlačítko \textit{Enable}, ďalej pri zapnutí a vypnutí položky sa v stĺpci disabled pri vypnutí nastaví paramter na True, v opačnom prípade na False
+\item tlačítko remove - otestovanie tlačítka remove, ktoré odobere špecifický záznam na zariadení, obdobne ako pri zapnutí a vypnutí položky sa vyhodí rovnaká výnimka, po odobraní záznamu sa záznam odstráni aj z listu položiek a obnoví sa aktuálny zoznam 
+\item otestovanie pridania položiek - otestuje sa pridanie položiek spôsobom, že sa ako prvé otvorí nové okno, kliknutím naň sa zobrazí  a pridajú sa konkrétne údaje, následne stalačením OK sa tento záznam pridá, platí to tiež pre okná s viac add tlačítkami, napr. pre firewall, logging, mangle, nat, v momente pridania záznamu  sa zoznam záznamov obnoví na aktuálny zoznam, pri výnimke, napr. zle zadanom údaji sa vyhodí výnimka s oknom "Could not talk to api"
+\item testovanie Maintenance - tlačítkom sa otestujú funkcie - reštartovanie zariadenia, vypnutie zariadenia, upgrade zariadenia na main verziu, v prípade problému s pripojením sa vyhodí okno s výnimkou, zapnutie a vypnutie balíčkov, reset zariadenia, obnovenie zariadenia zo súboru
+\item test Quit a About - tlačítkom about sa vyhodí okno s informáciou o softvéri, tlačítkom Quit sa ukončí celá aplikácia 
+\end{itemize}
 \chapter{Návod na inštaláciu a spustenie}
 \section{Inštalácia na operačom systéme linux}
 Najspoľahlivejšou cestou je nainštalovanie potrebných balíčkov v rámci pythonu na spustenie aplikácie. Linux v sebe štandardne zahrňuje python v oboch verziách, teda aj vo verzii 2 aj vo verzii 3, k posledným aktualizáciám linux mint vo verzii 3.6.5. \\
@@ -174,6 +192,5 @@ Po úspešnom spustení by sa malo otvoriť prihlasovacie okno, kde po jeho inic
 \caption{Prihlasovacie okno na mikrotik}
 \label{fig:winboxcustom}
 \end{figure}
-\chapter{Testovanie aplikácie}
 
 
