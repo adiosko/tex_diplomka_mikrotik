@@ -102,7 +102,7 @@ Pripojenie na mikrotik je realizované pomocou niekoľkých typov softvéru:\beg
 \item \textbf{Winbox} - základný softvér na konfiguráciu mikrotiku
 \item \textbf{Webfig} - konfigurácia mikrotiku pomocou webového rozhrania štandardne na portoch 80 a 443
 \item Riadenie mikrotiku pripojením na mac adresu - \textbf{mactelnet}
-\item Pripojenie pomocou protokolu \textbf{SSH} - zabezpečené a šifrované spojenie
+\item Pripojenie pomocou protokolu \textbf{Secure shell (SSH)} - zabezpečené a šifrované spojenie
 \item Pripojenie pomocou protokolu \textbf{telnet} - nebezpečné v dnešnej dobe
 \end{itemize}
 \section{Pripojenie pomocou winboxu}
@@ -151,7 +151,7 @@ Telnet predstavuje protokol, ktorý umožňuje pripojenie na vzdialené servery.
 Na povolenie pripojenia pomocou telnetu je potrebné povoliť službu telnet na mikrotiku v \textit{IP -> Services}. Pre bezpečnostné účely by sa telnet nemal používať, je terčom útokov, kde pomocou metasploitu je možné veľmi jednoducho prelomiť telnet, nakoľko je nešifrovaný. Pokiaľ chceme povoliť telnet na pripojenie na mikrotik, by sa mal minimálne zmeniť štandardný port z 23 na užívateľsky definovaný port.\\
 Príklad príkazu na pripojenie na zariadenie pomocou telnetu: \textit{telnet <IP adresa> <port>} 
 \subsection{Pripojenie pomocou ssh} 
-SSH predstavuje protokol, ktorý umožňuje vzdialené pripojenie pomocou tohoto protokolu. Používa štandardný port 22. Tak isto ako u telnetu, pre SSH platí to isté, je potrebné ho povoliť v I\textit{P -> Services}. SSH na rozdiel od telnetu je ale šifrovaný  a zabezpečený protokol. SSH predstavuje bezpečnú verziu telnetu. Je možné si zabezpečiť SSH prístup na bezpečnejší, a to tak, že sa budú porovnávať verejný  a súkromný kľúč certifikátu TKIP. Vstupom pripojenia SSH na mikrotik je na obrázku \ref{fig:ssh}. 
+SSH predstavuje protokol, ktorý umožňuje vzdialené pripojenie pomocou tohoto protokolu. Používa štandardný port 22. Tak isto ako u telnetu, pre SSH platí to isté, je potrebné ho povoliť v I\textit{P -> Services}. SSH na rozdiel od telnetu je ale šifrovaný  a zabezpečený protokol. SSH predstavuje bezpečnú verziu telnetu. Je možné si zabezpečiť SSH prístup na bezpečnejší, a to tak, že sa budú porovnávať verejný  a súkromný kľúč certifikátu Temporal Key Integrity Protocol (TKIP). Vstupom pripojenia SSH na mikrotik je na obrázku \ref{fig:ssh}. 
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.4]{../text/ssh.png}
@@ -159,7 +159,7 @@ SSH predstavuje protokol, ktorý umožňuje vzdialené pripojenie pomocou tohoto
 \label{fig:ssh}
 \end{figure}
 \chapter{Programovací jazyk Python}
-Python je interpretovaný, interaktívny, objektovo-orientovaný a vysoko-úrovňový programovací jazyk.Jazyk Python bol vytvorený pánom  Guido van Rossum v Wiskundskom centre informatiky v 80-tych rokoch. \\
+Python je interpretovaný, interaktívny, objektovo-orientovaný a vysoko-úrovňový programovací jazyk \cite{about}. Jazyk Python bol vytvorený pánom  Guido van Rossum v Wiskundskom centre informatiky v 80-tych rokoch. \\
 Medzi jeho vlastnosti patrí:\begin{itemize}
 \item dynamické typovanie
 \item konzolové aplikácie

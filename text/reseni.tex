@@ -239,7 +239,7 @@ V rámci hlavnej konfiguračnej časti diplomovej práce, pre konfiguráciu back
 \item \textbf{exportToHtml} - Časť predstavuje generovanie súboru na analýzu v podobe webovej stránky
 \item \textbf{interfaces} - Časť predstavuje konfiguráciu rozhraní na mikrotiku, tieto časti sú tiež popísané aj v iných zložkách ako napr. bridge. časť popisuje pridanie, odstránenie, zapnutie, vypnutie, konfiguráciu existujúcich rozhraní.
 \item \textbf{IPv4} - Rozsiahla časť, obsahuje konfiguráciu IP adries, firewallu, monitoringu, smerovania a ďalších nástrojov spadajúcich pod IP zložku na mikrotiku.
-\item \textbf{IPv6} - Pre zložku IPv6 platí to isté čo pre zložku IPv4, ale platí pre konfiguráciu na základe IPv6 adresného rozsahu
+\item \textbf{IPv6} - Pre zložku IPv6 platí to isté čo pre zložku IPv4, ale platí pre konfiguráciu na základe Internet Protocol version 6 (IPv6) adresného rozsahu
 \item \textbf{KVM} - Sekcia bude popisovať možnosti virtualizácie mikrotiku.
 \item \textbf{log} - Sekcia bude popisovať analýzu a konfiguráciu logu zariadenia
 \item \textbf{makeSupportFile} - Seckia bude popisovať vytvorenie súboru potrebného pre analýzu na mikrotik podpore
@@ -268,23 +268,23 @@ Niektoré pasáže sa dajú modifikovať pomocou mena položky, niektoré pomoco
 \label{sec:bridgechap}
 Zložka obsahuje triedy:
 \begin{itemize}
-\item \textbf{bridgeArp} - Trieda nastavuje funkcionalitu ARP v rámci bridgu
+\item \textbf{bridgeArp} - Trieda nastavuje funkcionalitu Address Resolution Protocol (ARP) v rámci bridgu
 \item \textbf{bridgeFilter} - Trieda nastavuje funkcionalitu fitrovania provozu (firewall)
 \item \textbf{bridgeFilterAction} - Trieda nastavuje akcie filtrovania provozu
 \item \textbf{bridgeFilterAdvanced} - Trieda nastavuje pokročilé filtrovanie
 \item \textbf{bridgeFilterGeneral} - Trieda nastavuje genrálne nastavenie filtrovania provozu
 \item \textbf{bridgeHosts} - Trieda ošetruje zoznam pripojených zariadení na bridge
 \item \textbf{bridgeMdb} - Trieda ošetruje nastavenie portov pripojených zariadení
-\item \textbf{bridgeMSTI} - Trieda nastavuje MST modul bridgu
-\item \textbf{bridgeNAT} - Trieda oošetruje nastaveneie NAT na bridgi
-\item \textbf{bridgeNATAction} - Trieda ošetruje nastavenie akcií NAT
+\item \textbf{bridgeMSTI} - Trieda nastavuje MST (Multiple Spanning Tree)  modul bridgu
+\item \textbf{bridgeNAT} - Trieda oošetruje nastavenie Network Address Translation (NAT) na bridgi
+\item \textbf{bridgeNATAction} - Trieda ošetruje nastavenie akcií NAT 
 \item \textbf{bridgeNatAdvanced} - Trieda ošetruje pokročilé nastavenie NAT
 \item \textbf{bridgeNatGeneral} - Trieda ošetruje genrálne nastavenie NAT na bridgi
-\item \textbf{bridgeNatStp} - Trieda ošetruje nastavenie STP
+\item \textbf{bridgeNatStp} - Trieda ošetruje nastavenie Spanning Tree Protocol (STP)
 \item \textbf{bridgePortMstOverride} - Trieda ošetruje nastavenie nanútenia MST
 \item \textbf{BridgePorts} - Trieda ošetruje nastavenie portov bridgu
 \item \textbf{BridgeSettings} - Trieda ošetruje globálne nastavenie  bridgu  
-\item \textbf{BridgeVlan} - Trieda ošetruje globálne nastavenie VLAN
+\item \textbf{BridgeVlan} - Trieda ošetruje globálne nastavenie Virtual Local Area Network (VLAN)
 \subsection{Vybraný analyzovaný súbor}
 Ako ukážku je vybratý súbor bridgeArp s popisom metód v tabuľke \ref{tab:bridge1}.
 \begin{table}[H]
@@ -324,7 +324,7 @@ Zložka pozostáva z:\begin{itemize}
 Zložka obsahuje:\begin{itemize}
 \item \textbf{accessList} - trieda ošetruje nastavenie prístupých listov (access listov)
 \item \textbf{accessListSet}- trieda ošetruje nastavenie už vytvorených access listov
-\item \textbf{capAaa} - trieda ošetruje nastavenie autorizačného protokolu  AAA
+\item \textbf{capAaa} - trieda ošetruje nastavenie autorizačného protokolu  Authentication, authorization and accounting (AAA)
 \item \textbf{capManager} - trieda ošetruje nastavenie capsman managera
 \item \textbf{capManagerInterfaces}- trieda ošetruje nastavenie capsman rozhraní
 \item \textbf{capsmanRegTable} - trieda obsahuje zoznam zaregistrovaných zariadení  a ich publikácia (provisioning)
@@ -429,7 +429,7 @@ Súčasťou zložky je nastavenie rohraní na mikrotiku. Patria sem triedy:
 \item \textbf{detectInternet} - trieda detekuje internet na vybranom rozhraní
 \item \textbf{eoipTunel} - trieda nastaví ethernet over IP rozhranie,spoločne s triedami \textbf{eoipSetGeneral} a \textbf{eoipSetLoopProtection}
 \item \textbf{ethernet} - trieda nastaví ethernet rozhrania spoločne s triedami \textbf{ethernetSet}, \textbf{ethernetSetGeneral} a \textbf{ethernetLoopProtectionSet}
-\item \textbf{greTunnel} - trieda nastaví rozhranie typu tunel GRE spoločne s triedou \textbf{greTunnelSet}
+\item \textbf{greTunnel} - trieda nastaví rozhranie typu tunel Generic Routing Encapsulation (GRE) spoločne s triedou \textbf{greTunnelSet}
 \item \textbf{interfaceList} - trieda nastaví listrozhraní spoločne s triedou \textbf{interfaceListSet}
 \item \textbf{interfaces} - trieda zobrazí  a nastaví všetky rozhrania na mikrotiku
 \item \textbf{interfaces} - trieda nastaví Long Term Evolution (LTE) rozhranie
@@ -490,7 +490,7 @@ Zložka obsahuje konguračné súbory nastavenie protokolov, adries, bezpečnost
 \textbf{Conenctions} - trieda ošetruje správu spojení na mikrotiku
 \textbf{ExstraSetup} - trieda ošetruje nastavenie napr. veľkosti hlavičky, sledovania počtu paketov za sekundu, ...\\
 \textbf{Filter} - trieda ošetruje nastavenie a správu filter pravidiel\\
-\textbf{L7Protocols} - trieda ošetruje nastavenie L7 protokolov - napr. torrent,...\\
+\textbf{L7Protocols} - trieda ošetruje nastavenie  protokolov siedmej vrstvy - napr. torrent,...\\
 \textbf{Mangle} - trieda ošetruje nastavenie Quality of Service (QoS)\\
 \textbf{Network Address Translation (NAT)} - trieda ošetruje  nastavenie prekladu adries\\
 \textbf{ServicePorts} - trieda ošetreuje servisné porty nastavené na firewalle
@@ -525,25 +525,25 @@ Zložka obsahuje konguračné súbory nastavenie protokolov, adries, bezpečnost
 \textbf{RouteNexthops} - správa "next hop" adries\\
 \textbf{RouteRules} - správa lokálnych smerovacích pravidiel
 \item \textbf{Services} - trieda nastavuje povolené štandardné porty a služby na mikrotiku
-\item \textbf{Settings} - trieda nastavuje globálne IPv4 nastavenie mikrotiku
+\item \textbf{Settings} - trieda nastavuje globálne IP nastavenie mikrotiku
 \item \textbf{Samba} - triedy \textbf{Smb, SmbShare a smbUsers} ošetrujú nastavenie Samba protokolu\\
 \textbf{Smb} - trieda globálne rieši nastavenie Samba profilov\\
 \textbf{SmbShare} - trieda ošetruje nastavenie zdieľaných zložiek
 \textbf{SmbUsers} - trieda ošetruje nastavenie Samba užívateľov
 \item \textbf{Snmp} - trieda ošetruje nastavenie správu monitoringu zariadenia v triedach \textbf{Snmp, SnmpCommunity}\\
-\textbf{Snmp} - trieda ošetruje globálne nastavenie SNMP protokolu\\
+\textbf{Snmp} - trieda ošetruje globálne nastavenie Simple Network Management Protocol (SNMP) protokolu\\
 \textbf{SnmpCommunity} - trieda ošetruje globálne nastavenie komunnít(community stringov)
 \item \textbf{Socks} - trieda ošetruje nastavenie socketov v triedach \textbf{Socks, SocksAccess a SocksConnections}
-\item \textbf{Tftp} - trieda ošetruje nastavenie TFTP provozu
+\item \textbf{Tftp} - trieda ošetruje nastavenie Trivial File Transfer Protocol (TFTP) provozu
 \item \textbf{TrafficFlow} - trieda ošetruje nastavenie kontroly trafiky v triedach \textbf{TrafficFlow a TrafficFlowIpFix}
-\item \textbf{Upnp} - trieda ošetruje nastavuje UPNP v triedach \textbf{upnpinterface a upnpsettings} 
+\item \textbf{Upnp} - trieda ošetruje nastavuje Universal Plug and Play (UPNP) v triedach \textbf{upnpinterface a upnpsettings} 
 \item \textbf{Webproxy} - ošetrenie nastavenia Webového proxy serveru v súboroch:\\
 \textbf{WebProxyAccess} - trieda ošetruje prístup k proxy serveru\\
 \textbf{WebProxyCache} - trieda ošetruje správu cache pamäti proxy serveru\\
 \textbf{WebProxyCacheContents} - trieda spravuje obsah pamäti\\
 \textbf{WebProxyConenctions} - trieda spravuje pripojené zariadenia na proxy server\\
 \textbf{WebProxyDirect} - trieda spravuje nastavenie priameho pripojenia na proxy server\\
-\textbf{WebProxyLookup} - trieda ošetruje nastavenie lokálnej proxy DNS\\
+\textbf{WebProxyLookup} - trieda ošetruje nastavenie lokálnej proxy Domain Name Server (DNS)\\
 \textbf{WebProxyRefreshes} - trieda ošetruje nastavenie obnovovacej frekvencie\\
 \textbf{WebProxySettings} - trieda ošetruje globálne nastavenia proxy serveru
 \end{itemize}
@@ -576,13 +576,13 @@ setTimeout & \begin{tabular}[c]{@{}c@{}}číslo poradia záznamu,\\ timeout hodn
 \label{fig:addList}
 \end{figure}
 \section{Zložka IPv6}
-Podtstata zložky IPv6 je nastavenie IPv6 protokolu pozostavújecoho z DHCP pre IPv6, rozsahov adries, smerovania, firewallu a ďalších možností.
+Podtstata zložky IPv6 je nastavenie IPv6 protokolu pozostavújecoho z Dynamic Host Configuration Protocol (DHCP) pre IPv6, rozsahov adries, smerovania, firewallu a ďalších možností.
 \subsection{Popis tried zložky}
 Zložka obsahuje nastavenie funkcií prokolu IPv6 a zahrňuje:\begin{itemize}
 \item \textbf{DHCPv6} - nastavenie protokolu DHCPv6 v triedach:\\
 \textbf{DHCPRelay} - nastavenie DHCP Relay pre verziu IPv6\\
 \textbf{DHCPServer} - nastavenie DHCP serveru\\
-\textbf{DHCPv6Client} - nastavenie DHCPv6 klienta\\
+\textbf{DHCPv6Client} - nastavenie Dynamic Host Configuration Protocol  version 6 (DHCPv6) klienta\\
 \textbf{FirewallActions} - nastavenie firewall akcií - povolenie ,zahodenie, logovanie, ...\\
 \textbf{FirewallAdvancedSetup} - nastavenie pokročilých vlastností firewallu napr. povolenie address listu, ...\\
 \textbf{FirewallConnections} - Správa pripojení v o verzii IPv6\\
@@ -628,7 +628,7 @@ resetAllCounters & žiadny & slovník & Metóda zmaže počítadlo všetkých pr
 \section{Zložky KVM, log a makeSupportFile}
 Obsahom zložiek je nastavenie virtuálneho mikrotiku, nastavenie logovania a vytvorenie súboru, ktorý je možné odslať na mikrotik podporu na analýzu. Celkový obsah je popísaný nižšie.
 \subsection{Popis triedy zložky KVM}
-Nastavenie virtuálnych mikrotikov alebo "mikrotiku v mikrotiku" je možné pomocou tzv. KVM. Zložka obsahuje triedy:\begin{itemize}
+Nastavenie virtuálnych mikrotikov alebo "mikrotiku v mikrotiku" je možné pomocou tzv. Kernel-based Virtual Machine (KVM). Zložka obsahuje triedy:\begin{itemize}
 \item \textbf{KVM} - trieda na nastavenie virtualizácie na mikrotiku pomocou triedy \textbf{KVM}
 \end{itemize}
 Popis súboru \textit{KVM.py} je popísaný na obrázku \ref{fig:kvm}  a jeho obsah metód je popísaný v tabuľke \ref{tab:kvm}.
@@ -753,7 +753,7 @@ Zložka pozostáva z tried:
 \begin{itemize}
 \item \textbf{MplsAcceptFilter} - trieda ošetruje nastavenie  filktrovanie trafiky
 \item \textbf{MplsAdvertiseFilter} - trieda ošetruje publikovanie filtrov
-\item \textbf{MplsBgpVpls} - trieda ošetruje nastavenie VPLS v rámci  BGP protokolu
+\item \textbf{MplsBgpVpls} - trieda ošetruje nastavenie Virtual Private LAN Service (VPLS) v rámci  Border Gateway Protocol (BGP) protokolu
 \item \textbf{MplsCiscoBgpVpls} - trieda ošetruje nastavenie VPLS v rámci technológií firmy CISCO
 \item \textbf{MplsForwardingTable} - trieda ošetruje správu forwarding tabuľky
 \item \textbf{MplsLdpInterface} - trieda ošetruje správu a nastavenie rozhraní MPLS
@@ -796,7 +796,7 @@ setLabel & \begin{tabular}[c]{@{}c@{}}poradové číslo prekladu,\\ označenie t
 \label{fig:mplslocal}
 \end{figure}
 \section{Zložka PPP}
-Úlohou zložky Point to point Protocol (PPP) je riadenie  a konfigurácia VPN spojenia rôznych typov napr. Open VPN (OVPN), SSTP, L2TP, ... Štruktúra zložky je rovnakaá ako v predchádzajúcich zložkách zahrňujúc kapitolu \ref{sec:bridgechap} a ďalšie kapitoly.
+Úlohou zložky Point to point Protocol (PPP) je riadenie  a konfigurácia VPN spojenia rôznych typov napr. Open Virtual Private Network (OVPN), Secure Socket Tunneling Protocol (SSTP), Layer 2 Tunneling Protocol (L2TP), ... Štruktúra zložky je rovnakaá ako v predchádzajúcich zložkách zahrňujúc kapitolu \ref{sec:bridgechap} a ďalšie kapitoly.
 \subsection{Popis tried zložky}
 Zložka obsahuje triedy:
 \begin{itemize}
@@ -822,7 +822,7 @@ Zložka obsahuje triedy:
 \textbf{interfacePppServerSetGeneral} - nastavenie globálnej konfigurácie ppp server profilu\\
 \textbf{pppAuthenticationAndAccounting} - nastavenie zabezpečenia PPP
 \item interfacePppoe - obsahuje triedy:\\
-\textbf{interfacePppoe} - správa rozhraní PPPoE\\
+\textbf{interfacePppoe} - správa rozhraní Point to Point Protocol over Ethernet (PPPoE)\\
 \textbf{interfacePppoeClient} - spráca PPPoE klientov\\
 \textbf{interfacePppoeClientSetDialOut} - správa nastavenia vytášania klienta\\
 \textbf{interfacePppoeSet} - nastavenie PPPoE rozhrania\\
@@ -830,7 +830,7 @@ Zložka obsahuje triedy:
 \textbf{pppoe} - správa pppoe rozhraní\\
 \textbf{pppoeSettings} - globálne nastavenie PPPoE
 \item \textbf{interfacePptp} - obsahuje triedy:\\
-\textbf{interfacePptpServer} - nastavenie Pptp servera\\
+\textbf{interfacePptpServer} - nastavenie Point to Pont Tunneling Protocol (PPTP) servera\\
 \textbf{interfacePptpServerBinding} - nastavenie spojení PPTP servera\\
 \textbf{interfacePptpServerSetGenral} - hlavné nastavenie PPTP server profilu\\
 \textbf{interfacePptpClientDialOut} - natsavenie vytáčania PPTP klienta\\
@@ -979,14 +979,14 @@ Zložka popisuje možnosti dynamického smerovania na mikrotiku. Rovnako ako kap
 \subsection{Zoznam tried zložiek}
 Zložka pozostáva z tried:
 \begin{itemize}
-\item \textbf{BFD} - trieda ošetruje nastavenie BFD
+\item \textbf{BFD} - trieda ošetruje nastavenie Bidirectional Forwarding Detection (BFD)
 \item \textbf{BGP} - triedy ošetrujú nastavenie BGP protokolu
 \item \textbf{Filter} - triedy ošetrujú nastavenie BGP bezpečnosti
-\item \textbf{IgmProxy} - triedy ošetrujú nastavenie IGMP proxy
-\item \textbf{MME} - trieda ošetruje nastavenie MME
-\item \textbf{OSPF} - triedy ošetrujú nastavenie OSPF
-\item \textbf{PIM} - trieda ošetruje nastavenie PIM
-\item \textbf{RIP} - trieda ošetruje nastavenie protokolu RIP
+\item \textbf{IgmProxy} - triedy ošetrujú nastavenie  Internet Group Management Protocol (IGMP) proxy
+\item \textbf{MME} - trieda ošetruje nastavenie Mobility Management Entity (MME)
+\item \textbf{OSPF} - triedy ošetrujú nastavenie Open Shortest Path First (OSPF)
+\item \textbf{PIM} - trieda ošetruje nastavenie Protocol-Independent Multicast  (PIM)
+\item \textbf{RIP} - trieda ošetruje nastavenie protokolu Routing Information Protocol (RIP)
 \item \textbf{RoutingFilter} - triedy ošetrujú nastavenie fiultrácie komunikácie protokolu BGP
 \item \textbf{RP} - trieda ošetruje nastavenie Randevou point 
 \item \textbf{VPNRoutes} - trieda ošetruje správu ciest VPN tunelu
@@ -1066,7 +1066,7 @@ Zložka pozostáva zo súborov:
 \item \textbf{LCD} -správa nastavenia kontroly LCD displeja
 \item \textbf{Licence} - správa licencie na mikrotiku
 \item \textbf{Logging} -správa logovania 
-\item \textbf{NTPClient} - správa klienta protokolu NTP
+\item \textbf{NTPClient} - správa klienta protokolu Network Time Protocol (NTP)
 \item \textbf{NTPServer} - správa serveru protokolu NTP
 \item \textbf{PackageManager} - správa aktualizácií mikrotiku a systémových balíkov
 \item \textbf{ResetConfig} - správa resetovania konfigurácie mikrotiku
@@ -1078,7 +1078,7 @@ Zložka pozostáva zo súborov:
 \item \textbf{SpecialLogin} -správa šopeciálneho admin prihlasovacieho účtu
 \item \textbf{SystemClock} - správa systémového času
 \item \textbf{SystemMaintenance} - správa reštartu a vypnutia mikrotiku
-\item \textbf{UPS} -správa konektoru na mikrotiku (AC adaptéru)
+\item \textbf{UPS} -správa konektoru na mikrotiku (Alternating Current (AC) adaptéru)
 \item \textbf{user} -triedy nastavujú užívateľov, skupiny,...
 \item \textbf{WatchDog} - sprva kontroly prvkov na mikrotiku
 \end{itemize}
@@ -1174,9 +1174,9 @@ Zložka obsahuje triedy:
 \item \textbf{interfaceVirtualBridge} - trieda ošetruje  nastavenie virtuálneho bridgu
 \item \textbf{interfaceVirtualStationPseudoBridge} - trieda ošetruje nastavenie pseudobridgu
 \item \textbf{interfaceVirtualStation} - trieda ošetruje nastavenie virtuálnej pracovnej stanice
-\item \textbf{interfaceVirtualWds} - triedy ošetrujú nastavenie rohrania ako WDS
+\item \textbf{interfaceVirtualWds} - triedy ošetrujú nastavenie rohrania ako Wireless Distribution System (WDS)
 \item \textbf{interfaceWirelessAlignement} - trieda ošetruje zarovnanie pásma
-\item \textbf{interfaceWpsClient} - trieda ošetruje nastavenie WPS klienta
+\item \textbf{interfaceWpsClient} - trieda ošetruje nastavenie  Wi-Fi Protected Setup (WPS) klienta
 \item \textbf{nstreme}- triedy ošetrujú nastavenie technológie nstreme dual
 \item \textbf{registration} - trieda ošetruje správu zaregistrovaných zariadení
 \item \textbf{security} - triedy ošetrujú nastavenie bezpečnosti WiFi siete napr. autentizácia cez RADIUS, šifrovanie,...

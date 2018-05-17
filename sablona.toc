@@ -55,14 +55,14 @@
 \contentsline {subsection}{\numberline {7.4.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{46}{subsection.324}
 \contentsline {section}{\numberline {7.5}Zlo\IeC {\v z}ka IPv4}{48}{section.329}
 \contentsline {subsection}{\numberline {7.5.1}Popis tried zlo\IeC {\v z}ky}{48}{subsection.330}
-\contentsline {subsection}{\numberline {7.5.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{50}{subsection.331}
+\contentsline {subsection}{\numberline {7.5.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{51}{subsection.331}
 \contentsline {section}{\numberline {7.6}Zlo\IeC {\v z}ka IPv6}{51}{section.336}
-\contentsline {subsection}{\numberline {7.6.1}Popis tried zlo\IeC {\v z}ky}{51}{subsection.337}
+\contentsline {subsection}{\numberline {7.6.1}Popis tried zlo\IeC {\v z}ky}{52}{subsection.337}
 \contentsline {subsection}{\numberline {7.6.2}Anyl\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{52}{subsection.338}
 \contentsline {section}{\numberline {7.7}Zlo\IeC {\v z}ky KVM, log a makeSupportFile}{53}{section.343}
 \contentsline {subsection}{\numberline {7.7.1}Popis triedy zlo\IeC {\v z}ky KVM}{53}{subsection.344}
 \contentsline {subsection}{\numberline {7.7.2}Popis triedy zlo\IeC {\v z}ky log}{54}{subsection.349}
-\contentsline {subsection}{\numberline {7.7.3}Popis triedy makeSupportFile}{54}{subsection.356}
+\contentsline {subsection}{\numberline {7.7.3}Popis triedy makeSupportFile}{55}{subsection.356}
 \contentsline {section}{\numberline {7.8}Zlo\IeC {\v z}ka Mesh}{55}{section.361}
 \contentsline {subsection}{\numberline {7.8.1}Popis tried zlo\IeC {\v z}ky}{55}{subsection.362}
 \contentsline {subsection}{\numberline {7.8.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{55}{subsection.363}
@@ -73,7 +73,7 @@
 \contentsline {subsection}{\numberline {7.10.1}Popis tried zlo\IeC {\v z}ky}{59}{subsection.376}
 \contentsline {subsection}{\numberline {7.10.2}Analyzovan\IeC {\'y} s\IeC {\'u}bor}{61}{subsection.377}
 \contentsline {section}{\numberline {7.11}Zlo\IeC {\v z}ka Queues}{61}{section.382}
-\contentsline {subsection}{\numberline {7.11.1}Zoznam tried zlo\IeC {\v z}ky}{61}{subsection.383}
+\contentsline {subsection}{\numberline {7.11.1}Zoznam tried zlo\IeC {\v z}ky}{62}{subsection.383}
 \contentsline {subsection}{\numberline {7.11.2}Anal\IeC {\'a}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{62}{subsection.384}
 \contentsline {section}{\numberline {7.12}Zlo\IeC {\v z}ka Radius}{63}{section.389}
 \contentsline {section}{\numberline {7.13}Zlo\IeC {\v z}ka routing}{65}{section.394}
@@ -114,6 +114,6 @@
 \contentsline {chapter}{\numberline {11}Z\IeC {\'a}ver}{83}{chapter.497}
 \contentsline {chapter}{Literat\'{u}ra}{84}{section*.499}
 \contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{86}{section*.501}
-\contentsline {chapter}{Zoznam pr\'{i}loh}{87}{section*.503}
-\contentsline {section}{\numberline {.1}Ulo\IeC {\v z}en\IeC {\'e} git repozit\IeC {\'a}re }{88}{section.504}
-\contentsline {section}{\numberline {.2}Obsah prilo\IeC {\v z}en\IeC {\'e}ho DVD }{88}{section.505}
+\contentsline {chapter}{Zoznam pr\'{i}loh}{88}{section*.503}
+\contentsline {section}{\numberline {.1}Ulo\IeC {\v z}en\IeC {\'e} git repozit\IeC {\'a}re }{89}{section.504}
+\contentsline {section}{\numberline {.2}Obsah prilo\IeC {\v z}en\IeC {\'e}ho DVD }{89}{section.505}

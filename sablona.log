@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.10)  16 MAY 2018 20:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.10)  18 MAY 2018 00:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1785,7 +1785,7 @@ Package pdftex.def Info: obrazky/../text/ssh.png used on input line 157.
  [20] [21 <./obrazky/../text/ssh.png>] [22
 
 ]
-<obrazky/../text/pycharm.png, id=921, 1926.19624pt x 1013.7875pt>
+<obrazky/../text/pycharm.png, id=923, 1926.19624pt x 1013.7875pt>
 File: obrazky/../text/pycharm.png Graphic file (type png)
 
 <use obrazky/../text/pycharm.png>
@@ -1817,7 +1817,7 @@ Overfull \hbox (17.99268pt too wide) in paragraph at lines 1--1
 []\T1/lmr/bx/n/17.28 KONZOLOVÁ ƒAS” AP-LI-KÁ-CIE NA SPRÁVU
  []
 
-<obrazky/../text/loginFiles.png, id=1040, 280.04625pt x 231.86626pt>
+<obrazky/../text/loginFiles.png, id=1042, 280.04625pt x 231.86626pt>
 File: obrazky/../text/loginFiles.png Graphic file (type png)
 
 <use obrazky/../text/loginFiles.png>
@@ -1842,7 +1842,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[31] <obrazky/../text/constructors.png, id=1074, 847.165pt x 400.49625pt>
+[31] <obrazky/../text/constructors.png, id=1076, 847.165pt x 400.49625pt>
 File: obrazky/../text/constructors.png Graphic file (type png)
 
 <use obrazky/../text/constructors.png>
@@ -1858,9 +1858,21 @@ Overfull \hbox (3.25606pt too wide) in paragraph at lines 132--133
 
 LaTeX Warning: Reference `fig:bridge2' on page 40 undefined on input line 266.
 
+
+Overfull \hbox (9.50731pt too wide) in paragraph at lines 271--272
+[]\T1/lmr/bx/n/12 bridgeArp \T1/lmr/m/n/12 - Trieda na-sta-vuje fun-kci-ona-lit
+u Add-ress Re-so-lu-tion Pro-to-col (ARP)
+ []
+
+
+Overfull \hbox (2.64497pt too wide) in paragraph at lines 279--280
+[]\T1/lmr/bx/n/12 bridgeNAT \T1/lmr/m/n/12 - Trieda oo²et-ruje na-sta-ve-nie Ne
+-twork Add-ress Trans-la-tion (NAT)
+ []
+
 [40
 
-] <obrazky/../text/bridge.png, id=1265, 393.47pt x 647.41875pt>
+] <obrazky/../text/bridge.png, id=1267, 393.47pt x 647.41875pt>
 File: obrazky/../text/bridge.png Graphic file (type png)
 
 <use obrazky/../text/bridge.png>
@@ -1872,7 +1884,7 @@ Overfull \hbox (0.69955pt too wide) in paragraph at lines 354--355
 u-hého ka-nálu prí-stu-po-vého bodu 
  []
 
-<obrazky/../text/configRates.png, id=1280, 336.25626pt x 254.9525pt>
+<obrazky/../text/configRates.png, id=1282, 336.25626pt x 254.9525pt>
 File: obrazky/../text/configRates.png Graphic file (type png)
 
 <use obrazky/../text/configRates.png>
@@ -1880,14 +1892,14 @@ Package pdftex.def Info: obrazky/../text/configRates.png used on input line 362
 .
 (pdftex.def)             Requested size: 201.75531pt x 152.97266pt.
  [43 <./obrazky/../text/configRates.png (PNG copy)>] <obrazky/../text/DudeDev.p
-ng, id=1290, 379.4175pt x 324.21124pt>
+ng, id=1292, 379.4175pt x 324.21124pt>
 File: obrazky/../text/DudeDev.png Graphic file (type png)
 
 <use obrazky/../text/DudeDev.png>
 Package pdftex.def Info: obrazky/../text/DudeDev.png used on input line 399.
 (pdftex.def)             Requested size: 227.65225pt x 194.52824pt.
  [44] [45 <./obrazky/../text/DudeDev.png (PNG copy)>] <obrazky/../text/gre.png,
- id=1306, 410.53375pt x 370.38374pt>
+ id=1308, 410.53375pt x 370.38374pt>
 File: obrazky/../text/gre.png Graphic file (type png)
 
 <use obrazky/../text/gre.png>
@@ -1917,29 +1929,28 @@ Overfull \hbox (1.58473pt too wide) in paragraph at lines 533--536
 a-ve-nie ko-mun-nít(community
  []
 
-<obrazky/../text/addList.png, id=1330, 347.2975pt x 301.125pt>
+[50] <obrazky/../text/addList.png, id=1336, 347.2975pt x 301.125pt>
 File: obrazky/../text/addList.png Graphic file (type png)
 
 <use obrazky/../text/addList.png>
 Package pdftex.def Info: obrazky/../text/addList.png used on input line 574.
 (pdftex.def)             Requested size: 208.3801pt x 180.67638pt.
- [50] [51 <./obrazky/../text/addList.png (PNG copy)>] <obrazky/../text/fwmangle
-.png, id=1343, 327.2225pt x 278.03876pt>
+ [51 <./obrazky/../text/addList.png (PNG copy)>] <obrazky/../text/fwmangle.png,
+ id=1345, 327.2225pt x 278.03876pt>
 File: obrazky/../text/fwmangle.png Graphic file (type png)
 
 <use obrazky/../text/fwmangle.png>
 Package pdftex.def Info: obrazky/../text/fwmangle.png used on input line 624.
 (pdftex.def)             Requested size: 196.335pt x 166.82454pt.
  [52]
-<obrazky/../text/kvmfig.png, id=1351, 327.2225pt x 116.435pt>
+<obrazky/../text/kvmfig.png, id=1352, 327.2225pt x 116.435pt>
 File: obrazky/../text/kvmfig.png Graphic file (type png)
 
 <use obrazky/../text/kvmfig.png>
 Package pdftex.def Info: obrazky/../text/kvmfig.png used on input line 648.
 (pdftex.def)             Requested size: 196.335pt x 69.86153pt.
- [53 <./obrazky/../text/fwmangle.png (PNG copy)> <./obrazky/../text/kvmfig.png 
-(PNG copy)>]
-<obrazky/../text/log.png, id=1359, 143.53625pt x 66.2475pt>
+ [53 <./obrazky/../text/fwmangle.png (PNG copy)>] <obrazky/../text/log.png, id=
+1359, 143.53625pt x 66.2475pt>
 File: obrazky/../text/log.png Graphic file (type png)
 
 <use obrazky/../text/log.png>
@@ -1963,41 +1974,47 @@ File: obrazky/../text/support.png Graphic file (type png)
 <use obrazky/../text/support.png>
 Package pdftex.def Info: obrazky/../text/support.png used on input line 695.
 (pdftex.def)             Requested size: 196.335pt x 69.86153pt.
- [54 <./obrazky/../text/log.png> <./obrazky/../text/logUML.png (PNG copy)>]
+ [54 <./obrazky/../text/kvmfig.png (PNG copy)> <./obrazky/../text/log.png> <./o
+brazky/../text/logUML.png (PNG copy)>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 710.
 
-<obrazky/../text/meshuml.png, id=1379, 469.755pt x 624.3325pt>
+<obrazky/../text/meshuml.png, id=1380, 469.755pt x 624.3325pt>
 File: obrazky/../text/meshuml.png Graphic file (type png)
 
 <use obrazky/../text/meshuml.png>
 Package pdftex.def Info: obrazky/../text/meshuml.png used on input line 745.
 (pdftex.def)             Requested size: 281.85518pt x 374.60239pt.
- [55 <./obrazky/../text/support.png (PNG copy)>] [56] [57 <./obrazky/../text/me
-shuml.png (PNG copy)>]
-<obrazky/../text/mplsuml.png, id=1398, 367.3725pt x 278.03876pt>
+ [55 <./obrazky/../text/support.png (PNG copy)>] [56]
+Overfull \hbox (7.29245pt too wide) in paragraph at lines 756--757
+[]\T1/lmr/bx/n/12 MplsBgpVpls \T1/lmr/m/n/12 - trieda o²et-ruje na-sta-ve-nie V
+ir-tual Pri-vate LAN Ser-vice (VPLS)
+ []
+
+[57 <./obrazky/../text/meshuml.png (PNG copy)>]
+<obrazky/../text/mplsuml.png, id=1400, 367.3725pt x 278.03876pt>
 File: obrazky/../text/mplsuml.png Graphic file (type png)
 
 <use obrazky/../text/mplsuml.png>
 Package pdftex.def Info: obrazky/../text/mplsuml.png used on input line 794.
 (pdftex.def)             Requested size: 220.42519pt x 166.82454pt.
  [58] [59 <./obrazky/../text/mplsuml.png (PNG copy)>] [60] <obrazky/../text/ppp
-tab.png, id=1417, 428.60126pt x 208.78pt>
+tab.png, id=1419, 428.60126pt x 208.78pt>
 File: obrazky/../text/ppptab.png Graphic file (type png)
 
 <use obrazky/../text/ppptab.png>
 Package pdftex.def Info: obrazky/../text/ppptab.png used on input line 877.
 (pdftex.def)             Requested size: 257.16273pt x 125.26895pt.
  [61 <./obrazky/../text/ppptab.png (PNG copy)>] <obrazky/../text/QueueTree.png,
- id=1427, 358.33875pt x 531.9875pt>
+ id=1429, 358.33875pt x 531.9875pt>
 File: obrazky/../text/QueueTree.png Graphic file (type png)
 
 <use obrazky/../text/QueueTree.png>
 Package pdftex.def Info: obrazky/../text/QueueTree.png used on input line 925.
 (pdftex.def)             Requested size: 215.0049pt x 319.19496pt.
  [62]
-<obrazky/../text/radiusPng.png, id=1435, 364.36125pt x 670.505pt>
+<obrazky/../text/radiusPng.png, id=1437, 364.36125pt x 670.505pt>
 File: obrazky/../text/radiusPng.png Graphic file (type png)
 
 <use obrazky/../text/radiusPng.png>
@@ -2005,7 +2022,12 @@ Package pdftex.def Info: obrazky/../text/radiusPng.png used on input line 973.
 (pdftex.def)             Requested size: 218.61842pt x 402.3061pt.
  [63 <./obrazky/../text/QueueTree.png (PNG copy)>] [64] [65 <./obrazky/../text/
 radiusPng.png (PNG copy)>]
-<obrazky/../text/RipNetworks.png, id=1454, 327.2225pt x 231.86626pt>
+Overfull \hbox (2.36255pt too wide) in paragraph at lines 989--990
+[]\T1/lmr/bx/n/12 RIP \T1/lmr/m/n/12 - trieda o²et-ruje na-sta-ve-nie pro-to-ko
+lu Rou-ting In-for-ma-tion Pro-to-col (RIP) 
+ []
+
+<obrazky/../text/RipNetworks.png, id=1456, 327.2225pt x 231.86626pt>
 File: obrazky/../text/RipNetworks.png Graphic file (type png)
 
 <use obrazky/../text/RipNetworks.png>
@@ -2013,7 +2035,7 @@ Package pdftex.def Info: obrazky/../text/RipNetworks.png used on input line 101
 5.
 (pdftex.def)             Requested size: 196.335pt x 139.12082pt.
  [66 <./obrazky/../text/RipNetworks.png (PNG copy)>]
-<obrazky/../text/SwitchPorts.png, id=1466, 363.3575pt x 185.69376pt>
+<obrazky/../text/SwitchPorts.png, id=1468, 363.3575pt x 185.69376pt>
 File: obrazky/../text/SwitchPorts.png Graphic file (type png)
 
 <use obrazky/../text/SwitchPorts.png>
@@ -2021,7 +2043,7 @@ Package pdftex.def Info: obrazky/../text/SwitchPorts.png used on input line 104
 9.
 (pdftex.def)             Requested size: 290.68639pt x 148.55519pt.
  [67] [68 <./obrazky/../text/SwitchPorts.png (PNG copy)>]
-<obrazky/../text/SystemMaintenance.png, id=1480, 348.30125pt x 139.52126pt>
+<obrazky/../text/SystemMaintenance.png, id=1482, 348.30125pt x 139.52126pt>
 File: obrazky/../text/SystemMaintenance.png Graphic file (type png)
 
 <use obrazky/../text/SystemMaintenance.png>
@@ -2029,7 +2051,7 @@ Package pdftex.def Info: obrazky/../text/SystemMaintenance.png used on input li
 ne 1102.
 (pdftex.def)             Requested size: 208.98236pt x 83.7134pt.
  [69 <./obrazky/../text/SystemMaintenance.png (PNG copy)>]
-<obrazky/../text/Netwatch.png, id=1490, 334.24875pt x 301.125pt>
+<obrazky/../text/Netwatch.png, id=1492, 334.24875pt x 301.125pt>
 File: obrazky/../text/Netwatch.png Graphic file (type png)
 
 <use obrazky/../text/Netwatch.png>
@@ -2042,7 +2064,13 @@ Overfull \hbox (5.15279pt too wide) in paragraph at lines 1175--1176
  []
 
 [71 <./obrazky/../text/Netwatch.png (PNG copy)>]
-<obrazky/../text/securityProfileRadius.png, id=1504, 398.48875pt x 324.21124pt>
+Overfull \hbox (8.03331pt too wide) in paragraph at lines 1179--1180
+[]\T1/lmr/bx/n/12 interfaceWpsClient \T1/lmr/m/n/12 - trieda o²et-ruje na-sta-v
+e-nie Wi-Fi Pro-tec-ted Se-tup (WPS)
+ []
+
+
+<obrazky/../text/securityProfileRadius.png, id=1506, 398.48875pt x 324.21124pt>
 File: obrazky/../text/securityProfileRadius.png Graphic file (type png)
 <use obrazky/../text/securityProfileRadius.png>
 Package pdftex.def Info: obrazky/../text/securityProfileRadius.png used on inpu
@@ -2060,7 +2088,7 @@ Overfull \hbox (13.97722pt too wide) in paragraph at lines 1--1
 
 
 
-] <obrazky/../text/linuxwinbox.png, id=1517, 837.1275pt x 551.05875pt>
+] <obrazky/../text/linuxwinbox.png, id=1519, 837.1275pt x 551.05875pt>
 File: obrazky/../text/linuxwinbox.png Graphic file (type png)
 
 <use obrazky/../text/linuxwinbox.png>
@@ -2072,7 +2100,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--28
 
  []
 
-<obrazky/../text/socket.png, id=1519, 209.78375pt x 157.58875pt>
+<obrazky/../text/socket.png, id=1521, 209.78375pt x 157.58875pt>
 File: obrazky/../text/socket.png Graphic file (type png)
 
 <use obrazky/../text/socket.png>
@@ -2081,14 +2109,14 @@ Package pdftex.def Info: obrazky/../text/socket.png used on input line 32.
  [74
 
  <./obrazky/../text/linuxwinbox.png>]
-<obrazky/../text/loginerror.png, id=1526, 204.765pt x 144.54pt>
+<obrazky/../text/loginerror.png, id=1528, 204.765pt x 144.54pt>
 File: obrazky/../text/loginerror.png Graphic file (type png)
 
 <use obrazky/../text/loginerror.png>
 Package pdftex.def Info: obrazky/../text/loginerror.png used on input line 39.
 (pdftex.def)             Requested size: 112.62108pt x 79.49722pt.
 
-<obrazky/../text/loginokno.png, id=1528, 1249.66875pt x 288.07625pt>
+<obrazky/../text/loginokno.png, id=1530, 1249.66875pt x 288.07625pt>
 File: obrazky/../text/loginokno.png Graphic file (type png)
 
 <use obrazky/../text/loginokno.png>
@@ -2101,7 +2129,7 @@ Overfull \hbox (10.59929pt too wide) in paragraph at lines 48--49
 
 [75 <./obrazky/../text/socket.png> <./obrazky/../text/loginerror.png> <./obrazk
 y/../text/loginokno.png>] [76]
-<obrazky/../text/interfacesgui.png, id=1545, 1109.14375pt x 680.5425pt>
+<obrazky/../text/interfacesgui.png, id=1547, 1109.14375pt x 680.5425pt>
 File: obrazky/../text/interfacesgui.png Graphic file (type png)
 
 <use obrazky/../text/interfacesgui.png>
@@ -2109,7 +2137,7 @@ Package pdftex.def Info: obrazky/../text/interfacesgui.png used on input line 8
 2.
 (pdftex.def)             Requested size: 388.20613pt x 238.19344pt.
 
-<obrazky/../text/ethernet.png, id=1546, 1243.64626pt x 369.38pt>
+<obrazky/../text/ethernet.png, id=1548, 1243.64626pt x 369.38pt>
 File: obrazky/../text/ethernet.png Graphic file (type png)
 
 <use obrazky/../text/ethernet.png>
@@ -2120,14 +2148,14 @@ Overfull \hbox (8.49138pt too wide) in paragraph at lines 88--89
  [][] 
  []
 
-<obrazky/../text/vlangui.png, id=1547, 1008.76875pt x 240.9pt>
+<obrazky/../text/vlangui.png, id=1549, 1008.76875pt x 240.9pt>
 File: obrazky/../text/vlangui.png Graphic file (type png)
 
 <use obrazky/../text/vlangui.png>
 Package pdftex.def Info: obrazky/../text/vlangui.png used on input line 94.
 (pdftex.def)             Requested size: 353.07436pt x 84.31625pt.
 
-<obrazky/../text/ifacelistmember.png, id=1548, 724.7075pt x 380.42125pt>
+<obrazky/../text/ifacelistmember.png, id=1550, 724.7075pt x 380.42125pt>
 File: obrazky/../text/ifacelistmember.png Graphic file (type png)
 
 <use obrazky/../text/ifacelistmember.png>
@@ -2135,7 +2163,7 @@ Package pdftex.def Info: obrazky/../text/ifacelistmember.png used on input line
  100.
 (pdftex.def)             Requested size: 253.65143pt x 133.14941pt.
  [77 <./obrazky/../text/interfacesgui.png> <./obrazky/../text/ethernet.png>]
-<obrazky/../text/ifacelist.png, id=1556, 642.4pt x 364.36125pt>
+<obrazky/../text/ifacelist.png, id=1558, 642.4pt x 364.36125pt>
 File: obrazky/../text/ifacelist.png Graphic file (type png)
 
 <use obrazky/../text/ifacelist.png>
@@ -2151,7 +2179,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) [80
 
 ] [81]
-<obrazky/../text/winboxcustom.png, id=1602, 834.11626pt x 541.02126pt>
+<obrazky/../text/winboxcustom.png, id=1604, 834.11626pt x 541.02126pt>
 File: obrazky/../text/winboxcustom.png Graphic file (type png)
 
 <use obrazky/../text/winboxcustom.png>
@@ -2169,7 +2197,7 @@ Package pdftex.def Info: obrazky/../text/winboxcustom.png used on input line 19
 \openout2 = `text/literatura.aux'.
 
  (./text/literatura.tex
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 7.
+LaTeX Font Info:    Try loading font information for T1+zi4 on input line 12.
 
 (/usr/share/texlive/texmf-dist/tex/latex/inconsolata/t1zi4.fd
 File: t1zi4.fd 2014/06/22 T1/zi4 (Inconsolata)
@@ -2177,7 +2205,7 @@ File: t1zi4.fd 2014/06/22 T1/zi4 (Inconsolata)
 ! Misplaced alignment tab character &.
 <argument> How to Install &
                             Configure Easy-RSA
-l.16 ...\emph{How to Install & Configure Easy-RSA}
+l.15 ...\emph{How to Install & Configure Easy-RSA}
                                                   \/ [online].
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2187,61 +2215,55 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \hbox (badness 3884) in paragraph at lines 16--20
+Underfull \hbox (badness 3884) in paragraph at lines 15--19
 []\T1/lmr/m/it/12 How to Ins-tall  Con-fi-gure Easy-RSA \T1/lmr/m/n/12 [on-line
 ]. 2013, [cit.24.03.2018].
  []
 
 
-Underfull \hbox (badness 2689) in paragraph at lines 16--20
+Underfull \hbox (badness 2689) in paragraph at lines 15--19
 \T1/lmr/m/n/12 Do-stupné z URL: $\OML/lmm/m/it/12 <$[]$\T1/zi4/m/n/12 https : /
  / docs . bigchaindb . com / projects / server / en /
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 22--26
+Underfull \hbox (badness 1112) in paragraph at lines 21--25
 []\T1/lmr/m/it/12 MAC Le-vel Ac-cess (Tel-net and Win-box) \T1/lmr/m/n/12 [on-l
 ine]. 2007, [cit.26.03.2018].
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--26
+Underfull \hbox (badness 10000) in paragraph at lines 21--25
 \T1/lmr/m/n/12 Do-stupné z URL: $\OML/lmm/m/it/12 <$[]$\T1/zi4/m/n/12 https : /
  / mikrotik . com / testdocs / ros / 2 . 9 / tools /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
+Underfull \hbox (badness 10000) in paragraph at lines 27--31
 []\T1/lmr/m/n/12 Mitchell Ani-cas \T1/lmr/m/it/12 OpenSSL Es-sen-tials: Wor-kin
 g with SSL Cer-ti-fi-ca-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--32
+Underfull \hbox (badness 10000) in paragraph at lines 27--31
 \T1/lmr/m/it/12 tes, Pri-vate Keys and CSRs \T1/lmr/m/n/12 [on-line]. 2012, [ci
 t.24.03.2018]. Do-
  []
 
 
-Underfull \hbox (badness 4217) in paragraph at lines 28--32
+Underfull \hbox (badness 4217) in paragraph at lines 27--31
 \T1/lmr/m/n/12 stupné z URL: $\OML/lmm/m/it/12 <$[]$\T1/zi4/m/n/12 https : / / 
 www . digitalocean . com / community / tutorials /
  []
 
 
-Overfull \hbox (31.00035pt too wide) in paragraph at lines 28--32
+Overfull \hbox (31.00035pt too wide) in paragraph at lines 27--31
 \T1/zi4/m/n/12 openssl-[]essentials-[]working-[]with-[]ssl-[]certificates-[]pri
 vate-[]keys-[]and-[]csrs$[]$\OML/lmm/m/it/12 >$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-\T1/lmr/m/n/12 Do-stupné z URL: $\OML/lmm/m/it/12 <$[]$\T1/zi4/m/n/12 http : / 
-/ www . cisco . com / c / en / us / products /
- []
-
-
-Underfull \hbox (badness 1365) in paragraph at lines 64--68
+Underfull \hbox (badness 1365) in paragraph at lines 57--61
 []\T1/lmr/m/it/12 Python 2.7.2 Re-le-ase \T1/lmr/m/n/12 [on-line]. 2018, [cit.0
 2.04.2018]. Do-stupné z URL:
  []
@@ -2252,19 +2274,19 @@ Underfull \hbox (badness 1365) in paragraph at lines 64--68
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 114--118
+Underfull \hbox (badness 10000) in paragraph at lines 107--111
 []\T1/lmr/m/it/12 Install the Cer-ti-fi-ca-tion Aut-ho-rity \T1/lmr/m/n/12 [on-
 line]. 2017, [cit.24.03.2018].
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--118
+Underfull \hbox (badness 10000) in paragraph at lines 107--111
 \T1/lmr/m/n/12 Do-stupné z URL: $\OML/lmm/m/it/12 <$[]$\T1/zi4/m/n/12 https : /
  / docs . microsoft . com / en-[]us /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--118
+Underfull \hbox (badness 10000) in paragraph at lines 107--111
 \T1/zi4/m/n/12 windows-[]server / networking / core-[]network-[]guide / cncg / 
 server-[]certs /
  []
@@ -2277,11 +2299,11 @@ server-[]certs /
 
 
 
-]) (./sablona.toa)
+] [87]) (./sablona.toa)
 \tf@toa=\write11
 \openout11 = `sablona.toa'.
 
- [87
+ [88
 
 
 ]
@@ -2307,7 +2329,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-) [88
+) [89
 
 ]
 
@@ -2348,10 +2370,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 245.
 ### semi simple group (level 1) entered at line 1 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 37186 strings out of 493029
- 691505 string characters out of 6136233
- 789075 words of memory out of 5000000
- 39444 multiletter control sequences out of 15000+600000
+ 37221 strings out of 493029
+ 691817 string characters out of 6136233
+ 790828 words of memory out of 5000000
+ 39479 multiletter control sequences out of 15000+600000
  53439 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,18n,101p,10490b,1329s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2367,10 +2389,10 @@ texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/
 lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
 sy10.pfb>
-Output written on sablona.pdf (89 pages, 1682777 bytes).
+Output written on sablona.pdf (90 pages, 1684887 bytes).
 PDF statistics:
  1855 PDF objects out of 2073 (max. 8388607)
- 1658 compressed objects within 17 object streams
+ 1657 compressed objects within 17 object streams
  608 named destinations out of 1000 (max. 500000)
  1200 words of extra memory for PDF output out of 10000 (max. 10000000)
 
