@@ -144,6 +144,7 @@ V rámci ďalšieho testovania nastávajú nasledujúce situácie:
 \item test Quit a About - tlačítkom about sa vyhodí okno s informáciou o softvéri, tlačítkom Quit sa ukončí celá aplikácia 
 \end{itemize}
 \chapter{Návod na inštaláciu a spustenie}
+Pre funkčnosť aplikácie je potrebné nahrať a importovať certifikát a kľúč do mikrotiku zo zložky projektu, pre spojenie cez API-SSL. To sa vykoná nahraním súborov na mikrotik, následne import certifikátu a kľúču v certificate, a následne nastavenie certifikátu v službe API-SSL a nastavenie štandardného portu 8729.
 \section{Inštalácia na operačom systéme linux}
 Najspoľahlivejšou cestou je nainštalovanie potrebných balíčkov v rámci pythonu na spustenie aplikácie. Linux v sebe štandardne zahrňuje python v oboch verziách, teda aj vo verzii 2 aj vo verzii 3, k posledným aktualizáciám linux mint vo verzii 3.6.5. \\
 Tento návod bude popisovať spôsob nainštalovania potrebných súborov a modulov do pythonu, ako aj spôsob spustenia aplikácie. Návod bol písaný na distribúciu linuxu Linix Mint, toto vychádza z Ubuntu teda z Debianu. Pre CentOS sa použije buď \textit{dnf} alebo \textit{yum}, to platí aj pre  fedoru. Pre arch linux platí príkaz \textit{pacman} na nainštalovanie jednotlivých aplikácií. 
