@@ -1,10 +1,10 @@
 \chapter{Grafická časť aplikácie (frontend)}
 V rámci frontend časti aplikácie boli použité aplikácie:\begin{itemize}
-\item \textbf{QT4 designer} - softvér na návrh dizajnu "okien" aplikácie
+\item \textbf{QT4 designer} - softvér na návrh dizajnu okien aplikácie
 \item \textbf{PyQT 4} - doplnok do pythonu, na návrh a programovanie grafických aplikácií
 \end{itemize} 
 \section{QT4 disigner}
-QT4 designer je aplikácia na návrh šablón v rámci použitia knižnice PyQT4. Medzi základné objekty použité v aplikácii sem patria:
+QT4 designer je aplikácia na návrh šablón v rámci použitia knižnice PyQT4. Designer patrí k štandardným nástrojom PyQt knižnice a nachádza sa v \textit{/usr/lib/x86\_ 64-linux-gnu/qt5/bin/designer}. Medzi základné objekty použité v aplikácii sem patria:
 \begin{itemize}
 \item \textbf{QPushButton} - tlačítko v GUI
 \item \textbf{textlabel} - popis pri tlačítkach a textových poliach
@@ -17,30 +17,44 @@ Po vytvorení šablóny sa súbor uloží vo formáte \textit{.ui} a musí sa na
 V aplikácii je použitá verzia PyQT vo verzii 4. Dnes existuje v dvoch verziách a to vo verzii 4 a vo verzii 5. Nakoľko QT4 designer je navrhnutý na PyQT vo verzii 4, tak aj PyQT je v kóde použité vo verzii 4. \\
 V rámci okna po prihlásení na zariadenie je okno založené na objekte \textit{menubar()} a na metódach \textit{addMenu()} na pridávanie hlavných položiek v menu a ďalšie položky sú \textit{QAcion}, ktoré vytvárajú podzložku v menu cez metódu \textit{addAction()}. Ďalšou dôležitou knižnicou je \textit{QtGui} na vytvorenie GUI plikácie. Objekt \textit{QApplication()} vytvorí samostatnú aplikáciu spoločne s metódou pre otvorenie okna \textit{show()}, tiež je tu použitá knižnica \textit{sys} a jej metóda \textit{exit()} na zatvorenie celej aplikácie,  a ďalšou metódou je \textit{close()}, táto metóda okno zavre.
 \chapter{Grafická aplikácia}
-\section{Hlavné prihlasovavie okno}
-Hlavné okno aplikácie predstavuje prihlasovaciu obrazovku a možnosť zobrazenia blízkych zariadení a to ich IP adries pomocou tlačítka \textit{find devices IP}(vyhľadávacia doba je 30 sekúnd), pomocou tohoto tlačítka sa vylistujú blízke mikrotik zariadenia a ich IP adresy, toto vychádza z aplikácie mactelnet a výstup zachytáva \textit{listIpValues}.\\
-Podobne ako zobrazenie IP adries sa pomocou tlačítka find devices MAC (doba hľadania zariadení je 30s sekúnd) vylistuje zoznam MAC adries blízkych zariadení. Pre funkčnosť týchto tlačítok je potreba na linuxe správne nastaviť forward pravidla na firewalle. Podobne ako \textit{find devices IP tlačítko} aj toto tlačítko pracuje s programom mactelnet a výstup zachytáva slovník \textit{listMacValues}. Toto vidíme na obrázku \ref{fig:winboxlinux}\\
+\section{Hlavné prihlasovacie okno}
+Hlavné okno aplikácie predstavuje prihlasovaciu obrazovku a možnosť zobrazenia blízkych zariadení a to ich IP adries pomocou tlačítka \textit{find devices}(vyhľadávacia doba je 2x 30 sekúnd, najskôr vyhľadá MAC adresy, potom IP adresy), pomocou tohoto tlačítka sa vylistujú blízke mikrotik zariadenia a ich IP adresy, toto vychádza z aplikácie mactelnet a výstup zachytáva \textit{listIpValues a listMacValues}. Toto vidíme na obrázku \ref{fig:winboxlinux}.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.45]{../text/linuxwinbox.png}
+\includegraphics[scale=0.45]{../text/winboxnew.png}
 \caption{Prihlasovacie okno aplikácie}
 \label{fig:winboxlinux}
 \end{figure}
-Ďalej sa tu nachádzajú textové polia address, username a password. Do týchto polí sa zapisuje IP adresa (je možné ju skopírovať z IP address textového poľa) zariadenia, na ktoré sa chceme pripojiť, užívateľské meno  a heslo a po stlačení tlačítka \textit{login} sa užívateľ pri úspešnom pokuse prihlási na mikrotik pomocou \textit{API-SSL}. V opačnom prípade sa vyhodí okno s výnimkou. Pri nepodpore zariadenia API-SSL prípadne španej komunikácie v rámci overovania certifikátu sa vyhodí nasledujúca výnimka podľa obrázku \ref{fig:socket}.
-\begin{figure}[H]
+Ďalej sa tu nachádzajú textové polia address, username a password. Do týchto polí sa zapisuje IP adresa (je možné ju skopírovať z IP address textového poľa) zariadenia, na ktoré sa chceme pripojiť, užívateľské meno  a heslo a po stlačení tlačítka \textit{login} sa užívateľ pri úspešnom pokuse prihlási na mikrotik pomocou \textit{API-SSL}. V opačnom prípade sa vyhodí okno s výnimkou. Pri nepodpore zariadenia API-SSL prípadne španej komunikácie v rámci overovania certifikátu sa vyhodí nasledujúca výnimka podľa obrázku \ref{fig:socket}. Druhým typom výnimky je neúšpešné prihlásenie chybného užívateľského mena alebo hesla. Toto vidíme na obrázku \ref{fig:loginworong}.Všetky tieto výnimky sú spravované pod štandardnými výnimkami programovacieho jazyka python a používajú štandardne \textit{try except}.
+\begin{figure}[h!]
 \centering
-\includegraphics[scale=0.55]{../text/socket.png}
-\caption{Výnimka pri španej komunikácii s routrom}
-\label{fig:socket}
+\begin{subfigure}{.6\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{../text/socket.png}
+  \caption{Výnimka pri zlej komunikácii s routrom}
+  \label{fig:socket}
+\end{subfigure}%
+\begin{subfigure}{.6\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{../text/loginerror.png}
+  \caption{Výnimka pri zlom prihlásení}
+  \label{fig:loginworong}
+\end{subfigure}
+\caption{Zoznam výnimiek pri prihlásení na zariadenie}
+\label{fig:exceptions}
 \end{figure}
-Druhým typom výnimky je neúšpešné prihlásenie chybného užívateľského mena alebo hesla. Toto vidíme na obrázku \ref{fig:loginworong}.
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.55]{../text/loginerror.png}
-\caption{Výnimka pri zadaní zlého užívateľského mena alebo hesla}
-\label{fig:loginworong}
-\end{figure}
-Všetky tieto výnimky sú spravované pod štandardnými výnimkami programovacieho jazyka python a používajú štandardne \textit{try except}.
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.55]{../text/socket.png}
+%\caption{Výnimka pri španej komunikácii s routrom}
+%\label{fig:socket}
+%\end{figure}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=0.55]{../text/loginerror.png}
+%\caption{Výnimka pri zadaní zlého užívateľského mena alebo hesla}
+%\label{fig:loginworong}
+%\end{figure}
 \subsection{Hlavné okno konfiguračnej aplikácie}
 Po úspšnom prihlásení na zariadení sa otvorí okno popisujúce na obrázku \ref{fig:loginokno}.
 \begin{figure}[H]
@@ -49,7 +63,9 @@ Po úspšnom prihlásení na zariadení sa otvorí okno popisujúce na obrázku 
 \caption{Hlavné okno aplikácie}
 \label{fig:loginokno}
 \end{figure}
+Aplikácia je riešená podobne ako na mikrotiku, to znamená okno v okne. Aplikácia je viac-oknová, može sa otvoriť niekoľko okien naraz a okná budú vykreslené v hlavnom okne aplikácie. 
 \section{Položky hlavného menu}
+\label{sec:buttons}
 V menu sa nachádzajú jednotlivé položky a ich podzložky:
 \begin{itemize}
 \item \textbf{Interface} - správa a manažment rozhraní, pridávanie, odoberanie rozhraní, zapnutie a vypnutie rozhraní, obshauje tiež správu ethernet rozhraní, VLAN rozhraní a tzv. interface listov a ich členov
@@ -69,6 +85,7 @@ V menu sa nachádzajú jednotlivé položky a ich podzložky:
 \item \textbf{About} - predstavuje dve tlačítka Quit a About, About vypíše informácie o softvéri, stlačením tlačítka  Quit sa vypnú všetky okná a celé spojenie zahrňujúc prihlasovacie okno 
 \end{itemize}
 \subsection{Ukážka fungovania aplikácie cez menu Interface}
+\label{sec:gui}
 Tlačítko interface obsahuje:
 \begin{itemize}
 \item \textbf{Interfaces} - obsahuje zoznam rozhraní, zapnutie a vypnutie rozhraní spoločne s výnimkami zobrazené na obrázku \ref{fig:interfacesgui} 
@@ -107,6 +124,7 @@ Tlačítko interface obsahuje:
 \caption{Okno interface list}
 \label{fig:interfacelistgui}
 \end{figure}
+V rámci aplikácie sa tu nachádzajú ďalších niekoľko okien, napr. IP, Maintenance, About, DHCP, Hostname, atď. Tieto časti aplikácie sú riešené rovnakým spôsobom ako to je v kapitole \ref{sec:gui}. Zoznam všetkých tlačítok sa nachádza v kapitole \ref{sec:buttons}.
 \section{Testovanie aplikácie}
 V rámci aplikácie bolo prevedené manuálne testovanie. Aplikácia bola tetsovaná na lokálnom mikrotiku, na ktorom bol nahratý a importovaný certifikát \textit{diplomlka.crt}. Tento certifikát bol následne použitý aj v službe API-SSL. V rámci testovania sú certifikáty nahraté aj v koreňovej zložke projektu aplikácie.\\
 Ako prvé bolo otestované vyhľadávanie zariadení kliknutím na tlačítko "\textit{find devices}". Pre funkčnosť tohoto vyhľadávania je potreba vypnúť firewall, nakoľko linux so zapnutým firewallom zariadenia nevyhľadá.\\
@@ -131,7 +149,7 @@ Najspoľahlivejšou cestou je nainštalovanie potrebných balíčkov v rámci py
 Tento návod bude popisovať spôsob nainštalovania potrebných súborov a modulov do pythonu, ako aj spôsob spustenia aplikácie.
 \subsection{Inštalácia pip a pip3}
 Pre potrebu inštalovania modulov do pythonu je potreba doinštalovať inštalátor pip a pip3 (pre python vo verzii 3).
-\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie pip,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie pip,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
 sudo apt install python-pip
 sudo apt install python3-pip
 pip install --upgrade pip
@@ -140,49 +158,49 @@ pip3 install --upgrade pip
 \subsection{Nainštalovanie knižnice tikapy}
 \label{sec:tikapy}
 Zadaním nasledujúceho príkazu v terminále sa nainštaluje knižnica tikapy, prte komunikáciu s mikrotikom, je použitá v backend časti aplikácie. Tikapy modul používa jazyk python 3. V prípade neúspechu je treba pridať parameter \textit{--user}.
-\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie tikapy,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie tikapy,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
 sudo apt install git
 git clone https://github.com/vshn/tikapy
 pip3 install tikapy
 \end{lstlisting}
 \subsection{Nainštalovanie pexpect}
 Podobne ako v kapitole \ref{sec:tikapy}, je potreba doinštalovať modul pexpect, ktorý zahrňuje pxssh, pxtelnet, pxftp, ...
-\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie pexpect,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie pexpect,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
 pip install pexpect
 pip3 install pexpect
 \end{lstlisting}
 \subsection{Inštalácia mactelnet}
 Pre potrebu vyhľadávania zariadení v aplikácii je potreba nainštalovať mactelnet klienta. Toto sa vykoná vykonaním príkazu
-\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie mactelnet,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie mactelnet,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
 sudo apt install mactelnet-client
 \end{lstlisting}
 \subsection{Nainštalovanie setuptools}
 Pre možnosť používania modulov do pythonu je nutné nainštalovať setuptools, to sa prevedie príkazom
-\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie setuptools,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie setuptools,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
 pip install setuptools --user
 pip3 install setuptools --user
 \end{lstlisting}
 \subsection{Inštalácia PyQT4}
 Grafická časť aplikácie je napísaná v module jazyka python PyQT4. Na inštaláciu je potreba zadať príkaz
-\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie pyqt4,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie pyqt4,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
 sudo apt install python-qt4 python-qt4-dev
 sudo apt install python3-pyqt4
 sudo apt install pyqt4-dev-tools
 \end{lstlisting}
 \subsection{Inštalácia QT4 designer}
 Grafická časť aplikácie bola navrhnutá v programe \textit{QT4 designer}, pre jej spojazdnenie je potreba ju nainštalovať (jediné možné riešenie je len na operačnom systéme linux, na windows neexistuje inštalátor). Nainštaluje sa obdobne:
-\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie qt4 designera,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie qt4 designera,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
 sudo apt install python-qt4 qt4-designer
 \end{lstlisting}
 \subsection{Inštalácia paramiko}
 Pre potreby fungovania aplikácie je potreba dpinštalovať modul paramiko. To sa prevedie príkazom
-\begin{lstlisting}[language=bash, frame=single, caption=Inštalácia paramiko,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=bash, frame=single, caption=Inštalácia paramiko,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
 pip install paramiko
 pip3 install paramiko
 \end{lstlisting}
 \subsection{Spustenie aplikácie}
 Aplikácia používa certifikáty uložené v projekte pod názvom \textit{diplomka1.crt} a kľúč k certifikátu pod názvom \textit{diplomka1.key}. Toto je pre spojenie s mikrotikom cez API-SSL. Pre spustenie aplikácie je potreba navigácie do koreňovej zložky, kde sa nachádza súbor \textit{loginGui.py}, tento súbor je spúšťací súbor na spustenie napísanej GUI aplikácie. Následne sa program spustí nasledovne:
-\begin{lstlisting}[language=bash, frame=single, caption=Spustenie aplikácie,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=bash, frame=single, caption=Spustenie aplikácie,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
 adrian@~/PycharmProjects/diplomkap3 $ python3 loginGui.py
 \end{lstlisting}
 Po úspešnom spustení by sa malo otvoriť prihlasovacie okno, kde po jeho inicializácii sa stlačením tlačítka na vyhľadanie zariadení cez tlačítko \textit{FInd devices}, toto trvá 1 minútu kým program mactelnet nájde najbližšie zariadenia, štandardné prihlasovacie užívateľské meno je \textit{admin}, po kliknutí na IP adresu sa doplní do textového poľa address, prihlasovacie okno je zobrazené na obrázku \ref{fig:winboxcustom}:

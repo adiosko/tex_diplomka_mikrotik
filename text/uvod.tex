@@ -230,7 +230,7 @@ Použitie modulu sa aplikuje v rámci diplomovej práce. Používa sa hlavne pri
 \end{itemize}
 V rámci práce sa tento modul použil v rámci knižnice loginManager, kde v metódach pre mactelnet vyhľadáva mikrotiky za pomoci protokolu mactelnet a ukladá to do textového súboru \textit{mt.output}. \\
 Nie je potreba inštalácie modulu  OS, pretože je zahrnutý v rámci štandardných knižníc jazyku python. V kóde vidíme ukážku metódy,ktorá vylistuje zoznam mikrotik zariadení za pomoci funkcie mactelnet a jej návratovou hodnotou je list zozname mikrotik zariadení.
-\begin{lstlisting}[language=python, frame=single, caption=Metóda na vyhľadanie MAC adries mikrotikov, captionpos=b]
+\begin{lstlisting}[language=python, frame=single, caption=Metóda na vyhľadanie MAC adries mikrotikov, captionpos=b, basicstyle=\footnotesize, showstringspaces=false]
 def listMikrotikDevices(self):
  deviceList = []
  loadMacAddress = False
@@ -263,7 +263,7 @@ Medzi najpoužívanejšie metódy v rámci diplomovej práce sú použité:
 \item \textit{sleep()} - Doba trvania odoslania príkazu v sekundách
 \item \textit{close()} - Ukončenie spojenia
 \end{itemize}
-\begin{lstlisting}[language=python, frame=single, caption=Použitie knižnice telnetlib, captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=python, frame=single, caption=Použitie knižnice telnetlib, captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
 def loginTelnet(self, password, login="admin"):
  import telnetlib
  central = centralControl(login, password)
@@ -295,7 +295,7 @@ Pexpect je súčasťou sady nástrojov Pypi. Aktuálna verzia modulu pexpect je 
 \item pre windows je potreba inštalácie modulu POSIX pre jeho funkčnosť
 \end{itemize}
 Na nainštalovanie pexpect \cite{pexpectinstall} na linuxe,sa v príkazovom riadku zadá:
-\begin{lstlisting}[language=python, frame=single, caption=Inštalácia Pexpect, captionpos=b]
+\begin{lstlisting}[language=python, frame=single, caption=Inštalácia Pexpect, captionpos=b, basicstyle=\footnotesize]
 pip install pexpect
 pip3 install pexpect
 \end{lstlisting}  
@@ -303,7 +303,7 @@ Pre inštaláciu na operačnom systéme Windows je potreba mať nainštalovaný 
 Modul pexpect zahŕňa modul pxssh a nie je potreba ho potom extra inštalovať.\\
 Nižšie vidíme ukážku použiia kombinácie modulov pexpect a pxssh na pripojenie na mikrotik.
 \newpage
-\begin{lstlisting}[language=python, frame=single, caption=Použitie pxssh na pripojenie na router cez protokol SSH, captionpos=b]
+\begin{lstlisting}[language=python, frame=single, caption=Použitie pxssh na pripojenie na router cez protokol SSH, captionpos=b, basicstyle=\footnotesize]
 def loginSSH(self, server,login, password):
  from pexpect import pxssh, spawn, expect
  import getpass
@@ -330,17 +330,18 @@ Modul tikapy ako celkovo mikrotik API komunikuje nezabezpečene na porte 8728 a 
 \item  \textit{close()} - Ukončenie spojenia
 \end{itemize} 
 Na nainštalovanie tikapy do pythonu je potreba to nainštalovať nasledovne, v príkazovom riadku zadaním príkazu:
-\begin{lstlisting}[language=python, frame=single, caption=Inštalácia tikapy,  captionpos=b]
+\begin{lstlisting}[language=python, frame=single, caption=Inštalácia tikapy,  captionpos=b, basicstyle=\footnotesize]
 pip install tikapy
 pip3 install tikapy
 \end{lstlisting}
+\newpage
 V rámci vytvorenia objektu sú dve možnosti:\begin{itemize}
 \item Vytvorenie klienta a to buď SSL klienta prípadne štandardného klienta TikapyCLient(adresa,port), pre SSL klienta to je port 8729, pre štandardného klienta port 8728
 \item Vytvorenie metódy login(užívateľ,heslo)
 \item Odoslanie príkazu metódou \textit{talk(['príkaz'])} 
 \end{itemize}
 Nižsie vidíme príklad metódy spoločne s konštruktorom triedy na pridanie IP adresy s príkladom použitia API slov.
-\begin{lstlisting}[language=python, frame=single, caption=Príklad použitia tikapy,  captionpos=b]
+\begin{lstlisting}[language=python, frame=single, caption=Príklad použitia tikapy,  captionpos=b, basicstyle=\footnotesize]
 from tikapy import TikapyClient
 from tikapy import TikapySslClient
 class Addresses:

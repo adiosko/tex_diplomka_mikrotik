@@ -17,103 +17,103 @@
 \contentsline {chapter}{\numberline {3}Pripojenie na Mikrotik}{18}{chapter.19}
 \contentsline {section}{\numberline {3.1}Mo\IeC {\v z}nosti pripojenia}{18}{section.20}
 \contentsline {section}{\numberline {3.2}Pripojenie pomocou winboxu}{18}{section.21}
-\contentsline {section}{\numberline {3.3}Pripojenie pomocou webfigu}{19}{section.24}
-\contentsline {section}{\numberline {3.4}Mactelnet}{19}{section.27}
-\contentsline {section}{\numberline {3.5}Pripojenie pomocou telnet a SSH}{20}{section.30}
-\contentsline {subsection}{\numberline {3.5.1}Pripojenie cet telnet}{20}{subsection.31}
-\contentsline {subsection}{\numberline {3.5.2}Pripojenie pomocou ssh}{20}{subsection.32}
-\contentsline {chapter}{\numberline {4}Programovac\IeC {\'\i } jazyk Python}{22}{chapter.35}
-\contentsline {section}{\numberline {4.1}Python 2}{22}{section.36}
-\contentsline {section}{\numberline {4.2}Python 3}{22}{section.37}
-\contentsline {section}{\numberline {4.3}Prostredia na programovanie v jazyku Python}{23}{section.38}
-\contentsline {section}{\numberline {4.4}Pycharm}{23}{section.39}
-\contentsline {chapter}{\numberline {5}Pou\IeC {\v z}it\IeC {\'e} kni\IeC {\v z}nice v diplomovej pr\IeC {\'a}ci}{25}{chapter.42}
-\contentsline {section}{\numberline {5.1}OS.SYSTEM}{25}{section.43}
-\contentsline {section}{\numberline {5.2}Telnetlib}{26}{section.60}
-\contentsline {section}{\numberline {5.3}Pxssh a pxexpect}{27}{section.78}
-\contentsline {subsection}{\numberline {5.3.1}In\IeC {\v s}tal\IeC {\'a}cia pexpect}{27}{subsection.79}
-\contentsline {section}{\numberline {5.4}TikApy}{28}{section.99}
-\contentsline {chapter}{\numberline {6}Konzolov\IeC {\'a} \IeC {\v c}as\IeC {\v t} aplik\IeC {\'a}cie na spr\IeC {\'a}vu mikrotikov}{30}{chapter.120}
-\contentsline {section}{\numberline {6.1}Popis naprogramovanej \IeC {\v c}asti prihlasovania na mikrotik}{30}{section.121}
-\contentsline {subsection}{\numberline {6.1.1}S\IeC {\'u}bor centralControl}{30}{subsection.124}
-\contentsline {subsection}{\numberline {6.1.2}S\IeC {\'u}bor Constructors}{32}{subsection.176}
-\contentsline {subsection}{\numberline {6.1.3}S\IeC {\'u}bor dhcpClient}{33}{subsection.179}
-\contentsline {subsection}{\numberline {6.1.4}S\IeC {\'u}bor LoginManager}{35}{subsection.219}
-\contentsline {section}{\numberline {6.2}Rozbor hlavnej \IeC {\v c}asti backendu}{38}{section.299}
-\contentsline {chapter}{\numberline {7}Hlavn\IeC {\'a} \IeC {\v c}as\IeC {\v t} backendu}{40}{chapter.300}
-\contentsline {section}{\numberline {7.1}Zlo\IeC {\v z}ka bridge}{40}{section.301}
-\contentsline {subsection}{\numberline {7.1.1}Popis tried zlo\IeC {\v z}ky}{40}{subsection.302}
-\contentsline {subsection}{\numberline {7.1.2}Vybran\IeC {\'y} analyzovan\IeC {\'y} s\IeC {\'u}bor}{41}{subsection.303}
-\contentsline {section}{\numberline {7.2}Zlo\IeC {\v z}ka capsman}{42}{section.308}
-\contentsline {subsection}{\numberline {7.2.1}Popis tried zlo\IeC {\v z}ky}{42}{subsection.309}
-\contentsline {subsection}{\numberline {7.2.2}Vybran\IeC {\'y} analyzovan\IeC {\'y} s\IeC {\'u}bor}{43}{subsection.310}
-\contentsline {section}{\numberline {7.3}Zlo\IeC {\v z}ka Dude}{44}{section.315}
-\contentsline {subsection}{\numberline {7.3.1}Popis tried zlo\IeC {\v z}ky}{44}{subsection.316}
-\contentsline {subsection}{\numberline {7.3.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{44}{subsection.317}
-\contentsline {section}{\numberline {7.4}Zlo\IeC {\v z}ka Interfaces}{45}{section.322}
-\contentsline {subsection}{\numberline {7.4.1}Popis tried zlo\IeC {\v z}ky}{45}{subsection.323}
-\contentsline {subsection}{\numberline {7.4.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{46}{subsection.324}
-\contentsline {section}{\numberline {7.5}Zlo\IeC {\v z}ka IPv4}{48}{section.329}
-\contentsline {subsection}{\numberline {7.5.1}Popis tried zlo\IeC {\v z}ky}{48}{subsection.330}
-\contentsline {subsection}{\numberline {7.5.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{51}{subsection.331}
-\contentsline {section}{\numberline {7.6}Zlo\IeC {\v z}ka IPv6}{51}{section.336}
-\contentsline {subsection}{\numberline {7.6.1}Popis tried zlo\IeC {\v z}ky}{52}{subsection.337}
-\contentsline {subsection}{\numberline {7.6.2}Anyl\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{52}{subsection.338}
-\contentsline {section}{\numberline {7.7}Zlo\IeC {\v z}ky KVM, log a makeSupportFile}{53}{section.343}
-\contentsline {subsection}{\numberline {7.7.1}Popis triedy zlo\IeC {\v z}ky KVM}{53}{subsection.344}
-\contentsline {subsection}{\numberline {7.7.2}Popis triedy zlo\IeC {\v z}ky log}{54}{subsection.349}
-\contentsline {subsection}{\numberline {7.7.3}Popis triedy makeSupportFile}{55}{subsection.356}
-\contentsline {section}{\numberline {7.8}Zlo\IeC {\v z}ka Mesh}{55}{section.361}
-\contentsline {subsection}{\numberline {7.8.1}Popis tried zlo\IeC {\v z}ky}{55}{subsection.362}
-\contentsline {subsection}{\numberline {7.8.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{55}{subsection.363}
-\contentsline {section}{\numberline {7.9}Zlo\IeC {\v z}ka MPLS}{57}{section.368}
-\contentsline {subsection}{\numberline {7.9.1}Popis tried zlo\IeC {\v z}ky}{57}{subsection.369}
-\contentsline {subsection}{\numberline {7.9.2}Anyl\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{58}{subsection.370}
-\contentsline {section}{\numberline {7.10}Zlo\IeC {\v z}ka PPP}{59}{section.375}
-\contentsline {subsection}{\numberline {7.10.1}Popis tried zlo\IeC {\v z}ky}{59}{subsection.376}
-\contentsline {subsection}{\numberline {7.10.2}Analyzovan\IeC {\'y} s\IeC {\'u}bor}{61}{subsection.377}
-\contentsline {section}{\numberline {7.11}Zlo\IeC {\v z}ka Queues}{61}{section.382}
-\contentsline {subsection}{\numberline {7.11.1}Zoznam tried zlo\IeC {\v z}ky}{62}{subsection.383}
-\contentsline {subsection}{\numberline {7.11.2}Anal\IeC {\'a}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{62}{subsection.384}
-\contentsline {section}{\numberline {7.12}Zlo\IeC {\v z}ka Radius}{63}{section.389}
-\contentsline {section}{\numberline {7.13}Zlo\IeC {\v z}ka routing}{65}{section.394}
-\contentsline {subsection}{\numberline {7.13.1}Zoznam tried zlo\IeC {\v z}iek}{65}{subsection.395}
-\contentsline {subsection}{\numberline {7.13.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{66}{subsection.396}
-\contentsline {section}{\numberline {7.14}Zlo\IeC {\v z}ka switch}{67}{section.401}
-\contentsline {subsection}{\numberline {7.14.1}Zoznam tried zlo\IeC {\v z}ky}{67}{subsection.402}
-\contentsline {subsection}{\numberline {7.14.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{67}{subsection.403}
-\contentsline {section}{\numberline {7.15}Zlo\IeC {\v z}ka System}{68}{section.408}
-\contentsline {subsection}{\numberline {7.15.1}Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky}{68}{subsection.409}
-\contentsline {subsection}{\numberline {7.15.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{69}{subsection.410}
-\contentsline {section}{\numberline {7.16}Zlo\IeC {\v z}ka tools}{69}{section.415}
-\contentsline {subsection}{\numberline {7.16.1}Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky}{69}{subsection.416}
-\contentsline {subsection}{\numberline {7.16.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{70}{subsection.417}
-\contentsline {section}{\numberline {7.17}Zlo\IeC {\v z}ka Wireless}{71}{section.422}
-\contentsline {subsection}{\numberline {7.17.1}Zoznam tried zlo\IeC {\v z}ky}{71}{subsection.423}
-\contentsline {subsection}{\numberline {7.17.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{72}{subsection.424}
-\contentsline {chapter}{\numberline {8}Grafick\IeC {\'a} \IeC {\v c}as\IeC {\v t} aplik\IeC {\'a}cie (frontend)}{73}{chapter.429}
-\contentsline {section}{\numberline {8.1}QT4 disigner}{73}{section.430}
-\contentsline {section}{\numberline {8.2}PyQT 4}{73}{section.431}
-\contentsline {chapter}{\numberline {9}Grafick\IeC {\'a} aplik\IeC {\'a}cia}{74}{chapter.432}
-\contentsline {section}{\numberline {9.1}Hlavn\IeC {\'e} prihlasovavie okno}{74}{section.433}
-\contentsline {subsection}{\numberline {9.1.1}Hlavn\IeC {\'e} okno konfigura\IeC {\v c}nej aplik\IeC {\'a}cie}{75}{subsection.440}
-\contentsline {section}{\numberline {9.2}Polo\IeC {\v z}ky hlavn\IeC {\'e}ho menu}{75}{section.443}
-\contentsline {subsection}{\numberline {9.2.1}Uk\IeC {\'a}\IeC {\v z}ka fungovania aplik\IeC {\'a}cie cez menu Interface}{76}{subsection.444}
-\contentsline {section}{\numberline {9.3}Testovanie aplik\IeC {\'a}cie}{78}{section.455}
-\contentsline {chapter}{\numberline {10}N\IeC {\'a}vod na in\IeC {\v s}tal\IeC {\'a}ciu a spustenie}{80}{chapter.456}
-\contentsline {section}{\numberline {10.1}In\IeC {\v s}tal\IeC {\'a}cia na opera\IeC {\v c}om syst\IeC {\'e}me linux}{80}{section.457}
-\contentsline {subsection}{\numberline {10.1.1}In\IeC {\v s}tal\IeC {\'a}cia pip a pip3}{80}{subsection.458}
-\contentsline {subsection}{\numberline {10.1.2}Nain\IeC {\v s}talovanie kni\IeC {\v z}nice tikapy}{80}{subsection.464}
-\contentsline {subsection}{\numberline {10.1.3}Nain\IeC {\v s}talovanie pexpect}{80}{subsection.469}
-\contentsline {subsection}{\numberline {10.1.4}In\IeC {\v s}tal\IeC {\'a}cia mactelnet}{81}{subsection.473}
-\contentsline {subsection}{\numberline {10.1.5}Nain\IeC {\v s}talovanie setuptools}{81}{subsection.476}
-\contentsline {subsection}{\numberline {10.1.6}In\IeC {\v s}tal\IeC {\'a}cia PyQT4}{81}{subsection.480}
-\contentsline {subsection}{\numberline {10.1.7}In\IeC {\v s}tal\IeC {\'a}cia QT4 designer}{81}{subsection.485}
-\contentsline {subsection}{\numberline {10.1.8}In\IeC {\v s}tal\IeC {\'a}cia paramiko}{81}{subsection.488}
-\contentsline {subsection}{\numberline {10.1.9}Spustenie aplik\IeC {\'a}cie}{82}{subsection.492}
-\contentsline {chapter}{\numberline {11}Z\IeC {\'a}ver}{83}{chapter.497}
-\contentsline {chapter}{Literat\'{u}ra}{84}{section*.499}
-\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{86}{section*.501}
-\contentsline {chapter}{Zoznam pr\'{i}loh}{88}{section*.503}
-\contentsline {section}{\numberline {.1}Ulo\IeC {\v z}en\IeC {\'e} git repozit\IeC {\'a}re }{89}{section.504}
-\contentsline {section}{\numberline {.2}Obsah prilo\IeC {\v z}en\IeC {\'e}ho DVD }{89}{section.505}
+\contentsline {section}{\numberline {3.3}Pripojenie pomocou webfigu}{19}{section.23}
+\contentsline {section}{\numberline {3.4}Mactelnet}{19}{section.25}
+\contentsline {section}{\numberline {3.5}Pripojenie pomocou telnet a SSH}{20}{section.27}
+\contentsline {subsection}{\numberline {3.5.1}Pripojenie cet telnet}{20}{subsection.28}
+\contentsline {subsection}{\numberline {3.5.2}Pripojenie pomocou ssh}{20}{subsection.29}
+\contentsline {chapter}{\numberline {4}Programovac\IeC {\'\i } jazyk Python}{22}{chapter.31}
+\contentsline {section}{\numberline {4.1}Python 2}{22}{section.32}
+\contentsline {section}{\numberline {4.2}Python 3}{22}{section.33}
+\contentsline {section}{\numberline {4.3}Prostredia na programovanie v jazyku Python}{23}{section.34}
+\contentsline {section}{\numberline {4.4}Pycharm}{23}{section.35}
+\contentsline {chapter}{\numberline {5}Pou\IeC {\v z}it\IeC {\'e} kni\IeC {\v z}nice v diplomovej pr\IeC {\'a}ci}{25}{chapter.37}
+\contentsline {section}{\numberline {5.1}OS.SYSTEM}{25}{section.38}
+\contentsline {section}{\numberline {5.2}Telnetlib}{25}{section.55}
+\contentsline {section}{\numberline {5.3}Pxssh a pxexpect}{26}{section.73}
+\contentsline {subsection}{\numberline {5.3.1}In\IeC {\v s}tal\IeC {\'a}cia pexpect}{27}{subsection.74}
+\contentsline {section}{\numberline {5.4}TikApy}{28}{section.94}
+\contentsline {chapter}{\numberline {6}Konzolov\IeC {\'a} \IeC {\v c}as\IeC {\v t} aplik\IeC {\'a}cie na spr\IeC {\'a}vu mikrotikov}{30}{chapter.115}
+\contentsline {section}{\numberline {6.1}Popis naprogramovanej \IeC {\v c}asti prihlasovania na mikrotik}{30}{section.116}
+\contentsline {subsection}{\numberline {6.1.1}S\IeC {\'u}bor centralControl}{30}{subsection.118}
+\contentsline {subsection}{\numberline {6.1.2}S\IeC {\'u}bor Constructors}{32}{subsection.170}
+\contentsline {subsection}{\numberline {6.1.3}S\IeC {\'u}bor dhcpClient}{33}{subsection.172}
+\contentsline {subsection}{\numberline {6.1.4}S\IeC {\'u}bor LoginManager}{34}{subsection.212}
+\contentsline {section}{\numberline {6.2}Rozbor hlavnej \IeC {\v c}asti backendu}{37}{section.292}
+\contentsline {chapter}{\numberline {7}Hlavn\IeC {\'a} \IeC {\v c}as\IeC {\v t} backendu}{39}{chapter.293}
+\contentsline {section}{\numberline {7.1}Zlo\IeC {\v z}ka bridge}{39}{section.294}
+\contentsline {subsection}{\numberline {7.1.1}Popis tried zlo\IeC {\v z}ky}{39}{subsection.295}
+\contentsline {subsection}{\numberline {7.1.2}Vybran\IeC {\'y} analyzovan\IeC {\'y} s\IeC {\'u}bor}{40}{subsection.296}
+\contentsline {section}{\numberline {7.2}Zlo\IeC {\v z}ka capsman}{41}{section.299}
+\contentsline {subsection}{\numberline {7.2.1}Popis tried zlo\IeC {\v z}ky}{41}{subsection.300}
+\contentsline {subsection}{\numberline {7.2.2}Vybran\IeC {\'y} analyzovan\IeC {\'y} s\IeC {\'u}bor}{42}{subsection.301}
+\contentsline {section}{\numberline {7.3}Zlo\IeC {\v z}ka Dude}{43}{section.304}
+\contentsline {subsection}{\numberline {7.3.1}Popis tried zlo\IeC {\v z}ky}{43}{subsection.305}
+\contentsline {subsection}{\numberline {7.3.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{43}{subsection.306}
+\contentsline {section}{\numberline {7.4}Zlo\IeC {\v z}ka Interfaces}{44}{section.309}
+\contentsline {subsection}{\numberline {7.4.1}Popis tried zlo\IeC {\v z}ky}{44}{subsection.310}
+\contentsline {subsection}{\numberline {7.4.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{45}{subsection.311}
+\contentsline {section}{\numberline {7.5}Zlo\IeC {\v z}ka IPv4}{46}{section.314}
+\contentsline {subsection}{\numberline {7.5.1}Popis tried zlo\IeC {\v z}ky}{46}{subsection.315}
+\contentsline {subsection}{\numberline {7.5.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{49}{subsection.316}
+\contentsline {section}{\numberline {7.6}Zlo\IeC {\v z}ka IPv6}{50}{section.319}
+\contentsline {subsection}{\numberline {7.6.1}Popis tried zlo\IeC {\v z}ky}{50}{subsection.320}
+\contentsline {subsection}{\numberline {7.6.2}Anyl\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{51}{subsection.321}
+\contentsline {section}{\numberline {7.7}Zlo\IeC {\v z}ky KVM, log a makeSupportFile}{52}{section.324}
+\contentsline {subsection}{\numberline {7.7.1}Popis triedy zlo\IeC {\v z}ky KVM}{52}{subsection.325}
+\contentsline {subsection}{\numberline {7.7.2}Popis triedy zlo\IeC {\v z}ky log}{52}{subsection.328}
+\contentsline {subsection}{\numberline {7.7.3}Popis triedy makeSupportFile}{53}{subsection.331}
+\contentsline {section}{\numberline {7.8}Zlo\IeC {\v z}ka Mesh}{53}{section.334}
+\contentsline {subsection}{\numberline {7.8.1}Popis tried zlo\IeC {\v z}ky}{53}{subsection.335}
+\contentsline {subsection}{\numberline {7.8.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{54}{subsection.336}
+\contentsline {section}{\numberline {7.9}Zlo\IeC {\v z}ka MPLS}{55}{section.339}
+\contentsline {subsection}{\numberline {7.9.1}Popis tried zlo\IeC {\v z}ky}{55}{subsection.340}
+\contentsline {subsection}{\numberline {7.9.2}Anyl\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{56}{subsection.341}
+\contentsline {section}{\numberline {7.10}Zlo\IeC {\v z}ka PPP}{57}{section.344}
+\contentsline {subsection}{\numberline {7.10.1}Popis tried zlo\IeC {\v z}ky}{57}{subsection.345}
+\contentsline {subsection}{\numberline {7.10.2}Analyzovan\IeC {\'y} s\IeC {\'u}bor}{59}{subsection.346}
+\contentsline {section}{\numberline {7.11}Zlo\IeC {\v z}ka Queues}{59}{section.349}
+\contentsline {subsection}{\numberline {7.11.1}Zoznam tried zlo\IeC {\v z}ky}{60}{subsection.350}
+\contentsline {subsection}{\numberline {7.11.2}Anal\IeC {\'a}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{60}{subsection.351}
+\contentsline {section}{\numberline {7.12}Zlo\IeC {\v z}ka Radius}{61}{section.354}
+\contentsline {section}{\numberline {7.13}Zlo\IeC {\v z}ka routing}{63}{section.357}
+\contentsline {subsection}{\numberline {7.13.1}Zoznam tried zlo\IeC {\v z}iek}{63}{subsection.358}
+\contentsline {subsection}{\numberline {7.13.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{64}{subsection.359}
+\contentsline {section}{\numberline {7.14}Zlo\IeC {\v z}ka switch}{65}{section.362}
+\contentsline {subsection}{\numberline {7.14.1}Zoznam tried zlo\IeC {\v z}ky}{65}{subsection.363}
+\contentsline {subsection}{\numberline {7.14.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{65}{subsection.364}
+\contentsline {section}{\numberline {7.15}Zlo\IeC {\v z}ka System}{66}{section.367}
+\contentsline {subsection}{\numberline {7.15.1}Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky}{66}{subsection.368}
+\contentsline {subsection}{\numberline {7.15.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{66}{subsection.369}
+\contentsline {section}{\numberline {7.16}Zlo\IeC {\v z}ka tools}{67}{section.372}
+\contentsline {subsection}{\numberline {7.16.1}Zoznam s\IeC {\'u}borov zlo\IeC {\v z}ky}{67}{subsection.373}
+\contentsline {subsection}{\numberline {7.16.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{68}{subsection.374}
+\contentsline {section}{\numberline {7.17}Zlo\IeC {\v z}ka Wireless}{69}{section.377}
+\contentsline {subsection}{\numberline {7.17.1}Zoznam tried zlo\IeC {\v z}ky}{69}{subsection.378}
+\contentsline {subsection}{\numberline {7.17.2}Anal\IeC {\'y}za vybran\IeC {\'e}ho s\IeC {\'u}boru}{69}{subsection.379}
+\contentsline {chapter}{\numberline {8}Grafick\IeC {\'a} \IeC {\v c}as\IeC {\v t} aplik\IeC {\'a}cie (frontend)}{71}{chapter.382}
+\contentsline {section}{\numberline {8.1}QT4 disigner}{71}{section.383}
+\contentsline {section}{\numberline {8.2}PyQT 4}{71}{section.384}
+\contentsline {chapter}{\numberline {9}Grafick\IeC {\'a} aplik\IeC {\'a}cia}{72}{chapter.385}
+\contentsline {section}{\numberline {9.1}Hlavn\IeC {\'e} prihlasovacie okno}{72}{section.386}
+\contentsline {subsection}{\numberline {9.1.1}Hlavn\IeC {\'e} okno konfigura\IeC {\v c}nej aplik\IeC {\'a}cie}{73}{subsection.389}
+\contentsline {section}{\numberline {9.2}Polo\IeC {\v z}ky hlavn\IeC {\'e}ho menu}{73}{section.391}
+\contentsline {subsection}{\numberline {9.2.1}Uk\IeC {\'a}\IeC {\v z}ka fungovania aplik\IeC {\'a}cie cez menu Interface}{74}{subsection.392}
+\contentsline {section}{\numberline {9.3}Testovanie aplik\IeC {\'a}cie}{76}{section.398}
+\contentsline {chapter}{\numberline {10}N\IeC {\'a}vod na in\IeC {\v s}tal\IeC {\'a}ciu a spustenie}{78}{chapter.399}
+\contentsline {section}{\numberline {10.1}In\IeC {\v s}tal\IeC {\'a}cia na opera\IeC {\v c}om syst\IeC {\'e}me linux}{78}{section.400}
+\contentsline {subsection}{\numberline {10.1.1}In\IeC {\v s}tal\IeC {\'a}cia pip a pip3}{78}{subsection.401}
+\contentsline {subsection}{\numberline {10.1.2}Nain\IeC {\v s}talovanie kni\IeC {\v z}nice tikapy}{78}{subsection.407}
+\contentsline {subsection}{\numberline {10.1.3}Nain\IeC {\v s}talovanie pexpect}{78}{subsection.412}
+\contentsline {subsection}{\numberline {10.1.4}In\IeC {\v s}tal\IeC {\'a}cia mactelnet}{79}{subsection.416}
+\contentsline {subsection}{\numberline {10.1.5}Nain\IeC {\v s}talovanie setuptools}{79}{subsection.419}
+\contentsline {subsection}{\numberline {10.1.6}In\IeC {\v s}tal\IeC {\'a}cia PyQT4}{79}{subsection.423}
+\contentsline {subsection}{\numberline {10.1.7}In\IeC {\v s}tal\IeC {\'a}cia QT4 designer}{79}{subsection.428}
+\contentsline {subsection}{\numberline {10.1.8}In\IeC {\v s}tal\IeC {\'a}cia paramiko}{79}{subsection.431}
+\contentsline {subsection}{\numberline {10.1.9}Spustenie aplik\IeC {\'a}cie}{80}{subsection.435}
+\contentsline {chapter}{\numberline {11}Z\IeC {\'a}ver}{81}{chapter.439}
+\contentsline {chapter}{Literat\'{u}ra}{82}{section*.441}
+\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{84}{section*.443}
+\contentsline {chapter}{Zoznam pr\'{i}loh}{86}{section*.445}
+\contentsline {section}{\numberline {.1}Ulo\IeC {\v z}en\IeC {\'e} git repozit\IeC {\'a}re }{87}{section.446}
+\contentsline {section}{\numberline {.2}Obsah prilo\IeC {\v z}en\IeC {\'e}ho DVD }{87}{section.447}

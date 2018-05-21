@@ -23,14 +23,14 @@ V súbore centrolControl sa popisuje spôsob hromadnej obsluhy mikrotikov na zá
 \item \textit{loginSSH()}- metóda je použitá na hromadné prihlásenie pomocou protokolu SSH na mikrotiky, používa sa tu pritom knižnica pexpect a jej subkižnica pxssh, jej vstupné parametre sú IP adresa serveru, užívateľské meno a heslo 
 \end{itemize}
 \linebreak
-\begin{lstlisting}[language=python, frame=single, caption=Deklarácia vstupných parametrov,captionpos=b]
+\begin{lstlisting}[language=python, frame=single, caption=Deklarácia vstupných parametrov,captionpos=b, basicstyle=\footnotesize]
  def __init__(self, login):
         self.username = login
         self.credentials = {
             "192.168.1.1": "admin",
             "192.168.2.1": ""
 \end{lstlisting}
-\begin{lstlisting}[language=python, frame=single, caption=Meóda zobrazenia mikrotikov,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=python, frame=single, caption=Meóda zobrazenia mikrotikov,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
  def listMikrotikDevices(self):
    deviceList = []
    loadAddress = False
@@ -48,7 +48,7 @@ V súbore centrolControl sa popisuje spôsob hromadnej obsluhy mikrotikov na zá
   return deviceList
 \end{lstlisting}
 \newpage
-\begin{lstlisting}[language=python, frame=single, caption=Metóda pridania užívateľských mien a hesiel,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=python, frame=single, caption=Metóda pridania užívateľských mien a hesiel,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
  def addCredentials(self, login="admin"):
    server_list = self.listMikrotikDevices()
    print( server_list )
@@ -61,7 +61,7 @@ V súbore centrolControl sa popisuje spôsob hromadnej obsluhy mikrotikov na zá
     self.credentials[server] = password
     return server_list
 \end{lstlisting}
-\begin{lstlisting}[language=python, frame=single, caption=Metóda hromadného prihlásenia pomocou protokolu SSH,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=python, frame=single, caption=Metóda hromadného prihlásenia pomocou protokolu SSH,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
  def loginSSH(self, server,login, password):
  from pexpect import pxssh, spawn, expect
  import getpass
@@ -91,7 +91,7 @@ Následne je vytvorená trieda Mikrotik, ktorá zahŕňa všetky konštruktory s
 \subsection{Súbor dhcpClient}
 V tomto súbore sa nachádza základná konfigurácia mikrotiku po pripojení naň. Obsahuje triedu basicConfig, ktorá pozostáva z dvoch metód.\\
 V konštruktore sa nastaví rozhranie, na ktorom sa má adresa nastaviť, IP adresa/subnet a MAC adresa na pripojenie na mikrotik pomocu protokolu mactelnet.
-\begin{lstlisting}[language=python, frame=single, caption=Trieda basicConfig,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=python, frame=single, caption=Trieda basicConfig,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
  class basicCOnfig:
     def __init__(self,interface,mac,ip):
         self.interface = interface
@@ -100,7 +100,7 @@ V konštruktore sa nastaví rozhranie, na ktorom sa má adresa nastaviť, IP adr
 \end{lstlisting}
 Prvá metóda \textit{dhcp()}, ktorej vstupné parametre sú užívateľské meno a heslo. Pozostáva z prihlásenia na mikrotik, a nastavenia Dynamic Host Client Protocol (DHCP) klienta na rozhraní, ktoré sa definuje pri volaní objektu v rámci konštruktoru.
 \newpage
-\begin{lstlisting}[language=python, frame=single, caption=Metóda dhcp,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=python, frame=single, caption=Metóda dhcp,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
  def dhcp(self,username,password):
         child =pexpect.spawn('mactelnet '+self.mac)
         child.expect('Username:')
@@ -118,7 +118,7 @@ Prvá metóda \textit{dhcp()}, ktorej vstupné parametre sú užívateľské men
             child.close()
 \end{lstlisting}
 Druhá metóda \textit{setAddress()}, ktorá bere ako vstupné parametre užívateľské meno a heslo nastaví statickú IP adresu na rozhraní definovanom v rámci konštruktoru.
-\begin{lstlisting}[language=python, frame=single, caption=Metóda setAddress,captionpos=b, showstringspaces=false]
+\begin{lstlisting}[language=python, frame=single, caption=Metóda setAddress,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
  def setAddress(self,username,password):
         child = pexpect.spawn( 'mactelnet '+ 
         self.mac )
@@ -139,13 +139,13 @@ Druhá metóda \textit{setAddress()}, ktorá bere ako vstupné parametre užíva
 \subsection{Súbor LoginManager}
 Súbor LoginManager pozostáva z niekoľkých metód, tieto metódy majú podobnú štruktúru ako súbor centralConrol popisujúci v kapitole \ref{sec:central}.\\
 Ako prvá popísaná časť je konštruktor, ktorý prijíma vstupné parametre užívateľské meno a heslo.
-\begin{lstlisting}[language=python, frame=single, caption=Konštruktor súboru,captionpos=b, showstringspaces=false] 
+\begin{lstlisting}[language=python, frame=single, caption=Konštruktor súboru,captionpos=b, showstringspaces=false, basicstyle=\footnotesize] 
 def __init__(self, login,password):
         self.username = login
         self.pwd = password
 \end{lstlisting}
 Druhá metóda je metóda \textit{loginTelnet()},v rámci tejto metódy sa rieši prihlásenie na mikrotik pomocou protokolu telnet za použitia knižnice telnetlib. Vo vstupe metódy sa definuje premenná \textit{server\_ list}. Táto premenná je naplnená IP adresami mikrotikov v rámci súboru centralControl.
-\begin{lstlisting}[language=python, frame=single, caption=Metóda loginTelnet,captionpos=b, showstringspaces=false] 
+\begin{lstlisting}[language=python, frame=single, caption=Metóda loginTelnet,captionpos=b, showstringspaces=false, basicstyle=\footnotesize] 
 def loginTelnet(self, password, login="admin"):
         import telnetlib
         central = centralControl(login, password)
@@ -169,7 +169,7 @@ def loginTelnet(self, password, login="admin"):
 \end{lstlisting}
 \newpage
 Ďalej sa tu nachádza metóda \textit{loginSSH()}, táto metóda pracujúca podobne ako metoda loginTelnet() pracuje na základe protokolu SSH, na vstupe má server IP adresu, užívateľské meno  a heslo.
-\begin{lstlisting}[language=python, frame=single, caption=Metóda loginSSH,captionpos=b, showstringspaces=false] 
+\begin{lstlisting}[language=python, frame=single, caption=Metóda loginSSH,captionpos=b, showstringspaces=false, basicstyle=\footnotesize] 
 def loginSSH(self, server,login, password):
         from pexpect import pxssh, spawn, expect
         import getpass
@@ -188,8 +188,7 @@ def loginSSH(self, server,login, password):
             print( str( e ) )
 \end{lstlisting}
 Ďalšou metódou je metóda na vylistovanie všetkých mikrotikov, táto metóda je bez vstupného parametru. Ako výstup je súbor \textit{mikrotik.output} naplnený MAC adresami mikrotikov. 
-\newpage
-\begin{lstlisting}[language=python, frame=single, caption=Metóda listMikrotikDevices,captionpos=b, showstringspaces=false] 
+\begin{lstlisting}[language=python, frame=single, caption=Metóda listMikrotikDevices,captionpos=b, showstringspaces=false, basicstyle=\footnotesize] 
 def listMikrotikDevices(self):
         deviceList = []
         loadMacAddress = False
@@ -211,8 +210,7 @@ def listMikrotikDevices(self):
         return deviceList
 \end{lstlisting}
 Poslednou metódou je metóda \textit{mactelnetLoginToSingleDevice()}, vďaka ktorej sa pripája pomocou protokolu mactelnet na jedno mikrotik zariadenie pomocou MAC adresy získanej z výstupu metódy \textit{listMikrotikDevices()} mikrotik.output.
-\newpage
-\begin{lstlisting}[language=python, frame=single, caption=Metóda mactelnetLoginToSingleDevice,captionpos=b, showstringspaces=false] 
+\begin{lstlisting}[language=python, frame=single, caption=Metóda mactelnetLoginToSingleDevice,captionpos=b, showstringspaces=false, basicstyle=\footnotesize] 
 def mactelnetLoginToSingleDevice(self, username, 
     password, address=None):
         deviceList = self.listMikrotikDevices()
@@ -263,7 +261,7 @@ Cieľom tejto zložky je konfigurácia bridgu na mikrotiku. Pozostáva z:\begin{
 \item Pridanie, odtsránenie, zapnutie, vypnutie a komentár položiek
 \item Modifikácia existujúcich položiek
 \end{itemize} 
-Niektoré pasáže sa dajú modifikovať pomocou mena položky, niektoré pomocou poradia položky (tiež podľa parametru \textit{.id} v rámci výstupu tikapy). Zoznam súborov  zložky nájdeme na obrázku \ref{fig:bridge2} a v kapitole\ref{sec:bridgechap}. 
+Niektoré pasáže sa dajú modifikovať pomocou mena položky, niektoré pomocou poradia položky (tiež podľa parametru \textit{.id} v rámci výstupu tikapy).
 \subsection{Popis tried zložky}
 \label{sec:bridgechap}
 Zložka obsahuje triedy:
@@ -443,7 +441,7 @@ Súčasťou zložky je nastavenie rohraní na mikrotiku. Patria sem triedy:
 Vybraný súbor \textit{greTunnelSet.py} a jeho nastavenie je zobrazené v UML diagrame triedy na obrázku \ref{fig:gre} a popis tried je analyzovaný v tabuľke \ref{tab:greTunel}.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{../text/gre.png}
+\includegraphics[scale=0.45]{../text/gre.png}
 \caption{UML diagram greTunnelSet triedy}
 \label{fig:gre}
 \end{figure}
@@ -469,7 +467,6 @@ disableAllowFastPath & názov tunelu & slovník & Metóda vypne funkciu tunelu "
 \caption{Tabuľka metód triedy greTunnelSet}
 \label{tab:greTunel}
 \end{table}
-\newpage
 \section{Zložka IPv4}
 Popis  zložky IPv4 spočíva v nastavení rôznych IPv4 protokolov, bezpečnosti, prekladu adries,statického smerovania a ďalších možností. Triedy spočívajú globálnym popisom totožným k popisov v kapitolách \ref{sec:bridgechap}, \ref{sec:capsmanchap} a ďalších kapitolách.  
 \subsection{Popis tried zložky}
@@ -653,12 +650,6 @@ listKVM & žiadny & slovník & Metóda zobrazí všetky virtuálne mikrotiky. \\
 Zložka log popisuje výpis systémového logu. Obsahuje triedy:\begin{itemize}
 \item \textbf{log} - trieda log na výpis systémového logu
 \end{itemize}
-\begin{figure}[H]
-\centering
-\includegraphics[scale=0.6]{../text/log.png}
-\caption{Zoznam súborov zložky log}
-\label{fig:log}
-\end{figure}
 Zoznam použitých metód je popísaný UML diagramom triedy na obrázku \ref{fig:logUML} a popísaný v tabuľke \ref{tab:log}.
 \begin{table}[H]
 \resizebox{\textwidth}{!}{%
@@ -679,7 +670,7 @@ listLog & žiadny & slovník & Metóda zobrazí systémový log. \\ \hline
 \end{figure}
 \subsection{Popis triedy makeSupportFile}
 Zložka log obsahuje súbor makeSupportFile spoločne s triedou makeSupportFile, vytvorí a odošle súbor na podporu. Trieda makeSupport má na starosti vytvorenie súboru pre podporu na analýzu. Obsah súboru je popísaný v tabuľke \ref{tab:support} a UML diagramom triedy na obrázku \ref{fig:support}.
-\begin{table}[]
+\begin{table}[h!]
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -707,7 +698,7 @@ Zložka pozostáva z tried:
 \end{itemize}
 \subsection{Analýza vybraného súboru}
 Pre vybraný analyzovaný súbor \textit{MeshInterfaces.py}. Anaylýza tried je zobrazená na UML diagrame na obrázku \ref{fig:meshuml} a popis metód je popísaný v tabuľke \ref{tab:meshtab}.
-\begin{table}[]
+\begin{table}[h!]
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|l|l|l|}
 \hline
@@ -770,7 +761,7 @@ Zložka pozostáva z tried:
 \end{itemize}
 \subsection{Anylýza vybraného súboru}
 Vybraný analyzovaný súbor \textit{MplsLocalBinding.py} je popísaný jeho UML diagramom na obrázku \ref{fig:mplslocal} a v tabuľke \ref{tab:locbind}.
-\begin{table}[H]
+\begin{table}[h]
 \centering
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|c|c|c|c|}
@@ -789,6 +780,7 @@ setLabel & \begin{tabular}[c]{@{}c@{}}poradové číslo prekladu,\\ označenie t
 \caption{Tabuľka zoznamu metód triedy MplsLocalBindings}
 \label{tab:locbind}
 \end{table}
+\\
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.6]{../text/mplsuml.png}
@@ -1046,7 +1038,7 @@ setVlanId     & \begin{tabular}[c]{@{}c@{}}meno switchu,\\ VLAN ID\end{tabular} 
 \end{table}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.8]{../text/SwitchPorts.png}
+\includegraphics[scale=0.6]{../text/SwitchPorts.png}
 \caption{UML digram triedy switchPorts}
 \label{fig:switchPort}
 \end{figure}
@@ -1099,7 +1091,7 @@ rebootRouter   & žiadny & slovník & Metóda reštartuje router. \\ \hline
 \end{table}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{../text/SystemMaintenance.png}
+\includegraphics[scale=0.5]{../text/SystemMaintenance.png}
 \caption{UML diagram triedy SystemMaintenance}
 \label{fig:systemMaintenance}
 \end{figure}
@@ -1152,7 +1144,7 @@ commentRule          & \begin{tabular}[c]{@{}c@{}}poradové číslo spojenia,\\ 
 \end{table}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.6]{../text/Netwatch.png}
+\includegraphics[scale=0.45]{../text/Netwatch.png}
 \caption{UML diagram triedy Netwatch}
 \label{fig:netwatchuml}
 \end{figure}
