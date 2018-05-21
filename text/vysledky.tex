@@ -146,7 +146,7 @@ V rámci ďalšieho testovania nastávajú nasledujúce situácie:
 \chapter{Návod na inštaláciu a spustenie}
 \section{Inštalácia na operačom systéme linux}
 Najspoľahlivejšou cestou je nainštalovanie potrebných balíčkov v rámci pythonu na spustenie aplikácie. Linux v sebe štandardne zahrňuje python v oboch verziách, teda aj vo verzii 2 aj vo verzii 3, k posledným aktualizáciám linux mint vo verzii 3.6.5. \\
-Tento návod bude popisovať spôsob nainštalovania potrebných súborov a modulov do pythonu, ako aj spôsob spustenia aplikácie.
+Tento návod bude popisovať spôsob nainštalovania potrebných súborov a modulov do pythonu, ako aj spôsob spustenia aplikácie. Návod bol písaný na distribúciu linuxu Linix Mint, toto vychádza z Ubuntu teda z Debianu. Pre CentOS sa použije buď \textit{dnf} alebo \textit{yum}, to platí aj pre  fedoru. Pre arch linux platí príkaz \textit{pacman} na nainštalovanie jednotlivých aplikácií. 
 \subsection{Inštalácia pip a pip3}
 Pre potrebu inštalovania modulov do pythonu je potreba doinštalovať inštalátor pip a pip3 (pre python vo verzii 3).
 \begin{lstlisting}[language=bash, frame=single, caption=Nainštalovanie pip,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
@@ -203,12 +203,46 @@ Aplikácia používa certifikáty uložené v projekte pod názvom \textit{diplo
 \begin{lstlisting}[language=bash, frame=single, caption=Spustenie aplikácie,captionpos=b, showstringspaces=false, basicstyle=\footnotesize]
 adrian@~/PycharmProjects/diplomkap3 $ python3 loginGui.py
 \end{lstlisting}
-Po úspešnom spustení by sa malo otvoriť prihlasovacie okno, kde po jeho inicializácii sa stlačením tlačítka na vyhľadanie zariadení cez tlačítko \textit{FInd devices}, toto trvá 1 minútu kým program mactelnet nájde najbližšie zariadenia, štandardné prihlasovacie užívateľské meno je \textit{admin}, po kliknutí na IP adresu sa doplní do textového poľa address, prihlasovacie okno je zobrazené na obrázku \ref{fig:winboxcustom}:
+Po úspešnom spustení by sa malo otvoriť prihlasovacie okno, kde po jeho inicializácii sa stlačením tlačítka na vyhľadanie zariadení cez tlačítko \textit{FInd devices}, toto trvá 1 minútu kým program mactelnet nájde najbližšie zariadenia, štandardné prihlasovacie užívateľské meno je \textit{admin}, po kliknutí na IP adresu sa doplní do textového poľa address. Následne sa zadá heslo a stlačí sa tlačítko OK. 
+\section{Návod na inštaláciu na operačnom systéme Windows}
+Aplikácia je napísaná vo verzii PyQt 4, ktorá existuje pre Windows do verzii pythonu 3.3, pre využitie vyšších verzií pythonu je nutné používať PyQt 5. Inštalácia je nasledujúca.
+\subsection{Inštalácia Python 3.3}
+Stiahnutie a inštalácia \textit{.exe} inštalátoru z nasledujúceho \href{http://www.python.org/ftp/python/3.3.5/python-3.3.5.amd64.msi}{odkazu} pre 64-bitovú platformu a pre 32-bitovú platformu z \href{http://www.python.org/ftp/python/3.3.5/python-3.3.5.msi}{odkazu}. Následne je potreba nastaviť systémovú premennú, aby sa mohol volať príkaz \textit{python3}, prípadne \textit{python} sa toto nastaví v rámci inštalátoru. 
+Možné nastavenie systémovej premennej je vidieť na obrázku \ref{fig:premenna}.
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.48]{../text/winboxcustom.png}
-\caption{Prihlasovacie okno na mikrotik}
-\label{fig:winboxcustom}
+\includegraphics[scale=0.6]{../text/premenna.png}
+\caption{Nastavenie systémovej premennej na windowse}
+\label{fig:premenna}
 \end{figure}
-
+\subsection{Inštalácia pip}
+Python inštalátor nezahrňuje pip prípadne pip3 a preto je nutné ho doinštalovať nasledovne:
+\begin{enumerate}
+\item stiahnutie súboru \href{https://bootstrap.pypa.io/get-pip.py}{\textit{get-pip.py}} do zložky kde je python, štandardne na disku C v zložke Python33. 
+\item nainštalovanie pip pomocou príkazu: \textit{python.exe get-pip.py}. Po úspešnej inštalácii sa tu objaví zložka \textit{Scripts}, \textbf{zložka musí obshaovať súbory pip a pip3}.
+\end{enumerate}
+\subsection{Inštalácia modulov}
+Doinštalovanie modulov tikapy, pexpect, paramiko, pypi nasledovne. Cez prieskumník sa dostaneme do zložky Scripts, kde pomocou pravého tlačítka myši a tlačítka SHIFT (ľavý) sa otvorí ponuka otvoriť cez powershell. Následne sa zadajú príkazy:
+\begin{itemize}
+\item \textit{.\textbackslash pip3 install tikapy} 
+\item \textit{.\textbackslash pip install tikapy}
+\item \textit{.\textbackslash pip3 install pipy}
+\item \textit{.\textbackslash pip install pipy}
+\item \textit{.\textbackslash pip3 install paramiko}
+\item \textit{.\textbackslash pip install paramiko} 
+\item \textit{.\textbackslash pip3 install pexpect}
+\item \textit{.\textbackslash pip install pexpect}
+\item \textit{.\textbackslash pip3 install setuptools}
+\item \textit{.\textbackslash pip install setuptools}   
+\end{itemize}
+\subsection{Inštalácia PyQt4}
+Pre nainštalovanie PyQt 4 na Windowse, je potreba stiahnuť \textit{.exe} inštalátor a nainštalovať ho do zložky, kde sa nachádza python, čo je štandardne \textit{C:\textbackslash python33}. Tu sa následne vytvoria všetky potrebné súbory na spustenie GUI aplikácie.
+\subsection{Spustenie aplikácie}
+Pre spustenie aplikácie je potreba pristupovať absolútnymi cestami. To je, pre spustenie aplikácie je nutné sa prenavigovať do zložky s projektom, ktorý je možný stiahnúť z priloženého DVD. Následne spustiť príkaz, napr. projekt mám uložený v adresáry E:\textbackslash diplomka. Potom príkaz bude vypadať \textit{C:\textbackslash python33\textbackslash python.exe loginGui.py}.
+\subsection{Možné problémy na windowse}
+Niektoré verzie Windows nepodporujú PyQt 4, preto môže vzniknúť situácia že sa aplikácia nespustí. Dôvodom môže byť, že nedokáže nájsť knižnicu \textit{uic}, ktorá je súčasťou PyQt 4. Pokiaľ to nepôjde sú tu dva scenáre:
+\begin{itemize}
+\item Scenár 1: Nastavenie systémovej premennej podobne ako na obrázku \ref{fig:premenna} pre uic, ktoré je v zložke kde sa nachádza python
+\item Scenár 2: Preportovanie aplikácie do verzie PyQt 5
+\end{itemize}  
 

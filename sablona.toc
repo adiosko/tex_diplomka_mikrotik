@@ -109,11 +109,18 @@
 \contentsline {subsection}{\numberline {10.1.5}Nain\IeC {\v s}talovanie setuptools}{79}{subsection.419}
 \contentsline {subsection}{\numberline {10.1.6}In\IeC {\v s}tal\IeC {\'a}cia PyQT4}{79}{subsection.423}
 \contentsline {subsection}{\numberline {10.1.7}In\IeC {\v s}tal\IeC {\'a}cia QT4 designer}{79}{subsection.428}
-\contentsline {subsection}{\numberline {10.1.8}In\IeC {\v s}tal\IeC {\'a}cia paramiko}{79}{subsection.431}
+\contentsline {subsection}{\numberline {10.1.8}In\IeC {\v s}tal\IeC {\'a}cia paramiko}{80}{subsection.431}
 \contentsline {subsection}{\numberline {10.1.9}Spustenie aplik\IeC {\'a}cie}{80}{subsection.435}
-\contentsline {chapter}{\numberline {11}Z\IeC {\'a}ver}{81}{chapter.439}
-\contentsline {chapter}{Literat\'{u}ra}{82}{section*.441}
-\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{84}{section*.443}
-\contentsline {chapter}{Zoznam pr\'{i}loh}{86}{section*.445}
-\contentsline {section}{\numberline {.1}Ulo\IeC {\v z}en\IeC {\'e} git repozit\IeC {\'a}re }{87}{section.446}
-\contentsline {section}{\numberline {.2}Obsah prilo\IeC {\v z}en\IeC {\'e}ho DVD }{87}{section.447}
+\contentsline {section}{\numberline {10.2}N\IeC {\'a}vod na in\IeC {\v s}tal\IeC {\'a}ciu na opera\IeC {\v c}nom syst\IeC {\'e}me Windows}{80}{section.438}
+\contentsline {subsection}{\numberline {10.2.1}In\IeC {\v s}tal\IeC {\'a}cia Python 3.3}{80}{subsection.439}
+\contentsline {subsection}{\numberline {10.2.2}In\IeC {\v s}tal\IeC {\'a}cia pip}{81}{subsection.441}
+\contentsline {subsection}{\numberline {10.2.3}In\IeC {\v s}tal\IeC {\'a}cia modulov}{81}{subsection.444}
+\contentsline {subsection}{\numberline {10.2.4}In\IeC {\v s}tal\IeC {\'a}cia PyQt4}{82}{subsection.445}
+\contentsline {subsection}{\numberline {10.2.5}Spustenie aplik\IeC {\'a}cie}{82}{subsection.446}
+\contentsline {subsection}{\numberline {10.2.6}Mo\IeC {\v z}n\IeC {\'e} probl\IeC {\'e}my na windowse}{82}{subsection.447}
+\contentsline {chapter}{\numberline {11}Z\IeC {\'a}ver}{83}{chapter.448}
+\contentsline {chapter}{Literat\'{u}ra}{84}{section*.450}
+\contentsline {chapter}{Zoznam symbolov, veli\v {c}\'{\i }n a skratiek}{86}{section*.452}
+\contentsline {chapter}{Zoznam pr\'{i}loh}{88}{section*.454}
+\contentsline {section}{\numberline {.1}Ulo\IeC {\v z}en\IeC {\'e} git repozit\IeC {\'a}re }{89}{section.455}
+\contentsline {section}{\numberline {.2}Obsah prilo\IeC {\v z}en\IeC {\'e}ho DVD }{89}{section.456}
